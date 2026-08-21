@@ -1,1 +1,1 @@
-# PY1_Comercio-Electronico-Cat-logo-Base-B2B
+# PY1_Comercio-Electronico-Catalogo-Base-B2B
