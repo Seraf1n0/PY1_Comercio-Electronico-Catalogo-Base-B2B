@@ -1,3 +1,54 @@
-{
-    
-}
+[
+  {
+    "objectID": "prod001",
+    "title": "Toyota Corolla",
+    "description": "Toyota Corolla 2023, vehículo de alta calidad y excelente rendimiento.",
+    "brand": "Toyota",
+    "model": "Corolla",
+    "engine": "1.8L 4-cilindros",
+    "color": "negro",
+    "cc": 1800,
+    "fuel_type": "gasolina",
+    "transmission": "automática",
+    "power": "120 hp",
+    "torque": "160 Nm",
+    "fuel_capacity": "50 L",
+    "drivetrain": "4x2",
+    "traction": "delantera",
+    "max_speed": "180 km/h",
+    "doors": 4,
+    "year": 2023,
+    "price": 25000,
+    "currency": "USD",
+    "categories": ["Automóviles", "Sedanes"],
+    "in_stock": true,
+    "stock": {
+      "headquarterLimon": 10,
+      "headquarterSanJose": 20,
+      "headquarterGuanacaste": 5
+    },
+    "rating": 4.3,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
+    "facets": {
+      "brand": "Toyota",
+      "model": "Corolla",
+      "engine": "1.8L 4-cilindros",
+      "color": "negro",
+      "fuel_type": "gasolina",
+      "transmission": "automática",
+      "power": "120 hp",
+      "torque": "160 Nm",
+      "fuel_capacity": "50 L",
+      "drivetrain": "4x2",
+      "traction": "delantera",
+      "max_speed": "180 km/h",
+      "doors": 4,
+      "year": 2023
+    }
+  }
+]
