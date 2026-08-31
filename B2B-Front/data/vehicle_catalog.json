@@ -31,7 +31,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Corolla",
@@ -81,7 +86,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Prius",
@@ -132,7 +142,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Land Cruiser",
@@ -182,7 +197,12 @@
       "headquarterGuanacaste": 5
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Highlander",
@@ -232,7 +252,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "4Runner",
@@ -283,7 +308,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "RAV4",
@@ -333,7 +363,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Tacoma",
@@ -383,7 +418,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Tundra",
@@ -433,7 +473,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Sienna",
@@ -484,7 +529,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Camry",
@@ -535,7 +585,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Sequoia",
@@ -585,7 +640,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Supra",
@@ -636,7 +696,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Mirai",
@@ -687,7 +752,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "C-HR",
@@ -737,7 +807,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Prius Prime (PHEV)",
@@ -788,7 +863,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "RAV4 Prime (PHEV)",
@@ -839,7 +919,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Corolla Cross",
@@ -889,7 +974,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "GR86",
@@ -940,7 +1030,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Crown",
@@ -990,7 +1085,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "GR Corolla",
@@ -1041,7 +1141,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Grand Highlander",
@@ -1092,7 +1197,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "Crown Signia",
@@ -1142,7 +1252,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "bZ",
@@ -1193,7 +1308,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TOYOTA",
       "model": "bZ Woodland",
@@ -1244,7 +1364,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "M3",
@@ -1295,7 +1420,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "X6",
@@ -1346,7 +1476,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "X5",
@@ -1397,7 +1532,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "X3",
@@ -1448,7 +1588,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "740i",
@@ -1499,7 +1644,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "Z4",
@@ -1550,7 +1700,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "F 800 GS",
@@ -1601,7 +1756,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "S 1000 RR",
@@ -1652,7 +1812,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "K 1600 GT",
@@ -1703,7 +1868,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "K 1600 GTL",
@@ -1754,7 +1924,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "S 1000 R",
@@ -1805,7 +1980,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "M5",
@@ -1856,7 +2036,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "228i",
@@ -1907,7 +2092,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "X1",
@@ -1958,7 +2148,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "530i",
@@ -2009,7 +2204,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "330i",
@@ -2060,7 +2260,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "760i",
@@ -2111,7 +2316,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "540i",
@@ -2162,7 +2372,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "X4",
@@ -2213,7 +2428,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "M2",
@@ -2264,7 +2484,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "M4",
@@ -2315,7 +2540,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "S 1000 XR",
@@ -2366,7 +2596,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "230i",
@@ -2417,7 +2652,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "M240i",
@@ -2468,7 +2708,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "430i",
@@ -2519,7 +2764,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "X2",
@@ -2570,7 +2820,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "X7",
@@ -2621,7 +2876,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "M340i",
@@ -2672,7 +2932,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "840i",
@@ -2723,7 +2988,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "M850i",
@@ -2774,7 +3044,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "M8",
@@ -2825,7 +3100,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "G 310 R",
@@ -2876,7 +3156,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "G 310 GS",
@@ -2927,7 +3212,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "C 400 GT",
@@ -2978,7 +3268,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "K 1600 B",
@@ -3029,7 +3324,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "R 18 Classic",
@@ -3080,7 +3380,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "R 18",
@@ -3131,7 +3436,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "M440i",
@@ -3182,7 +3492,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "CE 04",
@@ -3233,7 +3548,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "iX",
@@ -3284,7 +3604,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "i4",
@@ -3335,7 +3660,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "i7",
@@ -3386,7 +3716,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "XM",
@@ -3437,7 +3772,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "Alpina B8",
@@ -3488,7 +3828,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "750e",
@@ -3539,7 +3884,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "i5",
@@ -3590,7 +3940,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "CE 02",
@@ -3641,7 +3996,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "R 18 Roctane",
@@ -3692,7 +4052,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "R 18 B",
@@ -3743,7 +4108,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "R 18 Transcontinental",
@@ -3794,7 +4164,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "F 900 GS",
@@ -3845,7 +4220,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "F 900 GS Adventure",
@@ -3896,7 +4276,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "F 900 R",
@@ -3947,7 +4332,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "F 900 XR",
@@ -3998,7 +4388,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "M 1000 XR",
@@ -4049,7 +4444,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "M 1000 R",
@@ -4100,7 +4500,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "R 1300 GS",
@@ -4151,7 +4556,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "R 12",
@@ -4202,7 +4612,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "R 12 nineT",
@@ -4253,7 +4668,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "550e",
@@ -4304,7 +4724,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "F 900 GS-P",
@@ -4355,7 +4780,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "R 1300 GS Adventure",
@@ -4406,7 +4836,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "BMW",
       "model": "M235",
@@ -4457,7 +4892,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "GT-R",
@@ -4508,7 +4948,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "GT-R",
@@ -4559,7 +5004,12 @@
       "headquarterGuanacaste": 5
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Versa",
@@ -4610,7 +5060,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Versa",
@@ -4661,7 +5116,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Versa Note",
@@ -4712,7 +5172,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Versa Note",
@@ -4763,7 +5228,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Altima",
@@ -4814,7 +5284,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Altima",
@@ -4865,7 +5340,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Leaf",
@@ -4916,7 +5396,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Leaf",
@@ -4966,7 +5451,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "370Z",
@@ -5016,7 +5506,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "370Z",
@@ -5067,7 +5562,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Sentra",
@@ -5118,7 +5618,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Sentra",
@@ -5169,7 +5674,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Pathfinder",
@@ -5220,7 +5730,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Rogue",
@@ -5271,7 +5786,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Murano",
@@ -5322,7 +5842,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Armada",
@@ -5373,7 +5898,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "NV200",
@@ -5424,7 +5954,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "NV200",
@@ -5475,7 +6010,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Frontier",
@@ -5525,7 +6065,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Titan",
@@ -5576,7 +6121,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "NV",
@@ -5627,7 +6177,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "NV",
@@ -5678,7 +6233,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Maxima",
@@ -5729,7 +6289,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Maxima",
@@ -5780,7 +6345,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Rogue Sport",
@@ -5831,7 +6401,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Rogue Sport",
@@ -5882,7 +6457,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Kicks",
@@ -5933,7 +6513,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "NISSAN",
       "model": "Kicks",
@@ -5983,7 +6568,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "1500",
@@ -6034,7 +6624,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "1500",
@@ -6085,7 +6680,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "2500",
@@ -6136,7 +6736,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "2500",
@@ -6187,7 +6792,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "3500",
@@ -6238,7 +6848,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "3500",
@@ -6289,7 +6904,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "4500",
@@ -6340,7 +6960,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "4500",
@@ -6391,7 +7016,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "5500",
@@ -6442,7 +7072,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "5500",
@@ -6493,7 +7128,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "ProMaster 1500",
@@ -6544,7 +7184,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "ProMaster 1500",
@@ -6595,7 +7240,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "ProMaster 2500",
@@ -6646,7 +7296,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "ProMaster 2500",
@@ -6697,7 +7352,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "ProMaster 3500",
@@ -6748,7 +7408,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "ProMaster 3500",
@@ -6799,7 +7464,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "RAM",
       "model": "ProMaster 3500",
@@ -6850,7 +7520,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "Sprinter",
@@ -6901,7 +7576,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "Sprinter",
@@ -6952,7 +7632,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "Sprinter",
@@ -7003,7 +7688,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "Sprinter",
@@ -7054,7 +7744,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "SL-Class",
@@ -7105,7 +7800,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "E-Class",
@@ -7156,7 +7856,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "CLA-Class",
@@ -7207,7 +7912,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "GLA-Class",
@@ -7258,7 +7968,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "C-Class",
@@ -7309,7 +8024,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "S-Class",
@@ -7360,7 +8080,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "G-Class",
@@ -7411,7 +8136,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "AMG GT",
@@ -7462,7 +8192,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "GLC-Class",
@@ -7513,7 +8248,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "GLE-Class",
@@ -7564,7 +8304,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "GLS-Class",
@@ -7615,7 +8360,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "GLB-Class",
@@ -7666,7 +8416,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "EQS-Class Sedan",
@@ -7717,7 +8472,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "EQE-Class Sedan",
@@ -7768,7 +8528,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "EQB-Class",
@@ -7819,7 +8584,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "EQS-Class SUV",
@@ -7870,7 +8640,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "EQE-Class SUV",
@@ -7921,7 +8696,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "eSprinter",
@@ -7972,7 +8752,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "eSprinter",
@@ -8023,7 +8808,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "eSprinter",
@@ -8074,7 +8864,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "eSprinter",
@@ -8125,7 +8920,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MERCEDES-BENZ",
       "model": "CLE",
@@ -8176,7 +8976,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "JEEP",
       "model": "Wrangler",
@@ -8227,7 +9032,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "JEEP",
       "model": "Cherokee",
@@ -8278,7 +9088,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "JEEP",
       "model": "Compass",
@@ -8329,7 +9144,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "JEEP",
       "model": "Grand Cherokee",
@@ -8380,7 +9200,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "JEEP",
       "model": "Grand Wagoneer",
@@ -8431,7 +9256,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "JEEP",
       "model": "Gladiator",
@@ -8482,7 +9312,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "JEEP",
       "model": "Grand Cherokee L",
@@ -8533,7 +9368,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "JEEP",
       "model": "Grand Wagoneer L",
@@ -8584,7 +9424,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "JEEP",
       "model": "Wagoneer S",
@@ -8635,7 +9480,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "JEEP",
       "model": "Recon",
@@ -8686,7 +9536,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "ISUZU",
       "model": "NPR/NPR-HD",
@@ -8737,7 +9592,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "ISUZU",
       "model": "NQR",
@@ -8788,7 +9648,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "ISUZU",
       "model": "NRR",
@@ -8839,7 +9704,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "ISUZU",
       "model": "FTR",
@@ -8890,7 +9760,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "ISUZU",
       "model": "NPR-HD",
@@ -8941,7 +9816,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "ISUZU",
       "model": "NPR-XD",
@@ -8992,7 +9872,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "ISUZU",
       "model": "FVR",
@@ -9043,7 +9928,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Camaro",
@@ -9094,7 +9984,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Corvette",
@@ -9145,7 +10040,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Malibu",
@@ -9196,7 +10096,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Spark",
@@ -9247,7 +10152,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Equinox",
@@ -9298,7 +10208,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Express",
@@ -9349,7 +10264,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Express",
@@ -9400,7 +10320,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Express",
@@ -9450,7 +10375,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Silverado",
@@ -9501,7 +10431,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Silverado",
@@ -9552,7 +10487,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Suburban",
@@ -9603,7 +10543,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Tahoe",
@@ -9654,7 +10599,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Tahoe",
@@ -9705,7 +10655,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Traverse",
@@ -9755,7 +10710,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Colorado",
@@ -9806,7 +10766,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Colorado",
@@ -9857,7 +10822,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Trailblazer",
@@ -9908,7 +10878,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Trax",
@@ -9959,7 +10934,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Blazer",
@@ -10010,7 +10990,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Bolt EV",
@@ -10061,7 +11046,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "5500HD",
@@ -10112,7 +11102,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "3500/4500",
@@ -10163,7 +11158,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "4500HD",
@@ -10214,7 +11214,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "4500XD",
@@ -10265,7 +11270,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "5500XD",
@@ -10316,7 +11326,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Bolt Incomplete",
@@ -10367,7 +11382,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "6500XD",
@@ -10418,7 +11438,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "7500XD",
@@ -10469,7 +11494,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "CHEVROLET",
       "model": "Onix",
@@ -10520,7 +11550,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "SUBARU",
       "model": "Legacy",
@@ -10571,7 +11606,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "SUBARU",
       "model": "Outback",
@@ -10622,7 +11662,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "SUBARU",
       "model": "Forester",
@@ -10673,7 +11718,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "SUBARU",
       "model": "Impreza",
@@ -10724,7 +11774,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "SUBARU",
       "model": "WRX",
@@ -10775,7 +11830,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "SUBARU",
       "model": "BRZ",
@@ -10826,7 +11886,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "SUBARU",
       "model": "Crosstrek",
@@ -10877,7 +11942,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "SUBARU",
       "model": "Ascent",
@@ -10928,7 +11998,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "SUBARU",
       "model": "Solterra",
@@ -10979,7 +12054,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MAZDA",
       "model": "MX-5",
@@ -11030,7 +12110,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MAZDA",
       "model": "Mazda3",
@@ -11081,7 +12166,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MAZDA",
       "model": "CX-9",
@@ -11132,7 +12222,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MAZDA",
       "model": "CX-5",
@@ -11183,7 +12278,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MAZDA",
       "model": "CX-30",
@@ -11234,7 +12334,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MAZDA",
       "model": "MX-30",
@@ -11285,7 +12390,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MAZDA",
       "model": "CX-50",
@@ -11336,7 +12446,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Santa Fe",
@@ -11387,7 +12502,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Tucson",
@@ -11438,7 +12558,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Sonata",
@@ -11489,7 +12614,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Elantra",
@@ -11540,7 +12670,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Kona",
@@ -11591,7 +12726,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Nexo",
@@ -11642,7 +12782,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Palisade",
@@ -11693,7 +12838,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Venue",
@@ -11744,7 +12894,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Santa Cruz",
@@ -11795,7 +12950,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Ioniq 5",
@@ -11846,7 +13006,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Elantra N",
@@ -11897,7 +13062,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Xcient",
@@ -11948,7 +13118,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HYUNDAI",
       "model": "Ioniq 6",
@@ -11999,7 +13174,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLKSWAGEN",
       "model": "Jetta",
@@ -12050,7 +13230,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLKSWAGEN",
       "model": "GTI",
@@ -12101,7 +13286,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLKSWAGEN",
       "model": "Tiguan",
@@ -12152,7 +13342,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLKSWAGEN",
       "model": "Golf R",
@@ -12203,7 +13398,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLKSWAGEN",
       "model": "Atlas",
@@ -12254,7 +13454,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLKSWAGEN",
       "model": "Atlas Cross Sport",
@@ -12305,7 +13510,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLKSWAGEN",
       "model": "ID.4",
@@ -12356,7 +13566,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLKSWAGEN",
       "model": "Taos",
@@ -12407,7 +13622,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLKSWAGEN",
       "model": "Jetta GLI",
@@ -12458,7 +13678,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLKSWAGEN",
       "model": "ID. Buzz",
@@ -12509,7 +13734,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TESLA",
       "model": "Model S",
@@ -12560,7 +13790,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TESLA",
       "model": "Model X",
@@ -12611,7 +13846,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TESLA",
       "model": "Model 3",
@@ -12662,7 +13902,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TESLA",
       "model": "Model Y",
@@ -12713,7 +13958,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TESLA",
       "model": "Semi",
@@ -12764,7 +14014,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TESLA",
       "model": "Cybertruck",
@@ -12815,7 +14070,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "TESLA",
       "model": "Cybercab",
@@ -12866,7 +14126,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Accord",
@@ -12917,7 +14182,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Civic",
@@ -12968,7 +14238,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Pilot",
@@ -13019,7 +14294,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CR-V",
@@ -13070,7 +14350,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Ridgeline",
@@ -13121,7 +14406,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Odyssey",
@@ -13172,7 +14462,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Insight",
@@ -13223,7 +14518,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "PCX150",
@@ -13274,7 +14574,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Gold Wing",
@@ -13325,7 +14630,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "NC700X",
@@ -13376,7 +14686,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Metropolitan",
@@ -13427,7 +14742,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "NPS50 (Ruckus)",
@@ -13478,7 +14798,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "ST1300PA",
@@ -13529,7 +14854,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "ST1300",
@@ -13580,7 +14910,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Passport",
@@ -13631,7 +14966,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "HR-V",
@@ -13682,7 +15022,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "FourTrax",
@@ -13733,7 +15078,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "TRX90X",
@@ -13784,7 +15134,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "FourTrax Foreman",
@@ -13831,7 +15186,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "NSS300 (Forza)",
@@ -13878,7 +15238,12 @@
       "headquarterGuanacaste": 5
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Cota 4RT 260",
@@ -13925,7 +15290,12 @@
       "headquarterGuanacaste": 5
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "NC750X",
@@ -13972,7 +15342,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "TRX250X",
@@ -14019,7 +15394,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "FourTrax Recon",
@@ -14066,7 +15446,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "VT750 (Shadow Aero 750)",
@@ -14113,7 +15498,12 @@
       "headquarterGuanacaste": 5
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "VT750 (Shadow Phantom 750)",
@@ -14160,7 +15550,12 @@
       "headquarterGuanacaste": 5
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "ADV150",
@@ -14207,7 +15602,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Fireblade",
@@ -14254,7 +15654,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "FourTrax Foreman Rubicon",
@@ -14301,7 +15706,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Cota 300RR",
@@ -14348,7 +15758,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "SXS1000M (Pioneer 1000)",
@@ -14395,7 +15810,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "SXS700M (Pioneer 700)",
@@ -14442,7 +15862,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "SXS500M (Pioneer 500)",
@@ -14489,7 +15914,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "TRX500 (Rubicon)",
@@ -14536,7 +15966,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": null,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Trail125",
@@ -14587,7 +16022,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF300L",
@@ -14638,7 +16078,12 @@
       "headquarterGuanacaste": 4
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Monkey",
@@ -14689,7 +16134,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Civic Si",
@@ -14740,7 +16190,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Navi",
@@ -14791,7 +16246,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "PCX",
@@ -14842,7 +16302,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "SXS520M (Pioneer 520)",
@@ -14892,7 +16357,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF230F",
@@ -14942,7 +16412,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF125F",
@@ -14992,7 +16467,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF150F",
@@ -15042,7 +16522,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF150R",
@@ -15092,7 +16577,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF250L",
@@ -15142,7 +16632,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF250R",
@@ -15192,7 +16687,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF50F",
@@ -15242,7 +16742,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF110F",
@@ -15292,7 +16797,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF450R",
@@ -15342,7 +16852,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF450X",
@@ -15393,7 +16908,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF250RX",
@@ -15443,7 +16963,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF250F",
@@ -15493,7 +17018,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CRF450RX",
@@ -15543,7 +17073,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "XR650L",
@@ -15593,7 +17128,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CBR600RR",
@@ -15643,7 +17183,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CBR500R",
@@ -15693,7 +17238,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CB500F",
@@ -15743,7 +17293,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CB500X",
@@ -15793,7 +17348,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CBR1000RR",
@@ -15843,7 +17403,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CB1000R",
@@ -15893,7 +17458,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CBR300R",
@@ -15943,7 +17513,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CB300R",
@@ -15993,7 +17568,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CBR650R",
@@ -16043,7 +17623,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "CB650R",
@@ -16093,7 +17678,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Africa Twin",
@@ -16143,7 +17733,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Fury",
@@ -16194,7 +17789,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Giorno",
@@ -16245,7 +17845,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Foreman",
@@ -16296,7 +17901,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Rubicon",
@@ -16347,7 +17957,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Foreman Rubicon",
@@ -16398,7 +18013,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Rancher",
@@ -16449,7 +18069,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Recon",
@@ -16499,7 +18124,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Rebel 1100",
@@ -16549,7 +18179,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Rebel 300",
@@ -16599,7 +18234,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Rebel 500",
@@ -16650,7 +18290,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Gold Wing Tour",
@@ -16700,7 +18345,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Grom",
@@ -16750,7 +18400,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Super Cub C125",
@@ -16800,7 +18455,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "Africa Twin Adventure Sports",
@@ -16850,7 +18510,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "HONDA",
       "model": "SXS1000S (Talon 1000)",
@@ -16901,7 +18566,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Mustang",
@@ -16952,7 +18622,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Escape",
@@ -17003,7 +18678,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Expedition",
@@ -17054,7 +18734,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Explorer",
@@ -17104,7 +18789,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-150",
@@ -17154,7 +18844,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Ranger",
@@ -17205,7 +18900,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-250",
@@ -17256,7 +18956,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-250",
@@ -17307,7 +19012,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-350",
@@ -17358,7 +19068,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-350",
@@ -17409,7 +19124,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-450",
@@ -17460,7 +19180,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-450",
@@ -17511,7 +19236,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-550",
@@ -17562,7 +19292,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-550",
@@ -17613,7 +19348,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-650",
@@ -17664,7 +19404,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-750",
@@ -17715,7 +19460,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "E-350",
@@ -17766,7 +19516,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "E-450",
@@ -17817,7 +19572,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Expedition MAX",
@@ -17868,7 +19628,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Motorhome Chassis",
@@ -17919,7 +19684,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Commercial Chassis",
@@ -17970,7 +19740,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Transit",
@@ -18021,7 +19796,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Transit",
@@ -18072,7 +19852,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Transit",
@@ -18123,7 +19908,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Transit",
@@ -18174,7 +19964,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Bronco",
@@ -18225,7 +20020,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-600",
@@ -18276,7 +20076,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "F-600",
@@ -18327,7 +20132,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "'34",
@@ -18378,7 +20188,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Bronco Sport",
@@ -18429,7 +20244,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Mustang Mach-E",
@@ -18480,7 +20300,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Maverick",
@@ -18531,7 +20356,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 5.0,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "GT MKII",
@@ -18582,7 +20412,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 5.0,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "FORD",
       "model": "Mustang GTD",
@@ -18633,7 +20468,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "KIA",
       "model": "Rio",
@@ -18684,7 +20524,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "KIA",
       "model": "Soul",
@@ -18735,7 +20580,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "KIA",
       "model": "Forte",
@@ -18786,7 +20636,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "KIA",
       "model": "Sorento",
@@ -18837,7 +20692,12 @@
       "headquarterGuanacaste": 3
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "KIA",
       "model": "Sportage",
@@ -18888,7 +20748,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "KIA",
       "model": "Niro",
@@ -18939,7 +20804,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "KIA",
       "model": "Stinger",
@@ -18990,7 +20860,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "KIA",
       "model": "Telluride",
@@ -19041,7 +20916,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "KIA",
       "model": "Seltos",
@@ -19092,7 +20972,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "KIA",
       "model": "K5",
@@ -19143,7 +21028,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "KIA",
       "model": "Carnival",
@@ -19194,7 +21084,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "KIA",
       "model": "EV6",
@@ -19245,7 +21140,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "S60",
@@ -19296,7 +21196,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "V60",
@@ -19347,7 +21252,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "XC60",
@@ -19398,7 +21308,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "XC90",
@@ -19449,7 +21364,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "V60CC",
@@ -19500,7 +21420,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "S90",
@@ -19551,7 +21476,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "V90CC",
@@ -19602,7 +21532,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B10M",
@@ -19653,7 +21588,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "Cab Over Engine HT",
@@ -19704,7 +21644,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "Cab Over Engine HT",
@@ -19755,7 +21700,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "Cab Over Engine LT",
@@ -19806,7 +21756,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "Cab Over Engine LT",
@@ -19857,7 +21812,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "F12 w/F7 Cab",
@@ -19908,7 +21868,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "F12 w/F7 Cab",
@@ -19959,7 +21924,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "F6 w/F7 Cab",
@@ -20010,7 +21980,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "F6 w/F7 Cab",
@@ -20061,7 +22036,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "Cab Behind Engine",
@@ -20112,7 +22092,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "Cab Behind Engine",
@@ -20163,7 +22148,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "Volvo Trailers",
@@ -20214,7 +22204,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "XC40",
@@ -20265,7 +22260,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "VT",
@@ -20316,7 +22316,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "VS",
@@ -20367,7 +22372,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "C40",
@@ -20418,7 +22428,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B12R",
@@ -20469,7 +22484,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B7R",
@@ -20520,7 +22540,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B12B",
@@ -20571,7 +22596,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B12M",
@@ -20622,7 +22652,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B9TL",
@@ -20673,7 +22708,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B9R",
@@ -20724,7 +22764,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B9S",
@@ -20775,7 +22820,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B9L",
@@ -20826,7 +22876,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "BXR",
@@ -20877,7 +22932,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B5R",
@@ -20928,7 +22988,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "BRLH",
@@ -20979,7 +23044,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "BXXR",
@@ -21030,7 +23100,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "BFE",
@@ -21081,7 +23156,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "BXRB",
@@ -21132,7 +23212,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B8R",
@@ -21183,7 +23268,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "BRH",
@@ -21234,7 +23324,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B5TL",
@@ -21285,7 +23380,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "BE",
@@ -21336,7 +23436,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B8L",
@@ -21387,7 +23492,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "VOLVO",
       "model": "B13R",
@@ -21438,7 +23548,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MITSUBISHI",
       "model": "Outlander",
@@ -21489,7 +23604,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MITSUBISHI",
       "model": "Mirage",
@@ -21540,7 +23660,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MITSUBISHI",
       "model": "Mirage G4",
@@ -21591,7 +23716,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.4,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MITSUBISHI",
       "model": "Outlander Sport",
@@ -21642,7 +23772,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MITSUBISHI",
       "model": "Eclipse Cross",
@@ -21693,7 +23828,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.3,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "MITSUBISHI",
       "model": "Low Speed Vehicle",
@@ -21744,7 +23884,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "A4",
@@ -21795,7 +23940,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "S4",
@@ -21846,7 +23996,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "A6",
@@ -21897,7 +24052,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "A3",
@@ -21948,7 +24108,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "S6",
@@ -21999,7 +24164,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "S8",
@@ -22050,7 +24220,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "Q7",
@@ -22101,7 +24276,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "A5",
@@ -22152,7 +24332,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "S5",
@@ -22203,7 +24388,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "Q5",
@@ -22254,7 +24444,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "RS 5",
@@ -22305,7 +24500,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "A7",
@@ -22356,7 +24556,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.5,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "Q3",
@@ -22407,7 +24612,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "SQ5",
@@ -22458,7 +24668,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "S3",
@@ -22509,7 +24724,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "S7",
@@ -22560,7 +24780,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "RS 7",
@@ -22611,7 +24836,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "A4 allroad",
@@ -22662,7 +24892,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "RS 3",
@@ -22713,7 +24948,12 @@
       "headquarterGuanacaste": 1
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "Q8",
@@ -22764,7 +25004,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "A6 allroad",
@@ -22815,7 +25060,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "Q5 e",
@@ -22866,7 +25116,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "SQ7",
@@ -22917,7 +25172,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "SQ8",
@@ -22968,7 +25228,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "RS Q8",
@@ -23019,7 +25284,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "RS e-tron GT",
@@ -23070,7 +25340,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.6,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "Q4",
@@ -23121,7 +25396,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "A8 L",
@@ -23172,7 +25452,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "Q6",
@@ -23223,7 +25508,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "SQ6",
@@ -23274,7 +25564,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "RS 6 Avant",
@@ -23325,7 +25620,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "AUDI",
       "model": "S e-tron GT",
@@ -23376,7 +25676,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "PORSCHE",
       "model": "911",
@@ -23427,7 +25732,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "PORSCHE",
       "model": "Cayenne",
@@ -23478,7 +25788,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "PORSCHE",
       "model": "Panamera",
@@ -23529,7 +25844,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.7,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "PORSCHE",
       "model": "Macan",
@@ -23580,7 +25900,12 @@
       "headquarterGuanacaste": 2
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "PORSCHE",
       "model": "Taycan",
@@ -23631,7 +25956,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "PORSCHE",
       "model": "718 Boxster",
@@ -23682,7 +26012,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.9,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "PORSCHE",
       "model": "718 Spyder",
@@ -23733,7 +26068,12 @@
       "headquarterGuanacaste": 0
     },
     "rating": 4.8,
-    "images_urls": null,
+    "images_urls": [
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400",
+      "https://placehold.co/400x400"
+    ],
     "facets": {
       "brand": "PORSCHE",
       "model": "718 Cayman",
