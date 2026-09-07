@@ -1,10 +1,12 @@
 import { HashRouter } from 'react-router-dom';
 import { liteClient as algoliasearch } from "algoliasearch/lite";
-import { InstantSearch, SearchBox, Hits  } from "react-instantsearch";
+import { InstantSearch, SearchBox, Hits, HitsPerPage  } from "react-instantsearch";
 import CategoryFilter from './pages/search/components/CategoryFilter';
 import PriceRange from './pages/search/components/PriceRange';
 import BrandFilter from './pages/search/components/BrandFilter';
+import Pagination from './pages/search/components/Pagination';
 import type { Product } from './Catalog/types';
+
 const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_APP_ID,
   import.meta.env.VITE_ALGOLIA_SEARCH_KEY
@@ -32,11 +34,32 @@ function App() {
         </h1>
 
       <InstantSearch searchClient={searchClient} indexName="grupo-01_products">
+        <Pagination />
         <SearchBox />
         <CategoryFilter />
         <PriceRange />
         <BrandFilter />
-        <Hits hitComponent={Hit} />
+        <HitsPerPage
+                className="container-option"
+                items={[
+                  {
+                    label: '16 hits per page',
+                    value: 16,
+                    default: true,
+                  },
+                  {
+                    label: '32 hits per page',
+                    value: 32,
+                  },
+                  {
+                    label: '64 hits per page',
+                    value: 64,
+                  },
+                ]}
+              />
+        <Hits hitComponent={Hit} classNames={{
+        list: "grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4",
+      }} />
         
       </InstantSearch>
       
