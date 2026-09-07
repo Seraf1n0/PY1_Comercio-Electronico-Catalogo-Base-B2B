@@ -4,6 +4,7 @@ import { InstantSearch, SearchBox, Hits  } from "react-instantsearch";
 import CategoryFilter from './pages/search/components/CategoryFilter';
 import PriceRange from './pages/search/components/PriceRange';
 import BrandFilter from './pages/search/components/BrandFilter';
+import type { Product } from './Catalog/types';
 const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_APP_ID,
   import.meta.env.VITE_ALGOLIA_SEARCH_KEY
@@ -11,7 +12,7 @@ const searchClient = algoliasearch(
 
 
 // Esto es para poder mostrar resultados
-function Hit({ hit }) {
+function Hit({ hit }: {hit: Product}) {
   return (
     <article>
       <img src={hit.images_urls?.[0]} alt={hit.title} />

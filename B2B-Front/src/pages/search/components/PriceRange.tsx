@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useRange, type UseRangeProps } from "react-instantsearch";
+import  { useState, useEffect } from "react";
+import { useRange } from "react-instantsearch";
 import { RangeSlider as SpectrumRangeSlider } from "@adobe/react-spectrum";
 
 // …
