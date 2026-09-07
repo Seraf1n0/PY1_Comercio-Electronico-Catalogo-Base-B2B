@@ -7,7 +7,7 @@ export default function CategoryFilter() {
   const { value: selectedValue } = items.find((item) => item.isRefined) || {
     value: "",
   };
-
+  
   return (
     <select value={selectedValue} onChange={(event) => refine(event.target.value)}>
       <option value="">Todas</option>

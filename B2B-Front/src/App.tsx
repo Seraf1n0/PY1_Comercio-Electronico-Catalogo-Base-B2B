@@ -2,6 +2,7 @@ import { HashRouter } from 'react-router-dom';
 import { liteClient as algoliasearch } from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits  } from "react-instantsearch";
 import CategoryFilter from './pages/search/components/CategoryFilter';
+import PriceRange from './pages/search/components/PriceRange';
 
 const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_APP_ID,
@@ -31,8 +32,10 @@ function App() {
 
       <InstantSearch searchClient={searchClient} indexName="grupo-01_products">
         <SearchBox />
+        <CategoryFilter />
+        <PriceRange />
         <Hits hitComponent={Hit} />
-        <CategoryFilter></CategoryFilter>
+        
       </InstantSearch>
       
       </div>
