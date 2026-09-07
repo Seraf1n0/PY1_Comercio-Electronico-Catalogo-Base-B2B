@@ -3,7 +3,7 @@ import { liteClient as algoliasearch } from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits  } from "react-instantsearch";
 import CategoryFilter from './pages/search/components/CategoryFilter';
 import PriceRange from './pages/search/components/PriceRange';
-
+import BrandFilter from './pages/search/components/BrandFilter';
 const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_APP_ID,
   import.meta.env.VITE_ALGOLIA_SEARCH_KEY
@@ -34,6 +34,7 @@ function App() {
         <SearchBox />
         <CategoryFilter />
         <PriceRange />
+        <BrandFilter />
         <Hits hitComponent={Hit} />
         
       </InstantSearch>
