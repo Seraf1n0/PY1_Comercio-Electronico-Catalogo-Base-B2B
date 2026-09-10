@@ -6,6 +6,11 @@ import PriceRange from './pages/search/components/PriceRange';
 import BrandFilter from './pages/search/components/BrandFilter';
 import Pagination from './pages/search/components/Pagination';
 import type { Product } from './Catalog/types';
+import ColorFilter from './pages/search/components/ColorFilter';
+import DoorsFilter from './pages/search/components/DoorsFilter';
+import DrivetrainFilter from './pages/search/components/DrivetrainFilter';
+import EngineFilter from './pages/search/components/EngineFilter';
+import { ColorEditor } from '@adobe/react-spectrum';
 
 const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_APP_ID,
@@ -39,9 +44,20 @@ function App() {
       <InstantSearch searchClient={searchClient} indexName = {algoliaIndex} >
         <Pagination />
         <SearchBox />
+        <p>Categoría</p>
         <CategoryFilter />
+        <p>Precio</p>
         <PriceRange />
+        <p>Marca</p>
         <BrandFilter />
+        <p>Color</p>
+        <ColorFilter />
+        <p># de puertas</p>
+        <DoorsFilter />
+        <p>drivetrain</p>
+        <DrivetrainFilter  />
+        <p>motor</p>
+        <EngineFilter  />
         <HitsPerPage
                 className="container-option"
                 items={[
