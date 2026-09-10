@@ -12,6 +12,9 @@ const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_SEARCH_KEY
 );
 
+//Índice de algolia para que ahora provenga de las variables de entorno
+const algoliaIndex:string = import.meta.env.VITE_ALGOLIA_INDEX_NAME;
+
 
 // Esto es para poder mostrar resultados
 function Hit({ hit }: {hit: Product}) {
@@ -33,7 +36,7 @@ function App() {
           Proyecto 1 - Comercio Electronico - Catalogo Base B2B
         </h1>
 
-      <InstantSearch searchClient={searchClient} indexName="grupo-01_products">
+      <InstantSearch searchClient={searchClient} indexName = {algoliaIndex} >
         <Pagination />
         <SearchBox />
         <CategoryFilter />
