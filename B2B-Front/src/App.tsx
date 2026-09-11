@@ -2,11 +2,12 @@ import { HashRouter } from 'react-router-dom';
 import { liteClient as algoliasearch } from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits, HitsPerPage  } from "react-instantsearch";
 
-import PriceRange from './pages/search/components/PriceRange';
+import RangeSliderFilter  from './pages/search/components/RangeSliderFilter';
 import Pagination from './pages/search/components/Pagination';
 import type { Product } from './Catalog/types';
 import DropdownFilter from './pages/search/components/DropdownFilter';
-
+import ToggleFilter from './pages/search/components/ToggleFilter';
+import YesNoFilter from './pages/search/components/YesNoFilter';
 
 const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_APP_ID,
@@ -43,7 +44,10 @@ function App() {
         <p>Categoría</p>
         <DropdownFilter pAtribute="categories" />
         <p>Precio</p>
-        <PriceRange />
+        <RangeSliderFilter
+          pLabel="Precio"
+          rangeProps={{ attribute: "price" }}
+        />
         <p>Marca</p>
         <DropdownFilter pAtribute="brand" />
         <p>Color</p>
@@ -54,6 +58,28 @@ function App() {
         <DropdownFilter pAtribute="facets.drivetrain" />
         <p>motor</p>
         <DropdownFilter pAtribute="facets.engine" />
+        <p>Tipo de Combustible</p>
+        <ToggleFilter attribute="facets.fuel_type" />
+        <p>Capacidad de tanque</p>
+        <DropdownFilter pAtribute="facets.fuel_capacity" />
+        <p>Velocidad máxima</p>
+        <DropdownFilter pAtribute="facets.max_speed" />
+        <p>CV de potencia</p>
+        <DropdownFilter pAtribute="facets.power" />
+        <p>torque</p>
+        <DropdownFilter pAtribute="facets.torque" />
+        <p>Tracción</p>
+        <ToggleFilter attribute="facets.traction" />
+        <p>Transmisión</p>
+        <DropdownFilter pAtribute="facets.transmission" />
+        <p>Año</p>
+          <RangeSliderFilter
+          pLabel="Año"
+          rangeProps={{ attribute: "facets.year" }}
+        />
+        <p>En stock</p>
+        <YesNoFilter attribute="in_stock"/>
+       
         <HitsPerPage
                 className="container-option"
                 items={[
