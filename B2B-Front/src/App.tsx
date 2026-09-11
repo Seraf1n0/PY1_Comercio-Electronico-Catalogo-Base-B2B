@@ -8,7 +8,7 @@ import type { Product } from './Catalog/types';
 import DropdownFilter from './pages/search/components/DropdownFilter';
 import ToggleFilter from './pages/search/components/ToggleFilter';
 import YesNoFilter from './pages/search/components/YesNoFilter';
-
+import ToggleFilterWithSearchBox from './pages/search/components/ToggleFilterWithSearchBox';
 const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_APP_ID,
   import.meta.env.VITE_ALGOLIA_SEARCH_KEY
@@ -41,23 +41,28 @@ function App() {
       <InstantSearch searchClient={searchClient} indexName = {algoliaIndex} >
         <Pagination />
         <SearchBox />
+        <p>Marca</p>
+        <ToggleFilterWithSearchBox attribute="brand" limit={50}/>
         <p>Categoría</p>
-        <DropdownFilter pAtribute="categories" />
+        <ToggleFilterWithSearchBox attribute="categories" limit={50}/>
         <p>Precio</p>
         <RangeSliderFilter
           pLabel="Precio"
           rangeProps={{ attribute: "price" }}
         />
-        <p>Marca</p>
-        <DropdownFilter pAtribute="brand" />
+        
         <p>Color</p>
-        <DropdownFilter pAtribute="facets.color" />
+    
+        <ToggleFilterWithSearchBox attribute="facets.color" limit={50}/>
         <p># de puertas</p>
-        <DropdownFilter pAtribute="facets.doors" />
+        <ToggleFilter attribute="facets.doors" limit={50}/>
+       
         <p>drivetrain</p>
-        <DropdownFilter pAtribute="facets.drivetrain" />
+        <ToggleFilterWithSearchBox attribute="facets.drivetrain" limit={50}/>
+      
         <p>motor</p>
-        <DropdownFilter pAtribute="facets.engine" />
+        <ToggleFilterWithSearchBox attribute="facets.engine" limit={50}/>
+       
         <p>Tipo de Combustible</p>
         <ToggleFilter attribute="facets.fuel_type" />
         <p>Capacidad de tanque</p>
@@ -71,7 +76,8 @@ function App() {
         <p>Tracción</p>
         <ToggleFilter attribute="facets.traction" />
         <p>Transmisión</p>
-        <DropdownFilter pAtribute="facets.transmission" />
+        <ToggleFilterWithSearchBox attribute="facets.transmission" limit={50}/>
+  
         <p>Año</p>
           <RangeSliderFilter
           pLabel="Año"
