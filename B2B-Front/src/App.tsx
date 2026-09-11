@@ -1,16 +1,21 @@
 import { HashRouter } from 'react-router-dom';
 import { liteClient as algoliasearch } from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits, HitsPerPage  } from "react-instantsearch";
-import CategoryFilter from './pages/search/components/CategoryFilter';
-import PriceRange from './pages/search/components/PriceRange';
-import BrandFilter from './pages/search/components/BrandFilter';
+
+import RangeSliderFilter  from './pages/search/components/RangeSliderFilter';
 import Pagination from './pages/search/components/Pagination';
 import type { Product } from './Catalog/types';
+import DropdownFilter from './pages/search/components/DropdownFilter';
+import ToggleFilter from './pages/search/components/ToggleFilter';
+import YesNoFilter from './pages/search/components/YesNoFilter';
 
 const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_APP_ID,
   import.meta.env.VITE_ALGOLIA_SEARCH_KEY
 );
+
+//Índice de algolia para que ahora provenga de las variables de entorno
+const algoliaIndex:string = import.meta.env.VITE_ALGOLIA_INDEX_NAME;
 
 
 // Esto es para poder mostrar resultados
@@ -33,12 +38,48 @@ function App() {
           Proyecto 1 - Comercio Electronico - Catalogo Base B2B
         </h1>
 
-      <InstantSearch searchClient={searchClient} indexName="grupo-01_products">
+      <InstantSearch searchClient={searchClient} indexName = {algoliaIndex} >
         <Pagination />
         <SearchBox />
-        <CategoryFilter />
-        <PriceRange />
-        <BrandFilter />
+        <p>Categoría</p>
+        <DropdownFilter pAtribute="categories" />
+        <p>Precio</p>
+        <RangeSliderFilter
+          pLabel="Precio"
+          rangeProps={{ attribute: "price" }}
+        />
+        <p>Marca</p>
+        <DropdownFilter pAtribute="brand" />
+        <p>Color</p>
+        <DropdownFilter pAtribute="facets.color" />
+        <p># de puertas</p>
+        <DropdownFilter pAtribute="facets.doors" />
+        <p>drivetrain</p>
+        <DropdownFilter pAtribute="facets.drivetrain" />
+        <p>motor</p>
+        <DropdownFilter pAtribute="facets.engine" />
+        <p>Tipo de Combustible</p>
+        <ToggleFilter attribute="facets.fuel_type" />
+        <p>Capacidad de tanque</p>
+        <DropdownFilter pAtribute="facets.fuel_capacity" />
+        <p>Velocidad máxima</p>
+        <DropdownFilter pAtribute="facets.max_speed" />
+        <p>CV de potencia</p>
+        <DropdownFilter pAtribute="facets.power" />
+        <p>torque</p>
+        <DropdownFilter pAtribute="facets.torque" />
+        <p>Tracción</p>
+        <ToggleFilter attribute="facets.traction" />
+        <p>Transmisión</p>
+        <DropdownFilter pAtribute="facets.transmission" />
+        <p>Año</p>
+          <RangeSliderFilter
+          pLabel="Año"
+          rangeProps={{ attribute: "facets.year" }}
+        />
+        <p>En stock</p>
+        <YesNoFilter attribute="in_stock"/>
+       
         <HitsPerPage
                 className="container-option"
                 items={[

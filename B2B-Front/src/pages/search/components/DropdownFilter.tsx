@@ -2,8 +2,8 @@ import { useMenu } from "react-instantsearch";
 
 
 //Código extraído de https://www.algolia.com/doc/api-reference/widgets/menu-select/react
-export default function BrandFilter() {
-  const { items, refine } = useMenu({ attribute: "brand", limit: 50 }); // El atributo es fijo. El limite está colocado en 50 para que muestre todas.
+export default function DropdownFilter({ pAtribute }: {pAtribute: string}) {
+  const { items, refine } = useMenu({ attribute: pAtribute, limit: 50 }); // Atributo dinámico. El limite está colocado en 50 para que muestre todas.
   const { value: selectedValue } = items.find((item) => item.isRefined) || {
     value: "",
   };
