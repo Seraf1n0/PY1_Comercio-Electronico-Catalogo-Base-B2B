@@ -1,16 +1,12 @@
 import { HashRouter } from 'react-router-dom';
 import { liteClient as algoliasearch } from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits, HitsPerPage  } from "react-instantsearch";
-import CategoryFilter from './pages/search/components/CategoryFilter';
+
 import PriceRange from './pages/search/components/PriceRange';
-import BrandFilter from './pages/search/components/BrandFilter';
 import Pagination from './pages/search/components/Pagination';
 import type { Product } from './Catalog/types';
-import ColorFilter from './pages/search/components/ColorFilter';
-import DoorsFilter from './pages/search/components/DoorsFilter';
-import DrivetrainFilter from './pages/search/components/DrivetrainFilter';
-import EngineFilter from './pages/search/components/EngineFilter';
-import { ColorEditor } from '@adobe/react-spectrum';
+import DropdownFilter from './pages/search/components/DropdownFilter';
+
 
 const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_APP_ID,
@@ -45,19 +41,19 @@ function App() {
         <Pagination />
         <SearchBox />
         <p>Categoría</p>
-        <CategoryFilter />
+        <DropdownFilter pAtribute="categories" />
         <p>Precio</p>
         <PriceRange />
         <p>Marca</p>
-        <BrandFilter />
+        <DropdownFilter pAtribute="brand" />
         <p>Color</p>
-        <ColorFilter />
+        <DropdownFilter pAtribute="facets.color" />
         <p># de puertas</p>
-        <DoorsFilter />
+        <DropdownFilter pAtribute="facets.doors" />
         <p>drivetrain</p>
-        <DrivetrainFilter  />
+        <DropdownFilter pAtribute="facets.drivetrain" />
         <p>motor</p>
-        <EngineFilter  />
+        <DropdownFilter pAtribute="facets.engine" />
         <HitsPerPage
                 className="container-option"
                 items={[
