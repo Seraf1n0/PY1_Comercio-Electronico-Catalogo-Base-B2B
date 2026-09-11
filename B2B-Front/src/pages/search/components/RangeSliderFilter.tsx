@@ -31,7 +31,8 @@ export default function RangeSliderFilter({
   useEffect(() => {
     setValue({ start: from, end: to });
   }, [from, to]);
-
+  
+  
   return (
     <SpectrumRangeSlider
       label={pLabel}
@@ -41,6 +42,7 @@ export default function RangeSliderFilter({
       onChange={setValue}
       onChangeEnd={({ start, end }) => refine([start, end])}
       isDisabled={!canRefine}
+      UNSAFE_className="my-range-slider"
     />
   );
 }

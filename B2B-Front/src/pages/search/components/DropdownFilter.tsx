@@ -8,8 +8,9 @@ export default function DropdownFilter({ pAtribute }: {pAtribute: string}) {
     value: "",
   };
   
+  
   return (
-    <select value={selectedValue} onChange={(event) => refine(event.target.value)}>
+    <select className="select" value={selectedValue} onChange={(event) => refine(event.target.value)}>
       <option value="">Todas</option>
       {items.map((item) => (
         <option key={item.value} value={item.value}>

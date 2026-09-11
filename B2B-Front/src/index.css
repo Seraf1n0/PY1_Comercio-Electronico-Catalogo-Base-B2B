@@ -1,1 +1,8 @@
 @import "tailwindcss";
+@plugin "daisyui";
+.my-range-slider {
+  --spectrum-slider-track-color: #d1d5db;
+  --spectrum-slider-track-color-active: #4f46e5;
+  --spectrum-slider-handle-background-color: #4f46e5;
+  --spectrum-slider-handle-border-color: #4f46e5;
+}
