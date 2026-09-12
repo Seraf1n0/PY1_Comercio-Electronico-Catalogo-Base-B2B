@@ -9,6 +9,7 @@ type RangeSliderFilterProps = {
   formatValue?: (value: number) => string;
 };
 
+//Range slider genérico.
 export default function RangeSliderFilter({
   pLabel,
   rangeProps,

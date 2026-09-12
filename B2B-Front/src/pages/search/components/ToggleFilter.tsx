@@ -2,7 +2,7 @@ import {
   useRefinementList,
   type UseRefinementListProps,
 } from "react-instantsearch";
-
+//Filtros de checkbox, ponen la lista de filtros disponibles a partir del atributo elegido
 export default function ToggleFilter(props: UseRefinementListProps) {
   const { items, refine } = useRefinementList(props);
 

@@ -9,15 +9,16 @@ import {
   useClearRefinements,
 } from "react-instantsearch";
 
+//Componentes utilizados creados por nosotros
 import RangeSliderFilter from "./pages/search/components/RangeSliderFilter";
 import Pagination from "./pages/search/components/Pagination";
 import type { Product } from "./Catalog/types";
-//import DropdownFilter from "./pages/search/components/DropdownFilter";
 import ToggleFilter from "./pages/search/components/ToggleFilter";
 import YesNoFilter from "./pages/search/components/YesNoFilter";
 import ToggleFilterWithSearchBox from "./pages/search/components/ToggleFilterWithSearchBox";
 import ProductDetailPage from "./pages/productDetail/ProductDetailPage";
 
+//Variables de entorno
 const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_APP_ID,
   import.meta.env.VITE_ALGOLIA_SEARCH_KEY,
@@ -26,7 +27,7 @@ const searchClient = algoliasearch(
 //Índice de algolia para que ahora provenga de las variables de entorno
 const algoliaIndex: string = import.meta.env.VITE_ALGOLIA_INDEX_NAME;
 
-// Esto es para poder mostrar resultados
+// Esto es para poder mostrar resultados. Se utiliza el tipo hit de algolia
 function Hit({ hit }: { hit: Product }) {
   return (
     <Link to={`/producto/${hit.objectID}`}>
@@ -57,13 +58,14 @@ function ClearFiltersButton() {
   );
 }
 
+//Estos son todos los filtros, se hizo una función ya que se debe de usar en dos partes. Una en la de la interfaz desktop y otra en el sidebar de móvil entonces para no tenerlo dos veces se hizo con una función
 function FiltersList() {
   const sectionTitleClass =
     "text-xs font-bold uppercase tracking-wide text-slate-500 mb-3";
 
   return (
     <div className="flex flex-col">
-      {/* ───────── General ───────── */}
+ 
       <div className="py-4 border-b border-slate-200">
         <p className={sectionTitleClass}>General</p>
 
@@ -96,7 +98,6 @@ function FiltersList() {
         </div>
       </div>
 
-      {/* ───────── Diseño y carrocería ───────── */}
       <div className="py-4 border-b border-slate-200">
         <p className={sectionTitleClass}>Diseño y carrocería</p>
 
@@ -107,13 +108,12 @@ function FiltersList() {
           </div>
 
           <div>
-            <p className="font-semibold"># de puertas</p>
+            <p className="font-semibold">Número de puertas</p>
             <ToggleFilter attribute="facets.doors" limit={50} />
           </div>
         </div>
       </div>
 
-      {/* ───────── Motor y rendimiento ───────── */}
       <div className="py-4 border-b border-slate-200">
         <p className={sectionTitleClass}>Motor y rendimiento</p>
 
@@ -162,7 +162,6 @@ function FiltersList() {
         </div>
       </div>
 
-      {/* ───────── Transmisión y tracción ───────── */}
       <div className="py-4 border-b border-slate-200">
         <p className={sectionTitleClass}>Transmisión y tracción</p>
 
@@ -190,7 +189,7 @@ function FiltersList() {
         </div>
       </div>
 
-      {/* ───────── Disponibilidad ───────── */}
+
       <div className="pt-4">
         <p className={sectionTitleClass}>Disponibilidad</p>
         <p className="font-semibold">En stock</p>
@@ -200,25 +199,8 @@ function FiltersList() {
   );
 }
 
-function Navbar() {
-  return (
-    <div className="grid grid-cols-3 items-center bg-white shadow px-4 sm:px-6 py-3">
-      {/* Columna izquierda: vacía, mantiene el centrado */}
-      <div />
 
-      {/* Columna central: título */}
-      <p className="text-center font-bold text-lg text-indigo-700 truncate">
-        Bombocars
-      </p>
-
-      {/* Columna derecha: carrito */}
-      <div className="flex justify-end">
-        <ShoppingCartIcon className="h-6 w-6 text-gray-700 cursor-pointer hover:text-indigo-600" />
-      </div>
-    </div>
-  );
-}
-
+//Aquí está toda la vista de la página principal. Se juntan todos los componentes para crear lo que se ve en pantalla
 function SearchView() {
   return (
     <div className="min-h-screen bg-slate-50">

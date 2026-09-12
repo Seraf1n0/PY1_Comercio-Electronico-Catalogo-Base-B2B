@@ -4,13 +4,14 @@ import {
   type UseRefinementListProps,
 } from "react-instantsearch";
 
+//Este es el componente más utilizado. Permite filtrar por checkbox y a su vez filtrar los checkbox que se pueden seleccionar. Se usa por ejemplo en las marcas ya que son muchas.
 export default function ToggleFilterWithSearchBox(
   props: UseRefinementListProps,
 ) {
   const { items, refine, searchForItems } = useRefinementList(props);
   const [query, setQuery] = useState("");
 
-  //Con el input se filtra, es parte del componente y no veo que valga la pena traer elotro componente además que no sabría como implementarlo de momento se queda así
+  //Con el input se filtra, es parte del componente y no veo que valga la pena traer el otro componente además que no sabría como implementarlo de momento se queda así
   //https://www.algolia.com/doc/api-reference/widgets/refinement-list/react
 
   const clearSearch = () => {

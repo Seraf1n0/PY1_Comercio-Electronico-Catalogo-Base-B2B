@@ -2,6 +2,7 @@ import React from "react";
 import { usePagination, type UsePaginationProps } from "react-instantsearch";
 
 // Tomado de https://www.algolia.com/doc/api-reference/widgets/pagination/react y el estilo es de tailwind
+//Componente de paginación propio de algolia
 export default function Pagination(props: UsePaginationProps) {
   const {
     pages,
@@ -119,7 +120,7 @@ function PaginationItem({
   );
 }
 
-// Lleva el scroll al tope de la página con animación suave.
+// Lleva el scroll al tope de la página
 function scrollToTop() {
   window.scrollTo({
     top: 0,
