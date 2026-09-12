@@ -11,6 +11,7 @@ export default function YesNoFilter(props: UseToggleRefinementProps) {
     <label>
       <input
         type="checkbox"
+        className="checkbox"
         checked={value.isRefined}
         onChange={(event) => {
           refine({ isRefined: !event.target.checked });

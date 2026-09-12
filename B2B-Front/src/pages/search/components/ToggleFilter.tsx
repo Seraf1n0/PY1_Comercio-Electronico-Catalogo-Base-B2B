@@ -13,6 +13,7 @@ export default function ToggleFilter(props: UseRefinementListProps) {
           <label>
             <input
               type="checkbox"
+              className="checkbox"
               checked={item.isRefined}
               onChange={() => refine(item.value)}
             />
