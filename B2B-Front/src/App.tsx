@@ -1,5 +1,6 @@
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import { liteClient as algoliasearch } from "algoliasearch/lite";
+import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import {
   InstantSearch,
   SearchBox,
@@ -58,11 +59,10 @@ function ClearFiltersButton() {
 
 function FiltersList() {
   const sectionTitleClass =
-  "text-xs font-bold uppercase tracking-wide text-slate-500 mb-3";
+    "text-xs font-bold uppercase tracking-wide text-slate-500 mb-3";
 
   return (
     <div className="flex flex-col">
-
       {/* ───────── General ───────── */}
       <div className="py-4 border-b border-slate-200">
         <p className={sectionTitleClass}>General</p>
@@ -169,12 +169,18 @@ function FiltersList() {
         <div className="flex flex-col gap-4">
           <div>
             <p className="font-semibold">Transmisión</p>
-            <ToggleFilterWithSearchBox attribute="facets.transmission" limit={50} />
+            <ToggleFilterWithSearchBox
+              attribute="facets.transmission"
+              limit={50}
+            />
           </div>
 
           <div>
             <p className="font-semibold">Tren Motriz</p>
-            <ToggleFilterWithSearchBox attribute="facets.drivetrain" limit={50} />
+            <ToggleFilterWithSearchBox
+              attribute="facets.drivetrain"
+              limit={50}
+            />
           </div>
 
           <div>
@@ -194,14 +200,39 @@ function FiltersList() {
   );
 }
 
+function Navbar() {
+  return (
+    <div className="grid grid-cols-3 items-center bg-white shadow px-4 sm:px-6 py-3">
+      {/* Columna izquierda: vacía, mantiene el centrado */}
+      <div />
+
+      {/* Columna central: título */}
+      <p className="text-center font-bold text-lg text-indigo-700 truncate">
+        Bombocars
+      </p>
+
+      {/* Columna derecha: carrito */}
+      <div className="flex justify-end">
+        <ShoppingCartIcon className="h-6 w-6 text-gray-700 cursor-pointer hover:text-indigo-600" />
+      </div>
+    </div>
+  );
+}
+
 function SearchView() {
   return (
     <div className="min-h-screen bg-slate-50">
-      <header className="bg-blue-800/90 py-6 shadow-md">
-        <h1 className="text-center text-xl font-bold tracking-tight text-white sm:text-2xl">
-          Proyecto 1 - Comercio Electronico - Catalogo Base B2B
+      <div className="grid grid-cols-3 items-center bg-white px-4 sm:px-6 py-4 shadow-md">
+        
+        <div />
+        <h1 className="text-center text-xl font-bold tracking-tight text-blue-800 sm:text-2xl truncate">
+          Bombocars
         </h1>
-      </header>
+
+        <div className="flex justify-end">
+          <ShoppingCartIcon className="h-6 w-6 text-gray-700 cursor-pointer hover:text-indigo-600" />
+        </div>
+      </div>
 
       <InstantSearch searchClient={searchClient} indexName={algoliaIndex}>
         <div className="mx-auto max-w-7xl px-4 py-6 flex flex-col gap-4">
