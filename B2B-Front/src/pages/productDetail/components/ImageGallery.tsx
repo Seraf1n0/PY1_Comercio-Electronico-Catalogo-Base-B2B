@@ -19,15 +19,14 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
   
 
   return (
-    <div className="flex items-center justify-center gap-4">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-4">
       {/* Imagen grande - Principal */}
-      <div className="relative">
+      <div className="relative w-full md:w-auto">
         <img
           src={images[selectedIndex]}
           alt="Imagen del producto"
-          className="max-w-md h-96 object-contain rounded"
+          className="w-full md:max-w-md h-64 sm:h-80 md:h-96 object-contain rounded"
         />
-        {/* Flechas para movernos */}
         <button
           onClick={prevImage}
           className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-200 rounded-full px-2"
@@ -38,19 +37,19 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           onClick={nextImage}
           className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-200 rounded-full px-2"
         >
-            <ChevronRightIcon className="h-6 w-6 text-gray-600 cursor-pointer" />
+          <ChevronRightIcon className="h-6 w-6 text-gray-600 cursor-pointer" />
         </button>
       </div>
 
-      {/* Fotos mini como carrusel */}
-      <div className="flex flex-col gap-2">
+      {/* Fotos mini */}
+      <div className="flex flex-row md:flex-col gap-2 overflow-x-auto md:overflow-visible">
         {images.map((img, i) => (
           <img
             key={i}
             src={img}
             alt="Miniatura"
             onClick={() => setSelectedIndex(i)}
-            className={`w-20 h-20 object-cover rounded cursor-pointer border-2 ${
+            className={`w-16 h-16 md:w-20 md:h-20 shrink-0 object-cover rounded cursor-pointer border-2 ${
               i === selectedIndex ? "border-indigo-600" : "border-transparent"
             }`}
           />
