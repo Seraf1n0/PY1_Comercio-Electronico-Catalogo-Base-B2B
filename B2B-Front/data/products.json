@@ -32,10 +32,9 @@
     },
     "rating": 4.7,
     "images_urls": [
-      "https://placehold.co/400x400",
-      "https://placehold.co/400x400",
-      "https://placehold.co/400x400",
-      "https://placehold.co/400x400"
+      "https://res.cloudinary.com/c0b0qhos/image/upload/v1788807116/ToyotaCrownSignia26Bronce.jpg",
+      "https://res.cloudinary.com/c0b0qhos/image/upload/v1788807016/ToyotabZ2026White.webp"
+
     ],
     "facets": {
       "brand": "TOYOTA",
