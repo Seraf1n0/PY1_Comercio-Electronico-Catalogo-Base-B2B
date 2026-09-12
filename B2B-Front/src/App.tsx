@@ -5,12 +5,13 @@ import {
   SearchBox,
   Hits,
   HitsPerPage,
+  useClearRefinements,
 } from "react-instantsearch";
 
 import RangeSliderFilter from "./pages/search/components/RangeSliderFilter";
 import Pagination from "./pages/search/components/Pagination";
 import type { Product } from "./Catalog/types";
-import DropdownFilter from "./pages/search/components/DropdownFilter";
+//import DropdownFilter from "./pages/search/components/DropdownFilter";
 import ToggleFilter from "./pages/search/components/ToggleFilter";
 import YesNoFilter from "./pages/search/components/YesNoFilter";
 import ToggleFilterWithSearchBox from "./pages/search/components/ToggleFilterWithSearchBox";
@@ -38,104 +39,158 @@ function Hit({ hit }: { hit: Product }) {
   );
 }
 
-function FiltersList() {
+// Botón para limpiar todos los filtros activos de una sola vez
+function ClearFiltersButton() {
+  const { refine, canRefine } = useClearRefinements();
+
+  if (!canRefine) return null;
+
   return (
-    <>
-      <div>
-        <p className="font-semibold">Marca</p>
-        <ToggleFilterWithSearchBox attribute="brand" limit={50} />
+    <button
+      type="button"
+      onClick={() => refine()}
+      className="text-sm font-medium text-red-600 hover:text-red-700 hover:underline"
+    >
+      Borrar filtros
+    </button>
+  );
+}
+
+function FiltersList() {
+  const sectionTitleClass =
+  "text-xs font-bold uppercase tracking-wide text-slate-500 mb-3";
+
+  return (
+    <div className="flex flex-col">
+
+      {/* ───────── General ───────── */}
+      <div className="py-4 border-b border-slate-200">
+        <p className={sectionTitleClass}>General</p>
+
+        <div className="flex flex-col gap-4">
+          <div>
+            <p className="font-semibold">Marca</p>
+            <ToggleFilterWithSearchBox attribute="brand" limit={50} />
+          </div>
+
+          <div>
+            <p className="font-semibold">Categoría</p>
+            <ToggleFilterWithSearchBox attribute="categories" limit={50} />
+          </div>
+
+          <div>
+            <p className="font-semibold">Precio</p>
+            <RangeSliderFilter
+              pLabel="Precio"
+              rangeProps={{ attribute: "price" }}
+            />
+          </div>
+
+          <div>
+            <p className="font-semibold">Año</p>
+            <RangeSliderFilter
+              pLabel="Año"
+              rangeProps={{ attribute: "facets.year" }}
+            />
+          </div>
+        </div>
       </div>
 
-      <div>
-        <p className="font-semibold">Categoría</p>
-        <ToggleFilterWithSearchBox attribute="categories" limit={50} />
+      {/* ───────── Diseño y carrocería ───────── */}
+      <div className="py-4 border-b border-slate-200">
+        <p className={sectionTitleClass}>Diseño y carrocería</p>
+
+        <div className="flex flex-col gap-4">
+          <div>
+            <p className="font-semibold">Color</p>
+            <ToggleFilterWithSearchBox attribute="facets.color" limit={50} />
+          </div>
+
+          <div>
+            <p className="font-semibold"># de puertas</p>
+            <ToggleFilter attribute="facets.doors" limit={50} />
+          </div>
+        </div>
       </div>
 
-      <div>
-        <p className="font-semibold">Precio</p>
-        <RangeSliderFilter
-          pLabel="Precio"
-          rangeProps={{ attribute: "price" }}
-        />
+      {/* ───────── Motor y rendimiento ───────── */}
+      <div className="py-4 border-b border-slate-200">
+        <p className={sectionTitleClass}>Motor y rendimiento</p>
+
+        <div className="flex flex-col gap-4">
+          <div>
+            <p className="font-semibold">Motor</p>
+            <ToggleFilterWithSearchBox attribute="facets.engine" limit={50} />
+          </div>
+
+          <div>
+            <p className="font-semibold">Caballos de fuerza</p>
+            <RangeSliderFilter
+              pLabel="CV"
+              rangeProps={{ attribute: "facets.power_int_value" }}
+            />
+          </div>
+
+          <div>
+            <p className="font-semibold">Torque "LB-FT"</p>
+            <RangeSliderFilter
+              pLabel="Torque"
+              rangeProps={{ attribute: "facets.torque_int_value" }}
+            />
+          </div>
+
+          <div>
+            <p className="font-semibold">Velocidad máxima "KM/H"</p>
+            <RangeSliderFilter
+              pLabel="Velocidad Máxima"
+              rangeProps={{ attribute: "facets.max_speed_int_value" }}
+            />
+          </div>
+
+          <div>
+            <p className="font-semibold">Tipo de combustible</p>
+            <ToggleFilter attribute="facets.fuel_type" />
+          </div>
+
+          <div>
+            <p className="font-semibold">Capacidad de tanque "L"</p>
+            <RangeSliderFilter
+              pLabel="Capacidad de Tanque"
+              rangeProps={{ attribute: "facets.fuel_capacity_int_value" }}
+            />
+          </div>
+        </div>
       </div>
 
-      <div>
-        <p className="font-semibold">Color</p>
-        <ToggleFilterWithSearchBox attribute="facets.color" limit={50} />
+      {/* ───────── Transmisión y tracción ───────── */}
+      <div className="py-4 border-b border-slate-200">
+        <p className={sectionTitleClass}>Transmisión y tracción</p>
+
+        <div className="flex flex-col gap-4">
+          <div>
+            <p className="font-semibold">Transmisión</p>
+            <ToggleFilterWithSearchBox attribute="facets.transmission" limit={50} />
+          </div>
+
+          <div>
+            <p className="font-semibold">Tren Motriz</p>
+            <ToggleFilterWithSearchBox attribute="facets.drivetrain" limit={50} />
+          </div>
+
+          <div>
+            <p className="font-semibold">Tracción</p>
+            <ToggleFilter attribute="facets.traction" />
+          </div>
+        </div>
       </div>
 
-      <div>
-        <p className="font-semibold"># de puertas</p>
-        <ToggleFilter attribute="facets.doors" limit={50} />
-      </div>
-
-      <div>
-        <p className="font-semibold">Drivetrain</p>
-        <ToggleFilterWithSearchBox attribute="facets.drivetrain" limit={50} />
-      </div>
-
-      <div>
-        <p className="font-semibold">Motor</p>
-        <ToggleFilterWithSearchBox attribute="facets.engine" limit={50} />
-      </div>
-
-      <div>
-        <p className="font-semibold">Tipo de combustible</p>
-        <ToggleFilter attribute="facets.fuel_type" />
-      </div>
-
-      <div>
-        <p className="font-semibold">Capacidad de tanque</p>
-        <RangeSliderFilter
-          pLabel="Capacidad de Tanque"
-          rangeProps={{ attribute: "facets.fuel_capacity_int_value" }}
-        />
-      </div>
-
-      <div>
-        <p className="font-semibold">Velocidad máxima</p>
-        <RangeSliderFilter
-          pLabel="Velocidad Máxima"
-          rangeProps={{ attribute: "facets.max_speed_int_value" }}
-        />
-      </div>
-
-      <div>
-        <p className="font-semibold">CV de potencia</p>
-        <RangeSliderFilter
-          pLabel="CV"
-          rangeProps={{ attribute: "facets.power_int_value" }}
-        />
-      </div>
-
-      <div>
-        <p className="font-semibold">Torque</p>
-        <DropdownFilter pAtribute="facets.torque" />
-      </div>
-
-      <div>
-        <p className="font-semibold">Tracción</p>
-        <ToggleFilter attribute="facets.traction" />
-      </div>
-
-      <div>
-        <p className="font-semibold">Transmisión</p>
-        <ToggleFilterWithSearchBox attribute="facets.transmission" limit={50} />
-      </div>
-
-      <div>
-        <p className="font-semibold">Año</p>
-        <RangeSliderFilter
-          pLabel="Año"
-          rangeProps={{ attribute: "facets.year" }}
-        />
-      </div>
-
-      <div>
+      {/* ───────── Disponibilidad ───────── */}
+      <div className="pt-4">
+        <p className={sectionTitleClass}>Disponibilidad</p>
         <p className="font-semibold">En stock</p>
         <YesNoFilter attribute="in_stock" />
       </div>
-    </>
+    </div>
   );
 }
 
@@ -213,18 +268,21 @@ function SearchView() {
             <main className="flex flex-1 flex-col gap-4">
               <div className="flex items-center justify-between rounded-lg bg-white px-4 py-2 shadow-sm ring-1 ring-slate-200">
                 <span className="text-sm text-slate-500">Resultados</span>
-                <HitsPerPage
-                  classNames={{
-                    root: "container-option",
-                    select:
-                      "rounded-md border border-slate-300 bg-white px-2 py-1 text-sm text-slate-700 outline-none focus:border-indigo-500",
-                  }}
-                  items={[
-                    { label: "16 por página", value: 16, default: true },
-                    { label: "32 por página", value: 32 },
-                    { label: "64 por página", value: 64 },
-                  ]}
-                />
+                <div className="flex items-center gap-4">
+                  <ClearFiltersButton />
+                  <HitsPerPage
+                    classNames={{
+                      root: "container-option",
+                      select:
+                        "rounded-md border border-slate-300 bg-white px-2 py-1 text-sm text-slate-700 outline-none focus:border-indigo-500",
+                    }}
+                    items={[
+                      { label: "16 por página", value: 16, default: true },
+                      { label: "32 por página", value: 32 },
+                      { label: "64 por página", value: 64 },
+                    ]}
+                  />
+                </div>
               </div>
 
               <Hits

@@ -111,11 +111,20 @@ function PaginationItem({
           }
           event.preventDefault();
           onClick(event);
+          scrollToTop();
         }}
         {...props}
       />
     </li>
   );
+}
+
+// Lleva el scroll al tope de la página con animación suave.
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
 
 function isModifierClick(event: React.MouseEvent) {
