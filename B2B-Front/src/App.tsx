@@ -17,6 +17,7 @@ import ToggleFilter from "./pages/search/components/ToggleFilter";
 import YesNoFilter from "./pages/search/components/YesNoFilter";
 import ToggleFilterWithSearchBox from "./pages/search/components/ToggleFilterWithSearchBox";
 import ProductDetailPage from "./pages/productDetail/ProductDetailPage";
+import AddToCartButton from "./components/AddToCartButton";
 
 //Variables de entorno
 const searchClient = algoliasearch(
@@ -30,14 +31,18 @@ const algoliaIndex: string = import.meta.env.VITE_ALGOLIA_INDEX_NAME;
 // Esto es para poder mostrar resultados. Se utiliza el tipo hit de algolia
 function Hit({ hit }: { hit: Product }) {
   return (
-    <Link to={`/producto/${hit.objectID}`}>
-      <article>
-        <img src={hit.images_urls?.[0]} alt={hit.title} />
-        <p>{hit.categories?.[0] ?? "Sin categoría"}</p>
-        <h1>{hit.title ?? "Sin título"}</h1>
-        <p>₡{hit.price?.toLocaleString("es-CR") ?? "N/D"}</p>
-      </article>
-    </Link>
+    <div>
+      <Link to={`/producto/${hit.objectID}`}>
+        <article>
+          <img src={hit.images_urls?.[0]} alt={hit.title} />
+          <p>{hit.categories?.[0] ?? "Sin categoría"}</p>
+          <h1>{hit.title ?? "Sin título"}</h1>
+          <p>₡{hit.price?.toLocaleString("es-CR") ?? "N/D"}</p>
+        </article>
+      </Link>
+      <AddToCartButton product={hit} /> 
+    </div>
+
   );
 }
 
