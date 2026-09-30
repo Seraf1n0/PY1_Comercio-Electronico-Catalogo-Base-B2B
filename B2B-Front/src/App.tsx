@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import { liteClient as algoliasearch } from "algoliasearch/lite";
-import { ShoppingCartIcon } from "@heroicons/react/24/solid";
+import CartPreview from "./components/CartPreview";
 import {
   InstantSearch,
   SearchBox,
@@ -217,7 +217,7 @@ function SearchView() {
         </h1>
 
         <div className="flex justify-end">
-          <ShoppingCartIcon className="h-6 w-6 text-gray-700 cursor-pointer hover:text-indigo-600" />
+          <CartPreview />
         </div>
       </div>
 

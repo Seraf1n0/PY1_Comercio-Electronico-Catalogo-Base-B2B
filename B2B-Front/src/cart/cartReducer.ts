@@ -8,6 +8,7 @@ export interface State {
 
 export type Action =
  | { type: 'ADD_ITEM'; payload: Product }
+ | { type: 'INCREASE_ITEM'; payload: string }
  | { type: 'DECREASE_ITEM'; payload: string}
  | { type: 'REMOVE_ITEM'; payload: string }
  
@@ -31,6 +32,13 @@ export const reducer = (state: State, action: Action): State => {
 
             return { items: [...state.items, newItem] };
         }
+
+        case 'INCREASE_ITEM':
+            return {
+                items: state.items
+                .map((item) => item.id === action.payload ? {...item, quantity: item.quantity + 1} : item)
+                .filter((item) => item.quantity > 0)
+            } 
 
         case 'DECREASE_ITEM':
             return {
