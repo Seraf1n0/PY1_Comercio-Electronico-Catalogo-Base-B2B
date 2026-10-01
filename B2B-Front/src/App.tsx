@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import { liteClient as algoliasearch } from "algoliasearch/lite";
-import { ShoppingCartIcon } from "@heroicons/react/24/solid";
+import CartPreview from "./components/CartPreview";
 import {
   InstantSearch,
   SearchBox,
@@ -17,6 +17,7 @@ import ToggleFilter from "./pages/search/components/ToggleFilter";
 import YesNoFilter from "./pages/search/components/YesNoFilter";
 import ToggleFilterWithSearchBox from "./pages/search/components/ToggleFilterWithSearchBox";
 import ProductDetailPage from "./pages/productDetail/ProductDetailPage";
+import AddToCartButton from "./components/AddToCartButton";
 
 //Variables de entorno
 const searchClient = algoliasearch(
@@ -30,14 +31,18 @@ const algoliaIndex: string = import.meta.env.VITE_ALGOLIA_INDEX_NAME;
 // Esto es para poder mostrar resultados. Se utiliza el tipo hit de algolia
 function Hit({ hit }: { hit: Product }) {
   return (
-    <Link to={`/producto/${hit.objectID}`}>
-      <article>
-        <img src={hit.images_urls?.[0]} alt={hit.title} />
-        <p>{hit.categories?.[0] ?? "Sin categoría"}</p>
-        <h1>{hit.title ?? "Sin título"}</h1>
-        <p>₡{hit.price?.toLocaleString("es-CR") ?? "N/D"}</p>
-      </article>
-    </Link>
+    <div>
+      <Link to={`/producto/${hit.objectID}`}>
+        <article>
+          <img src={hit.images_urls?.[0]} alt={hit.title} />
+          <p>{hit.categories?.[0] ?? "Sin categoría"}</p>
+          <h1>{hit.title ?? "Sin título"}</h1>
+          <p>₡{hit.price?.toLocaleString("es-CR") ?? "N/D"}</p>
+        </article>
+      </Link>
+      <AddToCartButton product={hit} /> 
+    </div>
+
   );
 }
 
@@ -212,7 +217,7 @@ function SearchView() {
         </h1>
 
         <div className="flex justify-end">
-          <ShoppingCartIcon className="h-6 w-6 text-gray-700 cursor-pointer hover:text-indigo-600" />
+          <CartPreview />
         </div>
       </div>
 
