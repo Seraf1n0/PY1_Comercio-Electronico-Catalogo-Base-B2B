@@ -11,6 +11,7 @@ import FiltersList from "./components/FiltersList";
 import MobileFiltersDrawer from "./components/MobileFiltersDrawer";
 import ClearFiltersButton from "./components/ClearFiltersButton";
 import ProductHit from "./components/ProductHit";
+import NoResults from "./components/NoResults";
 
 // Vista completa de la página de búsqueda
 export default function SearchPage() {
@@ -80,7 +81,7 @@ export default function SearchPage() {
                   item: "rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-200",
                 }}
               />
-
+               <NoResults />
               <div className="flex justify-center pt-4">
                 <Pagination />
               </div>
