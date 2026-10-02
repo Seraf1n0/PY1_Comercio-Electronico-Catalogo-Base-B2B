@@ -50,7 +50,7 @@ export default function SearchPage() {
 
           <div className="flex flex-col gap-6 md:flex-row">
             <aside className="hidden md:flex md:flex-col gap-4 w-72 shrink-0 rounded-xl bg-white p-4 shadow-sm ring-1 ring-slate-200 h-fit">
-              <FiltersList />
+              <FiltersList collapsible/>
             </aside>
 
             <main className="flex flex-1 flex-col gap-4">
