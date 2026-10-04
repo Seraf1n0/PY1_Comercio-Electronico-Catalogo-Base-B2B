@@ -1,17 +1,29 @@
 import { useCart } from "../cart/useCart";
-import CartItemRow from "./CartItemRow";   
+import CartItemRow from "./CartItemRow";
 
-export default function CartPanel() {  
-    const { state } = useCart();   
-    
-    const totalPrice = state.items.reduce((total, item) => total + item.price * item.quantity, 0);
+export default function CartPanel() {
+    const { state, dispatch } = useCart();
+
+    const totalPrice = state.items.reduce((total, item) => total + item.subtotal, 0);
 
 
   return (
     <div className="absolute right-0 top-10 z-40 w-80 rounded-xl bg-white p-4 shadow-lg ring-1 ring-slate-200">
-      <h2 className="mb-3 text-sm font-bold uppercase tracking-wide text-slate-500">
-        Tu carrito
-      </h2>
+      <div className="mb-3 flex items-center justify-between">
+        <h2 className="text-sm font-bold uppercase tracking-wide text-slate-500">
+          Tu carrito
+        </h2>
+
+        {state.items.length > 0 && (
+          <button
+            type="button"
+            onClick={() => dispatch({ type: 'CLEAR_CART' })}
+            className="cursor-pointer text-xs font-semibold text-red-600 hover:underline"
+          >
+            Vaciar carrito
+          </button>
+        )}
+      </div>
 
       {state.items.length === 0 ? (
         <p className="py-6 text-center text-sm text-slate-500">

@@ -2,8 +2,8 @@ import type { Product } from "../../Catalog/types";
 import ImageGallery from "./components/ImageGallery";
 import SpecsTable from "./components/SpecsTable";
 import StockByLocation from "./components/StockByLocation";
-import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import ProductNavbar from "./components/ProductNavbar";
+import AddToCartButton from "../../components/AddToCartButton";
 
 
 interface ProductDetailProps {
@@ -36,10 +36,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                     </p>
                     <p className="text-sm text-gray-600 mt-1">Impuestos: Ya incluidos</p>
 
-                    <button className="mt-4 flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded w-full cursor-pointer">
-                        <ShoppingCartIcon className="h-5 w-5" />
-                        Agregar al carrito
-                    </button>
+                    <AddToCartButton product={product} />
                 </div>
             </div>
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRange, type UseRangeProps } from "react-instantsearch";
 
 type RangeSliderFilterProps = {
@@ -27,10 +27,12 @@ export default function RangeSliderFilter({
   );
 
   const [value, setValue] = useState({ start: from, end: to });
+  const [prevRange, setPrevRange] = useState({ from, to });
 
-  useEffect(() => {
+  if (prevRange.from !== from || prevRange.to !== to) {
+    setPrevRange({ from, to });
     setValue({ start: from, end: to });
-  }, [from, to]);
+  }
 
   const span = max - min || 1;
   const leftPct = ((value.start - min) / span) * 100;

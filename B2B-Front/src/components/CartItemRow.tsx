@@ -15,7 +15,7 @@ export default function CartItemRow({ item }: { item: CartItem }) {
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-semibold">{item.title}</p>
         <p className="text-xs text-slate-500">
-          ₡{(item.price * item.quantity).toLocaleString("es-CR")}
+          ₡{item.subtotal.toLocaleString("es-CR")}
         </p>
 
         <div className="mt-1 flex items-center gap-2">
