@@ -80,7 +80,6 @@ function PaginationItem({
   isCurrent,
   href,
   onClick,
-  className,
   ...props
 }: PaginationItemProps) {
   const estiloBase =

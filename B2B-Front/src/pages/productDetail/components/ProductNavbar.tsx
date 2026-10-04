@@ -1,5 +1,6 @@
-import {HomeIcon, LinkIcon, HeartIcon, ShoppingCartIcon } from "@heroicons/react/24/solid";
+import {HomeIcon, LinkIcon, HeartIcon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
+import CartPreview from "../../../components/CartPreview";
 
 interface ProductNavbarProps {
   title: string;
@@ -35,7 +36,7 @@ export default function ProductNavbar({ title, totalStock }: ProductNavbarProps)
           onClick={handleCopyLink}
         />
         <HeartIcon className="h-6 w-6 text-gray-700 cursor-pointer hover:text-red-500" />
-        <ShoppingCartIcon className="h-6 w-6 text-gray-700 cursor-pointer hover:text-indigo-600" />
+        <CartPreview />
       </div>
     </div>
   );

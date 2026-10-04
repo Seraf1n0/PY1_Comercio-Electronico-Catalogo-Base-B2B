@@ -1,23 +1,22 @@
-import { createContext, useReducer, type Dispatch, type ReactNode } from 'react';
-import type {State, Action} from './cartReducer';
+import { useEffect, useReducer, type ReactNode } from 'react';
 import { reducer } from './cartReducer';
-
-type CartContextType = {
-    state: State;
-    dispatch: Dispatch<Action>;
-}
-
-export const CartContext = createContext<CartContextType | null>(null);
+import { loadCart, saveCart } from './storage';
+import { CartContext } from './CartContext';
 
 export function CartProvider( { children }: { children: ReactNode }) {
-    const [state, dispatch] = useReducer(reducer, { items: [] });
+    const [state, dispatch] = useReducer(reducer, { items: [] }, () => ({
+        items: loadCart(),
+    }));
 
-    console.log(state.items);
+    useEffect(() => {
+        saveCart(state.items);
+    }, [state.items]);
+
     return (
         <CartContext.Provider value={{ state, dispatch }}>
             {children}
         </CartContext.Provider>
 
     )
-    
+
 }
