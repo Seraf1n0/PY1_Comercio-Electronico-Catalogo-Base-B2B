@@ -12,6 +12,11 @@ export default function CartPanel({ onClose }: { onClose?: () => void }) {
         navigate("/carrito");
     };
 
+    const handleSubmitOrder = () => {
+        onClose?.();
+        navigate("/finalizar-compra");
+    }
+
   return (
     <div className="absolute right-0 top-10 z-40 w-80 rounded-xl bg-white p-4 shadow-lg ring-1 ring-slate-200">
       <div className="mb-3 flex items-center justify-between">
@@ -56,6 +61,7 @@ export default function CartPanel({ onClose }: { onClose?: () => void }) {
             <button
                 type="button"
                 className="w-full cursor-pointer rounded bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
+                onClick={handleSubmitOrder}
             >
                 Finalizar compra
             </button>
