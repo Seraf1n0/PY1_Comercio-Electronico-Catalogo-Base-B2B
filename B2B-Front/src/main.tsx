@@ -2,9 +2,15 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
+import { CartProvider } from './cart/cartContext.tsx'
+import { CartFeedbackProvider } from './components/AddToCartFeedback.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <CartProvider>
+      <CartFeedbackProvider>
+        <App />
+      </CartFeedbackProvider>
+    </CartProvider>
   </StrictMode>,
 )

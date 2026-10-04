@@ -1,15 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRange, type UseRangeProps } from "react-instantsearch";
-import { RangeSlider as SpectrumRangeSlider } from "@adobe/react-spectrum";
 
-//Tipo para recibir los parámetros
 type RangeSliderFilterProps = {
   pLabel: string;
   rangeProps: UseRangeProps;
   formatValue?: (value: number) => string;
 };
 
-//Range slider genérico.
 export default function RangeSliderFilter({
   pLabel,
   rangeProps,
@@ -20,8 +17,6 @@ export default function RangeSliderFilter({
   const min = (range.min as number) || 0;
   const max = (range.max as number) || 0;
 
-  const [value, setValue] = useState({ start: min, end: max });
-
   const from = Math.max(
     min,
     Number.isFinite(start[0] as number) ? (start[0] as number) : min
@@ -31,9 +26,19 @@ export default function RangeSliderFilter({
     Number.isFinite(start[1] as number) ? (start[1] as number) : max
   );
 
-  useEffect(() => {
+  const [value, setValue] = useState({ start: from, end: to });
+  const [prevRange, setPrevRange] = useState({ from, to });
+
+  if (prevRange.from !== from || prevRange.to !== to) {
+    setPrevRange({ from, to });
     setValue({ start: from, end: to });
-  }, [from, to]);
+  }
+
+  const span = max - min || 1;
+  const leftPct = ((value.start - min) / span) * 100;
+  const rightPct = ((value.end - min) / span) * 100;
+
+  const commit = () => refine([value.start, value.end]);
 
   return (
     <div className="flex flex-col gap-1">
@@ -42,17 +47,49 @@ export default function RangeSliderFilter({
         <span className="text-sm text-slate-500">{formatValue(value.end)}</span>
       </div>
 
-      <SpectrumRangeSlider
-        aria-label={pLabel}
-        minValue={min}
-        maxValue={max}
-        value={value}
-        onChange={setValue}
-        onChangeEnd={({ start, end }) => refine([start, end])}
-        isDisabled={!canRefine}
-        UNSAFE_className="my-range-slider"
-        UNSAFE_style={{ width: "100%" }}
-      />
+      <div className="dual-range">
+        {/* Track gris + parte seleccionada */}
+        <div className="dual-range-track" />
+        <div
+          className="dual-range-selected"
+          style={{ left: `${leftPct}%`, width: `${rightPct - leftPct}%` }}
+        />
+
+        <input
+          type="range"
+          aria-label={`${pLabel} mínimo`}
+          min={min}
+          max={max}
+          value={value.start}
+          disabled={!canRefine}
+          onChange={(e) =>
+            setValue((v) => ({
+              ...v,
+              start: Math.min(Number(e.target.value), v.end),
+            }))
+          }
+          onMouseUp={commit}
+          onTouchEnd={commit}
+          onKeyUp={commit}
+        />
+        <input
+          type="range"
+          aria-label={`${pLabel} máximo`}
+          min={min}
+          max={max}
+          value={value.end}
+          disabled={!canRefine}
+          onChange={(e) =>
+            setValue((v) => ({
+              ...v,
+              end: Math.max(Number(e.target.value), v.start),
+            }))
+          }
+          onMouseUp={commit}
+          onTouchEnd={commit}
+          onKeyUp={commit}
+        />
+      </div>
 
       {!canRefine && (
         <span className="text-xs text-slate-400">Sin opciones disponibles</span>

@@ -9,13 +9,15 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "seeding": "node scripts/seed.mjs"
   },
   "dependencies": {
     "@adobe/react-spectrum": "^3.47.5",
     "@heroicons/react": "^2.2.0",
     "algoliasearch": "^5.57.0",
     "daisyui": "^5.7.36",
+    "dotenv": "^18.0.5",
     "gh-pages": "^6.3.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
