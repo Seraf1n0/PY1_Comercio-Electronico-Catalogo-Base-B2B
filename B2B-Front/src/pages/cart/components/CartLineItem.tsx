@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { TrashIcon } from "@heroicons/react/24/outline";
 import type { CartItem } from "../../../cart/types";
 import { useCart } from "../../../cart/useCart";
@@ -23,9 +24,12 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
 
         <div className="flex min-w-0 flex-1 flex-col">
           <div className="flex items-start justify-between gap-2">
-            <h3 className="line-clamp-2 font-semibold text-slate-800">
+            <Link
+              to={`/producto/${item.id}`}
+              className="line-clamp-2 font-semibold text-slate-800 transition hover:text-indigo-600 hover:underline"
+            >
               {item.title}
-            </h3>
+            </Link>
             <button
               type="button"
               onClick={onRemove}

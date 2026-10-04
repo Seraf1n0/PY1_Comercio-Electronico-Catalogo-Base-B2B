@@ -38,7 +38,7 @@ export default function CartPanel({ onClose }: { onClose?: () => void }) {
         <>
           <ul className="flex max-h-72 flex-col gap-3 overflow-y-auto">
             {state.items.map((item) => (
-                <CartItemRow key={item.id} item={item} />
+                <CartItemRow key={item.id} item={item} onNavigate={onClose} />
             ))}
           </ul>
 

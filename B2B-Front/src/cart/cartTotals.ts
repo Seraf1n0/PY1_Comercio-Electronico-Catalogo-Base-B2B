@@ -1,4 +1,5 @@
 import type { CartItem } from './types';
+import { getShippingCost } from './shipping';
 
 export const IVA_RATE = 0.13;
 
@@ -13,6 +14,10 @@ export function getIva(subtotal: number): number {
 export function getTotal(items: CartItem[]): number {
   const subtotal = getProductSubtotal(items);
   return subtotal + getIva(subtotal);
+}
+
+export function getOrderTotal(items: CartItem[]): number {
+  return getTotal(items) + getShippingCost(items);
 }
 
 export function formatColones(value: number): string {

@@ -4,7 +4,6 @@ import { HomeIcon } from "@heroicons/react/24/solid";
 import { useCart } from "../../cart/useCart";
 import type { CartItem } from "../../cart/types";
 import { getIva, getProductSubtotal, getTotal, formatColones } from "../../cart/cartTotals";
-import { useCartFeedback } from "../../components/cartFeedbackContext";
 import CartSummary from "../../components/CartSummary";
 import CartLineItem from "./components/CartLineItem";
 import EmptyCart from "./components/EmptyCart";
@@ -12,7 +11,6 @@ import EmptyCart from "./components/EmptyCart";
 export default function CartPage() {
   const { state, dispatch } = useCart();
   const navigate = useNavigate();
-  const { notify } = useCartFeedback();
   const [removed, setRemoved] = useState<{ item: CartItem; index: number } | null>(null);
 
   const subtotal = getProductSubtotal(state.items);
@@ -45,7 +43,7 @@ export default function CartPage() {
   };
 
   const handleCheckout = () => {
-    notify("El proceso de pago estará disponible próximamente");
+    navigate("/finalizar-compra");
   };
 
   return (
