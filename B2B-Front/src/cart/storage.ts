@@ -1,7 +1,7 @@
 import type { CartItem } from './types';
 
-const STORAGE_KEY = 'bombocars:cart:v1';
-const STORAGE_VERSION = 1;
+const STORAGE_KEY = 'bombocars:cart:v2';
+const STORAGE_VERSION = 2;
 
 interface PersistedCart {
   version: number;
@@ -21,7 +21,9 @@ function isValidItem(value: unknown): value is CartItem {
     typeof item.price === 'number' &&
     typeof item.quantity === 'number' &&
     item.quantity > 0 &&
-    typeof item.img === 'string'
+    typeof item.img === 'string' &&
+    typeof item.stock === 'number' &&
+    item.stock >= 0
   );
 }
 
@@ -47,7 +49,10 @@ export function loadCart(): CartItem[] {
 
     return parsed.items
       .filter(isValidItem)
-      .map((item) => ({ ...item, subtotal: item.price * item.quantity }));
+      .map((item) => ({
+        ...item,
+        subtotal: item.price * item.quantity,
+      }));
   } catch {
     return [];
   }

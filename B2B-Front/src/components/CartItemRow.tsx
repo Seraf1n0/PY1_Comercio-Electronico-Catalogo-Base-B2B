@@ -32,8 +32,8 @@ export default function CartItemRow({ item }: { item: CartItem }) {
             type="button"
             aria-label="Aumentar cantidad"
             onClick={() => dispatch({ type: 'INCREASE_ITEM', payload: item.id })}
-
-            className="h-6 w-6 rounded border border-slate-300 text-sm hover:bg-slate-100 cursor-pointer"
+            disabled={item.quantity >= item.stock}
+            className="h-6 w-6 rounded border border-slate-300 text-sm hover:bg-slate-100 cursor-pointer disabled:cursor-not-allowed disabled:opacity-40"
           >
             +
           </button>
