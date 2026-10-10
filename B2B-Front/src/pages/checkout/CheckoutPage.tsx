@@ -8,21 +8,27 @@ import {
   getShippingCost,
   getTotalUnits,
 } from "../../cart/shipping";
-import { useCartFeedback } from "../../components/cartFeedbackContext";
 import CartSummary from "../../components/CartSummary";
 import EmptyCart from "../cart/components/EmptyCart";
+import { useState } from "react";
+import CheckoutModal from "../checkout/components/CheckoutModal";
 
 export default function CheckoutPage() {
   const { state } = useCart();
   const navigate = useNavigate();
-  const { notify } = useCartFeedback();
-
   const shipping = getShippingCost(state.items);
   const total = getOrderTotal(state.items);
   const totalUnits = getTotalUnits(state.items);
 
+  const [isOpen, setIsOpen] =  useState(false);
+
+
+  const onClose = () => {
+    setIsOpen(false);
+  } 
+
   const handlePay = () => {
-    notify("La pasarela de pago estará disponible próximamente");
+    setIsOpen(true);
   };
 
   return (
@@ -117,6 +123,7 @@ export default function CheckoutPage() {
           </aside>
         </div>
       )}
+      <CheckoutModal isOpen={isOpen} onClose={onClose} items={state.items}></CheckoutModal>
 
       {state.items.length > 0 && (
         <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white px-4 pb-4 pt-3 shadow-lg lg:hidden">
