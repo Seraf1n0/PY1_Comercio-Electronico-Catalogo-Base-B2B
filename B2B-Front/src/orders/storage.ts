@@ -4,7 +4,6 @@ import type{ Order } from "../orders/types";
 
 
 const Orders_key = "orders";
-const orders: Order[] = []
 
 export function getNextOrderNumber(): number {
     const orders = getOrders();
