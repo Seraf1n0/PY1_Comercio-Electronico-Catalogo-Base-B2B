@@ -36,5 +36,7 @@ export type Order = {
     orderStatus: OrderStatus;
     paymentStatus: PaymentStatus;
     items: OrderItem[];
+    transactionId?: string;   //Esto cuando ya se completa el pago   
+    paymentAttempts?: number;  
 
 }

@@ -53,3 +53,38 @@ export function saveOrder(order: Order): void {
 }
 
 // AQUI pongan las funciones que necesiten en el futuro para guardar, modificar o leer las ordenes
+
+//Esta es de uso interno al momento de invocar a updateOrder
+function saveAllOrders(orders: Order[]): void {
+    try {
+        window.localStorage.setItem(Orders_key, JSON.stringify(orders));
+    } catch (error) {
+        console.error("Can't save the orders", error);
+        throw new Error("No pudimos guardar tu orden, inténtalo de nuevo");
+    }
+}
+
+// Busca una orden por su número.
+//  devuelve null si no existe
+export function getOrderByNumber(orderNumber: number): Order | null {
+    return getOrders().find((order) => order.orderNumber === orderNumber) ?? null;
+}
+
+
+// Mezcla los cambios con la orden existente y la vuelve a guardar
+export function updateOrder(
+    orderNumber: number,
+    changes: Partial<Order>
+): Order | null {
+    const orders = getOrders();
+    const index = orders.findIndex((order) => order.orderNumber === orderNumber);
+
+    if (index === -1) {
+        return null;
+    }
+
+    const updated: Order = { ...orders[index], ...changes };
+    orders[index] = updated;
+    saveAllOrders(orders);
+    return updated;
+}
