@@ -3,6 +3,8 @@ import SearchPage from "./pages/search/SearchPage";
 import ProductDetailPage from "./pages/productDetail/ProductDetailPage";
 import CartPage from "./pages/cart/CartPage";
 import CheckoutPage from "./pages/checkout/CheckoutPage";
+import PaymentPage from "./pages/payment/PaymentPage";
+import ConfirmationPage from "./pages/confirmation/ConfirmationPage";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Route path="/producto/:id" element={<ProductDetailPage />} />
         <Route path="/carrito" element={<CartPage />} />
         <Route path="/finalizar-compra" element={<CheckoutPage />} />
+        <Route path="/pago/:orderNumber" element={<PaymentPage />} />
+        <Route path="/confirmacion/:orderNumber" element={<ConfirmationPage />} />
       </Routes>
     </HashRouter>
   );
