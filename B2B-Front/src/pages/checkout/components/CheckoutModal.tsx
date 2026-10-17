@@ -9,7 +9,12 @@ import {
 import { getShippingCost } from "../../../cart/shipping";
 import type { Order, Buyer, Delivery, OrderItem } from "../../../orders/types";
 import { getNextOrderNumber, saveOrder } from "../../../orders/storage";
+import { errorMessages } from "../../../lib/errorMessages";
+import Spinner from "../../../components/Spinner";
 import { useNavigate } from "react-router-dom";
+
+// Espera breve para que el spinner sea perceptible antes de navegar al pago.
+const CONFIRM_DELAY_MS = 350;
 
 type ModalProps = {
   isOpen: boolean;
@@ -176,6 +181,9 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   const [cantonError, setCantonError] = useState("");
   const [addressError, setAddressError] = useState("");
 
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
   const provinces = Object.keys(cantonsByProvince);
 
   const availableCantons = cantonsByProvince[province] || [];
@@ -215,29 +223,34 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   const phoneRegex = /^[2-8][0-9]{7}$/;
 
   const validateName = (value: string) => {
-    if (!value.trim()) return "Campo obligatorio";
-    if (value.trim().length < 2) return "Muy corto";
-    if (!nameAndLastNameRegex.test(value.trim())) return "Solo letras";
+    if (!value.trim()) return errorMessages.validation.required;
+    if (value.trim().length < 2) return errorMessages.validation.nameTooShort;
+    if (!nameAndLastNameRegex.test(value.trim()))
+      return errorMessages.validation.nameInvalid;
     return "";
   };
 
   const validateEmail = (value: string) => {
-    if (!value.trim()) return "Campo obligatorio";
-    if (value.trim().length < 2) return "Correo muy corto";
-    if (!emailRegex.test(value.trim())) return "Introduzca un correo válido";
+    if (!value.trim()) return errorMessages.validation.required;
+    if (value.trim().length < 2)
+      return errorMessages.validation.emailTooShort;
+    if (!emailRegex.test(value.trim()))
+      return errorMessages.validation.emailInvalid;
     return "";
   };
 
   const validatePhone = (value: string) => {
-    if (!value.trim()) return "Campo obligatorio";
-    if (value.trim().length < 8) return "Teléfono muy corto";
-    if (!phoneRegex.test(value.trim())) return "Introduzca un teléfono válido";
+    if (!value.trim()) return errorMessages.validation.required;
+    if (value.trim().length < 8) return errorMessages.validation.phoneTooShort;
+    if (!phoneRegex.test(value.trim()))
+      return errorMessages.validation.phoneInvalid;
     return "";
   };
 
   const validateAddress = (value: string) => {
-    if (!value.trim()) return "Campo obligatorio";
-    if (value.trim().length < 10) return "La dirección es muy corta";
+    if (!value.trim()) return errorMessages.validation.required;
+    if (value.trim().length < 10)
+      return errorMessages.validation.addressTooShort;
     return "";
   };
 
@@ -264,8 +277,12 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   };
 
   const handleNextStepEntrega = () => {
-    const nextProvinceError = province ? "" : "Selecciona una provincia";
-    const nextCantonError = canton ? "" : "Selecciona un cantón";
+    const nextProvinceError = province
+      ? ""
+      : errorMessages.validation.provinceRequired;
+    const nextCantonError = canton
+      ? ""
+      : errorMessages.validation.cantonRequired;
     const nextAddressError = validateAddress(address);
 
     setProvinceError(nextProvinceError);
@@ -277,33 +294,40 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
     }
   };
 
-  const confirmOrder = () => {
+  const confirmOrder = async () => {
     if (isSubmitting.current) return;
     isSubmitting.current = true;
+    setSubmitting(true);
+    setSubmitError("");
 
     const buyer: Buyer = { name, lastName, email, phone };
     const delivery: Delivery = { address, province, canton, additionalAddress: null };
     const order: Order = generateOrder(buyer, delivery, items);
 
+    // Pequeña espera para que el usuario perciba el estado de carga.
+    await new Promise((resolve) => window.setTimeout(resolve, CONFIRM_DELAY_MS));
+
     try {
-        saveOrder(order);
+      saveOrder(order);
     } catch (error) {
-        isSubmitting.current = false;   // permite reintentar si no se pudo guardar
-        throw error;
+      console.error("No se pudo guardar la orden", error);
+      isSubmitting.current = false;   // permite reintentar si no se pudo guardar
+      setSubmitting(false);
+      setSubmitError(errorMessages.order.saveFailed);
+      return;
     }
 
     // La orden queda PENDING/PENDING y el usuario pasa a la pantalla de pago.
-    
     navigate(`/pago/${order.orderNumber}`, { replace: true });
 };
 
   return isOpen ? (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4 sm:p-6">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4 animate-fade-in sm:p-6">
       <div
         role="dialog"
         aria-modal="true"
         aria-labelledby="checkout-modal-title"
-        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-5 shadow-2xl sm:p-8"
+        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-5 shadow-2xl animate-scale-in sm:p-8"
       >
         <div className="flex items-start justify-between gap-4">
           <div>
@@ -378,7 +402,7 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
         </ol>
 
         {activeStep === "PERSONAL" && (
-          <div className="mt-8 space-y-6">
+          <div className="mt-8 space-y-6 animate-fade-in-up">
             <div>
               <h3 className="text-lg font-bold text-slate-900">
                 Información personal
@@ -514,7 +538,7 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
         )}
 
         {activeStep === "ENTREGA" && (
-          <div className="mt-8 space-y-6">
+          <div className="mt-8 space-y-6 animate-fade-in-up">
             <div>
               <h3 className="text-lg font-bold text-slate-900">
                 Datos de entrega
@@ -667,7 +691,7 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
           </div>
         )}
         {activeStep === "RESUMEN" && (
-          <div className="mt-8 space-y-6">
+          <div className="mt-8 space-y-6 animate-fade-in-up">
             <div>
               <h3 className="text-lg font-bold text-slate-900">
                 Revisa tu pedido
@@ -744,6 +768,12 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
               </div>
             </section>
 
+            {submitError && (
+              <p role="alert" className="text-sm font-semibold text-red-600">
+                {submitError}
+              </p>
+            )}
+
             <div className="flex flex-col-reverse gap-3 border-t border-slate-100 pt-5 sm:flex-row sm:items-center sm:justify-between">
               <button
                 type="button"
@@ -754,10 +784,18 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
               </button>
               <button
                 type="button"
-                onClick={() => confirmOrder()}
-                className="w-full rounded-lg bg-green-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 cursor-pointer sm:ml-auto sm:w-auto"
+                onClick={() => void confirmOrder()}
+                disabled={submitting}
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer sm:ml-auto sm:w-auto"
               >
-                Confirmar pedido
+                {submitting ? (
+                  <>
+                    <Spinner className="h-4 w-4" />
+                    Creando tu orden…
+                  </>
+                ) : (
+                  "Confirmar pedido"
+                )}
               </button>
             </div>
           </div>

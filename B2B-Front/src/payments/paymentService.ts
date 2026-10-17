@@ -50,7 +50,8 @@ function saveBalances(balances: Balances): void {
     try {
         window.localStorage.setItem(BALANCES_KEY, JSON.stringify(balances));
     } catch {
-
+        // Si el almacenamiento no esta disponible, se ignora: los saldos
+        // vuelven a los valores por defecto de cards.json.
     }
 }
 

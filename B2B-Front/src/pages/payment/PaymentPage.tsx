@@ -13,6 +13,8 @@ import {
 import type { Order } from "../../orders/types";
 import { processPayment } from "../../payments/paymentService";
 import type { CardData } from "../../payments/types";
+import { errorMessages } from "../../lib/errorMessages";
+import Spinner from "../../components/Spinner";
 import OrderSummary from "./components/OrderSummary";
 import PaymentResultMessage from "./components/PaymentResultMessage";
 
@@ -35,7 +37,7 @@ const formatExpiry = (value: string) => {
 function validateRequired(card: CardData): FieldErrors {
   const errors: FieldErrors = {};
   (Object.keys(card) as (keyof CardData)[]).forEach((key) => {
-    if (card[key].trim() === "") errors[key] = "Este campo es obligatorio";
+    if (card[key].trim() === "") errors[key] = errorMessages.validation.required;
   });
   return errors;
 }
@@ -72,7 +74,7 @@ const inputClass =
 
 function Notice({ title, text, to, action }: { title: string; text: string; to: string; action: string }) {
   return (
-    <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-20 text-center">
+    <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-20 text-center animate-fade-in">
       <h2 className="text-xl font-bold text-slate-800">{title}</h2>
       <p className="text-sm text-slate-500">{text}</p>
       <Link to={to} className="rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white transition hover:bg-indigo-700">
@@ -162,13 +164,27 @@ export default function PaymentPage() {
   //Protecciones para ordenes que se borran o cancelan
 
   if (!order) {
-    return <Notice title="No encontramos tu orden" text="Revisa el enlace o vuelve al catálogo." to="/" action="Volver al catálogo" />;
+    return (
+      <Notice
+        title={errorMessages.order.notFound.title}
+        text={errorMessages.order.notFound.text}
+        to="/"
+        action={errorMessages.order.notFound.action}
+      />
+    );
   }
   if (order.orderStatus === "CONFIRMED") {
     return <Navigate to={`/confirmacion/${order.orderNumber}`} replace />;
   }
   if (order.orderStatus === "FAILED") {
-    return <Notice title="Esta orden fue cancelada" text="Puedes volver a tu carrito para iniciar una nueva compra." to="/carrito" action="Ir al carrito" />;
+    return (
+      <Notice
+        title={errorMessages.order.cancelled.title}
+        text={errorMessages.order.cancelled.text}
+        to="/carrito"
+        action={errorMessages.order.cancelled.action}
+      />
+    );
   }
 
   return (
@@ -199,7 +215,7 @@ export default function PaymentPage() {
             id="payment-form"
             onSubmit={onSubmit}
             noValidate
-            className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200"
+            className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 animate-fade-in-up"
           >
             <h2 className="mb-4 text-base font-bold text-slate-800">Datos de la tarjeta</h2>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -253,7 +269,7 @@ export default function PaymentPage() {
             >
               {isProcessing ? (
                 <>
-                  <span className="h-5 w-5 animate-spin rounded-full border-2 border-white/40 border-t-white" />
+                  <Spinner className="h-5 w-5" />
                   Procesando pago…
                 </>
               ) : (
@@ -264,8 +280,12 @@ export default function PaymentPage() {
               )}
             </button>
             {isProcessing && (
-              <p className="mt-2 text-center text-xs text-slate-500">
-                No cierres ni recargues esta página.
+              <p
+                role="status"
+                aria-live="polite"
+                className="mt-2 text-center text-xs text-slate-500"
+              >
+                Procesando pago… No cierres ni recargues esta página.
               </p>
             )}
           </div>

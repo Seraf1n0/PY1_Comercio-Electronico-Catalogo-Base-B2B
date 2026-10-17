@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { searchClient, algoliaIndex } from "../../algoliaClient";
 import type { Product } from "../../Catalog/types";
+import { errorMessages } from "../../lib/errorMessages";
 import ProductDetail from "./ProductDetail";
+import ProductDetailSkeleton from "../../components/ProductDetailSkeleton";
 
 interface AlgoliaHitsResult {
   hits: Product[];
@@ -34,12 +36,12 @@ export default function ProductDetailPage() {
         const hits = (response.results[0] as AlgoliaHitsResult).hits;
 
         if (hits.length === 0) {
-          setError("Producto no encontrado");
+          setError(errorMessages.catalog.productNotFound);
         } else {
           setProduct(hits[0]);
         }
       } catch {
-        if (!cancelled) setError("Ocurrió un error al buscar el producto");
+        if (!cancelled) setError(errorMessages.catalog.productLoadError);
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -52,7 +54,14 @@ export default function ProductDetailPage() {
     };
   }, [id]);
 
-  if (loading) return <p>Cargando producto...</p>;
+  if (loading) {
+    return (
+      <div role="status" aria-live="polite" aria-busy="true">
+        <span className="sr-only">Cargando producto…</span>
+        <ProductDetailSkeleton />
+      </div>
+    );
+  }
   if (error) return <p>{error}</p>;
   if (!product) return null;
 

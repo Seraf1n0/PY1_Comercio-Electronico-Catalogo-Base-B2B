@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { getOrderByNumber } from "../../orders/storage";
+import { errorMessages } from "../../lib/errorMessages";
 import OrderSummary from "../payment/components/OrderSummary";
 
 export default function ConfirmationPage() {
@@ -10,14 +11,16 @@ export default function ConfirmationPage() {
   // Solo se muestra la confirmación si la orden realmente está confirmada
   if (!order || order.orderStatus !== "CONFIRMED") {
     return (
-      <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-20 text-center">
+      <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-20 text-center animate-fade-in">
         <h2 className="text-xl font-bold text-slate-800">
-          {order ? "Tu compra aún no está confirmada" : "No encontramos tu orden"}
+          {order
+            ? errorMessages.order.notConfirmed.title
+            : errorMessages.order.notFound.title}
         </h2>
         <p className="text-sm text-slate-500">
           {order
-            ? "El pago de esta orden no se ha completado."
-            : "Revisa el enlace o vuelve al catálogo."}
+            ? errorMessages.order.notConfirmed.text
+            : errorMessages.order.notFound.text}
         </p>
         <Link
           to={order?.orderStatus === "PENDING" ? `/pago/${order.orderNumber}` : "/"}
@@ -35,8 +38,8 @@ export default function ConfirmationPage() {
   return (
     <div className="min-h-screen bg-slate-50 px-4 py-8">
       <div className="mx-auto max-w-3xl">
-        <div className="flex flex-col items-center gap-2 text-center">
-          <CheckCircleIcon className="h-16 w-16 text-green-600" />
+        <div className="flex flex-col items-center gap-2 text-center animate-fade-in-up">
+          <CheckCircleIcon className="h-16 w-16 text-green-600 animate-scale-in" />
           <h1 className="text-2xl font-bold text-slate-900">¡Compra confirmada!</h1>
           <p className="text-sm text-slate-500">
             Tu pago fue aprobado y tu orden quedó registrada.

@@ -47,7 +47,9 @@ export function saveOrder(order: Order): void {
         window.localStorage.setItem(Orders_key, JSON.stringify(newOrder));
     } catch (error) {
         console.error("Can't push the order", error);
-        throw new Error("No pudimos guardar tu orden, intentalo de nuevo");
+        throw new Error("No pudimos guardar tu orden, intentalo de nuevo", {
+            cause: error,
+        });
     }    
   
 }
@@ -60,7 +62,9 @@ function saveAllOrders(orders: Order[]): void {
         window.localStorage.setItem(Orders_key, JSON.stringify(orders));
     } catch (error) {
         console.error("Can't save the orders", error);
-        throw new Error("No pudimos guardar tu orden, inténtalo de nuevo");
+        throw new Error("No pudimos guardar tu orden, inténtalo de nuevo", {
+            cause: error,
+        });
     }
 }
 

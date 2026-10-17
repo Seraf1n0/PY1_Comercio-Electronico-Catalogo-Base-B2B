@@ -116,7 +116,7 @@ export default function CartPage() {
       )}
 
       {state.items.length > 0 && (
-        <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white px-4 pb-4 pt-3 shadow-lg lg:hidden">
+        <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white px-4 pb-4 pt-3 shadow-lg lg:hidden animate-slide-up">
           <div className="mx-auto flex max-w-6xl items-end justify-between gap-4">
             <div className="text-sm text-slate-500">
               <p>

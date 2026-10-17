@@ -3,6 +3,7 @@ import {
   ExclamationTriangleIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
+import { errorMessages } from "../../../lib/errorMessages";
 
 type Props = {
   kind: "declined" | "error";
@@ -13,14 +14,14 @@ type Props = {
 
 const CONTENT = {
   declined: {
-    title: "Tu pago no fue aprobado",
-    hint: "Tu orden sigue pendiente y no se realizó ningún cobro. Verifica los datos de la tarjeta e inténtalo de nuevo.",
+    title: errorMessages.paymentDeclined.title,
+    hint: errorMessages.paymentDeclined.hint,
     Icon: XCircleIcon,
     style: "border-red-200 bg-red-50 text-red-800",
   },
   error: {
-    title: "No pudimos procesar tu pago",
-    hint: "Ocurrió un problema con el servicio de pagos. Tu compra no fue completada y no se realizó ningún cobro. Puedes intentarlo de nuevo.",
+    title: errorMessages.paymentServiceError.title,
+    hint: errorMessages.paymentServiceError.hint,
     Icon: ExclamationTriangleIcon,
     style: "border-amber-200 bg-amber-50 text-amber-800",
   },
@@ -32,7 +33,7 @@ export default function PaymentResultMessage({ kind, detail, onRetry, disabled }
   const { title, hint, Icon, style } = CONTENT[kind];
 
   return (
-    <div role="alert" className={`rounded-xl border p-4 ${style}`}>
+    <div role="alert" className={`rounded-xl border p-4 animate-fade-in-up ${style}`}>
       <div className="flex items-start gap-3">
         <Icon className="mt-0.5 h-6 w-6 shrink-0" />
         <div className="min-w-0 flex-1">
