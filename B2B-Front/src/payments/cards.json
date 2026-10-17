@@ -1,0 +1,38 @@
+[
+  {
+    "label": "Tarjeta con fondos amplios",
+    "holder": "COMPRADOR PRUEBA",
+    "number": "4000111111110001",
+    "expiry": "12/30",
+    "cvv": "123",
+    "balance": 1000000000,
+    "errorProbability": 0.15
+  },
+  {
+    "label": "Tarjeta con fondos medios",
+    "holder": "COMPRADOR PRUEBA",
+    "number": "4000111111110002",
+    "expiry": "12/30",
+    "cvv": "123",
+    "balance": 25000000,
+    "errorProbability": 0.15
+  },
+  {
+    "label": "Tarjeta sin fondos suficientes",
+    "holder": "COMPRADOR PRUEBA",
+    "number": "4000111111110003",
+    "expiry": "12/30",
+    "cvv": "123",
+    "balance": 500000,
+    "errorProbability": 0.15
+  },
+  {
+    "label": "Tarjeta con servicio caído",
+    "holder": "COMPRADOR PRUEBA",
+    "number": "4000111111110004",
+    "expiry": "12/30",
+    "cvv": "123",
+    "balance": 1000000000,
+    "errorProbability": 1
+  }
+]

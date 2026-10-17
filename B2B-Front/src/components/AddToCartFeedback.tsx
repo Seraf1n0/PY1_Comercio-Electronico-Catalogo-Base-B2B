@@ -37,7 +37,7 @@ export function CartFeedbackProvider({ children }: { children: ReactNode }) {
         className="pointer-events-none fixed bottom-6 left-1/2 z-50 w-full max-w-xs -translate-x-1/2 px-4"
       >
         {message && (
-          <div className="rounded-lg bg-slate-900 px-4 py-2 text-center text-sm font-medium text-white shadow-lg">
+          <div className="rounded-lg bg-slate-900 px-4 py-2 text-center text-sm font-medium text-white shadow-lg animate-fade-in-up">
             {message}
           </div>
         )}
