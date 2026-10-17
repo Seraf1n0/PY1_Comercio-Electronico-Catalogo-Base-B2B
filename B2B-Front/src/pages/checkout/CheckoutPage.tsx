@@ -126,7 +126,7 @@ export default function CheckoutPage() {
       <CheckoutModal isOpen={isOpen} onClose={onClose} items={state.items}></CheckoutModal>
 
       {state.items.length > 0 && (
-        <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white px-4 pb-4 pt-3 shadow-lg lg:hidden">
+        <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white px-4 pb-4 pt-3 shadow-lg lg:hidden animate-slide-up">
           <div className="mx-auto flex max-w-6xl items-center justify-between">
             <span className="text-sm uppercase tracking-wide text-slate-500">
               Total

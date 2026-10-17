@@ -46,7 +46,7 @@ export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
         </p>
 
         {confirmingRemove ? (
-          <div className="mt-1 rounded-md border border-amber-200 bg-amber-50 p-2">
+          <div className="mt-1 rounded-md border border-amber-200 bg-amber-50 p-2 animate-fade-in">
             <p role="alert" className="text-xs font-semibold text-amber-800">
               {errorMessages.cart.removeConfirm.question}
             </p>

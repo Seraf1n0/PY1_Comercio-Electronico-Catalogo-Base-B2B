@@ -33,7 +33,7 @@ export default function PaymentResultMessage({ kind, detail, onRetry, disabled }
   const { title, hint, Icon, style } = CONTENT[kind];
 
   return (
-    <div role="alert" className={`rounded-xl border p-4 ${style}`}>
+    <div role="alert" className={`rounded-xl border p-4 animate-fade-in-up ${style}`}>
       <div className="flex items-start gap-3">
         <Icon className="mt-0.5 h-6 w-6 shrink-0" />
         <div className="min-w-0 flex-1">

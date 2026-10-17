@@ -3,7 +3,7 @@ import { errorMessages } from "../../lib/errorMessages";
 
 export default function NotFoundPage() {
   return (
-    <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-20 text-center">
+    <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-20 text-center animate-fade-in">
       <p className="text-6xl font-extrabold text-slate-300">404</p>
       <h2 className="text-xl font-bold text-slate-800">
         {errorMessages.notFoundPage.title}

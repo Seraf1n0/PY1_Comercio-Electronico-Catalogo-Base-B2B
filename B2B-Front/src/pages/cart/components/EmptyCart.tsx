@@ -4,7 +4,7 @@ import { errorMessages } from "../../../lib/errorMessages";
 
 export default function EmptyCart() {
   return (
-    <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-20 text-center">
+    <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-20 text-center animate-fade-in">
       <ShoppingCartIcon className="h-16 w-16 text-slate-300" />
       <h2 className="text-xl font-bold text-slate-800">
         {errorMessages.emptyCart.title}

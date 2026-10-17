@@ -64,6 +64,7 @@ export const errorMessages = {
       title: "Tu compra aún no está confirmada",
       text: "El pago de esta orden no se ha completado.",
     },
+    saveFailed: "No pudimos guardar tu orden. Inténtalo de nuevo.",
   },
 
   /** Error inesperado de render manejado por el Error Boundary. */

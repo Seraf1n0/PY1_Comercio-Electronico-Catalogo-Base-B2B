@@ -18,7 +18,7 @@ export default function CartPanel({ onClose }: { onClose?: () => void }) {
     }
 
   return (
-    <div className="absolute right-0 top-10 z-40 w-80 rounded-xl bg-white p-4 shadow-lg ring-1 ring-slate-200">
+    <div className="absolute right-0 top-10 z-40 w-80 rounded-xl bg-white p-4 shadow-lg ring-1 ring-slate-200 origin-top-right animate-scale-in">
       <div className="mb-3 flex items-center justify-between">
         <h2 className="text-sm font-bold uppercase tracking-wide text-slate-500">
           Tu carrito

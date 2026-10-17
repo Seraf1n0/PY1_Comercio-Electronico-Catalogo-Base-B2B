@@ -14,6 +14,7 @@ import type { Order } from "../../orders/types";
 import { processPayment } from "../../payments/paymentService";
 import type { CardData } from "../../payments/types";
 import { errorMessages } from "../../lib/errorMessages";
+import Spinner from "../../components/Spinner";
 import OrderSummary from "./components/OrderSummary";
 import PaymentResultMessage from "./components/PaymentResultMessage";
 
@@ -73,7 +74,7 @@ const inputClass =
 
 function Notice({ title, text, to, action }: { title: string; text: string; to: string; action: string }) {
   return (
-    <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-20 text-center">
+    <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-20 text-center animate-fade-in">
       <h2 className="text-xl font-bold text-slate-800">{title}</h2>
       <p className="text-sm text-slate-500">{text}</p>
       <Link to={to} className="rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white transition hover:bg-indigo-700">
@@ -214,7 +215,7 @@ export default function PaymentPage() {
             id="payment-form"
             onSubmit={onSubmit}
             noValidate
-            className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200"
+            className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 animate-fade-in-up"
           >
             <h2 className="mb-4 text-base font-bold text-slate-800">Datos de la tarjeta</h2>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -268,7 +269,7 @@ export default function PaymentPage() {
             >
               {isProcessing ? (
                 <>
-                  <span className="h-5 w-5 animate-spin rounded-full border-2 border-white/40 border-t-white" />
+                  <Spinner className="h-5 w-5" />
                   Procesando pago…
                 </>
               ) : (
