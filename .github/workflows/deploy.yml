@@ -36,6 +36,11 @@ jobs:
         run: |
           npm ci 
           npm run build
+        env:
+          VITE_ALGOLIA_APP_ID: ${{ secrets.VITE_ALGOLIA_APP_ID }}
+          VITE_ALGOLIA_SEARCH_KEY: ${{ secrets.VITE_ALGOLIA_SEARCH_KEY }}
+          VITE_ALGOLIA_WRITE_KEY: ${{ secrets.VITE_ALGOLIA_WRITE_KEY }}
+          VITE_ALGOLIA_INDEX_NAME: ${{ secrets.VITE_ALGOLIA_INDEX_NAME }}
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
