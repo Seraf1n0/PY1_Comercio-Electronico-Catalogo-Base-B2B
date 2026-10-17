@@ -13,6 +13,7 @@ import {
 import type { Order } from "../../orders/types";
 import { processPayment } from "../../payments/paymentService";
 import type { CardData } from "../../payments/types";
+import { errorMessages } from "../../lib/errorMessages";
 import OrderSummary from "./components/OrderSummary";
 import PaymentResultMessage from "./components/PaymentResultMessage";
 
@@ -35,7 +36,7 @@ const formatExpiry = (value: string) => {
 function validateRequired(card: CardData): FieldErrors {
   const errors: FieldErrors = {};
   (Object.keys(card) as (keyof CardData)[]).forEach((key) => {
-    if (card[key].trim() === "") errors[key] = "Este campo es obligatorio";
+    if (card[key].trim() === "") errors[key] = errorMessages.validation.required;
   });
   return errors;
 }
@@ -162,13 +163,27 @@ export default function PaymentPage() {
   //Protecciones para ordenes que se borran o cancelan
 
   if (!order) {
-    return <Notice title="No encontramos tu orden" text="Revisa el enlace o vuelve al catálogo." to="/" action="Volver al catálogo" />;
+    return (
+      <Notice
+        title={errorMessages.order.notFound.title}
+        text={errorMessages.order.notFound.text}
+        to="/"
+        action={errorMessages.order.notFound.action}
+      />
+    );
   }
   if (order.orderStatus === "CONFIRMED") {
     return <Navigate to={`/confirmacion/${order.orderNumber}`} replace />;
   }
   if (order.orderStatus === "FAILED") {
-    return <Notice title="Esta orden fue cancelada" text="Puedes volver a tu carrito para iniciar una nueva compra." to="/carrito" action="Ir al carrito" />;
+    return (
+      <Notice
+        title={errorMessages.order.cancelled.title}
+        text={errorMessages.order.cancelled.text}
+        to="/carrito"
+        action={errorMessages.order.cancelled.action}
+      />
+    );
   }
 
   return (

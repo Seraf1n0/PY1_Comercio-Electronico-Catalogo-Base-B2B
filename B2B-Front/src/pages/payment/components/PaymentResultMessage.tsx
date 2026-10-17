@@ -3,6 +3,7 @@ import {
   ExclamationTriangleIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
+import { errorMessages } from "../../../lib/errorMessages";
 
 type Props = {
   kind: "declined" | "error";
@@ -13,14 +14,14 @@ type Props = {
 
 const CONTENT = {
   declined: {
-    title: "Tu pago no fue aprobado",
-    hint: "Tu orden sigue pendiente y no se realizó ningún cobro. Verifica los datos de la tarjeta e inténtalo de nuevo.",
+    title: errorMessages.paymentDeclined.title,
+    hint: errorMessages.paymentDeclined.hint,
     Icon: XCircleIcon,
     style: "border-red-200 bg-red-50 text-red-800",
   },
   error: {
-    title: "No pudimos procesar tu pago",
-    hint: "Ocurrió un problema con el servicio de pagos. Tu compra no fue completada y no se realizó ningún cobro. Puedes intentarlo de nuevo.",
+    title: errorMessages.paymentServiceError.title,
+    hint: errorMessages.paymentServiceError.hint,
     Icon: ExclamationTriangleIcon,
     style: "border-amber-200 bg-amber-50 text-amber-800",
   },

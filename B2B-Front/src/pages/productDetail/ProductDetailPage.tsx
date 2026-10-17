@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { searchClient, algoliaIndex } from "../../algoliaClient";
 import type { Product } from "../../Catalog/types";
+import { errorMessages } from "../../lib/errorMessages";
 import ProductDetail from "./ProductDetail";
 
 interface AlgoliaHitsResult {
@@ -34,12 +35,12 @@ export default function ProductDetailPage() {
         const hits = (response.results[0] as AlgoliaHitsResult).hits;
 
         if (hits.length === 0) {
-          setError("Producto no encontrado");
+          setError(errorMessages.catalog.productNotFound);
         } else {
           setProduct(hits[0]);
         }
       } catch {
-        if (!cancelled) setError("Ocurrió un error al buscar el producto");
+        if (!cancelled) setError(errorMessages.catalog.productLoadError);
       } finally {
         if (!cancelled) setLoading(false);
       }

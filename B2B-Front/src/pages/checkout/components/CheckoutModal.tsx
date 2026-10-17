@@ -9,6 +9,7 @@ import {
 import { getShippingCost } from "../../../cart/shipping";
 import type { Order, Buyer, Delivery, OrderItem } from "../../../orders/types";
 import { getNextOrderNumber, saveOrder } from "../../../orders/storage";
+import { errorMessages } from "../../../lib/errorMessages";
 import { useNavigate } from "react-router-dom";
 
 type ModalProps = {
@@ -215,29 +216,34 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   const phoneRegex = /^[2-8][0-9]{7}$/;
 
   const validateName = (value: string) => {
-    if (!value.trim()) return "Campo obligatorio";
-    if (value.trim().length < 2) return "Muy corto";
-    if (!nameAndLastNameRegex.test(value.trim())) return "Solo letras";
+    if (!value.trim()) return errorMessages.validation.required;
+    if (value.trim().length < 2) return errorMessages.validation.nameTooShort;
+    if (!nameAndLastNameRegex.test(value.trim()))
+      return errorMessages.validation.nameInvalid;
     return "";
   };
 
   const validateEmail = (value: string) => {
-    if (!value.trim()) return "Campo obligatorio";
-    if (value.trim().length < 2) return "Correo muy corto";
-    if (!emailRegex.test(value.trim())) return "Introduzca un correo válido";
+    if (!value.trim()) return errorMessages.validation.required;
+    if (value.trim().length < 2)
+      return errorMessages.validation.emailTooShort;
+    if (!emailRegex.test(value.trim()))
+      return errorMessages.validation.emailInvalid;
     return "";
   };
 
   const validatePhone = (value: string) => {
-    if (!value.trim()) return "Campo obligatorio";
-    if (value.trim().length < 8) return "Teléfono muy corto";
-    if (!phoneRegex.test(value.trim())) return "Introduzca un teléfono válido";
+    if (!value.trim()) return errorMessages.validation.required;
+    if (value.trim().length < 8) return errorMessages.validation.phoneTooShort;
+    if (!phoneRegex.test(value.trim()))
+      return errorMessages.validation.phoneInvalid;
     return "";
   };
 
   const validateAddress = (value: string) => {
-    if (!value.trim()) return "Campo obligatorio";
-    if (value.trim().length < 10) return "La dirección es muy corta";
+    if (!value.trim()) return errorMessages.validation.required;
+    if (value.trim().length < 10)
+      return errorMessages.validation.addressTooShort;
     return "";
   };
 
@@ -264,8 +270,12 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   };
 
   const handleNextStepEntrega = () => {
-    const nextProvinceError = province ? "" : "Selecciona una provincia";
-    const nextCantonError = canton ? "" : "Selecciona un cantón";
+    const nextProvinceError = province
+      ? ""
+      : errorMessages.validation.provinceRequired;
+    const nextCantonError = canton
+      ? ""
+      : errorMessages.validation.cantonRequired;
     const nextAddressError = validateAddress(address);
 
     setProvinceError(nextProvinceError);

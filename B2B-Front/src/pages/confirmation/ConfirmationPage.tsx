@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { getOrderByNumber } from "../../orders/storage";
+import { errorMessages } from "../../lib/errorMessages";
 import OrderSummary from "../payment/components/OrderSummary";
 
 export default function ConfirmationPage() {
@@ -12,12 +13,14 @@ export default function ConfirmationPage() {
     return (
       <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-20 text-center">
         <h2 className="text-xl font-bold text-slate-800">
-          {order ? "Tu compra aún no está confirmada" : "No encontramos tu orden"}
+          {order
+            ? errorMessages.order.notConfirmed.title
+            : errorMessages.order.notFound.title}
         </h2>
         <p className="text-sm text-slate-500">
           {order
-            ? "El pago de esta orden no se ha completado."
-            : "Revisa el enlace o vuelve al catálogo."}
+            ? errorMessages.order.notConfirmed.text
+            : errorMessages.order.notFound.text}
         </p>
         <Link
           to={order?.orderStatus === "PENDING" ? `/pago/${order.orderNumber}` : "/"}
