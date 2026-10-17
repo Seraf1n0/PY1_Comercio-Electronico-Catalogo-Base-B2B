@@ -5,18 +5,21 @@ import CartPage from "./pages/cart/CartPage";
 import CheckoutPage from "./pages/checkout/CheckoutPage";
 import PaymentPage from "./pages/payment/PaymentPage";
 import ConfirmationPage from "./pages/confirmation/ConfirmationPage";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
     <HashRouter>
-      <Routes>
-        <Route path="/" element={<SearchPage />} />
-        <Route path="/producto/:id" element={<ProductDetailPage />} />
-        <Route path="/carrito" element={<CartPage />} />
-        <Route path="/finalizar-compra" element={<CheckoutPage />} />
-        <Route path="/pago/:orderNumber" element={<PaymentPage />} />
-        <Route path="/confirmacion/:orderNumber" element={<ConfirmationPage />} />
-      </Routes>
+      <ErrorBoundary>
+        <Routes>
+          <Route path="/" element={<SearchPage />} />
+          <Route path="/producto/:id" element={<ProductDetailPage />} />
+          <Route path="/carrito" element={<CartPage />} />
+          <Route path="/finalizar-compra" element={<CheckoutPage />} />
+          <Route path="/pago/:orderNumber" element={<PaymentPage />} />
+          <Route path="/confirmacion/:orderNumber" element={<ConfirmationPage />} />
+        </Routes>
+      </ErrorBoundary>
     </HashRouter>
   );
 }
