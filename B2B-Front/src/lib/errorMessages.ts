@@ -26,6 +26,16 @@ export const errorMessages = {
     text: "Explora el catálogo y agrega vehículos para continuar con tu compra.",
   },
 
+  /** Confirmaciones del carrito. */
+  cart: {
+    removeConfirm: {
+      question: "¿Quitar este producto del carrito?",
+      hint: "La cantidad llegó a 0 y se eliminará del carrito.",
+      confirm: "Sí, quitar",
+      cancel: "Cancelar",
+    },
+  },
+
   /** Pago rechazado por el emisor (problema de la tarjeta). */
   paymentDeclined: {
     title: "Tu pago no fue aprobado",

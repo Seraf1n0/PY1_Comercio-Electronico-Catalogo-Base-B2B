@@ -4,6 +4,7 @@ import { searchClient, algoliaIndex } from "../../algoliaClient";
 import type { Product } from "../../Catalog/types";
 import { errorMessages } from "../../lib/errorMessages";
 import ProductDetail from "./ProductDetail";
+import ProductDetailSkeleton from "../../components/ProductDetailSkeleton";
 
 interface AlgoliaHitsResult {
   hits: Product[];
@@ -53,7 +54,14 @@ export default function ProductDetailPage() {
     };
   }, [id]);
 
-  if (loading) return <p>Cargando producto...</p>;
+  if (loading) {
+    return (
+      <div role="status" aria-live="polite" aria-busy="true">
+        <span className="sr-only">Cargando producto…</span>
+        <ProductDetailSkeleton />
+      </div>
+    );
+  }
   if (error) return <p>{error}</p>;
   if (!product) return null;
 

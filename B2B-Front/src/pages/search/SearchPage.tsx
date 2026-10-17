@@ -1,7 +1,6 @@
 import {
   InstantSearch,
   SearchBox,
-  Hits,
   HitsPerPage,
 } from "react-instantsearch";
 import { searchClient, algoliaIndex } from "../../lib/algolia";
@@ -10,7 +9,7 @@ import Pagination from "./components/Pagination";
 import FiltersList from "./components/FiltersList";
 import MobileFiltersDrawer from "./components/MobileFiltersDrawer";
 import ClearFiltersButton from "./components/ClearFiltersButton";
-import ProductHit from "./components/ProductHit";
+import SearchResults from "./components/SearchResults";
 import NoResults from "./components/NoResults";
 
 // Vista completa de la página de búsqueda
@@ -74,13 +73,7 @@ export default function SearchPage() {
                 </div>
               </div>
 
-              <Hits
-                hitComponent={ProductHit}
-                classNames={{
-                  list: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4",
-                  item: "rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-200",
-                }}
-              />
+              <SearchResults />
                <NoResults />
               <div className="flex justify-center pt-4">
                 <Pagination />

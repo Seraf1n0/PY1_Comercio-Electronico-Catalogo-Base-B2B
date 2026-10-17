@@ -279,8 +279,12 @@ export default function PaymentPage() {
               )}
             </button>
             {isProcessing && (
-              <p className="mt-2 text-center text-xs text-slate-500">
-                No cierres ni recargues esta página.
+              <p
+                role="status"
+                aria-live="polite"
+                className="mt-2 text-center text-xs text-slate-500"
+              >
+                Procesando pago… No cierres ni recargues esta página.
               </p>
             )}
           </div>
