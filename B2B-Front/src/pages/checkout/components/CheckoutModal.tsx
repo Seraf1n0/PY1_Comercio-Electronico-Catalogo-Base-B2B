@@ -11,7 +11,7 @@ import type { Order, Buyer, Delivery, OrderItem } from "../../../orders/types";
 import { getNextOrderNumber, saveOrder } from "../../../orders/storage";
 import { errorMessages } from "../../../lib/errorMessages";
 import Spinner from "../../../components/Spinner";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Espera breve para que el spinner sea perceptible antes de navegar al pago.
 const CONFIRM_DELAY_MS = 350;
@@ -60,6 +60,7 @@ const generateOrder = (
     orderStatus: "PENDING",
     paymentStatus: "PENDING",
     items: orderItems,
+    termsAccepted: true
   };
 };
 
@@ -195,6 +196,9 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   const shippingTotal = getShippingCost(items);
   const orderTotal = getOrderTotal(items);
 
+  const [acceptTerms, setAcceptTerms] = useState(false);
+  const [errorTerms, setErrorTerms] = useState("");
+
   useEffect(() => {
     if (!isCantonOpen) return;
 
@@ -295,6 +299,12 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   };
 
   const confirmOrder = async () => {
+    if (!acceptTerms) {
+      setErrorTerms("Debes aceptar los términos y condiciones para continuar.");
+      return;
+    }
+    setErrorTerms("");
+
     if (isSubmitting.current) return;
     isSubmitting.current = true;
     setSubmitting(true);
@@ -772,7 +782,34 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
               <p role="alert" className="text-sm font-semibold text-red-600">
                 {submitError}
               </p>
+
             )}
+              <div className="space-y-2"> 
+                <label htmlFor="accept-terms" className="flex items-start gap-2">
+                  <input type="checkbox"
+                    id="accept-terms"
+                    checked={acceptTerms}
+                    onChange={(e) => {
+                      setAcceptTerms(e.target.checked)
+                      if (e.target.checked) setErrorTerms("")
+                    }}
+                    className="mt-1 h-4 w-4"
+                  />
+                  <span>He leído y acepto los términos y condiciones</span>
+                </label>
+
+                <p className="text-sm">
+                  <Link to="/terminos-y-condiciones" 
+                  className="text-indigo-600 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Leer los terminos completos</Link>
+                </p>
+              { errorTerms && (
+                <p role="alert" className="text-sm font-semibold text-red-600">{errorTerms}</p>
+              )}                
+
+              </div> 
 
             <div className="flex flex-col-reverse gap-3 border-t border-slate-100 pt-5 sm:flex-row sm:items-center sm:justify-between">
               <button
@@ -782,6 +819,7 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
               >
                 Atrás
               </button>
+
               <button
                 type="button"
                 onClick={() => void confirmOrder()}
@@ -797,7 +835,7 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
                   "Confirmar pedido"
                 )}
               </button>
-            </div>
+            </div>           
           </div>
         )}
       </div>

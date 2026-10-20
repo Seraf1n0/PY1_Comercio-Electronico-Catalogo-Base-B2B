@@ -38,5 +38,6 @@ export type Order = {
     items: OrderItem[];
     transactionId?: string;   //Esto cuando ya se completa el pago   
     paymentAttempts?: number;  
+    termsAccepted: boolean;
 
 }
