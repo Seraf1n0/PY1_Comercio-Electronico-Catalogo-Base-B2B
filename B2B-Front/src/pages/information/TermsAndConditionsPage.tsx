@@ -185,7 +185,7 @@ export default function TermsAndConditionsPage() {
             <h2 className="text-2xl font-bold">Política de Privacidad</h2>
             <h3 className={subsectionClass}>Información que recopilamos</h3>
             <ul className={listClass}>
-              <li>Nombre completo y número de identificación.</li>
+              <li>Nombre completo</li>
               <li>Dirección de entrega, correo electrónico y número telefónico.</li>
               <li>Información relacionada con las compras realizadas.</li>
             </ul>
@@ -210,6 +210,10 @@ export default function TermsAndConditionsPage() {
               <li>Protección de bases de datos contra accesos no autorizados.</li>
               <li>Actualización periódica de los sistemas utilizados por la empresa.</li>
             </ul>
+            <p className="mt-2 text-slate-600">
+              Es importante aclarar que Bombocars sigue la ley de protección de datos de Costa Rica.
+                Ley 8968, Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales, y su reglamento. 
+            </p>
           </section>
 
           <section id="faq" className={sectionClass}>
