@@ -14,6 +14,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+defaults:
+  run:
+    working-directory: ./B2B-Front
+
 # Primero vamos a hacer un build instalando nodejs y dependencias
 # Luego se hace un configure y luego un update de la página de github pages
 jobs:
@@ -27,10 +31,16 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
+          cache-dependency-path: './B2B-Front/package-lock.json'
       - name: Install and Build
         run: |
           npm ci 
           npm run build
+        env:
+          VITE_ALGOLIA_APP_ID: ${{ secrets.VITE_ALGOLIA_APP_ID }}
+          VITE_ALGOLIA_SEARCH_KEY: ${{ secrets.VITE_ALGOLIA_SEARCH_KEY }}
+          VITE_ALGOLIA_WRITE_KEY: ${{ secrets.VITE_ALGOLIA_WRITE_KEY }}
+          VITE_ALGOLIA_INDEX_NAME: ${{ secrets.VITE_ALGOLIA_INDEX_NAME }}
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -38,7 +48,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: './B2B-Front/dist'
 
   deploy:
     environment:
