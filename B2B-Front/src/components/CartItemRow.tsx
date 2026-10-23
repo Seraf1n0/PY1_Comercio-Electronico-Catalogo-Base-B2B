@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { TrashIcon } from "@heroicons/react/24/outline";
 import type { CartItem } from "../cart/types";
 import { useCart } from "../cart/useCart";
 import { errorMessages } from "../lib/errorMessages";
@@ -101,7 +102,7 @@ export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
         aria-label={`Eliminar ${item.title} del carrito`}
         className="text-xs text-red-600 hover:underline cursor-pointer"
       >
-        Quitar
+        <TrashIcon className="h-5 w-5" />
       </button>
 
 
