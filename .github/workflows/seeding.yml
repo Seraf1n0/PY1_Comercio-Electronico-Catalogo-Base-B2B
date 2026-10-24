@@ -1,0 +1,50 @@
+name: Validar cambios en Catalogo y ejecutar seeder
+
+on:
+  push:
+    branches:
+      - main
+
+defaults:
+  run:
+    working-directory: ./B2B-Front
+
+jobs:
+  verificar-cambios:
+    runs-on: ubuntu-26.04
+
+    steps:
+      - name: Tomar información del commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # Esto compara el último commit con el anterior para detectar cambios
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24' 
+          cache: 'npm'
+
+      - name: Detección de cambios en el archivo products.json
+        id: verificar-cambios
+        run: |
+          # Tomar archivos cambiador del ultimo commit (HEAD)
+          CAMBIADOS=$(git diff --name-only HEAD^ HEAD)
+
+          # Usando el archivo products.json
+          ARCHIVO_TARGET="data/products.json"
+
+          # Ver si el archivo se modifico en el ultimo commit
+          if echo "$CAMBIADOS" | grep -q "$ARCHIVO_TARGET"; then
+            echo "El archivo objetivo SI fue modificado en el último commit."
+            echo "cambios_detectados=true" >> $GITHUB_ENV
+          else
+            echo "El archivo objetivo NO fue modificado en el último commit."
+            echo "cambios_detectados=false" >> $GITHUB_ENV
+          fi
+        
+      - name: Ejecutar seeder en caso de cambios
+        if: env.cambios_detectados == 'true'
+        run: |
+          echo "Ejecutando seeder debido a cambios en products.json..."
+          npm run seed
