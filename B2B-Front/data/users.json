@@ -1,0 +1,57 @@
+[
+  {
+    "objectID": "usr-b2b-001",
+    "username": "cliente b2c",
+    "email": "cliente.b2c@gmail.com",
+    "displayName": "Laura Mora",
+    "phone": "88881111",
+    "role": "B2C",
+    "active": true,
+    "defaultBranch": "san_jose"
+  },
+  {
+    "objectID": "usr-b2b-001",
+    "username": "empresa.b2b",
+    "email": "compras@gmail.com",
+    "displayName": "Carlos Vargas",
+    "phone": "22223333",
+    "role": "B2B",
+    "active": true,
+    "defaultBranch": "limon",
+    "company": {
+      "name": "Transportes Demo S.A.",
+      "legalId": "3-101-123456",
+      "contactName": "Carlos Vargas"
+    }
+  },
+  {
+    "objectID": "usr_admin_001",
+    "username": "admin",
+    "email": "admin@bombocars.cr",
+    "displayName": "Administrador",
+    "phone": "22224444",
+    "role": "ADMIN",
+    "active": true,
+    "defaultBranch": "san_jose"
+  },
+  {
+    "objectID": "usr-testinactive",
+    "username": "inactivo.demo",
+    "email": "inactivo@demo.cr",
+    "displayName": "Usuario Inactivo",
+    "phone": "88880000",
+    "role": "B2C",
+    "active": false,
+    "defaultBranch": "san_jose"
+  },
+  {
+    "objectID": "usr-test_norole",
+    "username": "sinrol.demo",
+    "email": "sinrol@demo.cr",
+    "displayName": "Usuario Sin Rol Valido",
+    "phone": "88880001",
+    "role": "SUPERVISOR",
+    "active": true,
+    "defaultBranch": "san_jose"
+  }
+]
