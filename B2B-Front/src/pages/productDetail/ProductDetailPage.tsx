@@ -5,6 +5,8 @@ import type { Product } from "../../Catalog/types";
 import { errorMessages } from "../../lib/errorMessages";
 import ProductDetail from "./ProductDetail";
 import ProductDetailSkeleton from "../../components/ProductDetailSkeleton";
+import { useAuth } from "../../auth/AuthContext";
+import { recordProductView } from "../../productHistory/storage";
 
 interface AlgoliaHitsResult {
   hits: Product[];
@@ -12,6 +14,7 @@ interface AlgoliaHitsResult {
 
 export default function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const { user } = useAuth();
 
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
@@ -38,7 +41,16 @@ export default function ProductDetailPage() {
         if (hits.length === 0) {
           setError(errorMessages.catalog.productNotFound);
         } else {
-          setProduct(hits[0]);
+          const foundProduct = hits[0];
+          setProduct(foundProduct);
+
+          if(user) {     
+            recordProductView(
+              user.objectID,
+              foundProduct.objectID,
+              foundProduct.title
+            )
+          }
         }
       } catch {
         if (!cancelled) setError(errorMessages.catalog.productLoadError);
@@ -52,7 +64,7 @@ export default function ProductDetailPage() {
     return () => {
       cancelled = true;
     };
-  }, [id]);
+  }, [id, user?.objectID]);
 
   if (loading) {
     return (
