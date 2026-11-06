@@ -12,7 +12,6 @@ import TermsAndConditionsPage from "./pages/information/TermsAndConditionsPage";
 import SiteFooter from "./components/SiteFooter";
 
 
-
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
