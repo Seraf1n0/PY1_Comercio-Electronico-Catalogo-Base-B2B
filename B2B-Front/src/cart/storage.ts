@@ -23,8 +23,8 @@ function isValidItem(value: unknown): value is CartItem {
   );
 }
 
-export function loadCart(): CartItem[] {
-  const items = readJSON<CartItem[]>(storageKeys.cart, [], STORAGE_VERSION);
+export function loadCart(userId: string): CartItem[] {
+  const items = readJSON<CartItem[]>(storageKeys.cart(userId), [], STORAGE_VERSION);
 
   if (!Array.isArray(items)) {
     return [];
@@ -38,6 +38,6 @@ export function loadCart(): CartItem[] {
     }));
 }
 
-export function saveCart(items: CartItem[]): void {
-  writeJSON(storageKeys.cart, items, STORAGE_VERSION);
+export function saveCart(userId: string, items: CartItem[]): void {
+  writeJSON(storageKeys.cart(userId), items, STORAGE_VERSION);
 }
