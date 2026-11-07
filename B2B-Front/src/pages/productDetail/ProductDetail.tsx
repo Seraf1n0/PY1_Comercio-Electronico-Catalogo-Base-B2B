@@ -36,7 +36,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                     </p>
                     <p className="text-sm text-gray-600 mt-1">Impuestos: Ya incluidos</p>
 
-                    <AddToCartButton product={product} />
+                    <AddToCartButton product={product} source="detail" />
                 </div>
             </div>
 

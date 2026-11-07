@@ -12,6 +12,13 @@ import MobileFiltersDrawer from "./components/MobileFiltersDrawer";
 import ClearFiltersButton from "./components/ClearFiltersButton";
 import SearchResults from "./components/SearchResults";
 import NoResults from "./components/NoResults";
+import { useTrackSearch } from "../../analytics/useTrackSearch";
+
+// Conecta el buscador con analytics; debe vivir dentro de InstantSearch.
+function SearchTracking() {
+  useTrackSearch();
+  return null;
+}
 
 // Vista completa de la página de búsqueda
 export default function SearchPage() {
@@ -31,6 +38,7 @@ export default function SearchPage() {
       </div>
 
       <InstantSearch searchClient={searchClient} indexName={algoliaIndex}>
+        <SearchTracking />
         <div className="mx-auto max-w-7xl px-4 py-6 flex flex-col gap-4">
           <div className="mb-2 flex items-center gap-2">
             <MobileFiltersDrawer />

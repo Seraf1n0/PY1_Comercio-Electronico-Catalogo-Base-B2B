@@ -5,6 +5,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { track } from "../analytics/tracker";
 import { userDirectory } from "./UserDirectory";
 import { AuthContext, type AuthContextValue } from "./authContextValue";
 import { clearSession, loadSession, saveSession } from "./sessionStore";
@@ -93,14 +94,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(result.user);
     setStatus("ready");
 
+    track(
+      {
+        userId: result.user.objectID,
+        role: result.user.role,
+        sessionId: nextSession.sessionId,
+      },
+      "LOGIN",
+      { role: result.user.role, username: result.user.username },
+    );
+
     return { ok: true };
   }, []);
 
   const logout = useCallback(() => {
+    if (user && session) {
+      track(
+        { userId: user.objectID, role: user.role, sessionId: session.sessionId },
+        "LOGOUT",
+        { role: user.role },
+      );
+    }
+
     clearSession();
     setSession(null);
     setUser(null);
-  }, []);
+  }, [user, session]);
 
   const value = useMemo<AuthContextValue>(
     () => ({

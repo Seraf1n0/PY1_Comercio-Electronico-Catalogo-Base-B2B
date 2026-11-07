@@ -14,6 +14,7 @@ import type { Order } from "../../orders/types";
 import { processPayment } from "../../payments/paymentService";
 import type { CardData } from "../../payments/types";
 import { errorMessages } from "../../lib/errorMessages";
+import { useAnalytics } from "../../analytics/useAnalytics";
 import Spinner from "../../components/Spinner";
 import OrderSummary from "./components/OrderSummary";
 import PaymentResultMessage from "./components/PaymentResultMessage";
@@ -92,6 +93,7 @@ export default function PaymentPage() {
   const orderId = Number(orderNumber);
   const navigate = useNavigate();
   const { dispatch } = useCart();
+  const { track } = useAnalytics();
 
   const [order, setOrder] = useState<Order | null>(() => getOrderByNumber(orderId));
   const [form, setForm] = useState<CardData>({ holder: "", number: "", expiry: "", cvv: "" });
@@ -126,6 +128,11 @@ export default function PaymentPage() {
       if (response.status === "PAYMENT_APPROVED") {
         const updated = markPaymentApproved(order.orderNumber, response.transactionId);
         if (updated?.orderStatus === "CONFIRMED") {
+          track("PURCHASE_COMPLETED", {
+            orderNumber: updated.orderNumber,
+            total: updated.total,
+            itemsCount: updated.items.length,
+          });
           dispatch({ type: "CLEAR_CART" });
           navigate(`/confirmacion/${order.orderNumber}`, { replace: true });
           return;

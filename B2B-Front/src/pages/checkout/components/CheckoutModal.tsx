@@ -7,6 +7,7 @@ import {
   formatColones,
 } from "../../../cart/cartTotals";
 import { getShippingCost } from "../../../cart/shipping";
+import { useAnalytics } from "../../../analytics/useAnalytics";
 import type { Order, Buyer, Delivery, OrderItem } from "../../../orders/types";
 import { getNextOrderNumber, saveOrder } from "../../../orders/storage";
 import { errorMessages } from "../../../lib/errorMessages";
@@ -160,6 +161,8 @@ const cantonsByProvince: Record<string, string[]> = {
 export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   const navigate = useNavigate();
   const isSubmitting = useRef(false);
+  const { track } = useAnalytics();
+  const checkoutTracked = useRef(false);
 
   const [activeStep, setActiveStep] = useState<CheckoutSteps>("PERSONAL");
   const [name, setName] = useState("");
@@ -221,6 +224,25 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [isCantonOpen]);
+
+  // Registra una sola vez cada apertura del checkout con carrito valido.
+  useEffect(() => {
+    if (!isOpen) {
+      checkoutTracked.current = false;
+      return;
+    }
+
+    if (checkoutTracked.current || items.length === 0) {
+      return;
+    }
+
+    checkoutTracked.current = true;
+    track("CHECKOUT_START", {
+      itemsCount: items.length,
+      totalUnits: items.reduce((sum, item) => sum + item.quantity, 0),
+      total: getOrderTotal(items),
+    });
+  }, [isOpen, items, track]);
 
   const nameAndLastNameRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü]+$/;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;

@@ -43,6 +43,7 @@ export interface ProductViewPayload {
   category: string;
   brand: string;
   price: number;
+  img?: string;
 }
 
 export interface AddToCartPayload {
