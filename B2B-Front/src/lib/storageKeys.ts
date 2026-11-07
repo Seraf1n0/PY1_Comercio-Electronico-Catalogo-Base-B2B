@@ -29,6 +29,8 @@ export const storageKeys = {
   events: (userId: string) => storageKey("events", 1, userId),
   history: (userId: string) => storageKey("history", 1, userId),
   metrics: (userId: string) => storageKey("metrics", 1, userId),
+  eventsPrefix: `${storageKey("events", 1)}:`,
+  metricsPrefix: `${storageKey("metrics", 1)}:`,
 } as const;
 
 /** keys viejas */
