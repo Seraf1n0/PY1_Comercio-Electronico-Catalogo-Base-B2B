@@ -123,6 +123,29 @@ export function removeJSON(
   }
 }
 
+/** 
+ * Lista las claves que empiezan con un prefijo (para agregar datos de varios usuarios). 
+ * */
+export function listKeys(prefix: string, area: StorageArea = "local"): string[] {
+  const storage = getStorage(area);
+  if (!storage) {
+    return [];
+  }
+
+  try {
+    const keys: string[] = [];
+    for (let index = 0; index < storage.length; index += 1) {
+      const key = storage.key(index);
+      if (key && key.startsWith(prefix)) {
+        keys.push(key);
+      }
+    }
+    return keys;
+  } catch {
+    return [];
+  }
+}
+
 /**
  * Lectura puntual de datos sin envoltura versionada
  */

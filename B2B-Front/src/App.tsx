@@ -12,7 +12,7 @@ import TermsAndConditionsPage from "./pages/information/TermsAndConditionsPage";
 import SiteFooter from "./components/SiteFooter";
 import LoginPage from "./pages/login/LoginPage";
 import RequireAuth from "./auth/RequireAuth";
-
+import AnalyticsPage from "./pages/analytics/AnalyticsPage";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -45,6 +45,7 @@ function App() {
             <Route path="/finalizar-compra" element={<CheckoutPage />} />
             <Route path="/pago/:orderNumber" element={<PaymentPage />} />
             <Route path="/confirmacion/:orderNumber" element={<ConfirmationPage />} />
+            <Route path="/analytics" element={<AnalyticsPage />} />
           </Route>
 
           <Route path="*" element={<NotFoundPage />} />
