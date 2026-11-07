@@ -85,4 +85,17 @@ export const errorMessages = {
     productNotFound: "Producto no encontrado",
     productLoadError: "Ocurrió un error al buscar el producto",
   },
+
+  /** Inicio y cierre de sesion. */
+  auth: {
+    emptyLogin: "Escribe tu correo o nombre de usuario.",
+    notFound: "No encontramos un usuario con ese correo o nombre de usuario.",
+    inactive: "Este usuario está inactivo. Contacta al administrador.",
+    invalidRole: "El rol de este usuario no es válido para el catálogo.",
+    invalidRecord: "Los datos de este usuario están incompletos.",
+    generic: "No se pudo iniciar sesión. Inténtalo de nuevo.",
+    demoTitle: "Usuarios de prueba",
+    demoHint: "Toca una tarjeta para entrar sin escribir credenciales.",
+    logout: "Cerrar sesión",
+  },
 } as const;

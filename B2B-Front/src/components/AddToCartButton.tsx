@@ -2,12 +2,21 @@ import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import type { Product } from "../Catalog/types";
 import { useCart } from "../cart/useCart";
 import { getTotalStock } from "../cart/stock";
+import { useAnalytics } from "../analytics/useAnalytics";
 import { useCartFeedback } from "./cartFeedbackContext";
 
+type AddToCartSource = "catalog" | "detail";
 
-export default function AddToCartButton({ product }: { product: Product }) {
+export default function AddToCartButton({
+    product,
+    source = "catalog",
+}: {
+    product: Product;
+    source?: AddToCartSource;
+}) {
     const { state, dispatch } = useCart();
     const { notify } = useCartFeedback();
+    const { track } = useAnalytics();
 
     const totalStock = getTotalStock(product);
     const hasPrice = typeof product.price === "number" && Number.isFinite(product.price);
@@ -21,6 +30,14 @@ export default function AddToCartButton({ product }: { product: Product }) {
         if (!canAdd) return;
 
         dispatch({ type: 'ADD_ITEM', payload: product });
+
+        track("ADD_TO_CART", {
+            productId: product.objectID,
+            title: product.title,
+            quantity: 1,
+            unitPrice: product.price,
+            source,
+        });
 
         const newQuantity = currentQuantity + 1;
         const label = product.title ?? "Producto";
