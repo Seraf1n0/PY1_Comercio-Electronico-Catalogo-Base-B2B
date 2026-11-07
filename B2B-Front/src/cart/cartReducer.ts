@@ -45,6 +45,8 @@ export const reducer = (state: State, action: Action): State => {
                 img: action.payload.images_urls?.[0] ?? "/placeholder.png",
                 stock: getTotalStock(action.payload),
                 subtotal: 0,
+                category: action.payload.categories?.[0] ?? "",
+                brand: action.payload.brand ?? "",
             });
 
             return { items: [...state.items, newItem] };

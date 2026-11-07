@@ -132,6 +132,14 @@ export default function PaymentPage() {
             orderNumber: updated.orderNumber,
             total: updated.total,
             itemsCount: updated.items.length,
+            items: updated.items.map((item) => ({
+              productId: item.productId,
+              title: item.name,
+              category: item.category ?? "",
+              brand: item.brand ?? "",
+              quantity: item.quantity,
+              unitPrice: item.unitPrice,
+            })),
           });
           dispatch({ type: "CLEAR_CART" });
           navigate(`/confirmacion/${order.orderNumber}`, { replace: true });

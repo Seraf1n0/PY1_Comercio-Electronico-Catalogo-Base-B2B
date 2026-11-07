@@ -49,6 +49,8 @@ export interface ProductViewPayload {
 export interface AddToCartPayload {
   productId: string;
   title: string;
+  category: string;
+  brand: string;
   quantity: number;
   unitPrice: number;
   source: "catalog" | "detail";
@@ -64,6 +66,16 @@ export interface PurchaseCompletedPayload {
   orderNumber: number;
   total: number;
   itemsCount: number;
+  items: PurchaseCompletedItem[];
+}
+
+export interface PurchaseCompletedItem {
+  productId: string;
+  title: string;
+  category: string;
+  brand: string;
+  quantity: number;
+  unitPrice: number;
 }
 
 /** Payload asociado a cada tipo de evento. */
