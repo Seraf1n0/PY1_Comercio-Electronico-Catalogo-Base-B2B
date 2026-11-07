@@ -1,19 +1,18 @@
 import type { Product } from "../Catalog/types";
 import type { AnalyticsEvent } from "./types";
 
-// Por cada acción sumaremos ciertos puntos para la afinidad del usuario con categorias y marcas
-// Cuando vea un producto es 1 punto, cuando agregue al carro 2 y 3 si compra los productos 
+// Por cada acción sumamos puntos a la afinidad del usuario con categorías y marcas.
+// Ver un producto suma 1 punto, agregarlo al carrito 3 y comprarlo 5.
 export const AFFINITY_EVENT_POINTS = {
   PRODUCT_VIEW: 1,
   ADD_TO_CART: 3,
   PURCHASE_COMPLETED: 5,
 } as const;
 
-const MS_PER_DAY = 24 * 60 * 60 * 1000;
-
 export interface AffinityEntry {
   value: string;
   score: number;
+  lastInteractionMs: number;
 }
 
 export interface AffinityProfile {
@@ -26,11 +25,18 @@ export interface ScoredProduct {
   score: number;
   categoryScore: number;
   brandScore: number;
+  lastInteractionMs: number;
 }
 
 export interface RankProductsOptions {
   excludeProductIds?: ReadonlySet<string>;
   limit?: number;
+  recentTieBreakWindowMs?: number;
+}
+
+export interface BuildAffinityOptions {
+  recencyMultiplier?: boolean;
+  nowMs?: number;
 }
 
 type AffinityAccumulator = Map<string, AffinityEntry>;
@@ -39,6 +45,7 @@ function addPoints(
   accumulator: AffinityAccumulator,
   value: unknown,
   points: number,
+  eventTsMs: number,
 ): void {
   if (typeof value !== "string") {
     return;
@@ -50,12 +57,18 @@ function addPoints(
   }
 
   const key = label.toLocaleLowerCase();
+  const interactionTsMs = Number.isFinite(eventTsMs) ? eventTsMs : 0;
   const current = accumulator.get(key);
 
   if (current) {
     current.score += points;
+    current.lastInteractionMs = Math.max(current.lastInteractionMs, interactionTsMs);
   } else {
-    accumulator.set(key, { value: label, score: points });
+    accumulator.set(key, {
+      value: label,
+      score: points,
+      lastInteractionMs: interactionTsMs,
+    });
   }
 }
 
@@ -63,8 +76,8 @@ function sortedEntries(accumulator: AffinityAccumulator): AffinityEntry[] {
   return [...accumulator.values()].sort((a, b) => b.score - a.score);
 }
 
-// Dependiendo de la cantidad de dias multiplicamos para aumentar o disminuir la afinidad
-// de 0 a 3 días multiplica por, de 4 a 6 días multiplica por 2 y de 7 días en adelante por 1
+const MS_PER_DAY = 24 * 60 * 60 * 1000;
+
 function getRecencyMultiplier(eventTsMs: number, nowMs: number): number {
   if (!Number.isFinite(eventTsMs)) {
     return 1;
@@ -81,11 +94,13 @@ function getRecencyMultiplier(eventTsMs: number, nowMs: number): number {
 }
 
 /**
- * Suma puntos dependiendo de la acción para cada categoría y marca además de la multiplicación por días
+ * Suma puntos dependiendo de la acción en caso de que el evento 
+ * llegue como falso no va a multiplicar por la cantidad de dias 
+ * los puntos correspondentes 
  */
 export function buildAffinityProfile(
   events: readonly AnalyticsEvent[],
-  nowMs = Date.now(),
+  { recencyMultiplier = true, nowMs = Date.now() }: BuildAffinityOptions = {},
 ): AffinityProfile {
   const categories: AffinityAccumulator = new Map();
   const brands: AffinityAccumulator = new Map();
@@ -95,19 +110,21 @@ export function buildAffinityProfile(
       continue;
     }
 
-    const multiplier = getRecencyMultiplier(event.tsMs, nowMs);
+    const multiplier = recencyMultiplier
+      ? getRecencyMultiplier(event.tsMs, nowMs)
+      : 1;
 
     if (event.type === "PRODUCT_VIEW") {
       const points = AFFINITY_EVENT_POINTS.PRODUCT_VIEW * multiplier;
-      addPoints(categories, event.payload.category, points);
-      addPoints(brands, event.payload.brand, points);
+      addPoints(categories, event.payload.category, points, event.tsMs);
+      addPoints(brands, event.payload.brand, points, event.tsMs);
       continue;
     }
 
     if (event.type === "ADD_TO_CART") {
       const points = AFFINITY_EVENT_POINTS.ADD_TO_CART * multiplier;
-      addPoints(categories, event.payload.category, points);
-      addPoints(brands, event.payload.brand, points);
+      addPoints(categories, event.payload.category, points, event.tsMs);
+      addPoints(brands, event.payload.brand, points, event.tsMs);
       continue;
     }
 
@@ -127,11 +144,13 @@ export function buildAffinityProfile(
           categories,
           purchasedItem.category,
           AFFINITY_EVENT_POINTS.PURCHASE_COMPLETED * multiplier,
+          event.tsMs,
         );
         addPoints(
           brands,
           purchasedItem.brand,
           AFFINITY_EVENT_POINTS.PURCHASE_COMPLETED * multiplier,
+          event.tsMs,
         );
       }
     }
@@ -143,13 +162,16 @@ export function buildAffinityProfile(
   };
 }
 
-function scoreForValue(entries: readonly AffinityEntry[], value: string): number {
+function affinityForValue(
+  entries: readonly AffinityEntry[],
+  value: string,
+): AffinityEntry | undefined {
   const key = value.trim().toLocaleLowerCase();
   if (!key) {
-    return 0;
+    return undefined;
   }
 
-  return entries.find((entry) => entry.value.toLocaleLowerCase() === key)?.score ?? 0;
+  return entries.find((entry) => entry.value.toLocaleLowerCase() === key);
 }
 
 /**
@@ -160,18 +182,24 @@ export function scoreProductAffinity(
   product: Product,
   profile: AffinityProfile,
 ): ScoredProduct {
-  const categoryScore = product.categories.reduce(
-    (bestScore, category) =>
-      Math.max(bestScore, scoreForValue(profile.categories, category)),
+  const categoryAffinities = product.categories
+    .map((category) => affinityForValue(profile.categories, category))
+    .filter((entry): entry is AffinityEntry => entry !== undefined);
+  const brandAffinity = affinityForValue(profile.brands, product.brand);
+  const categoryScore = Math.max(0, ...categoryAffinities.map(({ score }) => score));
+  const brandScore = brandAffinity?.score ?? 0;
+  const lastInteractionMs = Math.max(
     0,
+    brandAffinity?.lastInteractionMs ?? 0,
+    ...categoryAffinities.map(({ lastInteractionMs: timestamp }) => timestamp),
   );
-  const brandScore = scoreForValue(profile.brands, product.brand);
 
   return {
     product,
     categoryScore,
     brandScore,
     score: categoryScore + brandScore,
+    lastInteractionMs,
   };
 }
 
@@ -184,7 +212,38 @@ export function rankProductsByAffinity(
   profile: AffinityProfile,
   options: RankProductsOptions = {},
 ): ScoredProduct[] {
-  const { excludeProductIds, limit = products.length } = options;
+  const {
+    excludeProductIds,
+    limit = products.length,
+    recentTieBreakWindowMs = 0,
+  } = options;
+  const nowMs = Date.now();
+  const recentCutoffMs = nowMs - recentTieBreakWindowMs;
+
+  const compareProducts = (
+    a: ScoredProduct & { originalIndex: number },
+    b: ScoredProduct & { originalIndex: number },
+  ): number => {
+    if (a.score !== b.score) {
+      return b.score - a.score;
+    }
+
+    if (recentTieBreakWindowMs > 0) {
+      const aIsRecent =
+        a.lastInteractionMs >= recentCutoffMs && a.lastInteractionMs <= nowMs;
+      const bIsRecent =
+        b.lastInteractionMs >= recentCutoffMs && b.lastInteractionMs <= nowMs;
+
+      if (aIsRecent !== bIsRecent) {
+        return aIsRecent ? -1 : 1;
+      }
+      if (aIsRecent && bIsRecent && a.lastInteractionMs !== b.lastInteractionMs) {
+        return b.lastInteractionMs - a.lastInteractionMs;
+      }
+    }
+
+    return a.originalIndex - b.originalIndex;
+  };
 
   return products
     .filter((product) => !excludeProductIds?.has(product.objectID))
@@ -192,12 +251,13 @@ export function rankProductsByAffinity(
       ...scoreProductAffinity(product, profile),
       originalIndex: index,
     }))
-    .sort((a, b) => b.score - a.score || a.originalIndex - b.originalIndex)
+    .sort(compareProducts)
     .slice(0, Math.max(0, limit))
-    .map(({ product, score, categoryScore, brandScore }) => ({
+    .map(({ product, score, categoryScore, brandScore, lastInteractionMs }) => ({
       product,
       score,
       categoryScore,
       brandScore,
+      lastInteractionMs,
     }));
 }

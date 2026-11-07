@@ -13,6 +13,7 @@ import ClearFiltersButton from "./components/ClearFiltersButton";
 import SearchResults from "./components/SearchResults";
 import NoResults from "./components/NoResults";
 import { useTrackSearch } from "../../analytics/useTrackSearch";
+import RecommendedProducts from "../../components/RecommendedProducts";
 
 // Conecta el buscador con analytics; debe vivir dentro de InstantSearch.
 function SearchTracking() {
@@ -89,6 +90,7 @@ export default function SearchPage() {
               <div className="flex justify-center pt-4">
                 <Pagination />
               </div>
+              <RecommendedProducts />
             </main>
           </div>
         </div>

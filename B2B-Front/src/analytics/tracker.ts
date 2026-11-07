@@ -160,10 +160,14 @@ export function track<K extends AnalyticsEventType>(
     incrementCounter(context.userId, type);
     updateHistory(context.userId, type, payload);
     if (import.meta.env.DEV) {
+      const events = loadEvents(context.userId);
       console.log("[Afinidad]", {
         accion: event.type,
         datos: event.payload,
-        perfilActualizado: buildAffinityProfile(loadEvents(context.userId)),
+        productosRelacionados: buildAffinityProfile(events),
+        recomendacionesInicio: buildAffinityProfile(events, {
+          recencyMultiplier: false,
+        }),
       });
     }
 
