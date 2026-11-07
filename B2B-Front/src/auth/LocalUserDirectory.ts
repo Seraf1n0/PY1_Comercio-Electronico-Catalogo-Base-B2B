@@ -32,11 +32,10 @@ export const localUserDirectory: UserDirectory = {
     },
 
     async list() {
+        // Los registros invalidos (inactivos o sin rol) se omiten:
+        // solo se listan usuarios que realmente pueden iniciar sesion.
         return records.flatMap((raw): AppUser[] => {
             const result = parseUserRecord(raw);
-            if (!result.ok) {
-                throw new Error("Failed to parse user record");
-            }
             return result.ok ? [result.user] : [];
         });
     },

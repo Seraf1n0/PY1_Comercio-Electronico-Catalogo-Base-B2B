@@ -7,6 +7,7 @@ import { getIva, getProductSubtotal, getTotal, formatColones } from "../../cart/
 import CartSummary from "../../components/CartSummary";
 import CartLineItem from "./components/CartLineItem";
 import EmptyCart from "./components/EmptyCart";
+import UserBadge from "../../components/UserBadge";
 
 export default function CartPage() {
   const { state, dispatch } = useCart();
@@ -60,9 +61,12 @@ export default function CartPage() {
         <h1 className="text-lg font-bold tracking-tight text-blue-800 sm:text-xl">
           Tu carrito
         </h1>
-        <span className="min-w-20 text-right text-sm text-slate-500">
-          {totalItems} {totalItems === 1 ? "artículo" : "artículos"}
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="hidden min-w-20 text-right text-sm text-slate-500 sm:inline">
+            {totalItems} {totalItems === 1 ? "artículo" : "artículos"}
+          </span>
+          <UserBadge />
+        </div>
       </header>
 
       {state.items.length === 0 ? (

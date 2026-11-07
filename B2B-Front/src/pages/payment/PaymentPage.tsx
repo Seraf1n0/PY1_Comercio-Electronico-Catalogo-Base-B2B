@@ -17,6 +17,7 @@ import { errorMessages } from "../../lib/errorMessages";
 import Spinner from "../../components/Spinner";
 import OrderSummary from "./components/OrderSummary";
 import PaymentResultMessage from "./components/PaymentResultMessage";
+import UserBadge from "../../components/UserBadge";
 
 //Formato
 
@@ -202,9 +203,12 @@ export default function PaymentPage() {
         <h1 className="text-lg font-bold tracking-tight text-blue-800 sm:text-xl">
           Pago · Orden #{order.orderNumber}
         </h1>
-        <span className="min-w-20 text-right text-xs font-semibold text-slate-500">
-          {PAYMENT_LABEL[order.paymentStatus]}
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="hidden min-w-20 text-right text-xs font-semibold text-slate-500 sm:inline">
+            {PAYMENT_LABEL[order.paymentStatus]}
+          </span>
+          <UserBadge />
+        </div>
       </header>
 
       <div className="mx-auto max-w-6xl px-4 py-6 lg:flex lg:gap-6">

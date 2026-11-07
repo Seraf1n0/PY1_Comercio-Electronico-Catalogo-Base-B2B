@@ -1,5 +1,5 @@
 import { useEffect, useReducer, type ReactNode, useCallback, useRef} from "react";
-import { useAuth } from "../auth/AuthContext";
+import { useAuth } from "../auth/useAuth";
 import { reducer } from "./cartReducer";
 import { loadCart, saveCart } from "./storage";
 import { CartContext } from "./CartContext";

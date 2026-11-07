@@ -21,7 +21,7 @@ export function parseUserRecord(raw: RawUser): LookupResult {
     }
 
     if (!raw.active) return { ok: false, reason: "INACTIVE" };
-    if (!isRole(raw.role)) return { ok: false, reason: "INVALIDE_ROLE" };
+    if (!isRole(raw.role)) return { ok: false, reason: "INVALID_ROLE" };
     if (!isBranch(raw.defaultBranch)) return { ok: false, reason: "INVALID_RECORD" };
     if (raw.role === "B2B" && !raw.company?.name) return { ok: false, reason: "INVALID_RECORD" };
 

@@ -3,9 +3,9 @@ import {
   SearchBox,
   HitsPerPage,
 } from "react-instantsearch";
-import { Link } from "react-router-dom";
 import { searchClient, algoliaIndex } from "../../lib/algolia";
 import CartPreview from "../../components/CartPreview";
+import UserBadge from "../../components/UserBadge";
 import Pagination from "./components/Pagination";
 import FiltersList from "./components/FiltersList";
 import MobileFiltersDrawer from "./components/MobileFiltersDrawer";
@@ -18,12 +18,9 @@ export default function SearchPage() {
   return (
     <div className="min-h-screen bg-slate-50">
       <div className="grid grid-cols-3 items-center bg-white px-4 sm:px-6 py-4 shadow-md">
-        <Link
-          to="/login"
-          className="justify-self-start text-sm font-semibold text-indigo-600 transition hover:text-indigo-700"
-        >
-          Iniciar sesión
-        </Link>
+        <div className="justify-self-start">
+          <UserBadge />
+        </div>
         <h1 className="text-center text-xl font-bold tracking-tight text-blue-800 sm:text-2xl truncate">
           Bombocars
         </h1>

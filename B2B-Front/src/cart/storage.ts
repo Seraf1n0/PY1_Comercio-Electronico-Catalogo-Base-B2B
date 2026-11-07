@@ -2,7 +2,7 @@ import type { CartItem } from './types';
 import { readJSON, writeJSON } from '../lib/safeStorage';
 import { storageKeys } from '../lib/storageKeys';
 
-const STORAGE_VERSION = 2;
+const STORAGE_VERSION = 3;
 
 function isValidItem(value: unknown): value is CartItem {
   if (!value || typeof value !== 'object') {

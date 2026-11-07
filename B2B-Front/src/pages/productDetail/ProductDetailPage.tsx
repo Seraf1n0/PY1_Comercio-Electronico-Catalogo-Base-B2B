@@ -5,8 +5,8 @@ import type { Product } from "../../Catalog/types";
 import { errorMessages } from "../../lib/errorMessages";
 import ProductDetail from "./ProductDetail";
 import ProductDetailSkeleton from "../../components/ProductDetailSkeleton";
-import { useAuth } from "../../auth/AuthContext";
-import { recordProductView } from "../../productHistory/storage";
+import { useAuth } from "../../auth/useAuth";
+import { recordProductView } from "../../analytics/historyStore";
 
 interface AlgoliaHitsResult {
   hits: Product[];
@@ -15,6 +15,7 @@ interface AlgoliaHitsResult {
 export default function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
   const { user } = useAuth();
+  const userId = user?.objectID;
 
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
@@ -44,12 +45,15 @@ export default function ProductDetailPage() {
           const foundProduct = hits[0];
           setProduct(foundProduct);
 
-          if(user) {     
-            recordProductView(
-              user.objectID,
-              foundProduct.objectID,
-              foundProduct.title
-            )
+          if (userId) {
+            recordProductView(userId, {
+              id: foundProduct.objectID,
+              title: foundProduct.title,
+              img: foundProduct.images_urls[0] ?? "",
+              category: foundProduct.categories[0] ?? "",
+              brand: foundProduct.brand,
+              price: foundProduct.price,
+            });
           }
         }
       } catch {
@@ -64,7 +68,7 @@ export default function ProductDetailPage() {
     return () => {
       cancelled = true;
     };
-  }, [id, user?.objectID]);
+  }, [id, userId]);
 
   if (loading) {
     return (

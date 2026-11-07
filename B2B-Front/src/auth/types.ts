@@ -40,10 +40,24 @@ export interface RawUser {
 }
 
 // Los tipos de error que puede devolver el directorio
-export type LookupFailure = "NOT_FOUND" | "INACTIVE" | "INVALIDE_ROLE" | "INVALID_RECORD"
+export type LookupFailure = "NOT_FOUND" | "INACTIVE" | "INVALID_ROLE" | "INVALID_RECORD"
 
 export type LookupResult = 
 | { ok: true, user: AppUser }
+| { ok: false, reason: LookupFailure }
+
+/**
+ * Sesion por pestaña. Solo guarda quien esta conectado:
+ * el rol y demas datos se resuelven desde el directorio.
+ */
+export interface Session {
+    userId: string
+    sessionId: string
+    loginAt: string
+}
+
+export type LoginResult =
+| { ok: true }
 | { ok: false, reason: LookupFailure }
 
 /**

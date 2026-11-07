@@ -1,52 +1,119 @@
-import { createContext, useContext, useState, type ReactNode} from "react";
-import type { AppUser } from "./types";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from "react";
 import { userDirectory } from "./UserDirectory";
-import { readSessionJSON, writeSessionJSON, removeSessionJSON } from "../lib/safeStorage";
-import { storageKeys } from "../lib/storageKeys";
+import { AuthContext, type AuthContextValue } from "./authContextValue";
+import { clearSession, loadSession, saveSession } from "./sessionStore";
+import type { AppUser, LoginResult, Session } from "./types";
 
+function createSessionId(): string {
+  if (
+    typeof crypto !== "undefined" &&
+    typeof crypto.randomUUID === "function"
+  ) {
+    return crypto.randomUUID();
+  }
 
-
-interface AuthContextVal {
-    user: AppUser | null;
-    login: (loginInput: string) => Promise<string | null>;
-    logout: () => void;
+  return `session-${Date.now()}-${Math.random().toString(36).slice(2)}`;
 }
 
-const AuthContext = createContext<AuthContextVal | null>(null);
+export function AuthProvider({ children }: { children: ReactNode }) {
+  const [session, setSession] = useState<Session | null>(() => loadSession());
+  const [user, setUser] = useState<AppUser | null>(null);
+  const [status, setStatus] = useState<"loading" | "ready">("loading");
 
-export function AuthProvider({ children}: { children: ReactNode}) {
-    const [user, setUser] = useState<AppUser | null>(() => readSessionJSON<AppUser | null>(storageKeys.session, null));
+  // Revalida la sesion contra el directorio: si el usuario ya no existe,
+  // esta inactivo o tiene un rol invalido, la sesion se descarta.
+  useEffect(() => {
+    let cancelled = false;
 
-    async function login(loginInput: string): Promise<string | null> {
-        const result = await userDirectory.findByLogin(loginInput);
-        if (!result.ok) {
-            return ("No se encontro un usuario valido");
+    async function resolveSession() {
+      try {
+        const current = loadSession();
+
+        if (!current) {
+          if (!cancelled) {
+            setSession(null);
+            setUser(null);
+          }
+          return;
         }
 
-        writeSessionJSON(storageKeys.session, result.user);
-        setUser(result.user);
-        return null   
+        const resolved = await userDirectory.findById(current.userId);
+        if (cancelled) return;
+
+        if (!resolved) {
+          clearSession();
+          setSession(null);
+          setUser(null);
+          return;
+        }
+
+        setSession(current);
+        setUser(resolved);
+      } catch {
+        if (!cancelled) {
+          clearSession();
+          setSession(null);
+          setUser(null);
+        }
+      } finally {
+        if (!cancelled) {
+          setStatus("ready");
+        }
+      }
     }
 
+    resolveSession();
 
-    function logout() {
-        removeSessionJSON(storageKeys.session);
-        setUser(null);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const login = useCallback(async (loginInput: string): Promise<LoginResult> => {
+    const result = await userDirectory.findByLogin(loginInput);
+
+    if (!result.ok) {
+      return { ok: false, reason: result.reason };
     }
 
-    return (
-        <AuthContext.Provider value={{ user, login, logout }}>
-            {children}
-        </AuthContext.Provider>
-    )
+    const nextSession: Session = {
+      userId: result.user.objectID,
+      sessionId: createSessionId(),
+      loginAt: new Date().toISOString(),
+    };
+
+    saveSession(nextSession);
+    setSession(nextSession);
+    setUser(result.user);
+    setStatus("ready");
+
+    return { ok: true };
+  }, []);
+
+  const logout = useCallback(() => {
+    clearSession();
+    setSession(null);
+    setUser(null);
+  }, []);
+
+  const value = useMemo<AuthContextValue>(
+    () => ({
+      user,
+      role: user?.role ?? null,
+      sessionId: session?.sessionId ?? null,
+      status,
+      isAuthenticated: Boolean(user),
+      login,
+      logout,
+    }),
+    [user, session, status, login, logout],
+  );
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
-export function useAuth() {
-    const context = useContext(AuthContext);
-
-    if(!context){
-        throw new Error("Se debe usarel useAuth si o si en el authProvider");
-    }
-
-    return context;
-}
-

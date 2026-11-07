@@ -1,12 +1,6 @@
-export interface ProductView {
-    action: "PRODUCT_VIEW";
-    timestamp: string;
-    productId: string;
-    productTitle: string;
-}
-
-export interface ViewedProduct {
-    productId: string;
-    productTitle: string;
-    lastViewed: string;
-}
+export type {
+  ProductViewInput,
+  HistoryState,
+  ViewedProduct,
+} from "../analytics/historyStore";
+export type { ProductViewPayload as ProductView } from "../analytics/types";

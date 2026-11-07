@@ -23,7 +23,7 @@ export function parseStorageVersion(key: string): number | null {
 export const storageKeys = {
   users: storageKey("users", 1),
   session: storageKey("session", 1),
-  cart: (userId: string) => storageKey("cart", 2, userId),
+  cart: (userId: string) => storageKey("cart", 3, userId),
   orders: storageKey("orders", 1),
   balances: storageKey("balances", 1),
   events: (userId: string) => storageKey("events", 1, userId),
