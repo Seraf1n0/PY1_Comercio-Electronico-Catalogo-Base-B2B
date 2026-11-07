@@ -6,4 +6,6 @@ export interface CartItem {
   img: string;
   stock: number;
   subtotal: number;
+  category?: string;
+  brand?: string;
 }

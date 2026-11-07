@@ -1,4 +1,5 @@
 import type { Role } from "../auth/types";
+import { buildAffinityProfile } from "./affinityEngine";
 import { incrementCounter } from "./countersStore";
 import { appendEvent, loadEvents } from "./eventStore";
 import { recordProductView, recordSearch } from "./historyStore";
@@ -158,6 +159,17 @@ export function track<K extends AnalyticsEventType>(
     appendEvent(context.userId, event);
     incrementCounter(context.userId, type);
     updateHistory(context.userId, type, payload);
+    if (import.meta.env.DEV) {
+      const events = loadEvents(context.userId);
+      console.log("[Afinidad]", {
+        accion: event.type,
+        datos: event.payload,
+        productosRelacionados: buildAffinityProfile(events),
+        recomendacionesInicio: buildAffinityProfile(events, {
+          recencyMultiplier: false,
+        }),
+      });
+    }
 
     return event;
   } catch (error) {

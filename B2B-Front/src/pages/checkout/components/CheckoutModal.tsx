@@ -42,6 +42,8 @@ const generateOrder = (
     quantity: item.quantity,
     unitPrice: item.price,
     subtotal: item.subtotal,
+    category: item.category ?? "",
+    brand: item.brand ?? "",
   }));
 
   const subtotal = getProductSubtotal(items);

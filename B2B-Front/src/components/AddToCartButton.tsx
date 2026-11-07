@@ -34,6 +34,8 @@ export default function AddToCartButton({
         track("ADD_TO_CART", {
             productId: product.objectID,
             title: product.title,
+            category: product.categories?.[0] ?? "",
+            brand: product.brand ?? "",
             quantity: 1,
             unitPrice: product.price,
             source,
