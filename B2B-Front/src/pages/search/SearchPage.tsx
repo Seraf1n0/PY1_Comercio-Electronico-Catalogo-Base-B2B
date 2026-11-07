@@ -5,19 +5,29 @@ import {
 } from "react-instantsearch";
 import { searchClient, algoliaIndex } from "../../lib/algolia";
 import CartPreview from "../../components/CartPreview";
+import UserBadge from "../../components/UserBadge";
 import Pagination from "./components/Pagination";
 import FiltersList from "./components/FiltersList";
 import MobileFiltersDrawer from "./components/MobileFiltersDrawer";
 import ClearFiltersButton from "./components/ClearFiltersButton";
 import SearchResults from "./components/SearchResults";
 import NoResults from "./components/NoResults";
+import { useTrackSearch } from "../../analytics/useTrackSearch";
+
+// Conecta el buscador con analytics; debe vivir dentro de InstantSearch.
+function SearchTracking() {
+  useTrackSearch();
+  return null;
+}
 
 // Vista completa de la página de búsqueda
 export default function SearchPage() {
   return (
     <div className="min-h-screen bg-slate-50">
       <div className="grid grid-cols-3 items-center bg-white px-4 sm:px-6 py-4 shadow-md">
-        <div />
+        <div className="justify-self-start">
+          <UserBadge />
+        </div>
         <h1 className="text-center text-xl font-bold tracking-tight text-blue-800 sm:text-2xl truncate">
           Bombocars
         </h1>
@@ -28,6 +38,7 @@ export default function SearchPage() {
       </div>
 
       <InstantSearch searchClient={searchClient} indexName={algoliaIndex}>
+        <SearchTracking />
         <div className="mx-auto max-w-7xl px-4 py-6 flex flex-col gap-4">
           <div className="mb-2 flex items-center gap-2">
             <MobileFiltersDrawer />

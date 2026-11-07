@@ -12,6 +12,7 @@ import CartSummary from "../../components/CartSummary";
 import EmptyCart from "../cart/components/EmptyCart";
 import { useState } from "react";
 import CheckoutModal from "../checkout/components/CheckoutModal";
+import UserBadge from "../../components/UserBadge";
 
 export default function CheckoutPage() {
   const { state } = useCart();
@@ -45,9 +46,12 @@ export default function CheckoutPage() {
         <h1 className="text-lg font-bold tracking-tight text-blue-800 sm:text-xl">
           Finalizar compra
         </h1>
-        <span className="min-w-20 text-right text-sm text-slate-500">
-          {totalUnits} {totalUnits === 1 ? "vehículo" : "vehículos"}
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="hidden min-w-20 text-right text-sm text-slate-500 sm:inline">
+            {totalUnits} {totalUnits === 1 ? "vehículo" : "vehículos"}
+          </span>
+          <UserBadge />
+        </div>
       </header>
 
       {state.items.length === 0 ? (

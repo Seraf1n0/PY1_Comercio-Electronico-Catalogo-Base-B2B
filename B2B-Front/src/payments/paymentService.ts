@@ -5,12 +5,14 @@ import type {
     PaymentRequest,
     PaymentResponse,
 } from "./types";
+import { readJSON, removeJSON, writeJSON } from "../lib/safeStorage";
+import { storageKeys } from "../lib/storageKeys";
 
 const cards = cardsData as Card[];
 
 const PROCESSING_DELAY_MS = 1500;
 const ERROR_EXTRA_DELAY_MS = 2000;
-const BALANCES_KEY = "sandbox:balances";
+const BALANCES_VERSION = 1;
 
 /**
 Esto es para lanzar el error. Utiliza una clase de de typescript para dar una mejor respuesta y que pueda ser más específica que una excepción
@@ -38,21 +40,21 @@ const normalizeNumber = (value: string) => value.replace(/[\s-]/g, "");
 type Balances = Record<string, number>;
 
 function loadBalances(): Balances {
-    try {
-        const raw = window.localStorage.getItem(BALANCES_KEY);
-        return raw ? (JSON.parse(raw) as Balances) : {};
-    } catch {
+    const balances = readJSON<Balances>(
+        storageKeys.balances,
+        {},
+        BALANCES_VERSION,
+    );
+
+    if (!balances || typeof balances !== "object" || Array.isArray(balances)) {
         return {};
     }
+
+    return balances;
 }
 
 function saveBalances(balances: Balances): void {
-    try {
-        window.localStorage.setItem(BALANCES_KEY, JSON.stringify(balances));
-    } catch {
-        // Si el almacenamiento no esta disponible, se ignora: los saldos
-        // vuelven a los valores por defecto de cards.json.
-    }
+    writeJSON(storageKeys.balances, balances, BALANCES_VERSION);
 }
 
 // Busca el salod actual. Usa el guardado y si falla llama al del json
@@ -62,7 +64,7 @@ export function getCardBalance(card: Card): number {
 
 // Solo para probar. Resetea los saldos a los originales
 export function resetSandboxBalances(): void {
-    window.localStorage.removeItem(BALANCES_KEY);
+    removeJSON(storageKeys.balances);
 }
 
 // Lista con todas las tarjetas

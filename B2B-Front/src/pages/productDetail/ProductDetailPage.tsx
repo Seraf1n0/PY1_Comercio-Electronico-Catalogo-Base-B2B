@@ -5,6 +5,8 @@ import type { Product } from "../../Catalog/types";
 import { errorMessages } from "../../lib/errorMessages";
 import ProductDetail from "./ProductDetail";
 import ProductDetailSkeleton from "../../components/ProductDetailSkeleton";
+import { useAuth } from "../../auth/useAuth";
+import { useAnalytics } from "../../analytics/useAnalytics";
 
 interface AlgoliaHitsResult {
   hits: Product[];
@@ -12,6 +14,9 @@ interface AlgoliaHitsResult {
 
 export default function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const { user } = useAuth();
+  const userId = user?.objectID;
+  const { track } = useAnalytics();
 
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
@@ -53,6 +58,19 @@ export default function ProductDetailPage() {
       cancelled = true;
     };
   }, [id]);
+
+  useEffect(() => {
+    if (!product || !userId) return;
+
+    track("PRODUCT_VIEW", {
+      productId: product.objectID,
+      title: product.title,
+      category: product.categories[0] ?? "",
+      brand: product.brand,
+      price: product.price,
+      img: product.images_urls[0] ?? "",
+    });
+  }, [product, userId, track]);
 
   if (loading) {
     return (
