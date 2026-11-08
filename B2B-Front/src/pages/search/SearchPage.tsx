@@ -14,6 +14,8 @@ import SearchResults from "./components/SearchResults";
 import NoResults from "./components/NoResults";
 import { useTrackSearch } from "../../analytics/useTrackSearch";
 import RecommendedProducts from "../../components/RecommendedProducts";
+import RecentSearchChips from "./components/RecentSearchChips";
+import RecentlyViewedProducts from "./components/RecentlyViewedProducts";
 
 // Conecta el buscador con analytics; debe vivir dentro de InstantSearch.
 function SearchTracking() {
@@ -60,6 +62,8 @@ export default function SearchPage() {
             </div>
           </div>
 
+          <RecentSearchChips />
+
           <div className="flex flex-col gap-6 md:flex-row">
             <aside className="hidden md:flex md:flex-col gap-4 w-72 shrink-0 rounded-xl bg-white p-4 shadow-sm ring-1 ring-slate-200 h-fit">
               <FiltersList collapsible/>
@@ -91,6 +95,7 @@ export default function SearchPage() {
                 <Pagination />
               </div>
               <RecommendedProducts />
+              <RecentlyViewedProducts />
             </main>
           </div>
         </div>

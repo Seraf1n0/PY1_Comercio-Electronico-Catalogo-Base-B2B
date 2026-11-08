@@ -5,6 +5,8 @@ const HISTORY_VERSION = 1;
 
 export const MAX_RECENT_PRODUCTS = 12;
 export const MAX_RECENT_SEARCHES = 10;
+export const RECENT_SEARCHES_UPDATED_EVENT = "analytics:recent-searches-updated";
+export const RECENT_PRODUCTS_UPDATED_EVENT = "analytics:recent-products-updated";
 
 /** Datos minimos para volver a mostrar un producto visto. */
 export interface ViewedProduct {
@@ -180,6 +182,11 @@ export function recordProductView(
   ].slice(0, MAX_RECENT_PRODUCTS);
 
   saveHistory(userId, { ...history, recentlyViewed });
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(
+      new CustomEvent(RECENT_PRODUCTS_UPDATED_EVENT, { detail: { userId } }),
+    );
+  }
 }
 
 export function recordSearch(userId: string, query: string): void {
@@ -197,8 +204,19 @@ export function recordSearch(userId: string, query: string): void {
   ].slice(0, MAX_RECENT_SEARCHES);
 
   saveHistory(userId, { ...history, recentSearches });
+  window.dispatchEvent(
+    new CustomEvent(RECENT_SEARCHES_UPDATED_EVENT, { detail: { userId } }),
+  );
 }
 
 export function clearHistory(userId: string): void {
   saveHistory(userId, emptyHistory());
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(
+      new CustomEvent(RECENT_SEARCHES_UPDATED_EVENT, { detail: { userId } }),
+    );
+    window.dispatchEvent(
+      new CustomEvent(RECENT_PRODUCTS_UPDATED_EVENT, { detail: { userId } }),
+    );
+  }
 }
