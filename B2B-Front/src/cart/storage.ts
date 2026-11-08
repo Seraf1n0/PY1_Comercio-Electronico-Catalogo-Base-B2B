@@ -1,12 +1,8 @@
 import type { CartItem } from './types';
+import { readJSON, writeJSON } from '../lib/safeStorage';
+import { storageKeys } from '../lib/storageKeys';
 
-const STORAGE_KEY = 'bombocars:cart:v2';
-const STORAGE_VERSION = 2;
-
-interface PersistedCart {
-  version: number;
-  items: CartItem[];
-}
+const STORAGE_VERSION = 3;
 
 function isValidItem(value: unknown): value is CartItem {
   if (!value || typeof value !== 'object') {
@@ -27,46 +23,21 @@ function isValidItem(value: unknown): value is CartItem {
   );
 }
 
-export function loadCart(): CartItem[] {
-  if (typeof window === 'undefined') {
+export function loadCart(userId: string): CartItem[] {
+  const items = readJSON<CartItem[]>(storageKeys.cart(userId), [], STORAGE_VERSION);
+
+  if (!Array.isArray(items)) {
     return [];
   }
 
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) {
-      return [];
-    }
-
-    const parsed = JSON.parse(raw) as PersistedCart;
-    if (
-      !parsed ||
-      parsed.version !== STORAGE_VERSION ||
-      !Array.isArray(parsed.items)
-    ) {
-      return [];
-    }
-
-    return parsed.items
-      .filter(isValidItem)
-      .map((item) => ({
-        ...item,
-        subtotal: item.price * item.quantity,
-      }));
-  } catch {
-    return [];
-  }
+  return items
+    .filter(isValidItem)
+    .map((item) => ({
+      ...item,
+      subtotal: item.price * item.quantity,
+    }));
 }
 
-export function saveCart(items: CartItem[]): void {
-  if (typeof window === 'undefined') {
-    return;
-  }
-
-  try {
-    const payload: PersistedCart = { version: STORAGE_VERSION, items };
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
-  } catch {
-    // Storage lleno o bloqueado: no debe romper la aplicación.
-  }
+export function saveCart(userId: string, items: CartItem[]): void {
+  writeJSON(storageKeys.cart(userId), items, STORAGE_VERSION);
 }

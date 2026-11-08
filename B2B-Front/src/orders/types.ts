@@ -8,6 +8,8 @@ export type OrderItem = {
     quantity: number;
     unitPrice: number;
     subtotal: number;
+    category?: string;
+    brand?: string;
 }
 
 export type Buyer = {

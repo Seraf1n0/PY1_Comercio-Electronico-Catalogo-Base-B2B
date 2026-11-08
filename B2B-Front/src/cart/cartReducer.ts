@@ -14,6 +14,7 @@ export type Action =
  | { type: 'REMOVE_ITEM'; payload: string }
  | { type: 'RESTORE_ITEM'; payload: { item: CartItem; index: number } }
  | { type: 'CLEAR_CART' }
+ | { type: 'SYNC_CART'; payload: CartItem[] };
 
 
 const withSubtotal = (item: CartItem): CartItem => ({
@@ -44,6 +45,8 @@ export const reducer = (state: State, action: Action): State => {
                 img: action.payload.images_urls?.[0] ?? "/placeholder.png",
                 stock: getTotalStock(action.payload),
                 subtotal: 0,
+                category: action.payload.categories?.[0] ?? "",
+                brand: action.payload.brand ?? "",
             });
 
             return { items: [...state.items, newItem] };
@@ -80,6 +83,9 @@ export const reducer = (state: State, action: Action): State => {
             items.splice(safeIndex, 0, item);
             return { items };
         }
+
+        case 'SYNC_CART':
+            return { items: action.payload };
 
         case 'CLEAR_CART':
             return { items: [] };

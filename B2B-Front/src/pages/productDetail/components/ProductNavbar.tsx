@@ -2,6 +2,7 @@ import {HomeIcon, LinkIcon, HeartIcon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
 import FeedbackAlert from "../../../components/FeedbackAlert";
 import CartPreview from "../../../components/CartPreview";
+import UserBadge from "../../../components/UserBadge";
 import { useState } from "react";
 
 interface ProductNavbarProps {
@@ -63,6 +64,7 @@ export default function ProductNavbar({ title, totalStock }: ProductNavbarProps)
         <HeartIcon 
           className="heart-icon h-6 w-6 text-gray-700 cursor-pointer hover:text-red-500" 
           onClick={handleFavorite} />
+        <UserBadge />
         <CartPreview />
       </div>
 

@@ -10,8 +10,9 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import NotFoundPage from "./pages/error/NotFoundPage";
 import TermsAndConditionsPage from "./pages/information/TermsAndConditionsPage";
 import SiteFooter from "./components/SiteFooter";
-
-
+import LoginPage from "./pages/login/LoginPage";
+import RequireAuth from "./auth/RequireAuth";
+import AnalyticsPage from "./pages/analytics/AnalyticsPage";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -34,13 +35,19 @@ function App() {
       <ScrollToTop />
       <ErrorBoundary>
         <Routes>
-          <Route path="/" element={<SearchPage />} />
-          <Route path="/producto/:id" element={<ProductDetailPage />} />
-          <Route path="/carrito" element={<CartPage />} />
-          <Route path="/finalizar-compra" element={<CheckoutPage />} />
-          <Route path="/pago/:orderNumber" element={<PaymentPage />} />
-          <Route path="/confirmacion/:orderNumber" element={<ConfirmationPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/terminos-y-condiciones" element={<TermsAndConditionsPage />} />
+
+          <Route element={<RequireAuth />}>
+            <Route path="/" element={<SearchPage />} />
+            <Route path="/producto/:id" element={<ProductDetailPage />} />
+            <Route path="/carrito" element={<CartPage />} />
+            <Route path="/finalizar-compra" element={<CheckoutPage />} />
+            <Route path="/pago/:orderNumber" element={<PaymentPage />} />
+            <Route path="/confirmacion/:orderNumber" element={<ConfirmationPage />} />
+            <Route path="/analytics" element={<AnalyticsPage />} />
+          </Route>
+
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <SiteFooter />

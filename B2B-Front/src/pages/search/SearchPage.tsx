@@ -5,19 +5,32 @@ import {
 } from "react-instantsearch";
 import { searchClient, algoliaIndex } from "../../lib/algolia";
 import CartPreview from "../../components/CartPreview";
+import UserBadge from "../../components/UserBadge";
 import Pagination from "./components/Pagination";
 import FiltersList from "./components/FiltersList";
 import MobileFiltersDrawer from "./components/MobileFiltersDrawer";
 import ClearFiltersButton from "./components/ClearFiltersButton";
 import SearchResults from "./components/SearchResults";
 import NoResults from "./components/NoResults";
+import { useTrackSearch } from "../../analytics/useTrackSearch";
+import RecommendedProducts from "../../components/RecommendedProducts";
+import RecentSearchChips from "./components/RecentSearchChips";
+import RecentlyViewedProducts from "./components/RecentlyViewedProducts";
+
+// Conecta el buscador con analytics; debe vivir dentro de InstantSearch.
+function SearchTracking() {
+  useTrackSearch();
+  return null;
+}
 
 // Vista completa de la página de búsqueda
 export default function SearchPage() {
   return (
     <div className="min-h-screen bg-slate-50">
       <div className="grid grid-cols-3 items-center bg-white px-4 sm:px-6 py-4 shadow-md">
-        <div />
+        <div className="justify-self-start">
+          <UserBadge />
+        </div>
         <h1 className="text-center text-xl font-bold tracking-tight text-blue-800 sm:text-2xl truncate">
           Bombocars
         </h1>
@@ -28,6 +41,7 @@ export default function SearchPage() {
       </div>
 
       <InstantSearch searchClient={searchClient} indexName={algoliaIndex}>
+        <SearchTracking />
         <div className="mx-auto max-w-7xl px-4 py-6 flex flex-col gap-4">
           <div className="mb-2 flex items-center gap-2">
             <MobileFiltersDrawer />
@@ -47,6 +61,8 @@ export default function SearchPage() {
               />
             </div>
           </div>
+
+          <RecentSearchChips />
 
           <div className="flex flex-col gap-6 md:flex-row">
             <aside className="hidden md:flex md:flex-col gap-4 w-72 shrink-0 rounded-xl bg-white p-4 shadow-sm ring-1 ring-slate-200 h-fit">
@@ -78,6 +94,8 @@ export default function SearchPage() {
               <div className="flex justify-center pt-4">
                 <Pagination />
               </div>
+              <RecommendedProducts />
+              <RecentlyViewedProducts />
             </main>
           </div>
         </div>

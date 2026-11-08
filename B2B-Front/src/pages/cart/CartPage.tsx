@@ -7,6 +7,8 @@ import { getIva, getProductSubtotal, getTotal, formatColones } from "../../cart/
 import CartSummary from "../../components/CartSummary";
 import CartLineItem from "./components/CartLineItem";
 import EmptyCart from "./components/EmptyCart";
+import UserBadge from "../../components/UserBadge";
+import RecommendedProducts from "../../components/RecommendedProducts";
 
 export default function CartPage() {
   const { state, dispatch } = useCart();
@@ -60,58 +62,70 @@ export default function CartPage() {
         <h1 className="text-lg font-bold tracking-tight text-blue-800 sm:text-xl">
           Tu carrito
         </h1>
-        <span className="min-w-20 text-right text-sm text-slate-500">
-          {totalItems} {totalItems === 1 ? "artículo" : "artículos"}
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="hidden min-w-20 text-right text-sm text-slate-500 sm:inline">
+            {totalItems} {totalItems === 1 ? "artículo" : "artículos"}
+          </span>
+          <UserBadge />
+        </div>
       </header>
 
       {state.items.length === 0 ? (
         <EmptyCart />
       ) : (
-        <div className="mx-auto max-w-6xl px-4 py-6 lg:flex lg:gap-6">
-          <section className="flex-1">
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-base font-bold text-slate-800">
-                Productos ({state.items.length})
-              </h2>
-              <button
-                type="button"
-                onClick={handleClear}
-                className="cursor-pointer text-sm font-semibold text-red-600 hover:underline"
-              >
-                Vaciar carrito
-              </button>
-            </div>
+        <div className="mx-auto max-w-6xl px-4 py-6">
+          <div className="lg:flex lg:gap-6">
+            <section className="flex-1">
+              <div className="mb-4 flex items-center justify-between">
+                <h2 className="text-base font-bold text-slate-800">
+                  Productos ({state.items.length})
+                </h2>
+                <button
+                  type="button"
+                  onClick={handleClear}
+                  className="cursor-pointer text-sm font-semibold text-red-600 hover:underline"
+                >
+                  Vaciar carrito
+                </button>
+              </div>
 
-            <ul className="flex flex-col gap-3">
-              {state.items.map((item) => (
-                <CartLineItem
-                  key={item.id}
-                  item={item}
-                  onRemove={() => handleRemove(item)}
-                />
-              ))}
-            </ul>
-          </section>
+              <ul className="flex flex-col gap-3">
+                {state.items.map((item) => (
+                  <CartLineItem
+                    key={item.id}
+                    item={item}
+                    onRemove={() => handleRemove(item)}
+                  />
+                ))}
+              </ul>
+            </section>
 
-          <aside className="hidden lg:block lg:w-80 lg:shrink-0">
-            <div className="sticky top-6 rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
-              <h2 className="mb-4 text-sm font-bold uppercase tracking-wide text-slate-500">
-                Resumen de compra
-              </h2>
-              <CartSummary items={state.items} />
-              <button
-                type="button"
-                onClick={handleCheckout}
-                className="mt-5 w-full cursor-pointer rounded-lg bg-indigo-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-indigo-700"
-              >
-                Realizar compra
-              </button>
-              <p className="mt-2 text-center text-xs text-slate-400">
-                Impuestos calculados (IVA 13%)
-              </p>
-            </div>
-          </aside>
+            <aside className="hidden lg:block lg:w-80 lg:shrink-0">
+              <div className="sticky top-6 rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+                <h2 className="mb-4 text-sm font-bold uppercase tracking-wide text-slate-500">
+                  Resumen de compra
+                </h2>
+                <CartSummary items={state.items} />
+                <button
+                  type="button"
+                  onClick={handleCheckout}
+                  className="mt-5 w-full cursor-pointer rounded-lg bg-indigo-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-indigo-700"
+                >
+                  Realizar compra
+                </button>
+                <p className="mt-2 text-center text-xs text-slate-400">
+                  Impuestos calculados (IVA 13%)
+                </p>
+              </div>
+            </aside>
+          </div>
+
+          <RecommendedProducts
+            excludeProductIds={state.items.map((item) => item.id)}
+            title="Productos relacionados"
+            recencyMultiplier
+            recentTieBreakWindowMs={0}
+          />
         </div>
       )}
 
