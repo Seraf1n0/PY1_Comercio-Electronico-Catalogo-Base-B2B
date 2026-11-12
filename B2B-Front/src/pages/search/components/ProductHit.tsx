@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import type { Product } from "../../../Catalog/types";
 import AddToCartButton from "../../../components/AddToCartButton";
+import { selectPrice } from "../../../Catalog/pricing/selectPrice";
+import { useAuth } from "../../../auth/useAuth";
 
 export default function ProductHit({ hit }: { hit: Product }) {
+  const { role } = useAuth();
+  const price = role ? selectPrice(hit, role) : hit.price;
+
+
   return (
     <div className="flex h-full flex-col gap-3">
       <Link to={`/producto/${hit.objectID}`} className="flex flex-1 flex-col">
@@ -23,7 +29,7 @@ export default function ProductHit({ hit }: { hit: Product }) {
             {hit.title ?? "Sin título"}
           </h2>
           <p className="mt-auto font-bold text-blue-800">
-            ₡{hit.price?.toLocaleString("es-CR") ?? "N/D"}
+            ₡{price?.toLocaleString("es-CR") ?? "N/D"}
           </p>
         </article>
       </Link>
