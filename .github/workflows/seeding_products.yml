@@ -1,4 +1,4 @@
-name: Validar cambios en Catalogo y ejecutar seeder
+name: Validar cambios en Catalogo y ejecutar seeder products
 
 on:
   push:
@@ -47,4 +47,4 @@ jobs:
         if: env.cambios_detectados == 'true'
         run: |
           echo "Ejecutando seeder debido a cambios en products.json..."
-          npm run seed
+          npm run seeding_products
