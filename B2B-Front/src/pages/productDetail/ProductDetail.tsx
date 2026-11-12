@@ -4,7 +4,8 @@ import SpecsTable from "./components/SpecsTable";
 import StockByLocation from "./components/StockByLocation";
 import ProductNavbar from "./components/ProductNavbar";
 import AddToCartButton from "../../components/AddToCartButton";
-
+import { selectPrice } from "../../Catalog/pricing/selectPrice";
+import { useAuth } from "../../auth/useAuth";
 
 interface ProductDetailProps {
     product: Product;
@@ -12,7 +13,8 @@ interface ProductDetailProps {
 
 export default function ProductDetail({ product }: ProductDetailProps) {
     const totalStock = Object.values(product.stock).reduce((sum, cantidad) => sum + cantidad, 0);
-
+    const { role } = useAuth();
+    const price = role ? selectPrice(product, role) : product.price;
 
 
 
@@ -32,7 +34,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                 {/* Panel lateral */}
                 <div className="bg-white shadow-lg rounded p-4 w-full md:w-64 h-fit">
                     <p className="text-lg font-bold">
-                        Precio total: ₡{product.price.toLocaleString("es-CR")} 
+                        Precio total: ₡{price?.toLocaleString("es-CR") ?? "N/D"}
                     </p>
                     <p className="text-sm text-gray-600 mt-1">Impuestos: Ya incluidos</p>
 
