@@ -4,6 +4,11 @@ import { useCart } from "../cart/useCart";
 import { getTotalStock } from "../cart/stock";
 import { useAnalytics } from "../analytics/useAnalytics";
 import { useCartFeedback } from "./cartFeedbackContext";
+import { useAuth } from "../auth/useAuth";
+import { selectPrice } from "../Catalog/pricing/selectPrice";
+import { B2B_MINIMUM_VEHICLES } from "../cart/b2bEligibility";
+import { useBranch } from "../branch/useBranch";
+
 
 type AddToCartSource = "catalog" | "detail";
 
@@ -17,11 +22,16 @@ export default function AddToCartButton({
     const { state, dispatch } = useCart();
     const { notify } = useCartFeedback();
     const { track } = useAnalytics();
-
+    const { role } = useAuth();
+    const { selectedBranch } = useBranch();
     const totalStock = getTotalStock(product);
-    const hasPrice = typeof product.price === "number" && Number.isFinite(product.price);
     const currentQuantity = state.items.find((item) => item.id === product.objectID)?.quantity ?? 0;
     const reachedLimit = currentQuantity >= totalStock;
+    const totalVehiclesAfterAdd =
+        state.items.reduce((total, item) => total + item.quantity, 0) + 1;
+    const useB2BPrice = role === "B2B" && totalVehiclesAfterAdd >= B2B_MINIMUM_VEHICLES;
+    const price = selectPrice(product, useB2BPrice ? "B2B" : "B2C");
+    const hasPrice = typeof price === "number" && Number.isFinite(price);
 
     const canAdd =
         product.in_stock !== false && totalStock > 0 && hasPrice && !reachedLimit;
@@ -29,7 +39,7 @@ export default function AddToCartButton({
     const handleAdd = () => {
         if (!canAdd) return;
 
-        dispatch({ type: 'ADD_ITEM', payload: product });
+        dispatch({ type: 'ADD_ITEM', payload: { product, branchId: selectedBranch } });
 
         track("ADD_TO_CART", {
             productId: product.objectID,
@@ -37,7 +47,7 @@ export default function AddToCartButton({
             category: product.categories?.[0] ?? "",
             brand: product.brand ?? "",
             quantity: 1,
-            unitPrice: product.price,
+            unitPrice: price,
             source,
         });
 

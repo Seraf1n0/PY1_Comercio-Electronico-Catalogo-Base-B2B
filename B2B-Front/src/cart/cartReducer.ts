@@ -1,6 +1,7 @@
 import type { CartItem } from './types';
 import type { Product } from '../Catalog/types';
-import { getTotalStock } from './stock';
+import { getCartItemStock, getTotalStock } from './stock';
+import type { BranchId } from '../auth/types';
 
 export interface State {
     items: CartItem[];
@@ -8,7 +9,8 @@ export interface State {
 
 
 export type Action =
- | { type: 'ADD_ITEM'; payload: Product }
+ | { type: 'ADD_ITEM'; payload: { product: Product; branchId: BranchId | null } }
+ | { type: 'SET_ITEM_BRANCH'; payload: { id: string; branchId: BranchId | null } }
  | { type: 'INCREASE_ITEM'; payload: string }
  | { type: 'DECREASE_ITEM'; payload: string}
  | { type: 'REMOVE_ITEM'; payload: string }
@@ -25,37 +27,50 @@ const withSubtotal = (item: CartItem): CartItem => ({
 export const reducer = (state: State, action: Action): State => {
     switch (action.type) {
         case 'ADD_ITEM': {
-            const itemExist = state.items.some((a) => a.id === action.payload.objectID)
+            const { product, branchId } = action.payload;
+            const itemExist = state.items.some((a) => a.id === product.objectID)
 
             if(itemExist) {
                 return {
                     items: state.items.map((a) => {
-                        if (a.id !== action.payload.objectID) return a;
-                        if (a.quantity >= a.stock) return a;
+                        if (a.id !== product.objectID) return a;
+                        if (a.quantity >= getCartItemStock(a)) return a;
                         return withSubtotal({ ...a, quantity: a.quantity + 1 });
                     }),
                 };
             }
 
             const newItem: CartItem = withSubtotal({
-                id: action.payload.objectID,
-                title: action.payload.title ?? 'Falta titulo',
-                price: action.payload.price,
+                id: product.objectID,
+                title: product.title ?? 'Falta titulo',
+                price: product.price,
+                prices: product.prices,
                 quantity: 1,
-                img: action.payload.images_urls?.[0] ?? "/placeholder.png",
-                stock: getTotalStock(action.payload),
+                img: product.images_urls?.[0] ?? "/placeholder.png",
+                stock: getTotalStock(product),
+                stockByBranch: product.stock,
+                branchId,
                 subtotal: 0,
-                category: action.payload.categories?.[0] ?? "",
-                brand: action.payload.brand ?? "",
+                category: product.categories?.[0] ?? "",
+                brand: product.brand ?? "",
             });
 
             return { items: [...state.items, newItem] };
         }
 
+        case 'SET_ITEM_BRANCH':
+            return {
+                items: state.items.map((item) =>
+                    item.id === action.payload.id
+                        ? { ...item, branchId: action.payload.branchId }
+                        : item
+                ),
+            };
+
         case 'INCREASE_ITEM':
             return {
                 items: state.items.map((item) =>
-                    item.id === action.payload && item.quantity < item.stock
+                    item.id === action.payload && item.quantity < getCartItemStock(item)
                         ? withSubtotal({ ...item, quantity: item.quantity + 1 })
                         : item
                 ),

@@ -6,17 +6,21 @@ import { CartProvider } from './cart/cartContext.tsx'
 import { CartFeedbackProvider } from './components/AddToCartFeedback.tsx'
 import { AuthProvider } from "./auth/AuthContext";
 import { AnalyticsProvider } from "./analytics/AnalyticsContext";
+import { BranchProvider } from "./branch/BranchContext";
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <AuthProvider>
-      <AnalyticsProvider>
-        <CartProvider>
-          <CartFeedbackProvider>
-            <App />
-          </CartFeedbackProvider>
-        </CartProvider>
-      </AnalyticsProvider>
+      <BranchProvider>
+        <AnalyticsProvider>
+          <CartProvider>
+            <CartFeedbackProvider>
+              <App />
+            </CartFeedbackProvider>
+          </CartProvider>
+        </AnalyticsProvider>
+      </BranchProvider>
     </AuthProvider>
   </StrictMode>,
 )

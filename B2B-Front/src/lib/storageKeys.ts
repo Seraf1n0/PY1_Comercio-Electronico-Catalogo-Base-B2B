@@ -26,6 +26,7 @@ export const storageKeys = {
   cart: (userId: string) => storageKey("cart", 3, userId),
   orders: storageKey("orders", 1),
   balances: storageKey("balances", 1),
+  inventoryOverrides: storageKey("inventory-overrides", 1),
   events: (userId: string) => storageKey("events", 1, userId),
   history: (userId: string) => storageKey("history", 1, userId),
   metrics: (userId: string) => storageKey("metrics", 1, userId),

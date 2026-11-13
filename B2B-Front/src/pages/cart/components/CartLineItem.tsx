@@ -3,6 +3,11 @@ import { TrashIcon } from "@heroicons/react/24/outline";
 import type { CartItem } from "../../../cart/types";
 import { useCart } from "../../../cart/useCart";
 import { formatColones } from "../../../cart/cartTotals";
+import { useAuth } from "../../../auth/useAuth";
+import type { BranchId } from "../../../auth/types";
+import { getBranchInfo, branches } from "../../../branch/branches";
+import { getBranchStock } from "../../../inventory/inventoryOverrides";
+import { getCartItemStock } from "../../../cart/stock";
 
 interface CartLineItemProps {
   item: CartItem;
@@ -11,7 +16,14 @@ interface CartLineItemProps {
 
 export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
   const { dispatch } = useCart();
-  const reachedMax = item.quantity >= item.stock;
+  const { role } = useAuth();
+  const branchId = item.branchId ?? null;
+  const branchInfo = branchId ? getBranchInfo(branchId) : null;
+  const branchStock = branchInfo && item.stockByBranch
+    ? getBranchStock({ objectID: item.id, stock: item.stockByBranch }, branchInfo.id)
+    : null;
+  const currentStock = getCartItemStock(item);
+  const reachedMax = item.quantity >= currentStock;
 
   return (
     <li className="rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-200 sm:p-4">
@@ -40,9 +52,47 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
             </button>
           </div>
 
-          <p className="mt-1 text-sm text-slate-500">
-            Precio unitario: {formatColones(item.price)}
-          </p>
+          {role === "B2B" && item.prices && (
+            <>
+              <p className="mt-1 text-sm font-semibold text-blue-800">
+                Precio mayorista: {formatColones(item.prices.B2B)}
+              </p>
+              <p className="text-xs text-slate-400">
+                Precio regular: {formatColones(item.prices.B2C)}
+              </p>
+            </>
+          )}
+          {(role !== "B2B" || !item.prices) && (
+            <p className="mt-1 text-sm text-slate-500">
+              Precio unitario: {formatColones(item.price)}
+            </p>
+          )}
+
+          {branchInfo && (
+            <p className={`mt-1 text-xs font-medium ${branchStock ? "text-green-700" : "text-amber-700"}`}>
+              {branchStock === null
+                ? `Inventario de ${branchInfo.label} no disponible en este artículo del carrito`
+                : branchStock > 0
+                  ? `Disponible en ${branchInfo.label}: ${branchStock}`
+                  : `Sin stock en ${branchInfo.label}`}
+            </p>
+          )}
+          <label className="mt-2 flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600">
+            <span>Sucursal de origen:</span>
+            <select
+              value={item.branchId ?? ""}
+              onChange={(event) => dispatch({
+                type: "SET_ITEM_BRANCH",
+                payload: { id: item.id, branchId: event.target.value ? event.target.value as BranchId : null },
+              })}
+              className="rounded-md border border-slate-300 bg-white px-2 py-1.5 text-xs"
+            >
+              <option value="">Selecciona una sucursal</option>
+              {branches.map((branch) => (
+                <option key={branch.id} value={branch.id}>{branch.label}</option>
+              ))}
+            </select>
+          </label>
 
           <div className="mt-auto flex items-end justify-between gap-3 pt-3">
             <div className="flex items-center gap-2">
@@ -79,7 +129,7 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
 
           {reachedMax && (
             <p className="mt-1 text-xs text-amber-600">
-              Máximo disponible: {item.stock}
+              Máximo disponible: {currentStock}
             </p>
           )}
         </div>

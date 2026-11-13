@@ -1,8 +1,21 @@
 import { Link } from "react-router-dom";
 import type { Product } from "../../../Catalog/types";
 import AddToCartButton from "../../../components/AddToCartButton";
+import { selectPrice } from "../../../Catalog/pricing/selectPrice";
+import { useAuth } from "../../../auth/useAuth";
+import { useBranch } from "../../../branch/useBranch";
+import { getBranchInfo } from "../../../branch/branches";
+import { getBranchStock } from "../../../inventory/inventoryOverrides";
 
 export default function ProductHit({ hit }: { hit: Product }) {
+  const { role } = useAuth();
+  const price = role ? selectPrice(hit, role) : hit.price;
+  const isB2B = role === "B2B";
+  const { selectedBranch } = useBranch();
+  const branchInfo = selectedBranch ? getBranchInfo(selectedBranch) : null;
+  const branchStock = branchInfo ? getBranchStock(hit, branchInfo.id) : null;
+
+
   return (
     <div className="flex h-full flex-col gap-3">
       <Link to={`/producto/${hit.objectID}`} className="flex flex-1 flex-col">
@@ -22,9 +35,24 @@ export default function ProductHit({ hit }: { hit: Product }) {
           <h2 className="line-clamp-2 font-semibold text-slate-800">
             {hit.title ?? "Sin título"}
           </h2>
-          <p className="mt-auto font-bold text-blue-800">
-            ₡{hit.price?.toLocaleString("es-CR") ?? "N/D"}
-          </p>
+          <div className="mt-auto">
+            <p className="font-bold text-blue-800">
+              {isB2B ? "Precio mayorista: " : "Precio: "}
+              ₡{price?.toLocaleString("es-CR") ?? "N/D"}
+            </p>
+            {isB2B && hit.prices && (
+              <p className="text-xs font-normal text-slate-500">
+                Precio regular: ₡{hit.prices.B2C.toLocaleString("es-CR")}
+              </p>
+            )}
+          </div>
+          {branchInfo && branchStock !== null && (
+            <p className="text-xs text-slate-500">
+              {branchStock > 0
+                ? `Disponible en ${branchInfo.label}: ${branchStock} ${branchStock === 1 ? "unidad" : "unidades"}`
+                : `Sin stock en ${branchInfo.label}`}
+            </p>
+          )}
         </article>
       </Link>
 

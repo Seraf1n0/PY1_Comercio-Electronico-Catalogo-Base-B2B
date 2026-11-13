@@ -1,16 +1,19 @@
-import type { StockByHeadquarter } from "../../../Catalog/types"
+import type { Product } from "../../../Catalog/types"
+import type { BranchId } from "../../../auth/types";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/solid";
+import { branches } from "../../../branch/branches";
+import { getBranchStock } from "../../../inventory/inventoryOverrides";
 
 interface StockByLocationProps {
-  stock: StockByHeadquarter;
+  product: Product;
+  selectedBranch: BranchId | null;
 }
 
-export default function StockByLocation({ stock }: StockByLocationProps) {
-  const sedes = [
-    { label: "Limón", cantidad: stock.headquarterLimon },
-    { label: "San José", cantidad: stock.headquarterSanJose },
-    { label: "Guanacaste", cantidad: stock.headquarterGuanacaste },
-  ];
+export default function StockByLocation({ product, selectedBranch }: StockByLocationProps) {
+  const sedes = branches.map((branch) => ({
+    ...branch,
+    cantidad: getBranchStock(product, branch.id),
+  }));
 
   return (
     <div className="mt-4">
@@ -23,7 +26,7 @@ export default function StockByLocation({ stock }: StockByLocationProps) {
               sede.cantidad > 0
                 ? "bg-green-100 text-green-700"
                 : "bg-red-100 text-red-700"
-            }`}
+            } ${sede.id === selectedBranch ? "ring-2 ring-indigo-500" : ""}`}
           >
             {sede.cantidad > 0 ? (
               <CheckCircleIcon className="h-5 w-5" />
