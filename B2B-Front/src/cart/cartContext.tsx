@@ -4,6 +4,8 @@ import { reducer } from "./cartReducer";
 import { loadCart, saveCart } from "./storage";
 import { CartContext } from "./CartContext";
 import { useCartSync } from "./useCartSync";
+import { applyB2BCondition } from "./applyB2BCondition";
+import type { Role } from "../auth/types";
 
 
 export function CartProvider({ children }: { children: ReactNode }) {
@@ -14,7 +16,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <UserCartProvider key={user.objectID} userId={user.objectID}>
+    <UserCartProvider key={user.objectID} userId={user.objectID} role={user.role}>
       {children}
     </UserCartProvider>
   );
@@ -23,9 +25,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
 function UserCartProvider({
   children,
   userId,
+  role,
 }: {
   children: ReactNode;
   userId: string;
+  role: Role;
 }) {
   const [state, dispatch] = useReducer(reducer, { items: [] }, () => ({
     items: loadCart(userId),
@@ -44,6 +48,11 @@ function UserCartProvider({
 
   useCartSync(userId, syncCart);
 
+  const visibleState = {
+    ...state,
+    items: applyB2BCondition(state.items, role),
+  };
+
   useEffect(() => {
     if(skipNextSave.current) {
         skipNextSave.current = false;
@@ -53,7 +62,7 @@ function UserCartProvider({
   }, [userId, state.items]);
 
   return (
-    <CartContext.Provider value={{ state, dispatch }}>
+    <CartContext.Provider value={{ state: visibleState, dispatch }}>
       {children}
     </CartContext.Provider>
   );

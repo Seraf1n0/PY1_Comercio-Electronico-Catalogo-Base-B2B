@@ -6,6 +6,7 @@ import { useAnalytics } from "../analytics/useAnalytics";
 import { useCartFeedback } from "./cartFeedbackContext";
 import { useAuth } from "../auth/useAuth";
 import { selectPrice } from "../Catalog/pricing/selectPrice";
+import { B2B_MINIMUM_VEHICLES } from "../cart/b2bEligibility";
 
 
 type AddToCartSource = "catalog" | "detail";
@@ -21,11 +22,14 @@ export default function AddToCartButton({
     const { notify } = useCartFeedback();
     const { track } = useAnalytics();
     const { role } = useAuth();
-    const price = role ? selectPrice(product, role) : product.price;
     const totalStock = getTotalStock(product);
-    const hasPrice = typeof price === "number" && Number.isFinite(price);
     const currentQuantity = state.items.find((item) => item.id === product.objectID)?.quantity ?? 0;
     const reachedLimit = currentQuantity >= totalStock;
+    const totalVehiclesAfterAdd =
+        state.items.reduce((total, item) => total + item.quantity, 0) + 1;
+    const useB2BPrice = role === "B2B" && totalVehiclesAfterAdd >= B2B_MINIMUM_VEHICLES;
+    const price = selectPrice(product, useB2BPrice ? "B2B" : "B2C");
+    const hasPrice = typeof price === "number" && Number.isFinite(price);
 
     const canAdd =
         product.in_stock !== false && totalStock > 0 && hasPrice && !reachedLimit;
@@ -33,7 +37,7 @@ export default function AddToCartButton({
     const handleAdd = () => {
         if (!canAdd) return;
 
-        dispatch({ type: 'ADD_ITEM', payload: { ...product, price } });
+        dispatch({ type: 'ADD_ITEM', payload: product });
 
         track("ADD_TO_CART", {
             productId: product.objectID,

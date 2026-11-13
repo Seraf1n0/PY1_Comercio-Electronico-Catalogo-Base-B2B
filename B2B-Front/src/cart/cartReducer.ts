@@ -41,6 +41,7 @@ export const reducer = (state: State, action: Action): State => {
                 id: action.payload.objectID,
                 title: action.payload.title ?? 'Falta titulo',
                 price: action.payload.price,
+                prices: action.payload.prices,
                 quantity: 1,
                 img: action.payload.images_urls?.[0] ?? "/placeholder.png",
                 stock: getTotalStock(action.payload),
