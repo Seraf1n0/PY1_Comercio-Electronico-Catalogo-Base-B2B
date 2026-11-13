@@ -1,3 +1,6 @@
+import type { StockByHeadquarter } from '../Catalog/types';
+import type { BranchId } from '../auth/types';
+
 export interface CartItem {
   id: string;
   title: string;
@@ -9,6 +12,8 @@ export interface CartItem {
   quantity: number;
   img: string;
   stock: number;
+  stockByBranch?: StockByHeadquarter;
+  branchId?: BranchId | null;
   subtotal: number;
   category?: string;
   brand?: string;

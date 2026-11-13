@@ -6,6 +6,9 @@ import ProductNavbar from "./components/ProductNavbar";
 import AddToCartButton from "../../components/AddToCartButton";
 import { selectPrice } from "../../Catalog/pricing/selectPrice";
 import { useAuth } from "../../auth/useAuth";
+import { useBranch } from "../../branch/BranchContext";
+import { getBranchInfo } from "../../branch/branches";
+import BranchSelector from "../../branch/BranchSelector";
 
 interface ProductDetailProps {
     product: Product;
@@ -16,6 +19,11 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     const { role } = useAuth();
     const price = role ? selectPrice(product, role) : product.price;
     const isB2B = role === "B2B";
+    const { selectedBranch } = useBranch();
+    const selectedBranchInfo = selectedBranch ? getBranchInfo(selectedBranch) : null;
+    const selectedBranchStock = selectedBranchInfo
+        ? product.stock[selectedBranchInfo.stockKey]
+        : null;
 
 
 
@@ -43,6 +51,15 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                         </p>
                     )}
                     <p className="text-sm text-gray-600 mt-1">Impuestos: Ya incluidos</p>
+
+                    <div className="mt-4">
+                        <BranchSelector />
+                        {selectedBranchInfo && (
+                            <p className={`mt-2 text-sm font-medium ${selectedBranchStock ? "text-green-700" : "text-red-700"}`}>
+                                Disponible en {selectedBranchInfo.label}: {selectedBranchStock || "Sin stock"}
+                            </p>
+                        )}
+                    </div>
 
                     <AddToCartButton product={product} source="detail" />
                 </div>

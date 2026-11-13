@@ -4,6 +4,8 @@ import type { CartItem } from "../../../cart/types";
 import { useCart } from "../../../cart/useCart";
 import { formatColones } from "../../../cart/cartTotals";
 import { useAuth } from "../../../auth/useAuth";
+import type { BranchId } from "../../../auth/types";
+import { getBranchInfo, branches } from "../../../branch/branches";
 
 interface CartLineItemProps {
   item: CartItem;
@@ -13,6 +15,11 @@ interface CartLineItemProps {
 export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
   const { dispatch } = useCart();
   const { role } = useAuth();
+  const branchId = item.branchId ?? null;
+  const branchInfo = branchId ? getBranchInfo(branchId) : null;
+  const branchStock = branchInfo && item.stockByBranch
+    ? item.stockByBranch[branchInfo.stockKey]
+    : null;
   const reachedMax = item.quantity >= item.stock;
 
   return (
@@ -57,6 +64,32 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
               Precio unitario: {formatColones(item.price)}
             </p>
           )}
+
+          {branchInfo && (
+            <p className={`mt-1 text-xs font-medium ${branchStock ? "text-green-700" : "text-amber-700"}`}>
+              {branchStock === null
+                ? `Inventario de ${branchInfo.label} no disponible en este artículo del carrito`
+                : branchStock > 0
+                  ? `Disponible en ${branchInfo.label}: ${branchStock}`
+                  : `Sin stock en ${branchInfo.label}`}
+            </p>
+          )}
+          <label className="mt-2 flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600">
+            <span>Sucursal de origen:</span>
+            <select
+              value={item.branchId ?? ""}
+              onChange={(event) => dispatch({
+                type: "SET_ITEM_BRANCH",
+                payload: { id: item.id, branchId: event.target.value ? event.target.value as BranchId : null },
+              })}
+              className="rounded-md border border-slate-300 bg-white px-2 py-1.5 text-xs"
+            >
+              <option value="">Selecciona una sucursal</option>
+              {branches.map((branch) => (
+                <option key={branch.id} value={branch.id}>{branch.label}</option>
+              ))}
+            </select>
+          </label>
 
           <div className="mt-auto flex items-end justify-between gap-3 pt-3">
             <div className="flex items-center gap-2">
