@@ -10,6 +10,8 @@ import EmptyCart from "./components/EmptyCart";
 import UserBadge from "../../components/UserBadge";
 import RecommendedProducts from "../../components/RecommendedProducts";
 import B2BMinimumNotice from "../../components/B2BMinimumNotice";
+import { getCartInventoryIssues } from "../../cart/inventoryValidation";
+import { getCartLineId } from "../../cart/types";
 
 export default function CartPage() {
   const { state, dispatch } = useCart();
@@ -20,6 +22,7 @@ export default function CartPage() {
   const iva = getIva(subtotal);
   const total = getTotal(state.items);
   const totalItems = state.items.reduce((sum, item) => sum + item.quantity, 0);
+  const inventoryIssues = getCartInventoryIssues(state.items);
 
   useEffect(() => {
     if (!removed) return;
@@ -28,9 +31,10 @@ export default function CartPage() {
   }, [removed]);
 
   const handleRemove = (item: CartItem) => {
-    const index = state.items.findIndex((current) => current.id === item.id);
+    const lineId = getCartLineId(item);
+    const index = state.items.findIndex((current) => getCartLineId(current) === lineId);
     setRemoved({ item, index });
-    dispatch({ type: "REMOVE_ITEM", payload: item.id });
+    dispatch({ type: "REMOVE_ITEM", payload: lineId });
   };
 
   const handleUndo = () => {
@@ -46,6 +50,7 @@ export default function CartPage() {
   };
 
   const handleCheckout = () => {
+    if (inventoryIssues.length > 0) return;
     navigate("/finalizar-compra");
   };
 
@@ -97,12 +102,20 @@ export default function CartPage() {
               <ul className="flex flex-col gap-3">
                 {state.items.map((item) => (
                   <CartLineItem
-                    key={item.id}
+                    key={getCartLineId(item)}
                     item={item}
                     onRemove={() => handleRemove(item)}
                   />
                 ))}
               </ul>
+              {inventoryIssues.length > 0 && (
+                <div role="alert" className="mt-4 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800">
+                  <p className="font-semibold">Revisa la disponibilidad antes de continuar:</p>
+                  <ul className="mt-1 list-inside list-disc">
+                    {inventoryIssues.map((issue) => <li key={issue.itemId}>{issue.message}</li>)}
+                  </ul>
+                </div>
+              )}
             </section>
 
             <aside className="hidden lg:block lg:w-80 lg:shrink-0">
@@ -114,7 +127,8 @@ export default function CartPage() {
                 <button
                   type="button"
                   onClick={handleCheckout}
-                  className="mt-5 w-full cursor-pointer rounded-lg bg-indigo-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-indigo-700"
+                  disabled={inventoryIssues.length > 0}
+                  className="mt-5 w-full cursor-pointer rounded-lg bg-indigo-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-slate-300"
                 >
                   Realizar compra
                 </button>
@@ -163,7 +177,8 @@ export default function CartPage() {
           <button
             type="button"
             onClick={handleCheckout}
-            className="mx-auto mt-3 block w-full max-w-6xl cursor-pointer rounded-lg bg-indigo-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-indigo-700"
+            disabled={inventoryIssues.length > 0}
+            className="mx-auto mt-3 block w-full max-w-6xl cursor-pointer rounded-lg bg-indigo-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-slate-300"
           >
             Realizar compra
           </button>
