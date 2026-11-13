@@ -16,6 +16,7 @@ import { useTrackSearch } from "../../analytics/useTrackSearch";
 import RecommendedProducts from "../../components/RecommendedProducts";
 import RecentSearchChips from "./components/RecentSearchChips";
 import RecentlyViewedProducts from "./components/RecentlyViewedProducts";
+import B2BMinimumNotice from "../../components/B2BMinimumNotice";
 
 // Conecta el buscador con analytics; debe vivir dentro de InstantSearch.
 function SearchTracking() {
@@ -70,6 +71,7 @@ export default function SearchPage() {
             </aside>
 
             <main className="flex flex-1 flex-col gap-4">
+              <B2BMinimumNotice />
               <div className="flex items-center justify-between rounded-lg bg-white px-4 py-2 shadow-sm ring-1 ring-slate-200">
                 <span className="text-sm text-slate-500">Resultados</span>
                 <div className="flex items-center gap-4">

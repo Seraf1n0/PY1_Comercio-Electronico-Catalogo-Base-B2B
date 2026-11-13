@@ -9,6 +9,7 @@ import CartLineItem from "./components/CartLineItem";
 import EmptyCart from "./components/EmptyCart";
 import UserBadge from "../../components/UserBadge";
 import RecommendedProducts from "../../components/RecommendedProducts";
+import B2BMinimumNotice from "../../components/B2BMinimumNotice";
 
 export default function CartPage() {
   const { state, dispatch } = useCart();
@@ -69,6 +70,10 @@ export default function CartPage() {
           <UserBadge />
         </div>
       </header>
+
+      <div className="mx-auto max-w-6xl px-4 pt-4">
+        <B2BMinimumNotice />
+      </div>
 
       {state.items.length === 0 ? (
         <EmptyCart />

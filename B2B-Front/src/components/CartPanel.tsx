@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../cart/useCart";
 import CartItemRow from "./CartItemRow";
 import CartSummary from "./CartSummary";
+import B2BMinimumNotice from "./B2BMinimumNotice";
 
 export default function CartPanel({ onClose }: { onClose?: () => void }) {
     const { state, dispatch } = useCart();
@@ -34,6 +35,8 @@ export default function CartPanel({ onClose }: { onClose?: () => void }) {
           </button>
         )}
       </div>
+
+      <B2BMinimumNotice className="mb-3" />
 
       {state.items.length === 0 ? (
         <p className="py-6 text-center text-sm text-slate-500">
