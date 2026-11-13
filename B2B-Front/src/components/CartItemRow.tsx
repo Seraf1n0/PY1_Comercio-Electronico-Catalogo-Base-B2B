@@ -42,6 +42,7 @@ export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
         >
           {item.title}
         </Link>
+
         <p className="text-xs text-slate-500">
           ₡{item.subtotal.toLocaleString("es-CR")}
         </p>
