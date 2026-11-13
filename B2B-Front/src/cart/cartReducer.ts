@@ -1,7 +1,8 @@
-import type { CartItem } from './types';
+import { createCartLineId, getCartLineId, type CartItem } from './types';
 import type { Product } from '../Catalog/types';
 import { getCartItemStock, getTotalStock } from './stock';
 import type { BranchId } from '../auth/types';
+import { getBranchStock } from '../inventory/inventoryOverrides';
 
 export interface State {
     items: CartItem[];
@@ -10,7 +11,7 @@ export interface State {
 
 export type Action =
  | { type: 'ADD_ITEM'; payload: { product: Product; branchId: BranchId | null } }
- | { type: 'SET_ITEM_BRANCH'; payload: { id: string; branchId: BranchId | null } }
+ | { type: 'SET_ITEM_BRANCH'; payload: { lineId: string; branchId: BranchId | null } }
  | { type: 'INCREASE_ITEM'; payload: string }
  | { type: 'DECREASE_ITEM'; payload: string}
  | { type: 'REMOVE_ITEM'; payload: string }
@@ -28,20 +29,34 @@ export const reducer = (state: State, action: Action): State => {
     switch (action.type) {
         case 'ADD_ITEM': {
             const { product, branchId } = action.payload;
-            const itemExist = state.items.some((a) => a.id === product.objectID)
+            const existingItem = state.items.find(
+                (item) => item.id === product.objectID && item.branchId === branchId,
+            );
 
-            if(itemExist) {
+            if(existingItem) {
                 return {
                     items: state.items.map((a) => {
-                        if (a.id !== product.objectID) return a;
-                        if (a.quantity >= getCartItemStock(a)) return a;
-                        return withSubtotal({ ...a, quantity: a.quantity + 1 });
+                        if (getCartLineId(a) !== getCartLineId(existingItem)) return a;
+                        if (!branchId) return a;
+                        const available = getBranchStock(product, branchId);
+                        if (a.quantity >= available) return a;
+                        return withSubtotal({
+                            ...a,
+                            stock: getTotalStock(product),
+                            stockByBranch: product.stock,
+                            quantity: a.quantity + 1,
+                        });
                     }),
                 };
             }
 
+            if (!branchId || getBranchStock(product, branchId) < 1) {
+                return state;
+            }
+
             const newItem: CartItem = withSubtotal({
                 id: product.objectID,
+                lineId: createCartLineId(product.objectID, branchId),
                 title: product.title ?? 'Falta titulo',
                 price: product.price,
                 prices: product.prices,
@@ -58,19 +73,40 @@ export const reducer = (state: State, action: Action): State => {
             return { items: [...state.items, newItem] };
         }
 
-        case 'SET_ITEM_BRANCH':
+        case 'SET_ITEM_BRANCH': {
+            const source = state.items.find(
+                (item) => getCartLineId(item) === action.payload.lineId,
+            );
+            if (!source) return state;
+
+            const nextLineId = createCartLineId(source.id, action.payload.branchId);
+            const target = state.items.find(
+                (item) => item.id === source.id && item.branchId === action.payload.branchId
+                    && getCartLineId(item) !== action.payload.lineId,
+            );
+
+            if (target) {
+                const items = state.items
+                    .filter((item) => getCartLineId(item) !== action.payload.lineId)
+                    .map((item) => getCartLineId(item) === getCartLineId(target)
+                        ? withSubtotal({ ...item, quantity: item.quantity + source.quantity })
+                        : item);
+                return { items };
+            }
+
             return {
                 items: state.items.map((item) =>
-                    item.id === action.payload.id
-                        ? { ...item, branchId: action.payload.branchId }
+                    getCartLineId(item) === action.payload.lineId
+                        ? { ...item, lineId: nextLineId, branchId: action.payload.branchId }
                         : item
                 ),
             };
+        }
 
         case 'INCREASE_ITEM':
             return {
                 items: state.items.map((item) =>
-                    item.id === action.payload && item.quantity < getCartItemStock(item)
+                    getCartLineId(item) === action.payload && item.quantity < getCartItemStock(item)
                         ? withSubtotal({ ...item, quantity: item.quantity + 1 })
                         : item
                 ),
@@ -79,17 +115,17 @@ export const reducer = (state: State, action: Action): State => {
         case 'DECREASE_ITEM':
             return {
                 items: state.items
-                .map((item) => item.id === action.payload ? withSubtotal({...item, quantity: item.quantity - 1}) : item)
+                .map((item) => getCartLineId(item) === action.payload ? withSubtotal({...item, quantity: item.quantity - 1}) : item)
                 .filter((item) => item.quantity > 0)
             }
 
         case 'REMOVE_ITEM':
-            return { items: state.items.filter((item) => item.id !== action.payload) };
+            return { items: state.items.filter((item) => getCartLineId(item) !== action.payload) };
 
         case 'RESTORE_ITEM': {
             const { item, index } = action.payload;
 
-            if (state.items.some((existing) => existing.id === item.id)) {
+            if (state.items.some((existing) => getCartLineId(existing) === getCartLineId(item))) {
                 return state;
             }
 

@@ -10,8 +10,11 @@ export function getTotalStock(product: Pick<Product, 'objectID' | 'stock'>): num
   );
 }
 
-export function getCartItemStock(item: Pick<CartItem, 'id' | 'stock' | 'stockByBranch'>): number {
-  return item.stockByBranch
-    ? getTotalStock({ objectID: item.id, stock: item.stockByBranch })
-    : item.stock;
+export function getCartItemStock(item: Pick<CartItem, 'id' | 'stock' | 'stockByBranch' | 'branchId'>): number {
+  if (!item.branchId || !item.stockByBranch) return 0;
+
+  return getBranchStock(
+    { objectID: item.id, stock: item.stockByBranch },
+    item.branchId,
+  );
 }

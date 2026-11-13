@@ -8,6 +8,7 @@ import type { BranchId } from "../../../auth/types";
 import { getBranchInfo, branches } from "../../../branch/branches";
 import { getBranchStock } from "../../../inventory/inventoryOverrides";
 import { getCartItemStock } from "../../../cart/stock";
+import { getCartLineId } from "../../../cart/types";
 
 interface CartLineItemProps {
   item: CartItem;
@@ -23,6 +24,7 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
     ? getBranchStock({ objectID: item.id, stock: item.stockByBranch }, branchInfo.id)
     : null;
   const currentStock = getCartItemStock(item);
+  const lineId = getCartLineId(item);
   const reachedMax = item.quantity >= currentStock;
 
   return (
@@ -83,7 +85,7 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
               value={item.branchId ?? ""}
               onChange={(event) => dispatch({
                 type: "SET_ITEM_BRANCH",
-                payload: { id: item.id, branchId: event.target.value ? event.target.value as BranchId : null },
+                payload: { lineId, branchId: event.target.value ? event.target.value as BranchId : null },
               })}
               className="rounded-md border border-slate-300 bg-white px-2 py-1.5 text-xs"
             >
@@ -99,7 +101,7 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
               <button
                 type="button"
                 aria-label={`Disminuir cantidad de ${item.title}`}
-                onClick={() => dispatch({ type: "DECREASE_ITEM", payload: item.id })}
+                onClick={() => dispatch({ type: "DECREASE_ITEM", payload: lineId })}
                 disabled={item.quantity <= 1}
                 className="h-8 w-8 rounded-md border border-slate-300 text-base leading-none transition hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-40"
               >
@@ -114,7 +116,7 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
               <button
                 type="button"
                 aria-label={`Aumentar cantidad de ${item.title}`}
-                onClick={() => dispatch({ type: "INCREASE_ITEM", payload: item.id })}
+                onClick={() => dispatch({ type: "INCREASE_ITEM", payload: lineId })}
                 disabled={reachedMax}
                 className="h-8 w-8 rounded-md border border-slate-300 text-base leading-none transition hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-40"
               >
@@ -127,9 +129,13 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
             </p>
           </div>
 
-          {reachedMax && (
+          {item.quantity > currentStock && (
             <p className="mt-1 text-xs text-amber-600">
-              Máximo disponible: {currentStock}
+              {branchInfo
+                ? item.stockByBranch
+                  ? `Solo hay ${currentStock} ${currentStock === 1 ? "unidad" : "unidades"} disponibles en ${branchInfo.label}.`
+                  : `No se pudo consultar el inventario de ${branchInfo.label}; vuelve a agregar este artículo al carrito.`
+                : "Selecciona una sucursal para validar la disponibilidad."}
             </p>
           )}
         </div>

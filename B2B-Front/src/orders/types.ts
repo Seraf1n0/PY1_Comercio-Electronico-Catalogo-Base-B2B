@@ -1,9 +1,12 @@
+import type { BranchId } from "../auth/types";
+
 export type PaymentStatus = "APPROVED" | "DECLINED" | "ERROR" | "PENDING";
 export type OrderStatus = "PENDING" | "CONFIRMED" | "FAILED";
 
 
 export type OrderItem = {
     productId: string;
+    branchId?: BranchId | null;
     name: string;
     quantity: number;
     unitPrice: number;

@@ -1,13 +1,14 @@
 import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import type { Product } from "../Catalog/types";
 import { useCart } from "../cart/useCart";
-import { getTotalStock } from "../cart/stock";
 import { useAnalytics } from "../analytics/useAnalytics";
 import { useCartFeedback } from "./cartFeedbackContext";
 import { useAuth } from "../auth/useAuth";
 import { selectPrice } from "../Catalog/pricing/selectPrice";
 import { B2B_MINIMUM_VEHICLES } from "../cart/b2bEligibility";
 import { useBranch } from "../branch/useBranch";
+import { getBranchInfo } from "../branch/branches";
+import { getBranchStock } from "../inventory/inventoryOverrides";
 
 
 type AddToCartSource = "catalog" | "detail";
@@ -24,9 +25,14 @@ export default function AddToCartButton({
     const { track } = useAnalytics();
     const { role } = useAuth();
     const { selectedBranch } = useBranch();
-    const totalStock = getTotalStock(product);
-    const currentQuantity = state.items.find((item) => item.id === product.objectID)?.quantity ?? 0;
-    const reachedLimit = currentQuantity >= totalStock;
+    const branchId = selectedBranch;
+    const existingItem = state.items.find(
+        (item) => item.id === product.objectID && item.branchId === branchId,
+    );
+    const branchInfo = branchId ? getBranchInfo(branchId) : null;
+    const availableStock = branchId ? getBranchStock(product, branchId) : 0;
+    const currentQuantity = existingItem?.quantity ?? 0;
+    const reachedLimit = currentQuantity >= availableStock;
     const totalVehiclesAfterAdd =
         state.items.reduce((total, item) => total + item.quantity, 0) + 1;
     const useB2BPrice = role === "B2B" && totalVehiclesAfterAdd >= B2B_MINIMUM_VEHICLES;
@@ -34,12 +40,12 @@ export default function AddToCartButton({
     const hasPrice = typeof price === "number" && Number.isFinite(price);
 
     const canAdd =
-        product.in_stock !== false && totalStock > 0 && hasPrice && !reachedLimit;
+        product.in_stock !== false && availableStock > 0 && hasPrice && !reachedLimit;
 
     const handleAdd = () => {
         if (!canAdd) return;
 
-        dispatch({ type: 'ADD_ITEM', payload: { product, branchId: selectedBranch } });
+        dispatch({ type: 'ADD_ITEM', payload: { product, branchId } });
 
         track("ADD_TO_CART", {
             productId: product.objectID,
@@ -57,8 +63,14 @@ export default function AddToCartButton({
     };
 
     let buttonLabel = "Agregar al carrito";
-    if (!canAdd) {
-        buttonLabel = totalStock > 0 && hasPrice && reachedLimit ? "Máximo en carrito" : "Sin stock";
+    if (!branchId) {
+        buttonLabel = "Selecciona una sucursal";
+    } else if (!hasPrice) {
+        buttonLabel = "Precio no disponible";
+    } else if (availableStock === 0 || product.in_stock === false) {
+        buttonLabel = `Sin stock en ${branchInfo?.label ?? "la sucursal"}`;
+    } else if (reachedLimit) {
+        buttonLabel = `Límite: ${availableStock} en ${branchInfo?.label ?? "la sucursal"}`;
     }
 
     return (
