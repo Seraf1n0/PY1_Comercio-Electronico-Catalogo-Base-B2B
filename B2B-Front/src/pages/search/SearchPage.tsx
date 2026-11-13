@@ -17,6 +17,7 @@ import RecommendedProducts from "../../components/RecommendedProducts";
 import RecentSearchChips from "./components/RecentSearchChips";
 import RecentlyViewedProducts from "./components/RecentlyViewedProducts";
 import B2BMinimumNotice from "../../components/B2BMinimumNotice";
+import BranchSelector from "../../branch/BranchSelector";
 
 // Conecta el buscador con analytics; debe vivir dentro de InstantSearch.
 function SearchTracking() {
@@ -44,6 +45,9 @@ export default function SearchPage() {
       <InstantSearch searchClient={searchClient} indexName={algoliaIndex}>
         <SearchTracking />
         <div className="mx-auto max-w-7xl px-4 py-6 flex flex-col gap-4">
+          <div className="flex justify-end">
+            <BranchSelector />
+          </div>
           <div className="mb-2 flex items-center gap-2">
             <MobileFiltersDrawer />
 

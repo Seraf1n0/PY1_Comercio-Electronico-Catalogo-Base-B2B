@@ -3,11 +3,16 @@ import type { Product } from "../../../Catalog/types";
 import AddToCartButton from "../../../components/AddToCartButton";
 import { selectPrice } from "../../../Catalog/pricing/selectPrice";
 import { useAuth } from "../../../auth/useAuth";
+import { useBranch } from "../../../branch/BranchContext";
+import { getBranchInfo } from "../../../branch/branches";
 
 export default function ProductHit({ hit }: { hit: Product }) {
   const { role } = useAuth();
   const price = role ? selectPrice(hit, role) : hit.price;
   const isB2B = role === "B2B";
+  const { selectedBranch } = useBranch();
+  const branchInfo = selectedBranch ? getBranchInfo(selectedBranch) : null;
+  const branchStock = branchInfo ? hit.stock?.[branchInfo.stockKey] ?? 0 : null;
 
 
   return (
@@ -40,6 +45,13 @@ export default function ProductHit({ hit }: { hit: Product }) {
               </p>
             )}
           </div>
+          {branchInfo && branchStock !== null && (
+            <p className="text-xs text-slate-500">
+              {branchStock > 0
+                ? `Disponible en ${branchInfo.label}: ${branchStock} ${branchStock === 1 ? "unidad" : "unidades"}`
+                : `Sin stock en ${branchInfo.label}`}
+            </p>
+          )}
         </article>
       </Link>
 
