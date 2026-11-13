@@ -1,6 +1,6 @@
 import type { ChangeEvent } from "react";
 import type { BranchId } from "../auth/types";
-import { useBranch } from "./BranchContext";
+import { useBranch } from "./useBranch";
 import { branches } from "./branches";
 
 export default function BranchSelector() {

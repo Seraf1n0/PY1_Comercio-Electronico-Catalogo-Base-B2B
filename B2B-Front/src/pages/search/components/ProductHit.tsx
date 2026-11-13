@@ -3,8 +3,9 @@ import type { Product } from "../../../Catalog/types";
 import AddToCartButton from "../../../components/AddToCartButton";
 import { selectPrice } from "../../../Catalog/pricing/selectPrice";
 import { useAuth } from "../../../auth/useAuth";
-import { useBranch } from "../../../branch/BranchContext";
+import { useBranch } from "../../../branch/useBranch";
 import { getBranchInfo } from "../../../branch/branches";
+import { getBranchStock } from "../../../inventory/inventoryOverrides";
 
 export default function ProductHit({ hit }: { hit: Product }) {
   const { role } = useAuth();
@@ -12,7 +13,7 @@ export default function ProductHit({ hit }: { hit: Product }) {
   const isB2B = role === "B2B";
   const { selectedBranch } = useBranch();
   const branchInfo = selectedBranch ? getBranchInfo(selectedBranch) : null;
-  const branchStock = branchInfo ? hit.stock?.[branchInfo.stockKey] ?? 0 : null;
+  const branchStock = branchInfo ? getBranchStock(hit, branchInfo.id) : null;
 
 
   return (

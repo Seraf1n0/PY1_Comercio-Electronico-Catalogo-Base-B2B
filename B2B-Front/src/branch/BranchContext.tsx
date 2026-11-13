@@ -1,14 +1,7 @@
-import { createContext, useContext, useMemo, useState, type ReactNode } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
 import { useAuth } from '../auth/useAuth';
+import { BranchContext } from './branchContextValue';
 import type { BranchId } from '../auth/types';
-
-interface BranchContextValue {
-    selectedBranch: BranchId | null;
-    setSelectedBranch: (branchId: BranchId | null) => void;
-}
-
-
-const BranchContext = createContext<BranchContextValue | undefined>(undefined);
 function BranchState({children,initialBranch,}: {
   children: ReactNode;
   initialBranch: BranchId | null;
@@ -40,14 +33,4 @@ export function BranchProvider({ children }: { children: ReactNode }) {
       {children}
     </BranchState>
   );
-}
-
-export function useBranch() {
-  const context = useContext(BranchContext);
-
-  if (!context) {
-    throw new Error("useBranch debe usarse dentro de BranchProvider");
-  }
-
-  return context;
 }

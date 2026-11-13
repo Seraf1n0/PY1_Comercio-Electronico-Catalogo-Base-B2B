@@ -6,6 +6,8 @@ import { formatColones } from "../../../cart/cartTotals";
 import { useAuth } from "../../../auth/useAuth";
 import type { BranchId } from "../../../auth/types";
 import { getBranchInfo, branches } from "../../../branch/branches";
+import { getBranchStock } from "../../../inventory/inventoryOverrides";
+import { getCartItemStock } from "../../../cart/stock";
 
 interface CartLineItemProps {
   item: CartItem;
@@ -18,9 +20,10 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
   const branchId = item.branchId ?? null;
   const branchInfo = branchId ? getBranchInfo(branchId) : null;
   const branchStock = branchInfo && item.stockByBranch
-    ? item.stockByBranch[branchInfo.stockKey]
+    ? getBranchStock({ objectID: item.id, stock: item.stockByBranch }, branchInfo.id)
     : null;
-  const reachedMax = item.quantity >= item.stock;
+  const currentStock = getCartItemStock(item);
+  const reachedMax = item.quantity >= currentStock;
 
   return (
     <li className="rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-200 sm:p-4">
@@ -126,7 +129,7 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
 
           {reachedMax && (
             <p className="mt-1 text-xs text-amber-600">
-              Máximo disponible: {item.stock}
+              Máximo disponible: {currentStock}
             </p>
           )}
         </div>

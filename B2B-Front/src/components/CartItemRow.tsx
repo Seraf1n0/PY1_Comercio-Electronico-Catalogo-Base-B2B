@@ -5,6 +5,7 @@ import type { CartItem } from "../cart/types";
 import { useCart } from "../cart/useCart";
 import { errorMessages } from "../lib/errorMessages";
 import { useAuth } from "../auth/useAuth";
+import { getCartItemStock } from "../cart/stock";
 
 interface CartItemRowProps {
   item: CartItem;
@@ -15,6 +16,7 @@ export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
     const { dispatch } = useCart();
     const { role } = useAuth();
     const [confirmingRemove, setConfirmingRemove] = useState(false);
+    const currentStock = getCartItemStock(item);
 
     const handleDecrease = () => {
         if (item.quantity > 1) {
@@ -105,7 +107,7 @@ export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
               type="button"
               aria-label={`Aumentar cantidad de ${item.title}`}
               onClick={() => dispatch({ type: 'INCREASE_ITEM', payload: item.id })}
-              disabled={item.quantity >= item.stock}
+              disabled={item.quantity >= currentStock}
               className="h-6 w-6 rounded border border-slate-300 text-sm hover:bg-slate-100 cursor-pointer disabled:cursor-not-allowed disabled:opacity-40"
             >
               +

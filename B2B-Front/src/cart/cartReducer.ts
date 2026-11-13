@@ -1,6 +1,6 @@
 import type { CartItem } from './types';
 import type { Product } from '../Catalog/types';
-import { getTotalStock } from './stock';
+import { getCartItemStock, getTotalStock } from './stock';
 import type { BranchId } from '../auth/types';
 
 export interface State {
@@ -34,7 +34,7 @@ export const reducer = (state: State, action: Action): State => {
                 return {
                     items: state.items.map((a) => {
                         if (a.id !== product.objectID) return a;
-                        if (a.quantity >= a.stock) return a;
+                        if (a.quantity >= getCartItemStock(a)) return a;
                         return withSubtotal({ ...a, quantity: a.quantity + 1 });
                     }),
                 };
@@ -70,7 +70,7 @@ export const reducer = (state: State, action: Action): State => {
         case 'INCREASE_ITEM':
             return {
                 items: state.items.map((item) =>
-                    item.id === action.payload && item.quantity < item.stock
+                    item.id === action.payload && item.quantity < getCartItemStock(item)
                         ? withSubtotal({ ...item, quantity: item.quantity + 1 })
                         : item
                 ),

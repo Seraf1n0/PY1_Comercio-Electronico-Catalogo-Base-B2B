@@ -6,23 +6,25 @@ import ProductNavbar from "./components/ProductNavbar";
 import AddToCartButton from "../../components/AddToCartButton";
 import { selectPrice } from "../../Catalog/pricing/selectPrice";
 import { useAuth } from "../../auth/useAuth";
-import { useBranch } from "../../branch/BranchContext";
+import { useBranch } from "../../branch/useBranch";
 import { getBranchInfo } from "../../branch/branches";
 import BranchSelector from "../../branch/BranchSelector";
+import { branches } from "../../branch/branches";
+import { getBranchStock } from "../../inventory/inventoryOverrides";
 
 interface ProductDetailProps {
     product: Product;
 }
 
 export default function ProductDetail({ product }: ProductDetailProps) {
-    const totalStock = Object.values(product.stock).reduce((sum, cantidad) => sum + cantidad, 0);
+    const totalStock = branches.reduce((sum, branch) => sum + getBranchStock(product, branch.id), 0);
     const { role } = useAuth();
     const price = role ? selectPrice(product, role) : product.price;
     const isB2B = role === "B2B";
     const { selectedBranch } = useBranch();
     const selectedBranchInfo = selectedBranch ? getBranchInfo(selectedBranch) : null;
     const selectedBranchStock = selectedBranchInfo
-        ? product.stock[selectedBranchInfo.stockKey]
+        ? getBranchStock(product, selectedBranch!)
         : null;
 
 
@@ -95,7 +97,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             </div>
 
             <div>
-                <StockByLocation stock={product.stock} />
+                <StockByLocation product={product} selectedBranch={selectedBranch} />
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@ import { useCartFeedback } from "./cartFeedbackContext";
 import { useAuth } from "../auth/useAuth";
 import { selectPrice } from "../Catalog/pricing/selectPrice";
 import { B2B_MINIMUM_VEHICLES } from "../cart/b2bEligibility";
-import { useBranch } from "../branch/BranchContext";
+import { useBranch } from "../branch/useBranch";
 
 
 type AddToCartSource = "catalog" | "detail";
