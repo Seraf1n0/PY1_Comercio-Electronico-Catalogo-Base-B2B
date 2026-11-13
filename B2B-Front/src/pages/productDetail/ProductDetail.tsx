@@ -15,6 +15,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     const totalStock = Object.values(product.stock).reduce((sum, cantidad) => sum + cantidad, 0);
     const { role } = useAuth();
     const price = role ? selectPrice(product, role) : product.price;
+    const isB2B = role === "B2B";
 
 
 
@@ -34,8 +35,13 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                 {/* Panel lateral */}
                 <div className="bg-white shadow-lg rounded p-4 w-full md:w-64 h-fit">
                     <p className="text-lg font-bold">
-                        Precio total: ₡{price?.toLocaleString("es-CR") ?? "N/D"}
+                        {isB2B ? "Precio mayorista" : "Precio"}: ₡{price?.toLocaleString("es-CR") ?? "N/D"}
                     </p>
+                    {isB2B && product.prices && (
+                        <p className="text-sm text-gray-500">
+                            Precio regular: ₡{product.prices.B2C.toLocaleString("es-CR")}
+                        </p>
+                    )}
                     <p className="text-sm text-gray-600 mt-1">Impuestos: Ya incluidos</p>
 
                     <AddToCartButton product={product} source="detail" />

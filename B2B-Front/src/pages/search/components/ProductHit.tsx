@@ -7,6 +7,7 @@ import { useAuth } from "../../../auth/useAuth";
 export default function ProductHit({ hit }: { hit: Product }) {
   const { role } = useAuth();
   const price = role ? selectPrice(hit, role) : hit.price;
+  const isB2B = role === "B2B";
 
 
   return (
@@ -28,9 +29,17 @@ export default function ProductHit({ hit }: { hit: Product }) {
           <h2 className="line-clamp-2 font-semibold text-slate-800">
             {hit.title ?? "Sin título"}
           </h2>
-          <p className="mt-auto font-bold text-blue-800">
-            ₡{price?.toLocaleString("es-CR") ?? "N/D"}
-          </p>
+          <div className="mt-auto">
+            <p className="font-bold text-blue-800">
+              {isB2B ? "Precio mayorista: " : "Precio: "}
+              ₡{price?.toLocaleString("es-CR") ?? "N/D"}
+            </p>
+            {isB2B && hit.prices && (
+              <p className="text-xs font-normal text-slate-500">
+                Precio regular: ₡{hit.prices.B2C.toLocaleString("es-CR")}
+              </p>
+            )}
+          </div>
         </article>
       </Link>
 

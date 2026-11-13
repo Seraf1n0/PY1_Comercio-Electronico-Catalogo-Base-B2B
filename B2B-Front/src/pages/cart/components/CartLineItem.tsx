@@ -3,6 +3,7 @@ import { TrashIcon } from "@heroicons/react/24/outline";
 import type { CartItem } from "../../../cart/types";
 import { useCart } from "../../../cart/useCart";
 import { formatColones } from "../../../cart/cartTotals";
+import { useAuth } from "../../../auth/useAuth";
 
 interface CartLineItemProps {
   item: CartItem;
@@ -11,6 +12,7 @@ interface CartLineItemProps {
 
 export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
   const { dispatch } = useCart();
+  const { role } = useAuth();
   const reachedMax = item.quantity >= item.stock;
 
   return (
@@ -40,9 +42,21 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
             </button>
           </div>
 
-          <p className="mt-1 text-sm text-slate-500">
-            Precio unitario: {formatColones(item.price)}
-          </p>
+          {role === "B2B" && item.prices && (
+            <>
+              <p className="mt-1 text-sm font-semibold text-blue-800">
+                Precio mayorista: {formatColones(item.prices.B2B)}
+              </p>
+              <p className="text-xs text-slate-400">
+                Precio regular: {formatColones(item.prices.B2C)}
+              </p>
+            </>
+          )}
+          {(role !== "B2B" || !item.prices) && (
+            <p className="mt-1 text-sm text-slate-500">
+              Precio unitario: {formatColones(item.price)}
+            </p>
+          )}
 
           <div className="mt-auto flex items-end justify-between gap-3 pt-3">
             <div className="flex items-center gap-2">

@@ -4,6 +4,7 @@ import { TrashIcon } from "@heroicons/react/24/outline";
 import type { CartItem } from "../cart/types";
 import { useCart } from "../cart/useCart";
 import { errorMessages } from "../lib/errorMessages";
+import { useAuth } from "../auth/useAuth";
 
 interface CartItemRowProps {
   item: CartItem;
@@ -12,6 +13,7 @@ interface CartItemRowProps {
 
 export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
     const { dispatch } = useCart();
+    const { role } = useAuth();
     const [confirmingRemove, setConfirmingRemove] = useState(false);
 
     const handleDecrease = () => {
@@ -43,9 +45,24 @@ export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
           {item.title}
         </Link>
 
-        <p className="text-xs text-slate-500">
-          ₡{item.subtotal.toLocaleString("es-CR")}
-        </p>
+        {role === "B2B" && item.prices && (
+          <>
+            <p className="text-xs font-semibold text-blue-800">
+              Precio mayorista: ₡{item.prices.B2B.toLocaleString("es-CR")}
+            </p>
+            <p className="text-xs text-slate-400">
+              Precio regular: ₡{item.prices.B2C.toLocaleString("es-CR")}
+            </p>
+            <p className="text-xs text-slate-500">
+              Subtotal aplicado: ₡{item.subtotal.toLocaleString("es-CR")}
+            </p>
+          </>
+        )}
+        {(role !== "B2B" || !item.prices) && (
+          <p className="text-xs text-slate-500">
+            ₡{item.subtotal.toLocaleString("es-CR")}
+          </p>
+        )}
 
         {confirmingRemove ? (
           <div className="mt-1 rounded-md border border-amber-200 bg-amber-50 p-2 animate-fade-in">
