@@ -1,5 +1,6 @@
 import { formatColones } from "../../../cart/cartTotals";
 import type { Order } from "../../../orders/types";
+import { getBranchInfo } from "../../../branch/branches";
 
 function Row({ label, value, bold }: { label: string; value: string; bold?: boolean }) {
   return (
@@ -15,13 +16,14 @@ export default function OrderSummary({ order }: { order: Order }) {
   return (
     <div>
       <ul className="divide-y divide-slate-100">
-        {order.items.map((item) => (
-          <li key={item.productId} className="flex justify-between gap-3 py-2 text-sm">
+        {order.items.map((item, index) => (
+          <li key={`${item.productId}:${item.branchId ?? "unknown"}:${index}`} className="flex justify-between gap-3 py-2 text-sm">
             <div className="min-w-0">
               <p className="line-clamp-2 font-medium text-slate-800">{item.name}</p>
               <p className="text-slate-500">
                 {item.quantity} × {formatColones(item.unitPrice)}
               </p>
+              {item.branchId && <p className="text-slate-500">Sucursal: {getBranchInfo(item.branchId).label}</p>}
             </div>
             <p className="shrink-0 font-semibold text-slate-900">
               {formatColones(item.subtotal)}

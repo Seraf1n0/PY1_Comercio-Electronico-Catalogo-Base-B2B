@@ -13,6 +13,9 @@ import { getNextOrderNumber, saveOrder } from "../../../orders/storage";
 import { errorMessages } from "../../../lib/errorMessages";
 import Spinner from "../../../components/Spinner";
 import { Link, useNavigate } from "react-router-dom";
+import { getCartInventoryIssues } from "../../../cart/inventoryValidation";
+import { getCartLineId } from "../../../cart/types";
+import { getBranchInfo } from "../../../branch/branches";
 
 // Espera breve para que el spinner sea perceptible antes de navegar al pago.
 const CONFIRM_DELAY_MS = 350;
@@ -38,6 +41,7 @@ const generateOrder = (
 ): Order => {
   const orderItems: OrderItem[] = items.map((item) => ({
     productId: item.id,
+    branchId: item.branchId,
     name: item.title,
     quantity: item.quantity,
     unitPrice: item.price,
@@ -200,6 +204,7 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   const ivaTotal = getIva(subtotalGeneral);
   const shippingTotal = getShippingCost(items);
   const orderTotal = getOrderTotal(items);
+  const inventoryIssues = getCartInventoryIssues(items);
 
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [errorTerms, setErrorTerms] = useState("");
@@ -323,6 +328,12 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   };
 
   const confirmOrder = async () => {
+    const latestInventoryIssues = getCartInventoryIssues(items);
+    if (latestInventoryIssues.length > 0) {
+      setSubmitError(`No se puede crear la orden: ${latestInventoryIssues.map((issue) => issue.message).join(" ")}`);
+      return;
+    }
+
     if (!acceptTerms) {
       setErrorTerms("Debes aceptar los términos y condiciones para continuar.");
       return;
@@ -733,12 +744,23 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
               <p className="mt-1 text-sm text-slate-500">
                 Confirma los productos y el total antes de finalizar.
               </p>
+              {inventoryIssues.length > 0 && (
+                <div role="alert" className="mt-3 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800">
+                  <p className="font-semibold">Hay artículos sin disponibilidad suficiente:</p>
+                  <ul className="mt-1 list-inside list-disc">
+                    {inventoryIssues.map((issue) => <li key={issue.itemId}>{issue.message}</li>)}
+                  </ul>
+                  <Link to="/carrito" onClick={onClose} className="mt-2 inline-block font-semibold underline">
+                    Volver al carrito
+                  </Link>
+                </div>
+              )}
             </div>
 
             <ul className="space-y-3">
               {items.map((item) => (
                 <li
-                  key={item.id}
+                  key={getCartLineId(item)}
                   className="flex flex-wrap items-center gap-3 rounded-xl border border-slate-200 bg-white p-3 sm:flex-nowrap sm:gap-4 sm:p-4"
                 >
                   <img
@@ -756,6 +778,11 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
                     <p className="text-sm text-slate-500">
                       Precio unitario: {formatColones(item.price)}
                     </p>
+                    {item.branchId && (
+                      <p className="text-sm text-slate-500">
+                        Sucursal: {getBranchInfo(item.branchId).label}
+                      </p>
+                    )}
                   </div>
                   <div className="flex w-full items-center justify-between border-t border-slate-100 pt-2 sm:w-auto sm:shrink-0 sm:justify-end sm:border-0 sm:pt-0 sm:text-right">
                     <p className="text-xs text-slate-500 sm:hidden">Subtotal</p>
@@ -847,7 +874,7 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
               <button
                 type="button"
                 onClick={() => void confirmOrder()}
-                disabled={submitting}
+                disabled={submitting || inventoryIssues.length > 0}
                 className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer sm:ml-auto sm:w-auto"
               >
                 {submitting ? (

@@ -13,6 +13,9 @@ import EmptyCart from "../cart/components/EmptyCart";
 import { useState } from "react";
 import CheckoutModal from "../checkout/components/CheckoutModal";
 import UserBadge from "../../components/UserBadge";
+import { getCartInventoryIssues } from "../../cart/inventoryValidation";
+import { getCartLineId } from "../../cart/types";
+import { getBranchInfo } from "../../branch/branches";
 
 export default function CheckoutPage() {
   const { state } = useCart();
@@ -20,6 +23,7 @@ export default function CheckoutPage() {
   const shipping = getShippingCost(state.items);
   const total = getOrderTotal(state.items);
   const totalUnits = getTotalUnits(state.items);
+  const inventoryIssues = getCartInventoryIssues(state.items);
 
   const [isOpen, setIsOpen] =  useState(false);
 
@@ -29,6 +33,7 @@ export default function CheckoutPage() {
   } 
 
   const handlePay = () => {
+    if (inventoryIssues.length > 0) return;
     setIsOpen(true);
   };
 
@@ -59,6 +64,14 @@ export default function CheckoutPage() {
       ) : (
         <div className="mx-auto max-w-6xl px-4 py-6 lg:flex lg:gap-6">
           <section className="flex-1">
+            {inventoryIssues.length > 0 && (
+              <div role="alert" className="mb-4 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800">
+                <p className="font-semibold">No puedes pagar todavía. Corrige la disponibilidad en el carrito:</p>
+                <ul className="mt-1 list-inside list-disc">
+                  {inventoryIssues.map((issue) => <li key={issue.itemId}>{issue.message}</li>)}
+                </ul>
+              </div>
+            )}
             <h2 className="mb-4 text-base font-bold text-slate-800">
               Resumen de productos
             </h2>
@@ -66,7 +79,7 @@ export default function CheckoutPage() {
             <ul className="flex flex-col gap-3">
               {state.items.map((item) => (
                 <li
-                  key={item.id}
+                  key={getCartLineId(item)}
                   className="flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-200 sm:gap-4 sm:p-4"
                 >
                   <img
@@ -84,6 +97,11 @@ export default function CheckoutPage() {
                     <p className="mt-1 text-sm text-slate-500">
                       {item.quantity} × {formatColones(item.price)}
                     </p>
+                    {item.branchId && (
+                      <p className="text-sm text-slate-500">
+                        Sucursal: {getBranchInfo(item.branchId).label}
+                      </p>
+                    )}
                   </div>
                   <p className="shrink-0 font-bold text-slate-900">
                     {formatColones(item.subtotal)}
@@ -115,7 +133,8 @@ export default function CheckoutPage() {
               <button
                 type="button"
                 onClick={handlePay}
-                className="mt-5 flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-indigo-700"
+                disabled={inventoryIssues.length > 0}
+                className="mt-5 flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-slate-300"
               >
                 <CreditCardIcon className="h-5 w-5" />
                 Proceder al Pago
@@ -145,7 +164,8 @@ export default function CheckoutPage() {
           <button
             type="button"
             onClick={handlePay}
-            className="mx-auto mt-3 flex w-full max-w-6xl cursor-pointer items-center justify-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-indigo-700"
+            disabled={inventoryIssues.length > 0}
+            className="mx-auto mt-3 flex w-full max-w-6xl cursor-pointer items-center justify-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-base font-bold text-white shadow-sm transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-slate-300"
           >
             <CreditCardIcon className="h-5 w-5" />
             Proceder al Pago
