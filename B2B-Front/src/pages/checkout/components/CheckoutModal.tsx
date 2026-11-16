@@ -8,8 +8,11 @@ import {
 } from "../../../cart/cartTotals";
 import { getShippingCost } from "../../../cart/shipping";
 import { useAnalytics } from "../../../analytics/useAnalytics";
-import type { Order, Buyer, Delivery, OrderItem } from "../../../orders/types";
-import { getNextOrderNumber, saveOrder } from "../../../orders/storage";
+import { useAuth } from "../../../auth/useAuth";
+import { useBranch } from "../../../branch/useBranch";
+import type { Buyer, Delivery } from "../../../orders/types";
+import { saveOrder } from "../../../orders/storage";
+import { buildOrder, OrderBuildError } from "../../../orders/buildOrder";
 import { errorMessages } from "../../../lib/errorMessages";
 import Spinner from "../../../components/Spinner";
 import { Link, useNavigate } from "react-router-dom";
@@ -30,42 +33,6 @@ const checkoutSteps: { id: CheckoutSteps; label: string }[] = [
   { id: "ENTREGA", label: "Entrega" },
   { id: "RESUMEN", label: "Resumen" },
 ];
-
-const generateOrder = (
-  buyer: Buyer,
-  delivery: Delivery,
-  items: CartItem[],
-): Order => {
-  const orderItems: OrderItem[] = items.map((item) => ({
-    productId: item.id,
-    name: item.title,
-    quantity: item.quantity,
-    unitPrice: item.price,
-    subtotal: item.subtotal,
-    category: item.category ?? "",
-    brand: item.brand ?? "",
-  }));
-
-  const subtotal = getProductSubtotal(items);
-  const iva = getIva(subtotal);
-  const shippingCost = getShippingCost(items);
-  const total = getOrderTotal(items);
-
-  return {
-    orderNumber: getNextOrderNumber(),
-    date: new Date().toISOString(),
-    buyer,
-    delivery,
-    subtotal,
-    iva,
-    shippingCost,
-    total,
-    orderStatus: "PENDING",
-    paymentStatus: "PENDING",
-    items: orderItems,
-    termsAccepted: true
-  };
-};
 
 const cantonsByProvince: Record<string, string[]> = {
   "San José": [
@@ -164,6 +131,8 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   const navigate = useNavigate();
   const isSubmitting = useRef(false);
   const { track } = useAnalytics();
+  const { user } = useAuth();
+  const { selectedBranch } = useBranch();
   const checkoutTracked = useRef(false);
 
   const [activeStep, setActiveStep] = useState<CheckoutSteps>("PERSONAL");
@@ -334,26 +303,39 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
     setSubmitting(true);
     setSubmitError("");
 
+    const orderBranchId = selectedBranch ?? user?.defaultBranch ?? null;
     const buyer: Buyer = { name, lastName, email, phone };
     const delivery: Delivery = { address, province, canton, additionalAddress: null };
-    const order: Order = generateOrder(buyer, delivery, items);
-
-    // Pequeña espera para que el usuario perciba el estado de carga.
-    await new Promise((resolve) => window.setTimeout(resolve, CONFIRM_DELAY_MS));
 
     try {
+      const order = buildOrder({
+        user,
+        branchId: orderBranchId,
+        buyer,
+        delivery,
+        items,
+      });
+
+      // Pequeña espera para que el usuario perciba el estado de carga.
+      await new Promise((resolve) => window.setTimeout(resolve, CONFIRM_DELAY_MS));
+
       saveOrder(order);
+
+      // La orden queda PENDING/PENDING y el usuario pasa a la pantalla de pago.
+      navigate(`/pago/${order.orderNumber}`, { replace: true });
     } catch (error) {
-      console.error("No se pudo guardar la orden", error);
+      if (error instanceof OrderBuildError) {
+        setSubmitError(errorMessages.orderBuild[error.code]);
+      } else {
+        console.error("No se pudo guardar la orden", error);
+        setSubmitError(errorMessages.order.saveFailed);
+      }
+
       isSubmitting.current = false;   // permite reintentar si no se pudo guardar
       setSubmitting(false);
-      setSubmitError(errorMessages.order.saveFailed);
       return;
     }
-
-    // La orden queda PENDING/PENDING y el usuario pasa a la pantalla de pago.
-    navigate(`/pago/${order.orderNumber}`, { replace: true });
-};
+  };
 
   return isOpen ? (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4 animate-fade-in sm:p-6">
