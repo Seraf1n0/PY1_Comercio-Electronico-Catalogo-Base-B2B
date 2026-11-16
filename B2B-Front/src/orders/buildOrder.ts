@@ -6,7 +6,7 @@ import { getBranchStock } from "../inventory/inventoryOverrides";
 import { meetsB2BMinimum } from "../cart/b2bEligibility";
 import { getProductSubtotal, getIva, getOrderTotal } from "../cart/cartTotals";
 import { getShippingCost } from "../cart/shipping";
-import { getNextOrderNumber } from "./storage";
+import { getNextOrderNumber } from "./ordersStorage";
 
 export type OrderBuildErrorCode =
   | "INVALID_ROLE"

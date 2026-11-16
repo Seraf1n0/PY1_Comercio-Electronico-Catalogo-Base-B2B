@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
-import { getOrderByNumber } from "../../orders/storage";
+import { getOrderByNumber } from "../../orders/ordersStorage";
 import { errorMessages } from "../../lib/errorMessages";
 import OrderSummary from "../payment/components/OrderSummary";
 

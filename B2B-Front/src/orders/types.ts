@@ -6,6 +6,9 @@ export type OrderStatus = "PENDING" | "CONFIRMED" | "FAILED";
 export type CustomerType = "B2C" | "B2B";
 export type OrderSyncStatus = "SYNCED" | "PENDING";
 
+/** Sucursal de la orden: las reales mas el marcador legacy sin sucursal registrada */
+export type OrderBranchId = BranchId | "no_registrada";
+
 export type OrderItem = {
     productId: string;
     name: string;
@@ -15,7 +18,7 @@ export type OrderItem = {
     category?: string;
     brand?: string;
     priceTier: CustomerType;
-    branch: { id: BranchId; name: string };  // sucursal de esa linea
+    branch: { id: OrderBranchId; name: string };  // sucursal de esa linea
     availableAtPurchase: number;             // stock visto en esa sucursal
 }
 
@@ -55,7 +58,7 @@ export type Order = {
     customerType: CustomerType;
     company?: { name: string; legalId: string };
     pricingTier: CustomerType;
-    branch: { id: BranchId; name: string };  // sucursal de referencia de la orden
+    branch: { id: OrderBranchId; name: string };  // sucursal de referencia de la orden
     appliedConditions: string[];
     createdAtTs: number;
     syncStatus: OrderSyncStatus;
