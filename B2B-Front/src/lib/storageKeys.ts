@@ -24,7 +24,8 @@ export const storageKeys = {
   users: storageKey("users", 1),
   session: storageKey("session", 1),
   cart: (userId: string) => storageKey("cart", 3, userId),
-  orders: storageKey("orders", 1),
+  orders: storageKey("orders", 2),
+  ordersV1: storageKey("orders", 1), // solo lectura legacy
   balances: storageKey("balances", 1),
   inventoryOverrides: storageKey("inventory-overrides", 1),
   events: (userId: string) => storageKey("events", 1, userId),

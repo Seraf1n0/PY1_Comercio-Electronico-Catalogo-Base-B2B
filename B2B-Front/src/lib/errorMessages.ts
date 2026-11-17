@@ -1,3 +1,5 @@
+import type { OrderBuildErrorCode } from "../orders/buildOrder";
+
 /**
  * Catalogo central de mensajes para el usuario.
  *
@@ -66,6 +68,17 @@ export const errorMessages = {
     },
     saveFailed: "No pudimos guardar tu orden. Inténtalo de nuevo.",
   },
+
+  /** Errores al construir una orden desde el checkout. */
+  orderBuild: {
+    INVALID_ROLE: "Tu sesión no tiene un rol válido para completar la compra.",
+    MISSING_BRANCH: "Selecciona una sucursal para completar la compra.",
+    EMPTY_CART: "Tu carrito está vacío. Agrega vehículos para continuar.",
+    B2B_MINIMUM_NOT_MET:
+      "La compra B2B requiere al menos 4 vehículos en la orden.",
+    B2B_COMPANY_MISSING:
+      "Tu cuenta B2B no tiene una empresa registrada. Contacta al administrador.",
+  } satisfies Record<OrderBuildErrorCode, string>,
 
   /** Error inesperado de render manejado por el Error Boundary. */
   unexpected: {

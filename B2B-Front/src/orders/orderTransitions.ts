@@ -1,4 +1,4 @@
-import { getOrderByNumber, updateOrder } from "./storage";
+import { getOrderByNumber, updateOrder } from "./ordersStorage";
 import type { Order } from "./types";
 
 //Obtener orden que se puede cambiar su estado. Solo las que tienen estado de PENDING. 
