@@ -11,6 +11,7 @@ export type OrderBranchId = BranchId | "no_registrada";
 
 export type OrderItem = {
     productId: string;
+    branchId?: BranchId | null;
     name: string;
     quantity: number;
     unitPrice: number;
@@ -51,6 +52,7 @@ export type Order = {
     transactionId?: string;   //Esto cuando ya se completa el pago   
     paymentAttempts?: number;  
     termsAccepted: boolean;
+
     schemaVersion: 2;
     userId: string;
     userName: string;

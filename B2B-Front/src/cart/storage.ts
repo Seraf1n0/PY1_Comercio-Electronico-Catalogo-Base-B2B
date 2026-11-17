@@ -1,6 +1,7 @@
 import type { CartItem } from './types';
 import { readJSON, writeJSON } from '../lib/safeStorage';
 import { storageKeys } from '../lib/storageKeys';
+import { createCartLineId } from './types';
 
 const STORAGE_VERSION = 3;
 
@@ -34,6 +35,7 @@ export function loadCart(userId: string): CartItem[] {
     .filter(isValidItem)
     .map((item) => ({
       ...item,
+      lineId: item.lineId ?? createCartLineId(item.id, item.branchId ?? null),
       subtotal: item.price * item.quantity,
     }));
 }
