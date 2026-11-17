@@ -12,6 +12,7 @@ import { useAuth } from "../../../auth/useAuth";
 import { useBranch } from "../../../branch/useBranch";
 import type { Buyer, Delivery } from "../../../orders/types";
 import { saveOrder } from "../../../orders/ordersStorage";
+import { publishOrder } from "../../../orders/ordersIndexService";
 import { buildOrder, OrderBuildError } from "../../../orders/buildOrder";
 import { errorMessages } from "../../../lib/errorMessages";
 import Spinner from "../../../components/Spinner";
@@ -47,43 +48,6 @@ const checkoutSteps: { id: CheckoutSteps; label: string }[] = [
   { id: "ENTREGA", label: "Entrega" },
   { id: "RESUMEN", label: "Resumen" },
 ];
-
-const generateOrder = (
-  buyer: Buyer,
-  delivery: Delivery,
-  items: CartItem[],
-): Order => {
-  const orderItems: OrderItem[] = items.map((item) => ({
-    productId: item.id,
-    branchId: item.branchId,
-    name: item.title,
-    quantity: item.quantity,
-    unitPrice: item.price,
-    subtotal: item.subtotal,
-    category: item.category ?? "",
-    brand: item.brand ?? "",
-  }));
-
-  const subtotal = getProductSubtotal(items);
-  const iva = getIva(subtotal);
-  const shippingCost = getShippingCost(items);
-  const total = getOrderTotal(items);
-
-  return {
-    orderNumber: getNextOrderNumber(),
-    date: new Date().toISOString(),
-    buyer,
-    delivery,
-    subtotal,
-    iva,
-    shippingCost,
-    total,
-    orderStatus: "PENDING",
-    paymentStatus: "PENDING",
-    items: orderItems,
-    termsAccepted: true
-  };
-};
 
 const cantonsByProvince: Record<string, string[]> = {
   "San José": [
@@ -398,6 +362,8 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
       await new Promise((resolve) => window.setTimeout(resolve, CONFIRM_DELAY_MS));
 
       saveOrder(order);
+      // Publicación en Algolia en segundo plano: si falla, el checkout sigue.
+      void publishOrder(order);
 
       // La orden queda PENDING/PENDING y el usuario pasa a la pantalla de pago.
       navigate(`/pago/${order.orderNumber}`, { replace: true });

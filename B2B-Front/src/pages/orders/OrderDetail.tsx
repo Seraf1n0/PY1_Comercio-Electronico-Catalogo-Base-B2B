@@ -1,11 +1,10 @@
 import type { ReactNode } from "react";
 import { Link, useParams } from "react-router-dom";
 import { roleLabels } from "../../auth/roleLabels";
-import { useAuth } from "../../auth/useAuth";
+import Spinner from "../../components/Spinner";
 import UserBadge from "../../components/UserBadge";
 import { errorMessages } from "../../lib/errorMessages";
-import { canViewOrder } from "../../orders/orderAccess";
-import { getOrderByNumber } from "../../orders/ordersStorage";
+import { useOrderDetail } from "../../orders/useOrdersSearch";
 import type { Order } from "../../orders/types";
 import OrderSummary from "../payment/components/OrderSummary";
 
@@ -103,11 +102,32 @@ export function OrderDetailView({ order }: OrderDetailViewProps) {
 
 export default function OrderDetailPage() {
   const { orderNumber } = useParams();
-  const { user } = useAuth();
   const numeric = Number(orderNumber);
-  const order = Number.isNaN(numeric) ? null : getOrderByNumber(numeric);
+  const valid = Number.isInteger(numeric) && numeric > 0;
+  const { order, loading } = useOrderDetail(valid ? numeric : undefined);
 
-  if (!order || !canViewOrder(order, user)) {
+  if (!order && loading) {
+    return (
+      <div className="min-h-screen bg-slate-50 pb-10">
+        <header className="flex items-center justify-between gap-3 bg-white px-4 py-4 shadow-md sm:px-6">
+          <Link to="/mis-ordenes" className="text-sm font-semibold text-slate-700 hover:text-indigo-600">
+            ← Volver a mis órdenes
+          </Link>
+          <h1 className="text-lg font-bold text-blue-800 sm:text-xl">Detalle de la orden</h1>
+          <UserBadge />
+        </header>
+
+        <main className="mx-auto max-w-6xl px-4 py-6">
+          <div className="flex items-center justify-center gap-3 rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+            <Spinner className="h-5 w-5 text-indigo-600" />
+            <span className="text-sm text-slate-500">Cargando orden…</span>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  if (!order) {
     return (
       <div className="min-h-screen bg-slate-50 pb-10">
         <header className="flex items-center justify-between gap-3 bg-white px-4 py-4 shadow-md sm:px-6">

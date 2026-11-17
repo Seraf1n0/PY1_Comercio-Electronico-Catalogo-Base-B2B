@@ -35,6 +35,16 @@
     "defaultBranch": "san_jose"
   },
   {
+    "objectID": "usr_admin_003",
+    "username": "admin3",
+    "email": "admin3@bombocars.cr",
+    "displayName": "Administrador",
+    "phone": "22224446",
+    "role": "ADMIN",
+    "active": true,
+    "defaultBranch": "san_jose"
+  },
+  {
     "objectID": "usr-testinactive",
     "username": "inactivo.demo",
     "email": "inactivo@demo.cr",
