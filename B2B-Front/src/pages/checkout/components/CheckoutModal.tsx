@@ -16,9 +16,20 @@ import { buildOrder, OrderBuildError } from "../../../orders/buildOrder";
 import { errorMessages } from "../../../lib/errorMessages";
 import Spinner from "../../../components/Spinner";
 import { Link, useNavigate } from "react-router-dom";
+import BuyerForm from "./BuyerForm";
+import type {
+  BuyerField,
+  BuyerFormValues,
+  BuyerFormErrors,
+} from "./BuyerForm";
 
 // Espera breve para que el spinner sea perceptible antes de navegar al pago.
 const CONFIRM_DELAY_MS = 350;
+
+function splitDisplayName(displayName: string): { name: string; lastName: string } {
+  const parts = displayName.trim().split(/\s+/).filter(Boolean);
+  return { name: parts[0] ?? "", lastName: parts.slice(1).join(" ") };
+}
 
 type ModalProps = {
   isOpen: boolean;
@@ -136,10 +147,11 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   const checkoutTracked = useRef(false);
 
   const [activeStep, setActiveStep] = useState<CheckoutSteps>("PERSONAL");
-  const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const initialBuyer = splitDisplayName(user?.displayName ?? "");
+  const [name, setName] = useState(initialBuyer.name);
+  const [lastName, setLastName] = useState(initialBuyer.lastName);
+  const [email, setEmail] = useState(user?.email ?? "");
+  const [phone, setPhone] = useState(user?.phone ?? "");
 
   const [province, setProvince] = useState("");
   const [canton, setCanton] = useState("");
@@ -169,6 +181,7 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
   const ivaTotal = getIva(subtotalGeneral);
   const shippingTotal = getShippingCost(items);
   const orderTotal = getOrderTotal(items);
+  const buyerCompany = user?.role === "B2B" ? user.company : undefined;
 
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [errorTerms, setErrorTerms] = useState("");
@@ -249,6 +262,24 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
     if (value.trim().length < 10)
       return errorMessages.validation.addressTooShort;
     return "";
+  };
+
+  const handleBuyerChange = (field: BuyerField, value: string) => {
+    switch (field) {
+      case "name": setName(value); break;
+      case "lastName": setLastName(value); break;
+      case "email": setEmail(value); break;
+      case "phone": setPhone(value); break;
+    }
+  };
+
+  const handleBuyerBlur = (field: BuyerField) => {
+    switch (field) {
+      case "name": setNameError(validateName(name)); break;
+      case "lastName": setLastnameError(validateName(lastName)); break;
+      case "email": setEmailError(validateEmail(email)); break;
+      case "phone": setPhoneError(validatePhone(phone)); break;
+    }
   };
 
   const handleNextStep = () => {
@@ -337,6 +368,14 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
     }
   };
 
+  const buyerFormValues: BuyerFormValues = { name, lastName, email, phone };
+  const buyerFormErrors: BuyerFormErrors = {
+    name: nameError,
+    lastName: LastnameError,
+    email: EmailError,
+    phone: PhoneError,
+  };
+
   return isOpen ? (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4 animate-fade-in sm:p-6">
       <div
@@ -419,127 +458,13 @@ export default function CheckoutModal({ isOpen, onClose, items }: ModalProps) {
 
         {activeStep === "PERSONAL" && (
           <div className="mt-8 space-y-6 animate-fade-in-up">
-            <div>
-              <h3 className="text-lg font-bold text-slate-900">
-                Información personal
-              </h3>
-              <p className="mt-1 text-sm text-slate-500">
-                Completa tus datos para continuar con el pedido.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div className="space-y-1.5">
-                <label
-                  htmlFor="checkout-name"
-                  className="block text-sm font-semibold text-slate-700"
-                >
-                  Nombre
-                </label>
-                <input
-                  id="checkout-name"
-                  type="text"
-                  placeholder="Tu nombre"
-                  value={name}
-                  onChange={(event) => setName(event.target.value)}
-                  onBlur={() => setNameError(validateName(name))}
-                  aria-invalid={Boolean(nameError)}
-                  aria-describedby={
-                    nameError ? "checkout-name-error" : undefined
-                  }
-                  className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 transition focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-                {nameError && (
-                  <p id="checkout-name-error" className="text-sm text-red-600">
-                    {nameError}
-                  </p>
-                )}
-              </div>
-
-              <div className="space-y-1.5">
-                <label
-                  htmlFor="checkout-last-name"
-                  className="block text-sm font-semibold text-slate-700"
-                >
-                  Apellido
-                </label>
-                <input
-                  id="checkout-last-name"
-                  type="text"
-                  placeholder="Tu apellido"
-                  value={lastName}
-                  onChange={(event) => setLastName(event.target.value)}
-                  onBlur={() => setLastnameError(validateName(lastName))}
-                  aria-invalid={Boolean(LastnameError)}
-                  aria-describedby={
-                    LastnameError ? "checkout-last-name-error" : undefined
-                  }
-                  className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 transition focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-                {LastnameError && (
-                  <p
-                    id="checkout-last-name-error"
-                    className="text-sm text-red-600"
-                  >
-                    {LastnameError}
-                  </p>
-                )}
-              </div>
-
-              <div className="space-y-1.5">
-                <label
-                  htmlFor="checkout-email"
-                  className="block text-sm font-semibold text-slate-700"
-                >
-                  Correo electrónico
-                </label>
-                <input
-                  id="checkout-email"
-                  type="email"
-                  placeholder="tu@correo.com"
-                  value={email}
-                  onChange={(event) => setEmail(event.target.value)}
-                  onBlur={() => setEmailError(validateEmail(email))}
-                  aria-invalid={Boolean(EmailError)}
-                  aria-describedby={
-                    EmailError ? "checkout-email-error" : undefined
-                  }
-                  className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 transition focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-                {EmailError && (
-                  <p id="checkout-email-error" className="text-sm text-red-600">
-                    {EmailError}
-                  </p>
-                )}
-              </div>
-
-              <div className="space-y-1.5">
-                <label
-                  htmlFor="checkout-phone"
-                  className="block text-sm font-semibold text-slate-700"
-                >
-                  Teléfono
-                </label>
-                <input
-                  id="checkout-phone"
-                  type="tel"
-                  placeholder="8888-8888"
-                  value={phone}
-                  onChange={(event) => setPhone(event.target.value)}
-                  onBlur={() => setPhoneError(validatePhone(phone))}
-                  aria-invalid={Boolean(PhoneError)}
-                  aria-describedby={
-                    PhoneError ? "checkout-phone-error" : undefined
-                  }
-                  className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 transition focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-                {PhoneError && (
-                  <p id="checkout-phone-error" className="text-sm text-red-600">
-                    {PhoneError}
-                  </p>
-                )}
-              </div>
-            </div>
+            <BuyerForm
+              value={buyerFormValues}
+              errors={buyerFormErrors}
+              company={buyerCompany}
+              onChange={handleBuyerChange}
+              onBlur={handleBuyerBlur}
+            />
 
             <div className="flex justify-end border-t border-slate-100 pt-5">
               <button
