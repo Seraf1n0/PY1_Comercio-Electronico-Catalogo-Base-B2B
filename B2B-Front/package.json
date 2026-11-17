@@ -11,7 +11,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "seeding_products": "node scripts/seed_products.mjs",
-    "seeding_users": "node scripts/seed_users.mjs"
+    "seeding_users": "node scripts/seed_users.mjs",
+    "seeding_orders": "node scripts/seed_orders.mjs"
   },
   "dependencies": {
     "@adobe/react-spectrum": "^3.47.5",

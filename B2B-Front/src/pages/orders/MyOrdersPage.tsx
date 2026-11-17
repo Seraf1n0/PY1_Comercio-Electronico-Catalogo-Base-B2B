@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../../auth/useAuth";
 import { formatColones } from "../../cart/cartTotals";
+import Spinner from "../../components/Spinner";
 import UserBadge from "../../components/UserBadge";
-import { getOrders } from "../../orders/ordersStorage";
 import type { Order } from "../../orders/types";
+import { useOrdersSearch } from "../../orders/useOrdersSearch";
 
 const ORDER_STATUS_LABEL: Record<Order["orderStatus"], string> = {
   PENDING: "Orden pendiente",
@@ -56,25 +57,14 @@ function paymentStatusClass(status: Order["paymentStatus"]): string {
   }
 }
 
-// eslint-disable-next-line react-refresh/only-export-components -- función auxiliar pura, testeable por separado
-export function getMyOrders(orders: Order[], userId: string): Order[] {
-  return orders
-    .filter((order) => order.userId === userId)
-    .slice()
-    .sort((a, b) => {
-      const ta = getOrderTime(a);
-      const tb = getOrderTime(b);
-      if (tb !== ta) return tb - ta;
-      return b.orderNumber - a.orderNumber;
-    });
-}
-
 export default function MyOrdersPage() {
   const { user } = useAuth();
+  const { orders, loading, error } = useOrdersSearch({
+    hitsPerPage: 100,
+    scope: "own",
+  });
 
   if (!user) return null;
-
-  const orders = getMyOrders(getOrders(), user.objectID);
 
   return (
     <div className="min-h-screen bg-slate-50 pb-10">
@@ -87,7 +77,21 @@ export default function MyOrdersPage() {
       </header>
 
       <main className="mx-auto max-w-6xl px-4 py-6">
-        {orders.length === 0 ? (
+        {error && (
+          <div
+            role="status"
+            className="mb-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800"
+          >
+            {error}
+          </div>
+        )}
+
+        {loading && orders.length === 0 ? (
+          <div className="flex items-center justify-center gap-3 rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+            <Spinner className="h-5 w-5 text-indigo-600" />
+            <span className="text-sm text-slate-500">Cargando órdenes…</span>
+          </div>
+        ) : orders.length === 0 ? (
           <div className="rounded-xl border border-dashed border-slate-300 bg-white p-6 text-center shadow-sm ring-1 ring-slate-200">
             <p className="font-semibold text-slate-800">Todavía no tienes órdenes</p>
             <p className="mt-1 text-sm text-slate-500">
