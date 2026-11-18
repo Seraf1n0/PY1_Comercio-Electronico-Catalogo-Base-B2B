@@ -10,7 +10,8 @@ import EmptyCart from "./components/EmptyCart";
 import UserBadge from "../../components/UserBadge";
 import RecommendedProducts from "../../components/RecommendedProducts";
 import B2BMinimumNotice from "../../components/B2BMinimumNotice";
-import { getCartInventoryIssues } from "../../cart/inventoryValidation";
+import { getCartIssues } from "../../cart/inventoryValidation";
+import { useAuth } from "../../auth/useAuth";
 import { getCartLineId } from "../../cart/types";
 
 export default function CartPage() {
@@ -22,7 +23,9 @@ export default function CartPage() {
   const iva = getIva(subtotal);
   const total = getTotal(state.items);
   const totalItems = state.items.reduce((sum, item) => sum + item.quantity, 0);
-  const inventoryIssues = getCartInventoryIssues(state.items);
+    const { role } = useAuth();
+  // Inventario + precios: cualquiera de los dos bloquea la compra.
+  const inventoryIssues = getCartIssues(state.items, role);
 
   useEffect(() => {
     if (!removed) return;

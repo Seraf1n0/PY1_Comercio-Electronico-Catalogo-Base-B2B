@@ -9,6 +9,8 @@ import { getBranchInfo, branches } from "../../../branch/branches";
 import { getBranchStock } from "../../../inventory/inventoryOverrides";
 import { getCartItemStock } from "../../../cart/stock";
 import { getCartLineId } from "../../../cart/types";
+import { meetsB2BMinimum } from "../../../cart/b2bEligibility";
+import PriceTag from "../../../components/PriceTag";
 
 interface CartLineItemProps {
   item: CartItem;
@@ -16,8 +18,10 @@ interface CartLineItemProps {
 }
 
 export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
-  const { dispatch } = useCart();
+    const { state, dispatch } = useCart();
   const { role } = useAuth();
+  // Tarifa realmente cobrada: B2B solo si el carrito cumple el minimo.
+  const appliedTier = role === "B2B" && meetsB2BMinimum(state.items) ? "B2B" : "B2C";
   const branchId = item.branchId ?? null;
   const branchInfo = branchId ? getBranchInfo(branchId) : null;
   const branchStock = branchInfo && item.stockByBranch
@@ -54,22 +58,7 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
             </button>
           </div>
 
-          {role === "B2B" && item.prices && (
-            <>
-              <p className="mt-1 text-sm font-semibold text-blue-800">
-                Precio mayorista: {formatColones(item.prices.B2B)}
-              </p>
-              <p className="text-xs text-slate-400">
-                Precio regular: {formatColones(item.prices.B2C)}
-              </p>
-            </>
-          )}
-          {(role !== "B2B" || !item.prices) && (
-            <p className="mt-1 text-sm text-slate-500">
-              Precio unitario: {formatColones(item.price)}
-            </p>
-          )}
-
+                    <PriceTag item={item} appliedTier={appliedTier} size="md" className="mt-1" />
           {branchInfo && (
             <p className={`mt-1 text-xs font-medium ${branchStock ? "text-green-700" : "text-amber-700"}`}>
               {branchStock === null
@@ -96,7 +85,7 @@ export default function CartLineItem({ item, onRemove }: CartLineItemProps) {
             </select>
           </label>
 
-          <div className="mt-auto flex items-end justify-between gap-3 pt-3">
+                    <div className="mt-auto flex flex-wrap items-end justify-between gap-3 pt-3">
             <div className="flex items-center gap-2">
               <button
                 type="button"

@@ -8,15 +8,18 @@ import { useAuth } from "../auth/useAuth";
 import { getCartItemStock } from "../cart/stock";
 import { getBranchInfo } from "../branch/branches";
 import { getCartLineId } from "../cart/types";
-
+import { meetsB2BMinimum } from "../cart/b2bEligibility";
+import PriceTag from "./PriceTag";
 interface CartItemRowProps {
   item: CartItem;
   onNavigate?: () => void;
 }
 
 export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
-    const { dispatch } = useCart();
+    const { state, dispatch } = useCart();
     const { role } = useAuth();
+    // Tarifa realmente cobrada: B2B solo si el carrito cumple el minimo.
+    const appliedTier = role === "B2B" && meetsB2BMinimum(state.items) ? "B2B" : "B2C";
     const [confirmingRemove, setConfirmingRemove] = useState(false);
     const currentStock = getCartItemStock(item);
     const lineId = getCartLineId(item);
@@ -55,24 +58,10 @@ export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
           </p>
         )}
 
-        {role === "B2B" && item.prices && (
-          <>
-            <p className="text-xs font-semibold text-blue-800">
-              Precio mayorista: ₡{item.prices.B2B.toLocaleString("es-CR")}
-            </p>
-            <p className="text-xs text-slate-400">
-              Precio regular: ₡{item.prices.B2C.toLocaleString("es-CR")}
-            </p>
-            <p className="text-xs text-slate-500">
-              Subtotal aplicado: ₡{item.subtotal.toLocaleString("es-CR")}
-            </p>
-          </>
-        )}
-        {(role !== "B2B" || !item.prices) && (
-          <p className="text-xs text-slate-500">
-            ₡{item.subtotal.toLocaleString("es-CR")}
-          </p>
-        )}
+                <PriceTag item={item} appliedTier={appliedTier} size="sm" />
+        <p className="text-xs text-slate-500">
+          Subtotal: ₡{item.subtotal.toLocaleString("es-CR")}
+        </p>
 
         {item.quantity > currentStock && (
           <p className="mt-1 text-xs text-amber-700">

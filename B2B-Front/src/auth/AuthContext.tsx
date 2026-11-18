@@ -9,7 +9,7 @@ import { track } from "../analytics/tracker";
 import { userDirectory } from "./UserDirectory";
 import { AuthContext, type AuthContextValue } from "./authContextValue";
 import { clearSession, loadSession, saveSession } from "./sessionStore";
-import type { AppUser, LoginResult, Session } from "./types";
+import type { AppUser, LoginResult, LookupFailure, Session } from "./types";
 
 function createSessionId(): string {
   if (
@@ -26,6 +26,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<Session | null>(() => loadSession());
   const [user, setUser] = useState<AppUser | null>(null);
   const [status, setStatus] = useState<"loading" | "ready">("loading");
+  const [sessionNotice, setSessionNotice] = useState<LookupFailure | null>(null);
 
   // Revalida la sesion contra el directorio: si el usuario ya no existe,
   // esta inactivo o tiene un rol invalido, la sesion se descarta.
@@ -44,18 +45,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           return;
         }
 
-        const resolved = await userDirectory.findById(current.userId);
+        // lookupById devuelve el motivo: si el usuario quedo inactivo o
+        // con un rol invalido, se cierra la sesion y se informa en el login.
+        const resolved = await userDirectory.lookupById(current.userId);
         if (cancelled) return;
 
-        if (!resolved) {
+        if (!resolved.ok) {
           clearSession();
           setSession(null);
           setUser(null);
+          setSessionNotice(resolved.reason);
           return;
         }
 
         setSession(current);
-        setUser(resolved);
+        setUser(resolved.user);
       } catch {
         if (!cancelled) {
           clearSession();
@@ -90,6 +94,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
 
     saveSession(nextSession);
+    setSessionNotice(null);
     setSession(nextSession);
     setUser(result.user);
     setStatus("ready");
@@ -104,7 +109,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       { role: result.user.role, username: result.user.username },
     );
 
-    return { ok: true };
+    return { ok: true, role: result.user.role };
   }, []);
 
   const logout = useCallback(() => {
@@ -121,6 +126,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(null);
   }, [user, session]);
 
+  const dismissSessionNotice = useCallback(() => setSessionNotice(null), []);
+
   const value = useMemo<AuthContextValue>(
     () => ({
       user,
@@ -130,8 +137,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       isAuthenticated: Boolean(user),
       login,
       logout,
+      sessionNotice,
+      dismissSessionNotice,
     }),
-    [user, session, status, login, logout],
+    [user, session, status, login, logout, sessionNotice, dismissSessionNotice],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

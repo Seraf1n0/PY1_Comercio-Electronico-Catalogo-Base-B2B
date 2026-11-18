@@ -31,13 +31,26 @@ export const localUserDirectory: UserDirectory = {
         return result.ok ? result.user : null;
     },
 
+    async lookupById(userId) {
+        const raw = byId.get(userId);
+        return raw ? parseUserRecord(raw) : { ok: false, reason: "NOT_FOUND" };
+    },
+
+    async listAll() {
+        return records.map((raw) => ({
+            objectID: raw.objectID,
+            username: raw.username,
+            displayName: raw.displayName,
+            rawRole: raw.role ?? null,
+            result: parseUserRecord(raw),
+        }));
+    },
+
     async list() {
-        // Los registros invalidos (inactivos o sin rol) se omiten:
-        // solo se listan usuarios que realmente pueden iniciar sesion.
+
         return records.flatMap((raw): AppUser[] => {
             const result = parseUserRecord(raw);
             return result.ok ? [result.user] : [];
         });
     },
 }
-

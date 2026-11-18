@@ -9,7 +9,8 @@ import { B2B_MINIMUM_VEHICLES } from "../cart/b2bEligibility";
 import { useBranch } from "../branch/useBranch";
 import { getBranchInfo } from "../branch/branches";
 import { getBranchStock } from "../inventory/inventoryOverrides";
-
+import { can } from "../auth/permissions";
+import { canBePurchasedBy } from "../Catalog/pricing/priceValidation";
 
 type AddToCartSource = "catalog" | "detail";
 
@@ -34,13 +35,17 @@ export default function AddToCartButton({
     const currentQuantity = existingItem?.quantity ?? 0;
     const reachedLimit = currentQuantity >= availableStock;
     const totalVehiclesAfterAdd =
-        state.items.reduce((total, item) => total + item.quantity, 0) + 1;
+    state.items.reduce((total, item) => total + item.quantity, 0) + 1;
     const useB2BPrice = role === "B2B" && totalVehiclesAfterAdd >= B2B_MINIMUM_VEHICLES;
     const price = selectPrice(product, useB2BPrice ? "B2B" : "B2C");
-    const hasPrice = typeof price === "number" && Number.isFinite(price);
+    // Se valida la tarifa final del rol (el B2B siempre termina pagando B2B).
+    const hasPrice = price !== null && canBePurchasedBy(product, role);
 
     const canAdd =
         product.in_stock !== false && availableStock > 0 && hasPrice && !reachedLimit;
+
+    // RBAC: el admin consulta el catalogo pero no compra.
+    if (!can(role, "cart.add")) return null;
 
     const handleAdd = () => {
         if (!canAdd) return;
@@ -53,7 +58,7 @@ export default function AddToCartButton({
             category: product.categories?.[0] ?? "",
             brand: product.brand ?? "",
             quantity: 1,
-            unitPrice: price,
+            unitPrice: price ?? 0,
             source,
         });
 
