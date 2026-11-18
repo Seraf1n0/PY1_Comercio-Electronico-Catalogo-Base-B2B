@@ -3,7 +3,7 @@ import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeftIcon, CreditCardIcon } from "@heroicons/react/24/outline";
 import { useCart } from "../../cart/useCart";
 import { formatColones } from "../../cart/cartTotals";
-import { getOrderByNumber } from "../../orders/storage";
+import { getOrderByNumber } from "../../orders/ordersStorage";
 import {
   markOrderFailed,
   markPaymentApproved,

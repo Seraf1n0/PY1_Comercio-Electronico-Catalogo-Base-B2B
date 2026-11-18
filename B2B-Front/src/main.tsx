@@ -7,6 +7,7 @@ import { CartFeedbackProvider } from './components/AddToCartFeedback.tsx'
 import { AuthProvider } from "./auth/AuthContext";
 import { AnalyticsProvider } from "./analytics/AnalyticsContext";
 import { BranchProvider } from "./branch/BranchContext";
+import { OrdersProvider } from "./orders/ordersContext";
 
 
 createRoot(document.getElementById('root')!).render(
@@ -16,7 +17,9 @@ createRoot(document.getElementById('root')!).render(
         <AnalyticsProvider>
           <CartProvider>
             <CartFeedbackProvider>
-              <App />
+              <OrdersProvider>
+                <App />
+              </OrdersProvider>
             </CartFeedbackProvider>
           </CartProvider>
         </AnalyticsProvider>
