@@ -1,0 +1,103 @@
+[
+  {
+    "objectID": "1001",
+    "orderNumber": 1001,
+    "date": "2026-11-10T15:30:00.000Z",
+    "createdAtTs": 1794324600000,
+    "buyer": {
+      "name": "Administrador",
+      "lastName": "",
+      "fullName": "Administrador",
+      "email": "admin3@bombocars.cr",
+      "phone": "22224446"
+    },
+    "delivery": {
+      "address": "Oficina central BomboCars, San José",
+      "province": "San José",
+      "canton": "San José",
+      "additionalAddress": null
+    },
+    "subtotal": 20880000,
+    "iva": 2714400,
+    "shippingCost": 323332,
+    "total": 23917732,
+    "orderStatus": "CONFIRMED",
+    "paymentStatus": "APPROVED",
+    "items": [
+      {
+        "productId": "prod001",
+        "name": "Toyota Corolla 2026",
+        "quantity": 2,
+        "unitPrice": 10440000,
+        "subtotal": 20880000,
+        "category": "Sedán",
+        "brand": "TOYOTA",
+        "priceTier": "B2C",
+        "branch": { "id": "san_jose", "name": "San José" },
+        "availableAtPurchase": 3
+      }
+    ],
+    "transactionId": "seed-txn-1001",
+    "paymentAttempts": 1,
+    "termsAccepted": true,
+    "schemaVersion": 2,
+    "userId": "usr_admin_003",
+    "userName": "Administrador",
+    "role": "ADMIN",
+    "customerType": "B2C",
+    "pricingTier": "B2C",
+    "branch": { "id": "san_jose", "name": "San José" },
+    "appliedConditions": [],
+    "syncStatus": "SYNCED"
+  },
+  {
+    "objectID": "1002",
+    "orderNumber": 1002,
+    "date": "2026-11-12T18:05:00.000Z",
+    "createdAtTs": 1794506700000,
+    "buyer": {
+      "name": "Administrador",
+      "lastName": "",
+      "fullName": "Administrador",
+      "email": "admin3@bombocars.cr",
+      "phone": "22224446"
+    },
+    "delivery": {
+      "address": "Oficina central BomboCars, San José",
+      "province": "San José",
+      "canton": "San José",
+      "additionalAddress": null
+    },
+    "subtotal": 12825000,
+    "iva": 1667250,
+    "shippingCost": 161666,
+    "total": 14653916,
+    "orderStatus": "PENDING",
+    "paymentStatus": "PENDING",
+    "items": [
+      {
+        "productId": "prod002",
+        "name": "Toyota Prius 2026",
+        "quantity": 1,
+        "unitPrice": 12825000,
+        "subtotal": 12825000,
+        "category": "Hatchback",
+        "brand": "TOYOTA",
+        "priceTier": "B2C",
+        "branch": { "id": "san_jose", "name": "San José" },
+        "availableAtPurchase": 4
+      }
+    ],
+    "paymentAttempts": 0,
+    "termsAccepted": true,
+    "schemaVersion": 2,
+    "userId": "usr_admin_003",
+    "userName": "Administrador",
+    "role": "ADMIN",
+    "customerType": "B2C",
+    "pricingTier": "B2C",
+    "branch": { "id": "san_jose", "name": "San José" },
+    "appliedConditions": [],
+    "syncStatus": "SYNCED"
+  }
+]
