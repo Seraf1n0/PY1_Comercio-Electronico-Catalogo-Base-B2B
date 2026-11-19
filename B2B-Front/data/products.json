@@ -19,6 +19,10 @@
     "doors": 4,
     "year": 2026,
     "price": 10440000,
+    "prices": {
+      "B2C": 10440000,
+      "B2B": 9135000
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -74,6 +78,10 @@
     "doors": 4,
     "year": 2026,
     "price": 12825000,
+    "prices": {
+      "B2C": 12825000,
+      "B2B": 11221875
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -129,6 +137,10 @@
     "doors": 5,
     "year": 2026,
     "price": 25650000,
+    "prices": {
+      "B2C": 25650000,
+      "B2B": 22443750
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -185,6 +197,10 @@
     "doors": 5,
     "year": 2026,
     "price": 18360000,
+    "prices": {
+      "B2C": 18360000,
+      "B2B": 16065000
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -240,6 +256,10 @@
     "doors": 5,
     "year": 2026,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -295,6 +315,10 @@
     "doors": 5,
     "year": 2026,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -351,6 +375,10 @@
     "doors": 4,
     "year": 2026,
     "price": 16560000,
+    "prices": {
+      "B2C": 16560000,
+      "B2B": 14490000
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -406,6 +434,10 @@
     "doors": 4,
     "year": 2026,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -461,6 +493,10 @@
     "doors": 5,
     "year": 2026,
     "price": 17640000,
+    "prices": {
+      "B2C": 17640000,
+      "B2B": 15435000
+    },
     "currency": "CRC",
     "categories": [
       "Minivan",
@@ -516,6 +552,10 @@
     "doors": 4,
     "year": 2026,
     "price": 12960000,
+    "prices": {
+      "B2C": 12960000,
+      "B2B": 11340000
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -572,6 +612,10 @@
     "doors": 5,
     "year": 2026,
     "price": 28260000,
+    "prices": {
+      "B2C": 28260000,
+      "B2B": 24727500
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -628,6 +672,10 @@
     "doors": 2,
     "year": 2026,
     "price": 25560000,
+    "prices": {
+      "B2C": 25560000,
+      "B2B": 22365000
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -683,6 +731,10 @@
     "doors": 4,
     "year": 2026,
     "price": 23175000,
+    "prices": {
+      "B2C": 23175000,
+      "B2B": 20278125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -739,6 +791,10 @@
     "doors": 5,
     "year": 2026,
     "price": 13410000,
+    "prices": {
+      "B2C": 13410000,
+      "B2B": 11733750
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -795,6 +851,10 @@
     "doors": 4,
     "year": 2026,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -850,6 +910,10 @@
     "doors": 5,
     "year": 2026,
     "price": 21240000,
+    "prices": {
+      "B2C": 21240000,
+      "B2B": 18585000
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -906,6 +970,10 @@
     "doors": 5,
     "year": 2026,
     "price": 13140000,
+    "prices": {
+      "B2C": 13140000,
+      "B2B": 11497500
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -962,6 +1030,10 @@
     "doors": 2,
     "year": 2026,
     "price": 14040000,
+    "prices": {
+      "B2C": 14040000,
+      "B2B": 12285000
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -1017,6 +1089,10 @@
     "doors": 4,
     "year": 2026,
     "price": 19170000,
+    "prices": {
+      "B2C": 19170000,
+      "B2B": 16773750
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -1073,6 +1149,10 @@
     "doors": 5,
     "year": 2026,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -1128,6 +1208,10 @@
     "doors": 5,
     "year": 2026,
     "price": 20340000,
+    "prices": {
+      "B2C": 20340000,
+      "B2B": 17797500
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -1184,6 +1268,10 @@
     "doors": 5,
     "year": 2026,
     "price": 20205000,
+    "prices": {
+      "B2C": 20205000,
+      "B2B": 17679375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -1240,6 +1328,10 @@
     "doors": 5,
     "year": 2026,
     "price": 17190000,
+    "prices": {
+      "B2C": 17190000,
+      "B2B": 15041250
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -1295,6 +1387,10 @@
     "doors": 5,
     "year": 2026,
     "price": 19575000,
+    "prices": {
+      "B2C": 19575000,
+      "B2B": 17128125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -1351,6 +1447,10 @@
     "doors": 4,
     "year": 2025,
     "price": 35190000,
+    "prices": {
+      "B2C": 35190000,
+      "B2B": 30791250
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -1407,6 +1507,10 @@
     "doors": 5,
     "year": 2025,
     "price": 33525000,
+    "prices": {
+      "B2C": 33525000,
+      "B2B": 29334375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -1463,6 +1567,10 @@
     "doors": 5,
     "year": 2025,
     "price": 30240000,
+    "prices": {
+      "B2C": 30240000,
+      "B2B": 26460000
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -1519,6 +1627,10 @@
     "doors": 5,
     "year": 2025,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -1575,6 +1687,10 @@
     "doors": 4,
     "year": 2025,
     "price": 44325000,
+    "prices": {
+      "B2C": 44325000,
+      "B2B": 38784375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -1631,6 +1747,10 @@
     "doors": 2,
     "year": 2025,
     "price": 25110000,
+    "prices": {
+      "B2C": 25110000,
+      "B2B": 21971250
+    },
     "currency": "CRC",
     "categories": [
       "Descapotable",
@@ -1687,6 +1807,10 @@
     "doors": 0,
     "year": 2025,
     "price": 6075000,
+    "prices": {
+      "B2C": 6075000,
+      "B2B": 5315625
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -1743,6 +1867,10 @@
     "doors": 0,
     "year": 2025,
     "price": 8325000,
+    "prices": {
+      "B2C": 8325000,
+      "B2B": 7284375
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -1799,6 +1927,10 @@
     "doors": 0,
     "year": 2025,
     "price": 11790000,
+    "prices": {
+      "B2C": 11790000,
+      "B2B": 10316250
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -1855,6 +1987,10 @@
     "doors": 0,
     "year": 2025,
     "price": 12825000,
+    "prices": {
+      "B2C": 12825000,
+      "B2B": 11221875
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -1911,6 +2047,10 @@
     "doors": 0,
     "year": 2025,
     "price": 6525000,
+    "prices": {
+      "B2C": 6525000,
+      "B2B": 5709375
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -1967,6 +2107,10 @@
     "doors": 4,
     "year": 2025,
     "price": 54900000,
+    "prices": {
+      "B2C": 54900000,
+      "B2B": 48037500
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -2023,6 +2167,10 @@
     "doors": 4,
     "year": 2025,
     "price": 18225000,
+    "prices": {
+      "B2C": 18225000,
+      "B2B": 15946875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -2079,6 +2227,10 @@
     "doors": 5,
     "year": 2025,
     "price": 18900000,
+    "prices": {
+      "B2C": 18900000,
+      "B2B": 16537500
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -2135,6 +2287,10 @@
     "doors": 4,
     "year": 2025,
     "price": 27225000,
+    "prices": {
+      "B2C": 27225000,
+      "B2B": 23821875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -2191,6 +2347,10 @@
     "doors": 4,
     "year": 2025,
     "price": 21150000,
+    "prices": {
+      "B2C": 21150000,
+      "B2B": 18506250
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -2247,6 +2407,10 @@
     "doors": 4,
     "year": 2025,
     "price": 56250000,
+    "prices": {
+      "B2C": 56250000,
+      "B2B": 49218750
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -2303,6 +2467,10 @@
     "doors": 4,
     "year": 2025,
     "price": 29700000,
+    "prices": {
+      "B2C": 29700000,
+      "B2B": 25987500
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -2359,6 +2527,10 @@
     "doors": 5,
     "year": 2025,
     "price": 24975000,
+    "prices": {
+      "B2C": 24975000,
+      "B2B": 21853125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -2415,6 +2587,10 @@
     "doors": 2,
     "year": 2025,
     "price": 29475000,
+    "prices": {
+      "B2C": 29475000,
+      "B2B": 25790625
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -2471,6 +2647,10 @@
     "doors": 2,
     "year": 2025,
     "price": 36225000,
+    "prices": {
+      "B2C": 36225000,
+      "B2B": 31696875
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -2527,6 +2707,10 @@
     "doors": 0,
     "year": 2025,
     "price": 8100000,
+    "prices": {
+      "B2C": 8100000,
+      "B2B": 7087500
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -2583,6 +2767,10 @@
     "doors": 2,
     "year": 2025,
     "price": 18090000,
+    "prices": {
+      "B2C": 18090000,
+      "B2B": 15828750
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -2639,6 +2827,10 @@
     "doors": 2,
     "year": 2025,
     "price": 23625000,
+    "prices": {
+      "B2C": 23625000,
+      "B2B": 20671875
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -2695,6 +2887,10 @@
     "doors": 2,
     "year": 2025,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -2751,6 +2947,10 @@
     "doors": 5,
     "year": 2025,
     "price": 19575000,
+    "prices": {
+      "B2C": 19575000,
+      "B2B": 17128125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -2807,6 +3007,10 @@
     "doors": 5,
     "year": 2025,
     "price": 38025000,
+    "prices": {
+      "B2C": 38025000,
+      "B2B": 33271875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -2863,6 +3067,10 @@
     "doors": 4,
     "year": 2025,
     "price": 28125000,
+    "prices": {
+      "B2C": 28125000,
+      "B2B": 24609375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -2919,6 +3127,10 @@
     "doors": 2,
     "year": 2025,
     "price": 41625000,
+    "prices": {
+      "B2C": 41625000,
+      "B2B": 36421875
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -2975,6 +3187,10 @@
     "doors": 2,
     "year": 2025,
     "price": 50400000,
+    "prices": {
+      "B2C": 50400000,
+      "B2B": 44100000
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -3031,6 +3247,10 @@
     "doors": 2,
     "year": 2025,
     "price": 65250000,
+    "prices": {
+      "B2C": 65250000,
+      "B2B": 57093750
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -3087,6 +3307,10 @@
     "doors": 0,
     "year": 2025,
     "price": 2340000,
+    "prices": {
+      "B2C": 2340000,
+      "B2B": 2047500
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -3143,6 +3367,10 @@
     "doors": 0,
     "year": 2025,
     "price": 2655000,
+    "prices": {
+      "B2C": 2655000,
+      "B2B": 2323125
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -3199,6 +3427,10 @@
     "doors": 0,
     "year": 2025,
     "price": 3510000,
+    "prices": {
+      "B2C": 3510000,
+      "B2B": 3071250
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -3255,6 +3487,10 @@
     "doors": 0,
     "year": 2025,
     "price": 11025000,
+    "prices": {
+      "B2C": 11025000,
+      "B2B": 9646875
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -3311,6 +3547,10 @@
     "doors": 0,
     "year": 2025,
     "price": 8325000,
+    "prices": {
+      "B2C": 8325000,
+      "B2B": 7284375
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -3367,6 +3607,10 @@
     "doors": 0,
     "year": 2025,
     "price": 7560000,
+    "prices": {
+      "B2C": 7560000,
+      "B2B": 6615000
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -3423,6 +3667,10 @@
     "doors": 4,
     "year": 2025,
     "price": 28125000,
+    "prices": {
+      "B2C": 28125000,
+      "B2B": 24609375
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -3479,6 +3727,10 @@
     "doors": 0,
     "year": 2025,
     "price": 5625000,
+    "prices": {
+      "B2C": 5625000,
+      "B2B": 4921875
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -3535,6 +3787,10 @@
     "doors": 5,
     "year": 2025,
     "price": 39375000,
+    "prices": {
+      "B2C": 39375000,
+      "B2B": 34453125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -3591,6 +3847,10 @@
     "doors": 4,
     "year": 2025,
     "price": 30825000,
+    "prices": {
+      "B2C": 30825000,
+      "B2B": 26971875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -3647,6 +3907,10 @@
     "doors": 4,
     "year": 2025,
     "price": 53100000,
+    "prices": {
+      "B2C": 53100000,
+      "B2B": 46462500
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -3703,6 +3967,10 @@
     "doors": 5,
     "year": 2025,
     "price": 71550000,
+    "prices": {
+      "B2C": 71550000,
+      "B2B": 62606250
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -3759,6 +4027,10 @@
     "doors": 4,
     "year": 2025,
     "price": 65250000,
+    "prices": {
+      "B2C": 65250000,
+      "B2B": 57093750
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -3815,6 +4087,10 @@
     "doors": 4,
     "year": 2025,
     "price": 48150000,
+    "prices": {
+      "B2C": 48150000,
+      "B2B": 42131250
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -3871,6 +4147,10 @@
     "doors": 4,
     "year": 2025,
     "price": 30375000,
+    "prices": {
+      "B2C": 30375000,
+      "B2B": 26578125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -3927,6 +4207,10 @@
     "doors": 0,
     "year": 2025,
     "price": 3375000,
+    "prices": {
+      "B2C": 3375000,
+      "B2B": 2953125
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -3983,6 +4267,10 @@
     "doors": 0,
     "year": 2025,
     "price": 8460000,
+    "prices": {
+      "B2C": 8460000,
+      "B2B": 7402500
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4039,6 +4327,10 @@
     "doors": 0,
     "year": 2025,
     "price": 10125000,
+    "prices": {
+      "B2C": 10125000,
+      "B2B": 8859375
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4095,6 +4387,10 @@
     "doors": 0,
     "year": 2025,
     "price": 11025000,
+    "prices": {
+      "B2C": 11025000,
+      "B2B": 9646875
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4151,6 +4447,10 @@
     "doors": 0,
     "year": 2025,
     "price": 6255000,
+    "prices": {
+      "B2C": 6255000,
+      "B2B": 5473125
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4207,6 +4507,10 @@
     "doors": 0,
     "year": 2025,
     "price": 6705000,
+    "prices": {
+      "B2C": 6705000,
+      "B2B": 5866875
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4263,6 +4567,10 @@
     "doors": 0,
     "year": 2025,
     "price": 4410000,
+    "prices": {
+      "B2C": 4410000,
+      "B2B": 3858750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4319,6 +4627,10 @@
     "doors": 0,
     "year": 2025,
     "price": 5490000,
+    "prices": {
+      "B2C": 5490000,
+      "B2B": 4803750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4375,6 +4687,10 @@
     "doors": 0,
     "year": 2025,
     "price": 11475000,
+    "prices": {
+      "B2C": 11475000,
+      "B2B": 10040625
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4431,6 +4747,10 @@
     "doors": 0,
     "year": 2025,
     "price": 10125000,
+    "prices": {
+      "B2C": 10125000,
+      "B2B": 8859375
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4487,6 +4807,10 @@
     "doors": 0,
     "year": 2025,
     "price": 9225000,
+    "prices": {
+      "B2C": 9225000,
+      "B2B": 8071875
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4543,6 +4867,10 @@
     "doors": 0,
     "year": 2025,
     "price": 6210000,
+    "prices": {
+      "B2C": 6210000,
+      "B2B": 5433750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4599,6 +4927,10 @@
     "doors": 0,
     "year": 2025,
     "price": 7560000,
+    "prices": {
+      "B2C": 7560000,
+      "B2B": 6615000
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4655,6 +4987,10 @@
     "doors": 4,
     "year": 2025,
     "price": 32625000,
+    "prices": {
+      "B2C": 32625000,
+      "B2B": 28546875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -4711,6 +5047,10 @@
     "doors": 0,
     "year": 2025,
     "price": 6975000,
+    "prices": {
+      "B2C": 6975000,
+      "B2B": 6103125
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4767,6 +5107,10 @@
     "doors": 0,
     "year": 2025,
     "price": 10575000,
+    "prices": {
+      "B2C": 10575000,
+      "B2B": 9253125
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -4823,6 +5167,10 @@
     "doors": 4,
     "year": 2025,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -4879,6 +5227,10 @@
     "doors": 2,
     "year": 2020,
     "price": 51075000,
+    "prices": {
+      "B2C": 51075000,
+      "B2B": 44690625
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -4935,6 +5287,10 @@
     "doors": 2,
     "year": 2020,
     "price": 65250000,
+    "prices": {
+      "B2C": 65250000,
+      "B2B": 57093750
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -4991,6 +5347,10 @@
     "doors": 4,
     "year": 2020,
     "price": 6975000,
+    "prices": {
+      "B2C": 6975000,
+      "B2B": 6103125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -5047,6 +5407,10 @@
     "doors": 4,
     "year": 2020,
     "price": 7290000,
+    "prices": {
+      "B2C": 7290000,
+      "B2B": 6378750
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -5103,6 +5467,10 @@
     "doors": 5,
     "year": 2020,
     "price": 7110000,
+    "prices": {
+      "B2C": 7110000,
+      "B2B": 6221250
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -5159,6 +5527,10 @@
     "doors": 5,
     "year": 2020,
     "price": 6840000,
+    "prices": {
+      "B2C": 6840000,
+      "B2B": 5985000
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -5215,6 +5587,10 @@
     "doors": 4,
     "year": 2020,
     "price": 11025000,
+    "prices": {
+      "B2C": 11025000,
+      "B2B": 9646875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -5271,6 +5647,10 @@
     "doors": 4,
     "year": 2020,
     "price": 13275000,
+    "prices": {
+      "B2C": 13275000,
+      "B2B": 11615625
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -5327,6 +5707,10 @@
     "doors": 5,
     "year": 2020,
     "price": 14175000,
+    "prices": {
+      "B2C": 14175000,
+      "B2B": 12403125
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -5383,6 +5767,10 @@
     "doors": 5,
     "year": 2020,
     "price": 16425000,
+    "prices": {
+      "B2C": 16425000,
+      "B2B": 14371875
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -5439,6 +5827,10 @@
     "doors": 2,
     "year": 2020,
     "price": 14625000,
+    "prices": {
+      "B2C": 14625000,
+      "B2B": 12796875
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -5494,6 +5886,10 @@
     "doors": 2,
     "year": 2020,
     "price": 20475000,
+    "prices": {
+      "B2C": 20475000,
+      "B2B": 17915625
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -5549,6 +5945,10 @@
     "doors": 4,
     "year": 2020,
     "price": 8775000,
+    "prices": {
+      "B2C": 8775000,
+      "B2B": 7678125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -5605,6 +6005,10 @@
     "doors": 4,
     "year": 2020,
     "price": 9675000,
+    "prices": {
+      "B2C": 9675000,
+      "B2B": 8465625
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -5661,6 +6065,10 @@
     "doors": 5,
     "year": 2020,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -5717,6 +6125,10 @@
     "doors": 5,
     "year": 2020,
     "price": 11925000,
+    "prices": {
+      "B2C": 11925000,
+      "B2B": 10434375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -5773,6 +6185,10 @@
     "doors": 5,
     "year": 2020,
     "price": 15525000,
+    "prices": {
+      "B2C": 15525000,
+      "B2B": 13584375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -5829,6 +6245,10 @@
     "doors": 5,
     "year": 2020,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -5885,6 +6305,10 @@
     "doors": 4,
     "year": 2020,
     "price": 10575000,
+    "prices": {
+      "B2C": 10575000,
+      "B2B": 9253125
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -5941,6 +6365,10 @@
     "doors": 5,
     "year": 2020,
     "price": 11025000,
+    "prices": {
+      "B2C": 11025000,
+      "B2B": 9646875
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -5997,6 +6425,10 @@
     "doors": 4,
     "year": 2020,
     "price": 12825000,
+    "prices": {
+      "B2C": 12825000,
+      "B2B": 11221875
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -6053,6 +6485,10 @@
     "doors": 4,
     "year": 2020,
     "price": 16425000,
+    "prices": {
+      "B2C": 16425000,
+      "B2B": 14371875
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -6108,6 +6544,10 @@
     "doors": 4,
     "year": 2020,
     "price": 14625000,
+    "prices": {
+      "B2C": 14625000,
+      "B2B": 12796875
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -6164,6 +6604,10 @@
     "doors": 4,
     "year": 2020,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -6220,6 +6664,10 @@
     "doors": 4,
     "year": 2020,
     "price": 16875000,
+    "prices": {
+      "B2C": 16875000,
+      "B2B": 14765625
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -6276,6 +6724,10 @@
     "doors": 4,
     "year": 2020,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -6332,6 +6784,10 @@
     "doors": 5,
     "year": 2020,
     "price": 10575000,
+    "prices": {
+      "B2C": 10575000,
+      "B2B": 9253125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -6388,6 +6844,10 @@
     "doors": 5,
     "year": 2020,
     "price": 12375000,
+    "prices": {
+      "B2C": 12375000,
+      "B2B": 10828125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -6444,6 +6904,10 @@
     "doors": 5,
     "year": 2020,
     "price": 8775000,
+    "prices": {
+      "B2C": 8775000,
+      "B2B": 7678125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -6500,6 +6964,10 @@
     "doors": 5,
     "year": 2020,
     "price": 9675000,
+    "prices": {
+      "B2C": 9675000,
+      "B2B": 8465625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -6556,6 +7024,10 @@
     "doors": 4,
     "year": 2024,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -6611,6 +7083,10 @@
     "doors": 4,
     "year": 2024,
     "price": 26325000,
+    "prices": {
+      "B2C": 26325000,
+      "B2B": 23034375
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -6667,6 +7143,10 @@
     "doors": 4,
     "year": 2024,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -6723,6 +7203,10 @@
     "doors": 4,
     "year": 2024,
     "price": 32625000,
+    "prices": {
+      "B2C": 32625000,
+      "B2B": 28546875
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -6779,6 +7263,10 @@
     "doors": 4,
     "year": 2024,
     "price": 26325000,
+    "prices": {
+      "B2C": 26325000,
+      "B2B": 23034375
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -6835,6 +7323,10 @@
     "doors": 4,
     "year": 2024,
     "price": 39375000,
+    "prices": {
+      "B2C": 39375000,
+      "B2B": 34453125
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -6891,6 +7383,10 @@
     "doors": 4,
     "year": 2024,
     "price": 28125000,
+    "prices": {
+      "B2C": 28125000,
+      "B2B": 24609375
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -6947,6 +7443,10 @@
     "doors": 4,
     "year": 2024,
     "price": 30825000,
+    "prices": {
+      "B2C": 30825000,
+      "B2B": 26971875
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -7003,6 +7503,10 @@
     "doors": 4,
     "year": 2024,
     "price": 29925000,
+    "prices": {
+      "B2C": 29925000,
+      "B2B": 26184375
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -7059,6 +7563,10 @@
     "doors": 4,
     "year": 2024,
     "price": 32625000,
+    "prices": {
+      "B2C": 32625000,
+      "B2B": 28546875
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -7115,6 +7623,10 @@
     "doors": 4,
     "year": 2024,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -7171,6 +7683,10 @@
     "doors": 4,
     "year": 2024,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -7227,6 +7743,10 @@
     "doors": 4,
     "year": 2024,
     "price": 19575000,
+    "prices": {
+      "B2C": 19575000,
+      "B2B": 17128125
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -7283,6 +7803,10 @@
     "doors": 4,
     "year": 2024,
     "price": 20475000,
+    "prices": {
+      "B2C": 20475000,
+      "B2B": 17915625
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -7339,6 +7863,10 @@
     "doors": 4,
     "year": 2024,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -7395,6 +7923,10 @@
     "doors": 2,
     "year": 2024,
     "price": 20925000,
+    "prices": {
+      "B2C": 20925000,
+      "B2B": 18309375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -7451,6 +7983,10 @@
     "doors": 4,
     "year": 2024,
     "price": 22275000,
+    "prices": {
+      "B2C": 22275000,
+      "B2B": 19490625
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -7507,6 +8043,10 @@
     "doors": 4,
     "year": 2024,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -7563,6 +8103,10 @@
     "doors": 4,
     "year": 2024,
     "price": 23625000,
+    "prices": {
+      "B2C": 23625000,
+      "B2B": 20671875
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -7619,6 +8163,10 @@
     "doors": 4,
     "year": 2024,
     "price": 25425000,
+    "prices": {
+      "B2C": 25425000,
+      "B2B": 22246875
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -7675,6 +8223,10 @@
     "doors": 4,
     "year": 2024,
     "price": 22275000,
+    "prices": {
+      "B2C": 22275000,
+      "B2B": 19490625
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -7731,6 +8283,10 @@
     "doors": 2,
     "year": 2024,
     "price": 65250000,
+    "prices": {
+      "B2C": 65250000,
+      "B2B": 57093750
+    },
     "currency": "CRC",
     "categories": [
       "Descapotable",
@@ -7787,6 +8343,10 @@
     "doors": 4,
     "year": 2024,
     "price": 28575000,
+    "prices": {
+      "B2C": 28575000,
+      "B2B": 25003125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -7843,6 +8403,10 @@
     "doors": 4,
     "year": 2024,
     "price": 20025000,
+    "prices": {
+      "B2C": 20025000,
+      "B2B": 17521875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -7899,6 +8463,10 @@
     "doors": 5,
     "year": 2024,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -7955,6 +8523,10 @@
     "doors": 4,
     "year": 2024,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -8011,6 +8583,10 @@
     "doors": 4,
     "year": 2024,
     "price": 51750000,
+    "prices": {
+      "B2C": 51750000,
+      "B2B": 45281250
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -8067,6 +8643,10 @@
     "doors": 5,
     "year": 2024,
     "price": 65250000,
+    "prices": {
+      "B2C": 65250000,
+      "B2B": 57093750
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -8123,6 +8703,10 @@
     "doors": 2,
     "year": 2024,
     "price": 60750000,
+    "prices": {
+      "B2C": 60750000,
+      "B2B": 53156250
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -8179,6 +8763,10 @@
     "doors": 5,
     "year": 2024,
     "price": 22275000,
+    "prices": {
+      "B2C": 22275000,
+      "B2B": 19490625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -8235,6 +8823,10 @@
     "doors": 5,
     "year": 2024,
     "price": 28125000,
+    "prices": {
+      "B2C": 28125000,
+      "B2B": 24609375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -8291,6 +8883,10 @@
     "doors": 5,
     "year": 2024,
     "price": 38925000,
+    "prices": {
+      "B2C": 38925000,
+      "B2B": 34059375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -8347,6 +8943,10 @@
     "doors": 5,
     "year": 2024,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -8403,6 +9003,10 @@
     "doors": 4,
     "year": 2024,
     "price": 47250000,
+    "prices": {
+      "B2C": 47250000,
+      "B2B": 41343750
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -8459,6 +9063,10 @@
     "doors": 4,
     "year": 2024,
     "price": 35325000,
+    "prices": {
+      "B2C": 35325000,
+      "B2B": 30909375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -8515,6 +9123,10 @@
     "doors": 5,
     "year": 2024,
     "price": 26325000,
+    "prices": {
+      "B2C": 26325000,
+      "B2B": 23034375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -8571,6 +9183,10 @@
     "doors": 5,
     "year": 2024,
     "price": 48600000,
+    "prices": {
+      "B2C": 48600000,
+      "B2B": 42525000
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -8627,6 +9243,10 @@
     "doors": 5,
     "year": 2024,
     "price": 35775000,
+    "prices": {
+      "B2C": 35775000,
+      "B2B": 31303125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -8683,6 +9303,10 @@
     "doors": 4,
     "year": 2024,
     "price": 28125000,
+    "prices": {
+      "B2C": 28125000,
+      "B2B": 24609375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -8739,6 +9363,10 @@
     "doors": 4,
     "year": 2024,
     "price": 30825000,
+    "prices": {
+      "B2C": 30825000,
+      "B2B": 26971875
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -8795,6 +9423,10 @@
     "doors": 4,
     "year": 2024,
     "price": 29025000,
+    "prices": {
+      "B2C": 29025000,
+      "B2B": 25396875
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -8851,6 +9483,10 @@
     "doors": 4,
     "year": 2024,
     "price": 31725000,
+    "prices": {
+      "B2C": 31725000,
+      "B2B": 27759375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -8907,6 +9543,10 @@
     "doors": 2,
     "year": 2024,
     "price": 25425000,
+    "prices": {
+      "B2C": 25425000,
+      "B2B": 22246875
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -8963,6 +9603,10 @@
     "doors": 4,
     "year": 2026,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -9019,6 +9663,10 @@
     "doors": 5,
     "year": 2026,
     "price": 15975000,
+    "prices": {
+      "B2C": 15975000,
+      "B2B": 13978125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -9075,6 +9723,10 @@
     "doors": 5,
     "year": 2026,
     "price": 13275000,
+    "prices": {
+      "B2C": 13275000,
+      "B2B": 11615625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -9131,6 +9783,10 @@
     "doors": 5,
     "year": 2026,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -9187,6 +9843,10 @@
     "doors": 5,
     "year": 2026,
     "price": 41625000,
+    "prices": {
+      "B2C": 41625000,
+      "B2B": 36421875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -9243,6 +9903,10 @@
     "doors": 4,
     "year": 2026,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -9299,6 +9963,10 @@
     "doors": 5,
     "year": 2026,
     "price": 20925000,
+    "prices": {
+      "B2C": 20925000,
+      "B2B": 18309375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -9355,6 +10023,10 @@
     "doors": 5,
     "year": 2026,
     "price": 44325000,
+    "prices": {
+      "B2C": 44325000,
+      "B2B": 38784375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -9411,6 +10083,10 @@
     "doors": 5,
     "year": 2026,
     "price": 32175000,
+    "prices": {
+      "B2C": 32175000,
+      "B2B": 28153125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -9467,6 +10143,10 @@
     "doors": 4,
     "year": 2026,
     "price": 29925000,
+    "prices": {
+      "B2C": 29925000,
+      "B2B": 26184375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -9523,6 +10203,10 @@
     "doors": 2,
     "year": 2025,
     "price": 28125000,
+    "prices": {
+      "B2C": 28125000,
+      "B2B": 24609375
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -9579,6 +10263,10 @@
     "doors": 2,
     "year": 2025,
     "price": 30825000,
+    "prices": {
+      "B2C": 30825000,
+      "B2B": 26971875
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -9635,6 +10323,10 @@
     "doors": 2,
     "year": 2025,
     "price": 32625000,
+    "prices": {
+      "B2C": 32625000,
+      "B2B": 28546875
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -9691,6 +10383,10 @@
     "doors": 2,
     "year": 2025,
     "price": 39375000,
+    "prices": {
+      "B2C": 39375000,
+      "B2B": 34453125
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -9747,6 +10443,10 @@
     "doors": 2,
     "year": 2025,
     "price": 29025000,
+    "prices": {
+      "B2C": 29025000,
+      "B2B": 25396875
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -9803,6 +10503,10 @@
     "doors": 2,
     "year": 2025,
     "price": 29475000,
+    "prices": {
+      "B2C": 29475000,
+      "B2B": 25790625
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -9859,6 +10563,10 @@
     "doors": 2,
     "year": 2025,
     "price": 35325000,
+    "prices": {
+      "B2C": 35325000,
+      "B2B": 30909375
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -9915,6 +10623,10 @@
     "doors": 2,
     "year": 2021,
     "price": 12825000,
+    "prices": {
+      "B2C": 12825000,
+      "B2B": 11221875
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -9971,6 +10683,10 @@
     "doors": 2,
     "year": 2021,
     "price": 28125000,
+    "prices": {
+      "B2C": 28125000,
+      "B2B": 24609375
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -10027,6 +10743,10 @@
     "doors": 4,
     "year": 2021,
     "price": 10575000,
+    "prices": {
+      "B2C": 10575000,
+      "B2B": 9253125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -10083,6 +10803,10 @@
     "doors": 5,
     "year": 2021,
     "price": 6525000,
+    "prices": {
+      "B2C": 6525000,
+      "B2B": 5709375
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -10139,6 +10863,10 @@
     "doors": 5,
     "year": 2021,
     "price": 11925000,
+    "prices": {
+      "B2C": 11925000,
+      "B2B": 10434375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -10195,6 +10923,10 @@
     "doors": 4,
     "year": 2021,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -10251,6 +10983,10 @@
     "doors": 4,
     "year": 2021,
     "price": 16425000,
+    "prices": {
+      "B2C": 16425000,
+      "B2B": 14371875
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -10307,6 +11043,10 @@
     "doors": 4,
     "year": 2021,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -10363,6 +11103,10 @@
     "doors": 4,
     "year": 2021,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -10418,6 +11162,10 @@
     "doors": 4,
     "year": 2021,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -10474,6 +11222,10 @@
     "doors": 5,
     "year": 2021,
     "price": 23625000,
+    "prices": {
+      "B2C": 23625000,
+      "B2B": 20671875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -10530,6 +11282,10 @@
     "doors": 5,
     "year": 2021,
     "price": 22275000,
+    "prices": {
+      "B2C": 22275000,
+      "B2B": 19490625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -10586,6 +11342,10 @@
     "doors": 5,
     "year": 2021,
     "price": 30825000,
+    "prices": {
+      "B2C": 30825000,
+      "B2B": 26971875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -10642,6 +11402,10 @@
     "doors": 5,
     "year": 2021,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -10698,6 +11462,10 @@
     "doors": 4,
     "year": 2021,
     "price": 11925000,
+    "prices": {
+      "B2C": 11925000,
+      "B2B": 10434375
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -10753,6 +11521,10 @@
     "doors": 4,
     "year": 2021,
     "price": 15975000,
+    "prices": {
+      "B2C": 15975000,
+      "B2B": 13978125
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -10809,6 +11581,10 @@
     "doors": 5,
     "year": 2021,
     "price": 10125000,
+    "prices": {
+      "B2C": 10125000,
+      "B2B": 8859375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -10865,6 +11641,10 @@
     "doors": 5,
     "year": 2021,
     "price": 9675000,
+    "prices": {
+      "B2C": 9675000,
+      "B2B": 8465625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -10921,6 +11701,10 @@
     "doors": 5,
     "year": 2021,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -10977,6 +11761,10 @@
     "doors": 5,
     "year": 2021,
     "price": 16425000,
+    "prices": {
+      "B2C": 16425000,
+      "B2B": 14371875
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -11033,6 +11821,10 @@
     "doors": 2,
     "year": 2021,
     "price": 26325000,
+    "prices": {
+      "B2C": 26325000,
+      "B2B": 23034375
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -11089,6 +11881,10 @@
     "doors": 2,
     "year": 2021,
     "price": 23625000,
+    "prices": {
+      "B2C": 23625000,
+      "B2B": 20671875
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -11145,6 +11941,10 @@
     "doors": 2,
     "year": 2021,
     "price": 24525000,
+    "prices": {
+      "B2C": 24525000,
+      "B2B": 21459375
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -11201,6 +12001,10 @@
     "doors": 2,
     "year": 2021,
     "price": 25425000,
+    "prices": {
+      "B2C": 25425000,
+      "B2B": 22246875
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -11257,6 +12061,10 @@
     "doors": 2,
     "year": 2021,
     "price": 27225000,
+    "prices": {
+      "B2C": 27225000,
+      "B2B": 23821875
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -11313,6 +12121,10 @@
     "doors": 2,
     "year": 2021,
     "price": 15525000,
+    "prices": {
+      "B2C": 15525000,
+      "B2B": 13584375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -11369,6 +12181,10 @@
     "doors": 2,
     "year": 2021,
     "price": 29925000,
+    "prices": {
+      "B2C": 29925000,
+      "B2B": 26184375
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -11425,6 +12241,10 @@
     "doors": 2,
     "year": 2021,
     "price": 32625000,
+    "prices": {
+      "B2C": 32625000,
+      "B2B": 28546875
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -11481,6 +12301,10 @@
     "doors": 4,
     "year": 2021,
     "price": 6525000,
+    "prices": {
+      "B2C": 6525000,
+      "B2B": 5709375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -11537,6 +12361,10 @@
     "doors": 4,
     "year": 2025,
     "price": 11025000,
+    "prices": {
+      "B2C": 11025000,
+      "B2B": 9646875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -11593,6 +12421,10 @@
     "doors": 5,
     "year": 2025,
     "price": 13275000,
+    "prices": {
+      "B2C": 13275000,
+      "B2B": 11615625
+    },
     "currency": "CRC",
     "categories": [
       "Familiar",
@@ -11649,6 +12481,10 @@
     "doors": 5,
     "year": 2025,
     "price": 12825000,
+    "prices": {
+      "B2C": 12825000,
+      "B2B": 11221875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -11705,6 +12541,10 @@
     "doors": 5,
     "year": 2025,
     "price": 10575000,
+    "prices": {
+      "B2C": 10575000,
+      "B2B": 9253125
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -11761,6 +12601,10 @@
     "doors": 4,
     "year": 2025,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -11817,6 +12661,10 @@
     "doors": 2,
     "year": 2025,
     "price": 14175000,
+    "prices": {
+      "B2C": 14175000,
+      "B2B": 12403125
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -11873,6 +12721,10 @@
     "doors": 5,
     "year": 2025,
     "price": 11925000,
+    "prices": {
+      "B2C": 11925000,
+      "B2B": 10434375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -11929,6 +12781,10 @@
     "doors": 5,
     "year": 2025,
     "price": 15975000,
+    "prices": {
+      "B2C": 15975000,
+      "B2B": 13978125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -11985,6 +12841,10 @@
     "doors": 5,
     "year": 2025,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12041,6 +12901,10 @@
     "doors": 2,
     "year": 2023,
     "price": 12825000,
+    "prices": {
+      "B2C": 12825000,
+      "B2B": 11221875
+    },
     "currency": "CRC",
     "categories": [
       "Descapotable",
@@ -12097,6 +12961,10 @@
     "doors": 4,
     "year": 2023,
     "price": 10575000,
+    "prices": {
+      "B2C": 10575000,
+      "B2B": 9253125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -12153,6 +13021,10 @@
     "doors": 5,
     "year": 2023,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12209,6 +13081,10 @@
     "doors": 5,
     "year": 2023,
     "price": 12825000,
+    "prices": {
+      "B2C": 12825000,
+      "B2B": 11221875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12265,6 +13141,10 @@
     "doors": 5,
     "year": 2023,
     "price": 11025000,
+    "prices": {
+      "B2C": 11025000,
+      "B2B": 9646875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12321,6 +13201,10 @@
     "doors": 5,
     "year": 2023,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12377,6 +13261,10 @@
     "doors": 5,
     "year": 2023,
     "price": 14175000,
+    "prices": {
+      "B2C": 14175000,
+      "B2B": 12403125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12433,6 +13321,10 @@
     "doors": 5,
     "year": 2024,
     "price": 15975000,
+    "prices": {
+      "B2C": 15975000,
+      "B2B": 13978125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12489,6 +13381,10 @@
     "doors": 5,
     "year": 2024,
     "price": 12825000,
+    "prices": {
+      "B2C": 12825000,
+      "B2B": 11221875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12545,6 +13441,10 @@
     "doors": 4,
     "year": 2024,
     "price": 12375000,
+    "prices": {
+      "B2C": 12375000,
+      "B2B": 10828125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -12601,6 +13501,10 @@
     "doors": 4,
     "year": 2024,
     "price": 9675000,
+    "prices": {
+      "B2C": 9675000,
+      "B2B": 8465625
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -12657,6 +13561,10 @@
     "doors": 5,
     "year": 2024,
     "price": 11025000,
+    "prices": {
+      "B2C": 11025000,
+      "B2B": 9646875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12713,6 +13621,10 @@
     "doors": 5,
     "year": 2024,
     "price": 27225000,
+    "prices": {
+      "B2C": 27225000,
+      "B2B": 23821875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12769,6 +13681,10 @@
     "doors": 5,
     "year": 2024,
     "price": 16425000,
+    "prices": {
+      "B2C": 16425000,
+      "B2B": 14371875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12825,6 +13741,10 @@
     "doors": 5,
     "year": 2024,
     "price": 9225000,
+    "prices": {
+      "B2C": 9225000,
+      "B2B": 8071875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12881,6 +13801,10 @@
     "doors": 4,
     "year": 2024,
     "price": 14625000,
+    "prices": {
+      "B2C": 14625000,
+      "B2B": 12796875
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -12937,6 +13861,10 @@
     "doors": 5,
     "year": 2024,
     "price": 21375000,
+    "prices": {
+      "B2C": 21375000,
+      "B2B": 18703125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -12993,6 +13921,10 @@
     "doors": 4,
     "year": 2024,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -13049,6 +13981,10 @@
     "doors": 2,
     "year": 2024,
     "price": 65250000,
+    "prices": {
+      "B2C": 65250000,
+      "B2B": 57093750
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -13105,6 +14041,10 @@
     "doors": 4,
     "year": 2024,
     "price": 20475000,
+    "prices": {
+      "B2C": 20475000,
+      "B2B": 17915625
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -13161,6 +14101,10 @@
     "doors": 4,
     "year": 2025,
     "price": 10125000,
+    "prices": {
+      "B2C": 10125000,
+      "B2B": 8859375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -13217,6 +14161,10 @@
     "doors": 5,
     "year": 2025,
     "price": 14625000,
+    "prices": {
+      "B2C": 14625000,
+      "B2B": 12796875
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -13273,6 +14221,10 @@
     "doors": 5,
     "year": 2025,
     "price": 13275000,
+    "prices": {
+      "B2C": 13275000,
+      "B2B": 11615625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -13329,6 +14281,10 @@
     "doors": 5,
     "year": 2025,
     "price": 20475000,
+    "prices": {
+      "B2C": 20475000,
+      "B2B": 17915625
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -13385,6 +14341,10 @@
     "doors": 5,
     "year": 2025,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -13441,6 +14401,10 @@
     "doors": 5,
     "year": 2025,
     "price": 17775000,
+    "prices": {
+      "B2C": 17775000,
+      "B2B": 15553125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -13497,6 +14461,10 @@
     "doors": 5,
     "year": 2025,
     "price": 17775000,
+    "prices": {
+      "B2C": 17775000,
+      "B2B": 15553125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -13553,6 +14521,10 @@
     "doors": 5,
     "year": 2025,
     "price": 11925000,
+    "prices": {
+      "B2C": 11925000,
+      "B2B": 10434375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -13609,6 +14581,10 @@
     "doors": 4,
     "year": 2025,
     "price": 14175000,
+    "prices": {
+      "B2C": 14175000,
+      "B2B": 12403125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -13665,6 +14641,10 @@
     "doors": 5,
     "year": 2025,
     "price": 26775000,
+    "prices": {
+      "B2C": 26775000,
+      "B2B": 23428125
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -13721,6 +14701,10 @@
     "doors": 4,
     "year": 2026,
     "price": 40275000,
+    "prices": {
+      "B2C": 40275000,
+      "B2B": 35240625
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -13777,6 +14761,10 @@
     "doors": 5,
     "year": 2026,
     "price": 44775000,
+    "prices": {
+      "B2C": 44775000,
+      "B2B": 39178125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -13833,6 +14821,10 @@
     "doors": 4,
     "year": 2026,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -13889,6 +14881,10 @@
     "doors": 5,
     "year": 2026,
     "price": 22275000,
+    "prices": {
+      "B2C": 22275000,
+      "B2B": 19490625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -13945,6 +14941,10 @@
     "doors": 2,
     "year": 2026,
     "price": 81000000,
+    "prices": {
+      "B2C": 81000000,
+      "B2B": 70875000
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -14001,6 +15001,10 @@
     "doors": 4,
     "year": 2026,
     "price": 35775000,
+    "prices": {
+      "B2C": 35775000,
+      "B2B": 31303125
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -14057,6 +15061,10 @@
     "doors": 2,
     "year": 2026,
     "price": 15750000,
+    "prices": {
+      "B2C": 15750000,
+      "B2B": 13781250
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -14113,6 +15121,10 @@
     "doors": 4,
     "year": 2022,
     "price": 11925000,
+    "prices": {
+      "B2C": 11925000,
+      "B2B": 10434375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -14169,6 +15181,10 @@
     "doors": 4,
     "year": 2022,
     "price": 10125000,
+    "prices": {
+      "B2C": 10125000,
+      "B2B": 8859375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -14225,6 +15241,10 @@
     "doors": 5,
     "year": 2022,
     "price": 16875000,
+    "prices": {
+      "B2C": 16875000,
+      "B2B": 14765625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -14281,6 +15301,10 @@
     "doors": 5,
     "year": 2022,
     "price": 11925000,
+    "prices": {
+      "B2C": 11925000,
+      "B2B": 10434375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -14337,6 +15361,10 @@
     "doors": 4,
     "year": 2022,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -14393,6 +15421,10 @@
     "doors": 5,
     "year": 2022,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "Minivan",
@@ -14449,6 +15481,10 @@
     "doors": 4,
     "year": 2022,
     "price": 11475000,
+    "prices": {
+      "B2C": 11475000,
+      "B2B": 10040625
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -14505,6 +15541,10 @@
     "doors": 0,
     "year": 2022,
     "price": 1710000,
+    "prices": {
+      "B2C": 1710000,
+      "B2B": 1496250
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -14561,6 +15601,10 @@
     "doors": 0,
     "year": 2022,
     "price": 12825000,
+    "prices": {
+      "B2C": 12825000,
+      "B2B": 11221875
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -14617,6 +15661,10 @@
     "doors": 0,
     "year": 2022,
     "price": 3690000,
+    "prices": {
+      "B2C": 3690000,
+      "B2B": 3228750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -14673,6 +15721,10 @@
     "doors": 0,
     "year": 2022,
     "price": 1125000,
+    "prices": {
+      "B2C": 1125000,
+      "B2B": 984375
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -14729,6 +15781,10 @@
     "doors": 0,
     "year": 2022,
     "price": 1260000,
+    "prices": {
+      "B2C": 1260000,
+      "B2B": 1102500
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -14785,6 +15841,10 @@
     "doors": 0,
     "year": 2022,
     "price": 8325000,
+    "prices": {
+      "B2C": 8325000,
+      "B2B": 7284375
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -14841,6 +15901,10 @@
     "doors": 0,
     "year": 2022,
     "price": 7425000,
+    "prices": {
+      "B2C": 7425000,
+      "B2B": 6496875
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -14897,6 +15961,10 @@
     "doors": 5,
     "year": 2022,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -14953,6 +16021,10 @@
     "doors": 5,
     "year": 2022,
     "price": 10575000,
+    "prices": {
+      "B2C": 10575000,
+      "B2B": 9253125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -15009,6 +16081,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2925000,
+    "prices": {
+      "B2C": 2925000,
+      "B2B": 2559375
+    },
     "currency": "CRC",
     "categories": [
       "ATV",
@@ -15065,6 +16141,10 @@
     "doors": 0,
     "year": 2022,
     "price": 1440000,
+    "prices": {
+      "B2C": 1440000,
+      "B2B": 1260000
+    },
     "currency": "CRC",
     "categories": [
       "ATV",
@@ -15121,6 +16201,10 @@
     "doors": 0,
     "year": 2022,
     "price": 3690000,
+    "prices": {
+      "B2C": 3690000,
+      "B2B": 3228750
+    },
     "currency": "CRC",
     "categories": [
       "ATV",
@@ -16009,6 +17093,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2362500,
+    "prices": {
+      "B2C": 2362500,
+      "B2B": 2067188
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16065,6 +17153,10 @@
     "doors": 0,
     "year": 2022,
     "price": 1890000,
+    "prices": {
+      "B2C": 1890000,
+      "B2B": 1653750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16121,6 +17213,10 @@
     "doors": 4,
     "year": 2022,
     "price": 12375000,
+    "prices": {
+      "B2C": 12375000,
+      "B2B": 10828125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -16177,6 +17273,10 @@
     "doors": 0,
     "year": 2022,
     "price": 810000,
+    "prices": {
+      "B2C": 810000,
+      "B2B": 708750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16233,6 +17333,10 @@
     "doors": 0,
     "year": 2022,
     "price": 1755000,
+    "prices": {
+      "B2C": 1755000,
+      "B2B": 1535625
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16289,6 +17393,10 @@
     "doors": 0,
     "year": 2022,
     "price": 4410000,
+    "prices": {
+      "B2C": 4410000,
+      "B2B": 3858750
+    },
     "currency": "CRC",
     "categories": [
       "UTV",
@@ -16344,6 +17452,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2070000,
+    "prices": {
+      "B2C": 2070000,
+      "B2B": 1811250
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16399,6 +17511,10 @@
     "doors": 0,
     "year": 2022,
     "price": 1440000,
+    "prices": {
+      "B2C": 1440000,
+      "B2B": 1260000
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16454,6 +17570,10 @@
     "doors": 0,
     "year": 2022,
     "price": 1620000,
+    "prices": {
+      "B2C": 1620000,
+      "B2B": 1417500
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16509,6 +17629,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2340000,
+    "prices": {
+      "B2C": 2340000,
+      "B2B": 2047500
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16564,6 +17688,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2340000,
+    "prices": {
+      "B2C": 2340000,
+      "B2B": 2047500
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16619,6 +17747,10 @@
     "doors": 0,
     "year": 2022,
     "price": 3690000,
+    "prices": {
+      "B2C": 3690000,
+      "B2B": 3228750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16674,6 +17806,10 @@
     "doors": 0,
     "year": 2022,
     "price": 742500,
+    "prices": {
+      "B2C": 742500,
+      "B2B": 649688
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16729,6 +17865,10 @@
     "doors": 0,
     "year": 2022,
     "price": 1125000,
+    "prices": {
+      "B2C": 1125000,
+      "B2B": 984375
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16784,6 +17924,10 @@
     "doors": 0,
     "year": 2022,
     "price": 4320000,
+    "prices": {
+      "B2C": 4320000,
+      "B2B": 3780000
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16839,6 +17983,10 @@
     "doors": 0,
     "year": 2022,
     "price": 4410000,
+    "prices": {
+      "B2C": 4410000,
+      "B2B": 3858750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16895,6 +18043,10 @@
     "doors": 0,
     "year": 2022,
     "price": 3780000,
+    "prices": {
+      "B2C": 3780000,
+      "B2B": 3307500
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -16950,6 +18102,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2160000,
+    "prices": {
+      "B2C": 2160000,
+      "B2B": 1890000
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17005,6 +18161,10 @@
     "doors": 0,
     "year": 2022,
     "price": 4410000,
+    "prices": {
+      "B2C": 4410000,
+      "B2B": 3858750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17060,6 +18220,10 @@
     "doors": 0,
     "year": 2022,
     "price": 3150000,
+    "prices": {
+      "B2C": 3150000,
+      "B2B": 2756250
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17115,6 +18279,10 @@
     "doors": 0,
     "year": 2022,
     "price": 5400000,
+    "prices": {
+      "B2C": 5400000,
+      "B2B": 4725000
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17170,6 +18338,10 @@
     "doors": 0,
     "year": 2022,
     "price": 3240000,
+    "prices": {
+      "B2C": 3240000,
+      "B2B": 2835000
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17225,6 +18397,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2925000,
+    "prices": {
+      "B2C": 2925000,
+      "B2B": 2559375
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17280,6 +18456,10 @@
     "doors": 0,
     "year": 2022,
     "price": 3240000,
+    "prices": {
+      "B2C": 3240000,
+      "B2B": 2835000
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17335,6 +18515,10 @@
     "doors": 0,
     "year": 2022,
     "price": 7560000,
+    "prices": {
+      "B2C": 7560000,
+      "B2B": 6615000
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17390,6 +18574,10 @@
     "doors": 0,
     "year": 2022,
     "price": 5850000,
+    "prices": {
+      "B2C": 5850000,
+      "B2B": 5118750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17445,6 +18633,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2160000,
+    "prices": {
+      "B2C": 2160000,
+      "B2B": 1890000
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17500,6 +18692,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2250000,
+    "prices": {
+      "B2C": 2250000,
+      "B2B": 1968750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17555,6 +18751,10 @@
     "doors": 0,
     "year": 2022,
     "price": 4410000,
+    "prices": {
+      "B2C": 4410000,
+      "B2B": 3858750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17610,6 +18810,10 @@
     "doors": 0,
     "year": 2022,
     "price": 4185000,
+    "prices": {
+      "B2C": 4185000,
+      "B2B": 3661875
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17665,6 +18869,10 @@
     "doors": 0,
     "year": 2022,
     "price": 6525000,
+    "prices": {
+      "B2C": 6525000,
+      "B2B": 5709375
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17720,6 +18928,10 @@
     "doors": 0,
     "year": 2022,
     "price": 5040000,
+    "prices": {
+      "B2C": 5040000,
+      "B2B": 4410000
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17776,6 +18988,10 @@
     "doors": 0,
     "year": 2022,
     "price": 1170000,
+    "prices": {
+      "B2C": 1170000,
+      "B2B": 1023750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -17832,6 +19048,10 @@
     "doors": 0,
     "year": 2022,
     "price": 3510000,
+    "prices": {
+      "B2C": 3510000,
+      "B2B": 3071250
+    },
     "currency": "CRC",
     "categories": [
       "ATV",
@@ -17888,6 +19108,10 @@
     "doors": 0,
     "year": 2022,
     "price": 3960000,
+    "prices": {
+      "B2C": 3960000,
+      "B2B": 3465000
+    },
     "currency": "CRC",
     "categories": [
       "ATV",
@@ -17944,6 +19168,10 @@
     "doors": 0,
     "year": 2022,
     "price": 4140000,
+    "prices": {
+      "B2C": 4140000,
+      "B2B": 3622500
+    },
     "currency": "CRC",
     "categories": [
       "ATV",
@@ -18000,6 +19228,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2790000,
+    "prices": {
+      "B2C": 2790000,
+      "B2B": 2441250
+    },
     "currency": "CRC",
     "categories": [
       "ATV",
@@ -18056,6 +19288,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2070000,
+    "prices": {
+      "B2C": 2070000,
+      "B2B": 1811250
+    },
     "currency": "CRC",
     "categories": [
       "ATV",
@@ -18111,6 +19347,10 @@
     "doors": 0,
     "year": 2022,
     "price": 4185000,
+    "prices": {
+      "B2C": 4185000,
+      "B2B": 3661875
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -18166,6 +19406,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2115000,
+    "prices": {
+      "B2C": 2115000,
+      "B2B": 1850625
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -18221,6 +19465,10 @@
     "doors": 0,
     "year": 2022,
     "price": 2925000,
+    "prices": {
+      "B2C": 2925000,
+      "B2B": 2559375
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -18277,6 +19525,10 @@
     "doors": 0,
     "year": 2022,
     "price": 13275000,
+    "prices": {
+      "B2C": 13275000,
+      "B2B": 11615625
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -18332,6 +19584,10 @@
     "doors": 0,
     "year": 2022,
     "price": 1530000,
+    "prices": {
+      "B2C": 1530000,
+      "B2B": 1338750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -18387,6 +19643,10 @@
     "doors": 0,
     "year": 2022,
     "price": 1710000,
+    "prices": {
+      "B2C": 1710000,
+      "B2B": 1496250
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -18442,6 +19702,10 @@
     "doors": 0,
     "year": 2022,
     "price": 7290000,
+    "prices": {
+      "B2C": 7290000,
+      "B2B": 6378750
+    },
     "currency": "CRC",
     "categories": [
       "Moto",
@@ -18497,6 +19761,10 @@
     "doors": 0,
     "year": 2022,
     "price": 9225000,
+    "prices": {
+      "B2C": 9225000,
+      "B2B": 8071875
+    },
     "currency": "CRC",
     "categories": [
       "UTV",
@@ -18553,6 +19821,10 @@
     "doors": 2,
     "year": 2025,
     "price": 20925000,
+    "prices": {
+      "B2C": 20925000,
+      "B2B": 18309375
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -18609,6 +19881,10 @@
     "doors": 5,
     "year": 2025,
     "price": 13275000,
+    "prices": {
+      "B2C": 13275000,
+      "B2B": 11615625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -18665,6 +19941,10 @@
     "doors": 5,
     "year": 2025,
     "price": 26325000,
+    "prices": {
+      "B2C": 26325000,
+      "B2B": 23034375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -18721,6 +20001,10 @@
     "doors": 5,
     "year": 2025,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -18777,6 +20061,10 @@
     "doors": 4,
     "year": 2025,
     "price": 20925000,
+    "prices": {
+      "B2C": 20925000,
+      "B2B": 18309375
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -18832,6 +20120,10 @@
     "doors": 4,
     "year": 2025,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -18887,6 +20179,10 @@
     "doors": 4,
     "year": 2025,
     "price": 26325000,
+    "prices": {
+      "B2C": 26325000,
+      "B2B": 23034375
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -18943,6 +20239,10 @@
     "doors": 2,
     "year": 2025,
     "price": 20475000,
+    "prices": {
+      "B2C": 20475000,
+      "B2B": 17915625
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -18999,6 +20299,10 @@
     "doors": 4,
     "year": 2025,
     "price": 30825000,
+    "prices": {
+      "B2C": 30825000,
+      "B2B": 26971875
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -19055,6 +20359,10 @@
     "doors": 4,
     "year": 2025,
     "price": 23625000,
+    "prices": {
+      "B2C": 23625000,
+      "B2B": 20671875
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -19111,6 +20419,10 @@
     "doors": 4,
     "year": 2025,
     "price": 35325000,
+    "prices": {
+      "B2C": 35325000,
+      "B2B": 30909375
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -19167,6 +20479,10 @@
     "doors": 2,
     "year": 2025,
     "price": 28125000,
+    "prices": {
+      "B2C": 28125000,
+      "B2B": 24609375
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -19223,6 +20539,10 @@
     "doors": 4,
     "year": 2025,
     "price": 29475000,
+    "prices": {
+      "B2C": 29475000,
+      "B2B": 25790625
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -19279,6 +20599,10 @@
     "doors": 4,
     "year": 2025,
     "price": 31275000,
+    "prices": {
+      "B2C": 31275000,
+      "B2B": 27365625
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -19335,6 +20659,10 @@
     "doors": 2,
     "year": 2025,
     "price": 35325000,
+    "prices": {
+      "B2C": 35325000,
+      "B2B": 30909375
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -19391,6 +20719,10 @@
     "doors": 2,
     "year": 2025,
     "price": 38925000,
+    "prices": {
+      "B2C": 38925000,
+      "B2B": 34059375
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -19447,6 +20779,10 @@
     "doors": 2,
     "year": 2025,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -19503,6 +20839,10 @@
     "doors": 2,
     "year": 2025,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -19559,6 +20899,10 @@
     "doors": 5,
     "year": 2025,
     "price": 28575000,
+    "prices": {
+      "B2C": 28575000,
+      "B2B": 25003125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -19615,6 +20959,10 @@
     "doors": 2,
     "year": 2025,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "Chasis",
@@ -19671,6 +21019,10 @@
     "doors": 2,
     "year": 2025,
     "price": 15975000,
+    "prices": {
+      "B2C": 15975000,
+      "B2B": 13978125
+    },
     "currency": "CRC",
     "categories": [
       "Chasis",
@@ -19727,6 +21079,10 @@
     "doors": 4,
     "year": 2025,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -19783,6 +21139,10 @@
     "doors": 4,
     "year": 2025,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -19839,6 +21199,10 @@
     "doors": 4,
     "year": 2025,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -19895,6 +21259,10 @@
     "doors": 4,
     "year": 2025,
     "price": 20925000,
+    "prices": {
+      "B2C": 20925000,
+      "B2B": 18309375
+    },
     "currency": "CRC",
     "categories": [
       "Furgoneta",
@@ -19951,6 +21319,10 @@
     "doors": 4,
     "year": 2025,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -20007,6 +21379,10 @@
     "doors": 2,
     "year": 2025,
     "price": 28125000,
+    "prices": {
+      "B2C": 28125000,
+      "B2B": 24609375
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -20063,6 +21439,10 @@
     "doors": 4,
     "year": 2025,
     "price": 29925000,
+    "prices": {
+      "B2C": 29925000,
+      "B2B": 26184375
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -20119,6 +21499,10 @@
     "doors": 2,
     "year": 2025,
     "price": 33750000,
+    "prices": {
+      "B2C": 33750000,
+      "B2B": 29531250
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -20175,6 +21559,10 @@
     "doors": 5,
     "year": 2025,
     "price": 13725000,
+    "prices": {
+      "B2C": 13725000,
+      "B2B": 12009375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -20231,6 +21619,10 @@
     "doors": 5,
     "year": 2025,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -20287,6 +21679,10 @@
     "doors": 4,
     "year": 2025,
     "price": 11025000,
+    "prices": {
+      "B2C": 11025000,
+      "B2B": 9646875
+    },
     "currency": "CRC",
     "categories": [
       "Pickup",
@@ -20343,6 +21739,10 @@
     "doors": 2,
     "year": 2025,
     "price": 540000000,
+    "prices": {
+      "B2C": 540000000,
+      "B2B": 472500000
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -20399,6 +21799,10 @@
     "doors": 2,
     "year": 2025,
     "price": 146250000,
+    "prices": {
+      "B2C": 146250000,
+      "B2B": 127968750
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -20455,6 +21859,10 @@
     "doors": 4,
     "year": 2022,
     "price": 7425000,
+    "prices": {
+      "B2C": 7425000,
+      "B2B": 6496875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -20511,6 +21919,10 @@
     "doors": 5,
     "year": 2022,
     "price": 8775000,
+    "prices": {
+      "B2C": 8775000,
+      "B2B": 7678125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -20567,6 +21979,10 @@
     "doors": 4,
     "year": 2022,
     "price": 8775000,
+    "prices": {
+      "B2C": 8775000,
+      "B2B": 7678125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -20623,6 +22039,10 @@
     "doors": 5,
     "year": 2022,
     "price": 13275000,
+    "prices": {
+      "B2C": 13275000,
+      "B2B": 11615625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -20679,6 +22099,10 @@
     "doors": 5,
     "year": 2022,
     "price": 11925000,
+    "prices": {
+      "B2C": 11925000,
+      "B2B": 10434375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -20735,6 +22159,10 @@
     "doors": 5,
     "year": 2022,
     "price": 11475000,
+    "prices": {
+      "B2C": 11475000,
+      "B2B": 10040625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -20791,6 +22219,10 @@
     "doors": 4,
     "year": 2022,
     "price": 16425000,
+    "prices": {
+      "B2C": 16425000,
+      "B2B": 14371875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -20847,6 +22279,10 @@
     "doors": 5,
     "year": 2022,
     "price": 15525000,
+    "prices": {
+      "B2C": 15525000,
+      "B2B": 13584375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -20903,6 +22339,10 @@
     "doors": 5,
     "year": 2022,
     "price": 10125000,
+    "prices": {
+      "B2C": 10125000,
+      "B2B": 8859375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -20959,6 +22399,10 @@
     "doors": 4,
     "year": 2022,
     "price": 11025000,
+    "prices": {
+      "B2C": 11025000,
+      "B2B": 9646875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -21015,6 +22459,10 @@
     "doors": 5,
     "year": 2022,
     "price": 15075000,
+    "prices": {
+      "B2C": 15075000,
+      "B2B": 13190625
+    },
     "currency": "CRC",
     "categories": [
       "Minivan",
@@ -21071,6 +22519,10 @@
     "doors": 5,
     "year": 2022,
     "price": 21375000,
+    "prices": {
+      "B2C": 21375000,
+      "B2B": 18703125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -21127,6 +22579,10 @@
     "doors": 4,
     "year": 2023,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -21183,6 +22639,10 @@
     "doors": 5,
     "year": 2023,
     "price": 20475000,
+    "prices": {
+      "B2C": 20475000,
+      "B2B": 17915625
+    },
     "currency": "CRC",
     "categories": [
       "Familiar",
@@ -21239,6 +22699,10 @@
     "doors": 5,
     "year": 2023,
     "price": 20025000,
+    "prices": {
+      "B2C": 20025000,
+      "B2B": 17521875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -21295,6 +22759,10 @@
     "doors": 5,
     "year": 2023,
     "price": 25425000,
+    "prices": {
+      "B2C": 25425000,
+      "B2B": 22246875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -21351,6 +22819,10 @@
     "doors": 5,
     "year": 2023,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "Familiar",
@@ -21407,6 +22879,10 @@
     "doors": 4,
     "year": 2023,
     "price": 25425000,
+    "prices": {
+      "B2C": 25425000,
+      "B2B": 22246875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -21463,6 +22939,10 @@
     "doors": 5,
     "year": 2023,
     "price": 26325000,
+    "prices": {
+      "B2C": 26325000,
+      "B2B": 23034375
+    },
     "currency": "CRC",
     "categories": [
       "Familiar",
@@ -21519,6 +22999,10 @@
     "doors": 2,
     "year": 2023,
     "price": 38250000,
+    "prices": {
+      "B2C": 38250000,
+      "B2B": 33468750
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -21575,6 +23059,10 @@
     "doors": 2,
     "year": 2023,
     "price": 60750000,
+    "prices": {
+      "B2C": 60750000,
+      "B2B": 53156250
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -21631,6 +23119,10 @@
     "doors": 2,
     "year": 2023,
     "price": 65250000,
+    "prices": {
+      "B2C": 65250000,
+      "B2B": 57093750
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -21687,6 +23179,10 @@
     "doors": 2,
     "year": 2023,
     "price": 56250000,
+    "prices": {
+      "B2C": 56250000,
+      "B2B": 49218750
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -21743,6 +23239,10 @@
     "doors": 2,
     "year": 2023,
     "price": 59400000,
+    "prices": {
+      "B2C": 59400000,
+      "B2B": 51975000
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -21799,6 +23299,10 @@
     "doors": 2,
     "year": 2023,
     "price": 20250000,
+    "prices": {
+      "B2C": 20250000,
+      "B2B": 17718750
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -21855,6 +23359,10 @@
     "doors": 2,
     "year": 2023,
     "price": 21600000,
+    "prices": {
+      "B2C": 21600000,
+      "B2B": 18900000
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -21911,6 +23419,10 @@
     "doors": 2,
     "year": 2023,
     "price": 15750000,
+    "prices": {
+      "B2C": 15750000,
+      "B2B": 13781250
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -21967,6 +23479,10 @@
     "doors": 2,
     "year": 2023,
     "price": 17100000,
+    "prices": {
+      "B2C": 17100000,
+      "B2B": 14962500
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -22023,6 +23539,10 @@
     "doors": 2,
     "year": 2023,
     "price": 60750000,
+    "prices": {
+      "B2C": 60750000,
+      "B2B": 53156250
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -22079,6 +23599,10 @@
     "doors": 2,
     "year": 2023,
     "price": 69750000,
+    "prices": {
+      "B2C": 69750000,
+      "B2B": 61031250
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -22135,6 +23659,10 @@
     "doors": 2,
     "year": 2023,
     "price": 15750000,
+    "prices": {
+      "B2C": 15750000,
+      "B2B": 13781250
+    },
     "currency": "CRC",
     "categories": [
       "Remolque",
@@ -22191,6 +23719,10 @@
     "doors": 5,
     "year": 2023,
     "price": 17325000,
+    "prices": {
+      "B2C": 17325000,
+      "B2B": 15159375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -22247,6 +23779,10 @@
     "doors": 2,
     "year": 2023,
     "price": 65250000,
+    "prices": {
+      "B2C": 65250000,
+      "B2B": 57093750
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -22303,6 +23839,10 @@
     "doors": 2,
     "year": 2023,
     "price": 56250000,
+    "prices": {
+      "B2C": 56250000,
+      "B2B": 49218750
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -22359,6 +23899,10 @@
     "doors": 5,
     "year": 2023,
     "price": 26325000,
+    "prices": {
+      "B2C": 26325000,
+      "B2B": 23034375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -22415,6 +23959,10 @@
     "doors": 2,
     "year": 2023,
     "price": 65250000,
+    "prices": {
+      "B2C": 65250000,
+      "B2B": 57093750
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -22471,6 +24019,10 @@
     "doors": 2,
     "year": 2023,
     "price": 42750000,
+    "prices": {
+      "B2C": 42750000,
+      "B2B": 37406250
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -22527,6 +24079,10 @@
     "doors": 2,
     "year": 2023,
     "price": 66600000,
+    "prices": {
+      "B2C": 66600000,
+      "B2B": 58275000
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -22583,6 +24139,10 @@
     "doors": 2,
     "year": 2023,
     "price": 63900000,
+    "prices": {
+      "B2C": 63900000,
+      "B2B": 55912500
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -22639,6 +24199,10 @@
     "doors": 2,
     "year": 2023,
     "price": 83250000,
+    "prices": {
+      "B2C": 83250000,
+      "B2B": 72843750
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -22695,6 +24259,10 @@
     "doors": 2,
     "year": 2023,
     "price": 60750000,
+    "prices": {
+      "B2C": 60750000,
+      "B2B": 53156250
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -22751,6 +24319,10 @@
     "doors": 3,
     "year": 2023,
     "price": 87750000,
+    "prices": {
+      "B2C": 87750000,
+      "B2B": 76781250
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -22807,6 +24379,10 @@
     "doors": 3,
     "year": 2023,
     "price": 78750000,
+    "prices": {
+      "B2C": 78750000,
+      "B2B": 68906250
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -22863,6 +24439,10 @@
     "doors": 2,
     "year": 2023,
     "price": 56250000,
+    "prices": {
+      "B2C": 56250000,
+      "B2B": 49218750
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -22919,6 +24499,10 @@
     "doors": 2,
     "year": 2023,
     "price": 38250000,
+    "prices": {
+      "B2C": 38250000,
+      "B2B": 33468750
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -22975,6 +24559,10 @@
     "doors": 2,
     "year": 2023,
     "price": 87750000,
+    "prices": {
+      "B2C": 87750000,
+      "B2B": 76781250
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -23031,6 +24619,10 @@
     "doors": 4,
     "year": 2023,
     "price": 96750000,
+    "prices": {
+      "B2C": 96750000,
+      "B2B": 84656250
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -23087,6 +24679,10 @@
     "doors": 3,
     "year": 2023,
     "price": 74250000,
+    "prices": {
+      "B2C": 74250000,
+      "B2B": 64968750
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -23143,6 +24739,10 @@
     "doors": 2,
     "year": 2023,
     "price": 42750000,
+    "prices": {
+      "B2C": 42750000,
+      "B2B": 37406250
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -23199,6 +24799,10 @@
     "doors": 2,
     "year": 2023,
     "price": 51750000,
+    "prices": {
+      "B2C": 51750000,
+      "B2B": 45281250
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -23255,6 +24859,10 @@
     "doors": 2,
     "year": 2023,
     "price": 92250000,
+    "prices": {
+      "B2C": 92250000,
+      "B2B": 80718750
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -23311,6 +24919,10 @@
     "doors": 2,
     "year": 2023,
     "price": 78750000,
+    "prices": {
+      "B2C": 78750000,
+      "B2B": 68906250
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -23367,6 +24979,10 @@
     "doors": 2,
     "year": 2023,
     "price": 83250000,
+    "prices": {
+      "B2C": 83250000,
+      "B2B": 72843750
+    },
     "currency": "CRC",
     "categories": [
       "Camión",
@@ -23423,6 +25039,10 @@
     "doors": 2,
     "year": 2023,
     "price": 87750000,
+    "prices": {
+      "B2C": 87750000,
+      "B2B": 76781250
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -23479,6 +25099,10 @@
     "doors": 2,
     "year": 2023,
     "price": 74250000,
+    "prices": {
+      "B2C": 74250000,
+      "B2B": 64968750
+    },
     "currency": "CRC",
     "categories": [
       "Autobús",
@@ -23535,6 +25159,10 @@
     "doors": 5,
     "year": 2024,
     "price": 12825000,
+    "prices": {
+      "B2C": 12825000,
+      "B2B": 11221875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -23591,6 +25219,10 @@
     "doors": 5,
     "year": 2024,
     "price": 7425000,
+    "prices": {
+      "B2C": 7425000,
+      "B2B": 6496875
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -23647,6 +25279,10 @@
     "doors": 4,
     "year": 2024,
     "price": 7875000,
+    "prices": {
+      "B2C": 7875000,
+      "B2B": 6890625
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -23703,6 +25339,10 @@
     "doors": 5,
     "year": 2024,
     "price": 10575000,
+    "prices": {
+      "B2C": 10575000,
+      "B2B": 9253125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -23759,6 +25399,10 @@
     "doors": 5,
     "year": 2024,
     "price": 11925000,
+    "prices": {
+      "B2C": 11925000,
+      "B2B": 10434375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -23815,6 +25459,10 @@
     "doors": 0,
     "year": 2024,
     "price": 5625000,
+    "prices": {
+      "B2C": 5625000,
+      "B2B": 4921875
+    },
     "currency": "CRC",
     "categories": [
       "Eléctrico",
@@ -23871,6 +25519,10 @@
     "doors": 4,
     "year": 2025,
     "price": 19125000,
+    "prices": {
+      "B2C": 19125000,
+      "B2B": 16734375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -23927,6 +25579,10 @@
     "doors": 4,
     "year": 2025,
     "price": 23625000,
+    "prices": {
+      "B2C": 23625000,
+      "B2B": 20671875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -23983,6 +25639,10 @@
     "doors": 4,
     "year": 2025,
     "price": 26325000,
+    "prices": {
+      "B2C": 26325000,
+      "B2B": 23034375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -24039,6 +25699,10 @@
     "doors": 4,
     "year": 2025,
     "price": 15975000,
+    "prices": {
+      "B2C": 15975000,
+      "B2B": 13978125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -24095,6 +25759,10 @@
     "doors": 4,
     "year": 2025,
     "price": 32625000,
+    "prices": {
+      "B2C": 32625000,
+      "B2B": 28546875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -24151,6 +25819,10 @@
     "doors": 4,
     "year": 2025,
     "price": 54000000,
+    "prices": {
+      "B2C": 54000000,
+      "B2B": 47250000
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -24207,6 +25879,10 @@
     "doors": 5,
     "year": 2025,
     "price": 27225000,
+    "prices": {
+      "B2C": 27225000,
+      "B2B": 23821875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -24263,6 +25939,10 @@
     "doors": 2,
     "year": 2025,
     "price": 20925000,
+    "prices": {
+      "B2C": 20925000,
+      "B2B": 18309375
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -24319,6 +25999,10 @@
     "doors": 2,
     "year": 2025,
     "price": 25425000,
+    "prices": {
+      "B2C": 25425000,
+      "B2B": 22246875
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -24375,6 +26059,10 @@
     "doors": 5,
     "year": 2025,
     "price": 20025000,
+    "prices": {
+      "B2C": 20025000,
+      "B2B": 17521875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -24431,6 +26119,10 @@
     "doors": 2,
     "year": 2025,
     "price": 35325000,
+    "prices": {
+      "B2C": 35325000,
+      "B2B": 30909375
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -24487,6 +26179,10 @@
     "doors": 5,
     "year": 2025,
     "price": 32625000,
+    "prices": {
+      "B2C": 32625000,
+      "B2B": 28546875
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -24543,6 +26239,10 @@
     "doors": 5,
     "year": 2025,
     "price": 16875000,
+    "prices": {
+      "B2C": 16875000,
+      "B2B": 14765625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -24599,6 +26299,10 @@
     "doors": 5,
     "year": 2025,
     "price": 26325000,
+    "prices": {
+      "B2C": 26325000,
+      "B2B": 23034375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -24655,6 +26359,10 @@
     "doors": 4,
     "year": 2025,
     "price": 21375000,
+    "prices": {
+      "B2C": 21375000,
+      "B2B": 18703125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -24711,6 +26419,10 @@
     "doors": 5,
     "year": 2025,
     "price": 37125000,
+    "prices": {
+      "B2C": 37125000,
+      "B2B": 32484375
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -24767,6 +26479,10 @@
     "doors": 5,
     "year": 2025,
     "price": 56250000,
+    "prices": {
+      "B2C": 56250000,
+      "B2B": 49218750
+    },
     "currency": "CRC",
     "categories": [
       "Hatchback",
@@ -24823,6 +26539,10 @@
     "doors": 5,
     "year": 2025,
     "price": 21825000,
+    "prices": {
+      "B2C": 21825000,
+      "B2B": 19096875
+    },
     "currency": "CRC",
     "categories": [
       "Familiar",
@@ -24879,6 +26599,10 @@
     "doors": 4,
     "year": 2025,
     "price": 28125000,
+    "prices": {
+      "B2C": 28125000,
+      "B2B": 24609375
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -24935,6 +26659,10 @@
     "doors": 5,
     "year": 2025,
     "price": 33075000,
+    "prices": {
+      "B2C": 33075000,
+      "B2B": 28940625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -24991,6 +26719,10 @@
     "doors": 5,
     "year": 2025,
     "price": 30375000,
+    "prices": {
+      "B2C": 30375000,
+      "B2B": 26578125
+    },
     "currency": "CRC",
     "categories": [
       "Familiar",
@@ -25047,6 +26779,10 @@
     "doors": 5,
     "year": 2025,
     "price": 26325000,
+    "prices": {
+      "B2C": 26325000,
+      "B2B": 23034375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -25103,6 +26839,10 @@
     "doors": 5,
     "year": 2025,
     "price": 40275000,
+    "prices": {
+      "B2C": 40275000,
+      "B2B": 35240625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -25159,6 +26899,10 @@
     "doors": 5,
     "year": 2025,
     "price": 41625000,
+    "prices": {
+      "B2C": 41625000,
+      "B2B": 36421875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -25215,6 +26959,10 @@
     "doors": 5,
     "year": 2025,
     "price": 56250000,
+    "prices": {
+      "B2C": 56250000,
+      "B2B": 49218750
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -25271,6 +27019,10 @@
     "doors": 4,
     "year": 2025,
     "price": 65250000,
+    "prices": {
+      "B2C": 65250000,
+      "B2B": 57093750
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -25327,6 +27079,10 @@
     "doors": 5,
     "year": 2025,
     "price": 22275000,
+    "prices": {
+      "B2C": 22275000,
+      "B2B": 19490625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -25383,6 +27139,10 @@
     "doors": 4,
     "year": 2025,
     "price": 39375000,
+    "prices": {
+      "B2C": 39375000,
+      "B2B": 34453125
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -25439,6 +27199,10 @@
     "doors": 5,
     "year": 2025,
     "price": 29475000,
+    "prices": {
+      "B2C": 29475000,
+      "B2B": 25790625
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -25495,6 +27259,10 @@
     "doors": 5,
     "year": 2025,
     "price": 32625000,
+    "prices": {
+      "B2C": 32625000,
+      "B2B": 28546875
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -25551,6 +27319,10 @@
     "doors": 5,
     "year": 2025,
     "price": 54000000,
+    "prices": {
+      "B2C": 54000000,
+      "B2B": 47250000
+    },
     "currency": "CRC",
     "categories": [
       "Familiar",
@@ -25607,6 +27379,10 @@
     "doors": 4,
     "year": 2025,
     "price": 48150000,
+    "prices": {
+      "B2C": 48150000,
+      "B2B": 42131250
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -25663,6 +27439,10 @@
     "doors": 2,
     "year": 2025,
     "price": 51750000,
+    "prices": {
+      "B2C": 51750000,
+      "B2B": 45281250
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",
@@ -25719,6 +27499,10 @@
     "doors": 5,
     "year": 2025,
     "price": 35775000,
+    "prices": {
+      "B2C": 35775000,
+      "B2B": 31303125
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -25775,6 +27559,10 @@
     "doors": 4,
     "year": 2025,
     "price": 41625000,
+    "prices": {
+      "B2C": 41625000,
+      "B2B": 36421875
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -25831,6 +27619,10 @@
     "doors": 5,
     "year": 2025,
     "price": 28125000,
+    "prices": {
+      "B2C": 28125000,
+      "B2B": 24609375
+    },
     "currency": "CRC",
     "categories": [
       "SUV",
@@ -25887,6 +27679,10 @@
     "doors": 4,
     "year": 2025,
     "price": 40275000,
+    "prices": {
+      "B2C": 40275000,
+      "B2B": 35240625
+    },
     "currency": "CRC",
     "categories": [
       "Sedán",
@@ -25943,6 +27739,10 @@
     "doors": 2,
     "year": 2025,
     "price": 30825000,
+    "prices": {
+      "B2C": 30825000,
+      "B2B": 26971875
+    },
     "currency": "CRC",
     "categories": [
       "Descapotable",
@@ -25999,6 +27799,10 @@
     "doors": 2,
     "year": 2025,
     "price": 65250000,
+    "prices": {
+      "B2C": 65250000,
+      "B2B": 57093750
+    },
     "currency": "CRC",
     "categories": [
       "Descapotable",
@@ -26055,6 +27859,10 @@
     "doors": 2,
     "year": 2025,
     "price": 30375000,
+    "prices": {
+      "B2C": 30375000,
+      "B2B": 26578125
+    },
     "currency": "CRC",
     "categories": [
       "Coupé",

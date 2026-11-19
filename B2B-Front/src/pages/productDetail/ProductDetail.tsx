@@ -4,15 +4,28 @@ import SpecsTable from "./components/SpecsTable";
 import StockByLocation from "./components/StockByLocation";
 import ProductNavbar from "./components/ProductNavbar";
 import AddToCartButton from "../../components/AddToCartButton";
-
+import { selectPrice } from "../../Catalog/pricing/selectPrice";
+import { useAuth } from "../../auth/useAuth";
+import { useBranch } from "../../branch/useBranch";
+import { getBranchInfo } from "../../branch/branches";
+import BranchSelector from "../../branch/BranchSelector";
+import { branches } from "../../branch/branches";
+import { getBranchStock } from "../../inventory/inventoryOverrides";
 
 interface ProductDetailProps {
     product: Product;
 }
 
 export default function ProductDetail({ product }: ProductDetailProps) {
-    const totalStock = Object.values(product.stock).reduce((sum, cantidad) => sum + cantidad, 0);
-
+    const totalStock = branches.reduce((sum, branch) => sum + getBranchStock(product, branch.id), 0);
+    const { role } = useAuth();
+    const price = role ? selectPrice(product, role) : product.price;
+    const isB2B = role === "B2B";
+    const { selectedBranch } = useBranch();
+    const selectedBranchInfo = selectedBranch ? getBranchInfo(selectedBranch) : null;
+    const selectedBranchStock = selectedBranchInfo
+        ? getBranchStock(product, selectedBranch!)
+        : null;
 
 
 
@@ -32,9 +45,23 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                 {/* Panel lateral */}
                 <div className="bg-white shadow-lg rounded p-4 w-full md:w-64 h-fit">
                     <p className="text-lg font-bold">
-                        Precio total: ₡{product.price.toLocaleString("es-CR")} 
+                        {isB2B ? "Precio mayorista" : "Precio"}: ₡{price?.toLocaleString("es-CR") ?? "N/D"}
                     </p>
+                    {isB2B && product.prices && (
+                        <p className="text-sm text-gray-500">
+                            Precio regular: ₡{product.prices.B2C.toLocaleString("es-CR")}
+                        </p>
+                    )}
                     <p className="text-sm text-gray-600 mt-1">Impuestos: Ya incluidos</p>
+
+                    <div className="mt-4">
+                        <BranchSelector />
+                        {selectedBranchInfo && (
+                            <p className={`mt-2 text-sm font-medium ${selectedBranchStock ? "text-green-700" : "text-red-700"}`}>
+                                Disponible en {selectedBranchInfo.label}: {selectedBranchStock || "Sin stock"}
+                            </p>
+                        )}
+                    </div>
 
                     <AddToCartButton product={product} source="detail" />
                 </div>
@@ -70,7 +97,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             </div>
 
             <div>
-                <StockByLocation stock={product.stock} />
+                <StockByLocation product={product} selectedBranch={selectedBranch} />
             </div>
         </div>
     </div>

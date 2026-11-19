@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../cart/useCart";
 import CartItemRow from "./CartItemRow";
+import { getCartLineId } from "../cart/types";
 import CartSummary from "./CartSummary";
+import B2BMinimumNotice from "./B2BMinimumNotice";
 
 export default function CartPanel({ onClose }: { onClose?: () => void }) {
     const { state, dispatch } = useCart();
@@ -35,6 +37,8 @@ export default function CartPanel({ onClose }: { onClose?: () => void }) {
         )}
       </div>
 
+      <B2BMinimumNotice className="mb-3" />
+
       {state.items.length === 0 ? (
         <p className="py-6 text-center text-sm text-slate-500">
           El carrito está vacío
@@ -43,7 +47,7 @@ export default function CartPanel({ onClose }: { onClose?: () => void }) {
         <>
           <ul className="flex max-h-72 flex-col gap-3 overflow-y-auto">
             {state.items.map((item) => (
-                <CartItemRow key={item.id} item={item} onNavigate={onClose} />
+                <CartItemRow key={getCartLineId(item)} item={item} onNavigate={onClose} />
             ))}
           </ul>
 

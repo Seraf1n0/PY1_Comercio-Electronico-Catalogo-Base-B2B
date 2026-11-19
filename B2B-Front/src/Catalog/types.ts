@@ -18,6 +18,10 @@ export interface Product {
   doors: number;
   year: number;
   price: number;
+  prices?: { // Precios del 3er proyecto de negocio a consumidor y negocio a negoco(mayorista)
+    B2C: number;
+    B2B: number;
+  };
   currency: string;
   categories: string[];
   in_stock: boolean;

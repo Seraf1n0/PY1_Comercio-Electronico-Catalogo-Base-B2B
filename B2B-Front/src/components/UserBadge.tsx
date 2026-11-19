@@ -1,4 +1,4 @@
-import { ArrowRightOnRectangleIcon, ChartBarIcon } from "@heroicons/react/24/outline";
+import { ArrowRightOnRectangleIcon, ChartBarIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 import { roleLabels } from "../auth/roleLabels";
 import { useAuth } from "../auth/useAuth";
@@ -36,6 +36,22 @@ export default function UserBadge() {
           {user.company ? ` · ${user.company.name}` : ""}
         </p>
       </div>
+
+      {role !== "ADMIN" && (
+        <NavLink
+          to="/mis-ordenes"
+          title="Mis órdenes"
+          aria-label="Mis órdenes"
+          className={({ isActive }) =>
+            `flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold transition hover:bg-slate-100 hover:text-indigo-700 ${
+              isActive ? "bg-indigo-50 text-indigo-700" : "text-slate-600"
+            }`
+          }
+        >
+          <ShoppingBagIcon className="h-5 w-5" />
+          <span className="hidden sm:inline">Mis órdenes</span>
+        </NavLink>
+      )}
 
       {/* NUEVO: enlace a Analytics */}
       <NavLink

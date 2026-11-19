@@ -4,7 +4,6 @@ import { useAuth } from "../../../auth/useAuth";
 import {
   loadRecentlyViewedProducts,
   RECENT_PRODUCTS_UPDATED_EVENT,
-  type ViewedProduct,
 } from "../../../analytics/historyStore";
 
 // Aqui es el limite de fotos por si en el futuro queremos aumentarlo
@@ -13,21 +12,16 @@ const DISPLAY_LIMIT = 8;
 export default function RecentlyViewedProducts() {
   const { user } = useAuth();
   const userId = user?.objectID;
-  const [products, setProducts] = useState<ViewedProduct[]>([]);
+  const [, setRevision] = useState(0);
+  const products = userId ? loadRecentlyViewedProducts(userId) : [];
 
   useEffect(() => {
-    if (!userId) {
-      setProducts([]);
-      return;
-    }
-
-    const refreshProducts = () => setProducts(loadRecentlyViewedProducts(userId));
-    refreshProducts();
+    if (!userId) return;
 
     const handleUpdate = (event: Event) => {
       const updatedUserId = (event as CustomEvent<{ userId: string }>).detail?.userId;
       if (updatedUserId === userId) {
-        refreshProducts();
+        setRevision((revision) => revision + 1);
       }
     };
 

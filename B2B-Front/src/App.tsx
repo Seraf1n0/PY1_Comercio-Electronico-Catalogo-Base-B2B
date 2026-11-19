@@ -13,6 +13,8 @@ import SiteFooter from "./components/SiteFooter";
 import LoginPage from "./pages/login/LoginPage";
 import RequireAuth from "./auth/RequireAuth";
 import AnalyticsPage from "./pages/analytics/AnalyticsPage";
+import MyOrdersPage from "./pages/orders/MyOrdersPage";
+import OrderDetailPage from "./pages/orders/OrderDetail";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -46,6 +48,8 @@ function App() {
             <Route path="/pago/:orderNumber" element={<PaymentPage />} />
             <Route path="/confirmacion/:orderNumber" element={<ConfirmationPage />} />
             <Route path="/analytics" element={<AnalyticsPage />} />
+            <Route path="/mis-ordenes" element={<MyOrdersPage />} />
+            <Route path="/mis-ordenes/:orderNumber" element={<OrderDetailPage />} />
           </Route>
 
           <Route path="*" element={<NotFoundPage />} />

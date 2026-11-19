@@ -1,6 +1,5 @@
-// Ahorita consume indirectamente usando localuserdirecrty pero la idea es usar algolia luego
 import type { UserDirectory } from "./types.ts";
-import { localUserDirectory } from "./LocalUserDirectory.ts";
+import { algoliaUserDirectory } from "./AlgoliaUserDirectory";
 
 export type {
     AppUser,
@@ -12,4 +11,4 @@ export type {
     UserDirectory,
 } from "./types.ts";
 
-export const userDirectory: UserDirectory = localUserDirectory;
+export const userDirectory: UserDirectory = algoliaUserDirectory;

@@ -4,6 +4,10 @@ import { TrashIcon } from "@heroicons/react/24/outline";
 import type { CartItem } from "../cart/types";
 import { useCart } from "../cart/useCart";
 import { errorMessages } from "../lib/errorMessages";
+import { useAuth } from "../auth/useAuth";
+import { getCartItemStock } from "../cart/stock";
+import { getBranchInfo } from "../branch/branches";
+import { getCartLineId } from "../cart/types";
 
 interface CartItemRowProps {
   item: CartItem;
@@ -12,18 +16,21 @@ interface CartItemRowProps {
 
 export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
     const { dispatch } = useCart();
+    const { role } = useAuth();
     const [confirmingRemove, setConfirmingRemove] = useState(false);
+    const currentStock = getCartItemStock(item);
+    const lineId = getCartLineId(item);
 
     const handleDecrease = () => {
         if (item.quantity > 1) {
-            dispatch({ type: 'DECREASE_ITEM', payload: item.id });
+            dispatch({ type: 'DECREASE_ITEM', payload: lineId });
             return;
         }
         setConfirmingRemove(true);
     };
 
     const handleConfirmRemove = () => {
-        dispatch({ type: 'REMOVE_ITEM', payload: item.id });
+        dispatch({ type: 'REMOVE_ITEM', payload: lineId });
     };
 
   return (
@@ -42,9 +49,40 @@ export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
         >
           {item.title}
         </Link>
-        <p className="text-xs text-slate-500">
-          ₡{item.subtotal.toLocaleString("es-CR")}
-        </p>
+        {item.branchId && (
+          <p className="text-xs text-slate-500">
+            Sucursal: {getBranchInfo(item.branchId).label}
+          </p>
+        )}
+
+        {role === "B2B" && item.prices && (
+          <>
+            <p className="text-xs font-semibold text-blue-800">
+              Precio mayorista: ₡{item.prices.B2B.toLocaleString("es-CR")}
+            </p>
+            <p className="text-xs text-slate-400">
+              Precio regular: ₡{item.prices.B2C.toLocaleString("es-CR")}
+            </p>
+            <p className="text-xs text-slate-500">
+              Subtotal aplicado: ₡{item.subtotal.toLocaleString("es-CR")}
+            </p>
+          </>
+        )}
+        {(role !== "B2B" || !item.prices) && (
+          <p className="text-xs text-slate-500">
+            ₡{item.subtotal.toLocaleString("es-CR")}
+          </p>
+        )}
+
+        {item.quantity > currentStock && (
+          <p className="mt-1 text-xs text-amber-700">
+            {item.branchId
+              ? item.stockByBranch
+                ? `Solo hay ${currentStock} ${currentStock === 1 ? "unidad" : "unidades"} disponibles en ${getBranchInfo(item.branchId).label}.`
+                : `No se pudo consultar el inventario de ${getBranchInfo(item.branchId).label}.`
+              : "Selecciona una sucursal para validar la disponibilidad."}
+          </p>
+        )}
 
         {confirmingRemove ? (
           <div className="mt-1 rounded-md border border-amber-200 bg-amber-50 p-2 animate-fade-in">
@@ -86,8 +124,8 @@ export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
             <button
               type="button"
               aria-label={`Aumentar cantidad de ${item.title}`}
-              onClick={() => dispatch({ type: 'INCREASE_ITEM', payload: item.id })}
-              disabled={item.quantity >= item.stock}
+              onClick={() => dispatch({ type: 'INCREASE_ITEM', payload: lineId })}
+              disabled={item.quantity >= currentStock}
               className="h-6 w-6 rounded border border-slate-300 text-sm hover:bg-slate-100 cursor-pointer disabled:cursor-not-allowed disabled:opacity-40"
             >
               +
@@ -98,7 +136,7 @@ export default function CartItemRow({ item, onNavigate }: CartItemRowProps) {
 
       <button
         type="button"
-        onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: item.id })}
+        onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: lineId })}
         aria-label={`Eliminar ${item.title} del carrito`}
         className="text-xs text-red-600 hover:underline cursor-pointer"
       >

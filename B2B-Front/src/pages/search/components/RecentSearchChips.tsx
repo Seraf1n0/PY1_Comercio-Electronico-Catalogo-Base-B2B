@@ -10,21 +10,16 @@ export default function RecentSearchChips() {
   const { user } = useAuth();
   const userId = user?.objectID;
   const { refine } = useSearchBox();
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const [, setRevision] = useState(0);
+  const recentSearches = userId ? loadRecentSearches(userId) : [];
 
   useEffect(() => {
-    if (!userId) {
-      setRecentSearches([]);
-      return;
-    }
-
-    const refreshSearches = () => setRecentSearches(loadRecentSearches(userId));
-    refreshSearches();
+    if (!userId) return;
 
     const handleUpdate = (event: Event) => {
       const updatedUserId = (event as CustomEvent<{ userId: string }>).detail?.userId;
       if (updatedUserId === userId) {
-        refreshSearches();
+        setRevision((revision) => revision + 1);
       }
     };
 
