@@ -60,12 +60,9 @@ export function buildOrder(input: BuildOrderInput): Order {
 
   const isB2B = user.role === "B2B";
 
-  if (isB2B && !meetsB2BMinimum(items)) {
-    throw new OrderBuildError(
-      "B2B_MINIMUM_NOT_MET",
-      "La compra B2B requiere al menos 4 vehículos en la orden.",
-    );
-  }
+    // Condicion comercial: el B2B obtiene precio B2B solo con 4+ vehiculos;
+  // con menos, la compra se permite con precio B2C.
+  const pricingTier: CustomerType = isB2B && meetsB2BMinimum(items) ? "B2B" : "B2C";
 
   if (isB2B && !user.company) {
     throw new OrderBuildError(
@@ -86,7 +83,9 @@ export function buildOrder(input: BuildOrderInput): Order {
     (item) =>
       !isValidPrice(item.price) ||
       !canBePurchasedBy(item, user.role) ||
-      (isB2B && item.price !== item.prices?.B2B),
+            (isB2B &&
+        item.price !==
+          (pricingTier === "B2B" ? item.prices?.B2B : (item.prices?.B2C ?? item.price))),
   );
   if (invalidItem) {
     throw new OrderBuildError(
@@ -95,7 +94,7 @@ export function buildOrder(input: BuildOrderInput): Order {
     );
   }
   
-  const pricingTier: CustomerType = isB2B ? "B2B" : "B2C";
+ 
 
   const orderItems: OrderItem[] = items.map((item) => {
     const itemBranchId = item.branchId ?? branchId;
@@ -141,16 +140,18 @@ export function buildOrder(input: BuildOrderInput): Order {
     userId: user.objectID,
     userName: user.displayName,
     role: user.role,
-    customerType: pricingTier,
+        customerType: isB2B ? "B2B" : "B2C",
     company:
       isB2B && user.company
         ? { name: user.company.name, legalId: user.company.legalId }
         : undefined,
     pricingTier,
     branch: { id: branchId, name: getBranchInfo(branchId).label },
-    appliedConditions: isB2B
-      ? ["Precio B2B aplicado: mínimo 4 vehículos en la orden"]
-      : [],
+        appliedConditions: !isB2B
+      ? []
+      : pricingTier === "B2B"
+        ? ["Precio B2B aplicado: 4 o más vehículos en la orden"]
+        : ["Sin el mínimo de 4 vehículos: se aplicó precio B2C"],
     createdAtTs: Date.now(),
     syncStatus: "PENDING",
   };
