@@ -69,12 +69,20 @@ describe("Generación de la orden", () => {
     expect(order.appliedConditions.length).toBeGreaterThan(0);
   });
 
-  it("impide la orden B2B por debajo del mínimo de vehículos", () => {
-    expect(errorCode(() => buildOrder({ user: b2b, branchId: "san_jose", buyer, delivery, items: [line(3, 90_000)] })))
-      .toBe("B2B_MINIMUM_NOT_MET");
+    it("B2B con menos de 4 vehículos compra con precio B2C", () => {
+    const order = buildOrder({ user: b2b, branchId: "san_jose", buyer, delivery, items: [line(3, 100_000)] });
+    expect(order.customerType).toBe("B2B");
+    expect(order.pricingTier).toBe("B2C");
+    expect(order.items[0].unitPrice).toBe(100_000);
+    expect(order.company?.name).toBe("Transportes Demo S.A.");
   });
 
-  it("impide la orden B2B si el precio no es el B2B", () => {
+  it("impide la orden B2B con menos de 4 vehículos si se intenta cobrar precio B2B", () => {
+    expect(errorCode(() => buildOrder({ user: b2b, branchId: "san_jose", buyer, delivery, items: [line(3, 90_000)] })))
+      .toBe("INVALID_PRICE");
+  });
+
+  it("impide la orden B2B con 4 o más vehículos si el precio no es el B2B", () => {
     expect(errorCode(() => buildOrder({ user: b2b, branchId: "san_jose", buyer, delivery, items: [line(4, 100_000)] })))
       .toBe("INVALID_PRICE");
   });
