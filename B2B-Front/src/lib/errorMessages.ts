@@ -78,12 +78,23 @@ export const errorMessages = {
       "La compra B2B requiere al menos 4 vehículos en la orden.",
     B2B_COMPANY_MISSING:
       "Tu cuenta B2B no tiene una empresa registrada. Contacta al administrador.",
+          B2B_COMPANY_INVALID:
+      "Los datos de tu empresa (nombre o cédula jurídica) no son válidos. Contacta al administrador.",
+    INVALID_PRICE:
+      "Uno de los productos no tiene un precio válido en este momento. Revisa tu carrito.",
   } satisfies Record<OrderBuildErrorCode, string>,
 
   /** Error inesperado de render manejado por el Error Boundary. */
   unexpected: {
     title: "Algo salió mal",
     text: "Ocurrió un error inesperado. Puedes reintentar o volver al catálogo; tu carrito se conserva.",
+  },
+
+    /** Ruta bloqueada por RBAC. */
+  accessDenied: {
+    title: "Acceso denegado",
+    text: "No tienes permiso para ver esta sección.",
+    action: "Volver al inicio",
   },
 
   /** Ruta inexistente. */
@@ -110,5 +121,19 @@ export const errorMessages = {
     demoTitle: "Usuarios de prueba",
     demoHint: "Toca una tarjeta para entrar sin escribir credenciales.",
     logout: "Cerrar sesión",
+    sessionEnded: {
+      NOT_FOUND: "Tu sesión se cerró porque el usuario ya no existe.",
+      INACTIVE: "Tu sesión se cerró porque tu usuario fue desactivado. Contacta al administrador.",
+      INVALID_ROLE: "Tu sesión se cerró porque tu usuario ya no tiene un rol válido.",
+      INVALID_RECORD: "Tu sesión se cerró porque los datos de tu usuario están incompletos.",
+    },
+    blockedTitle: "Usuarios sin acceso (casos de prueba)",
+    blockedHint: "Estos usuarios existen pero no pueden iniciar sesión. Tócalos para ver el mensaje.",
+    blockedReason: {
+      NOT_FOUND: "No existe",
+      INACTIVE: "Inactivo",
+      INVALID_ROLE: "Rol inválido",
+      INVALID_RECORD: "Datos incompletos",
+    },
   },
 } as const;

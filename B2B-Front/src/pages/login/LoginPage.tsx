@@ -1,11 +1,12 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { roleLabels } from "../../auth/roleLabels";
-import type { AppUser, LookupFailure } from "../../auth/types";
+import RoleBadge from "../../components/RoleBadge";
+import type { AppUser, LookupFailure, UserListing } from "../../auth/types";
 import { useAuth } from "../../auth/useAuth";
 import { userDirectory } from "../../auth/UserDirectory";
 import Spinner from "../../components/Spinner";
 import { errorMessages } from "../../lib/errorMessages";
+import { canAccessPath, homePathFor } from "../../auth/permissions";
 
 const AUTH_ERROR_MESSAGES: Record<LookupFailure, string> = {
   NOT_FOUND: errorMessages.auth.notFound,
@@ -19,20 +20,28 @@ export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [demoUsers, setDemoUsers] = useState<AppUser[]>([]);
-  const { login } = useAuth();
+  const [blockedUsers, setBlockedUsers] = useState<UserListing[]>([]);
+  const { login, sessionNotice, dismissSessionNotice } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
     let active = true;
 
+    // listAll trae validos e invalidos: los validos son tarjetas de acceso,
+    // los invalidos (inactivo / rol invalido) se muestran como casos de prueba.
     userDirectory
-      .list()
-      .then((users) => {
-        if (active) setDemoUsers(users);
+      .listAll()
+      .then((listing) => {
+        if (!active) return;
+        setDemoUsers(listing.flatMap((entry) => (entry.result.ok ? [entry.result.user] : [])));
+        setBlockedUsers(listing.filter((entry) => !entry.result.ok));
       })
       .catch(() => {
-        if (active) setDemoUsers([]);
+        if (active) {
+          setDemoUsers([]);
+          setBlockedUsers([]);
+        }
       });
 
     return () => {
@@ -42,6 +51,7 @@ export default function LoginPage() {
 
   async function submitLogin(value: string) {
     setError(null);
+    dismissSessionNotice();
 
     const trimmed = value.trim();
     if (!trimmed) {
@@ -57,10 +67,13 @@ export default function LoginPage() {
         return;
       }
 
-      const from = location.state?.from;
-      const returnTo = from
-        ? `${from.pathname}${from.search}${from.hash}`
-        : "/";
+      // Solo se vuelve a la ruta original si el rol que entro puede verla.
+     const from = location.state?.from;
+      const hasRealDestination = from && from.pathname !== "/";
+      const returnTo =
+        hasRealDestination && canAccessPath(result.role, from.pathname)
+          ? `${from.pathname}${from.search}${from.hash}`
+          : homePathFor(result.role);
       navigate(returnTo, { replace: true });
     } catch {
       setError(errorMessages.auth.generic);
@@ -94,6 +107,15 @@ export default function LoginPage() {
             tarjeta de prueba.
           </p>
         </div>
+
+        {sessionNotice && (
+          <p
+            role="alert"
+            className="mt-6 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-800"
+          >
+            {errorMessages.auth.sessionEnded[sessionNotice]}
+          </p>
+        )}
 
         <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
           <div>
@@ -163,9 +185,7 @@ export default function LoginPage() {
                 <span className="text-sm font-semibold text-slate-800">
                   {user.displayName}
                 </span>
-                <span className="text-xs font-semibold text-indigo-600">
-                  {roleLabels[user.role]}
-                </span>
+                                <RoleBadge role={user.role} size="xs" className="mt-0.5" />
                 {user.company && (
                   <span className="truncate text-xs text-slate-500">
                     {user.company.name}
@@ -177,6 +197,47 @@ export default function LoginPage() {
               </button>
             ))}
           </div>
+
+          {blockedUsers.length > 0 && (
+            <div className="mt-6">
+              <p className="text-sm font-semibold text-slate-700">
+                {errorMessages.auth.blockedTitle}
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                {errorMessages.auth.blockedHint}
+              </p>
+
+              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                {blockedUsers.map((entry) => (
+                  <button
+                    key={entry.objectID}
+                    type="button"
+                    disabled={isSubmitting}
+                    onClick={() => {
+                      setLoginInput(entry.username);
+                      void submitLogin(entry.username);
+                    }}
+                    className="flex cursor-pointer flex-col items-start rounded-lg border border-dashed border-red-200 bg-red-50/40 px-3 py-2 text-left transition hover:border-red-400 disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    <span className="text-sm font-semibold text-slate-700">
+                      {entry.displayName}
+                    </span>
+                    {!entry.result.ok && (
+                      <span className="text-xs font-semibold text-red-600">
+                        {errorMessages.auth.blockedReason[entry.result.reason]}
+                        {entry.result.reason === "INVALID_ROLE" && entry.rawRole
+                          ? ` (${entry.rawRole})`
+                          : ""}
+                      </span>
+                    )}
+                    <span className="mt-1 text-[11px] text-slate-400">
+                      {entry.username}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </main>

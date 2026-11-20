@@ -1,6 +1,6 @@
 import { searchClient } from "../lib/algolia";
 import { parseUserRecord, normalizeLogin } from "./UserRecord";
-import type { AppUser, LookupResult, RawUser, UserDirectory } from "./types";
+import type { AppUser, LookupResult, RawUser, UserDirectory, UserListing } from "./types";
 
 const USERS_INDEX: string = import.meta.env.VITE_ALGOLIA_USERS_INDEX_NAME || "users";
 const PAGE_SIZE = 20;
@@ -40,6 +40,21 @@ export const algoliaUserDirectory: UserDirectory = {
 
     const result = parseUserRecord(raw);
     return result.ok ? result.user : null;
+  },
+
+  async lookupById(id): Promise<LookupResult> {
+    const raw = (await loadUsers()).find((user) => user.objectID === id);
+    return raw ? parseUserRecord(raw) : { ok: false, reason: "NOT_FOUND" };
+  },
+
+  async listAll(): Promise<UserListing[]> {
+    return (await loadUsers()).map((raw) => ({
+      objectID: raw.objectID,
+      username: raw.username,
+      displayName: raw.displayName,
+      rawRole: raw.role ?? null,
+      result: parseUserRecord(raw),
+    }));
   },
 
   async list(): Promise<AppUser[]> {

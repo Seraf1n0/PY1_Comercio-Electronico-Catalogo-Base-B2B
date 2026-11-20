@@ -7,7 +7,7 @@ import ProductDetail from "./ProductDetail";
 import ProductDetailSkeleton from "../../components/ProductDetailSkeleton";
 import { useAuth } from "../../auth/useAuth";
 import { useAnalytics } from "../../analytics/useAnalytics";
-
+import { getProductTitle } from "../../Catalog/productTitle";
 interface AlgoliaHitsResult {
   hits: Product[];
 }
@@ -64,11 +64,11 @@ export default function ProductDetailPage() {
 
     track("PRODUCT_VIEW", {
       productId: product.objectID,
-      title: product.title,
-      category: product.categories[0] ?? "",
+      title: getProductTitle(product),
+      category: product.categories?.[0] ?? "",
       brand: product.brand,
       price: product.price,
-      img: product.images_urls[0] ?? "",
+      img: product.images_urls?.[0] ?? "",
     });
   }, [product, userId, track]);
 
