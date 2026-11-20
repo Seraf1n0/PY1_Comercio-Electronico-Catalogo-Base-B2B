@@ -32,7 +32,7 @@ export default function RoleContextBar() {
             <BuildingOffice2Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
             <span>
               Comprando como <strong>{user.company?.name ?? "empresa"}</strong> · Precios{" "}
-              <strong>B2B</strong> · Mínimo {B2B_MINIMUM_VEHICLES} vehículos por orden
+                            <strong>B2B</strong> desde {B2B_MINIMUM_VEHICLES} vehículos
             </span>
           </>
         )}
