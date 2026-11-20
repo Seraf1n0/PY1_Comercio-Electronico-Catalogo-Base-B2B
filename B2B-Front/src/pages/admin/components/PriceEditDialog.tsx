@@ -11,6 +11,7 @@ import {
 } from "../../../Catalog/pricing/priceOverrides";
 import { isValidPrice } from "../../../Catalog/pricing/priceView";
 import type { Product } from "../../../Catalog/types";
+import { getProductTitle } from "../../../Catalog/productTitle";
 
 function show(value: number | undefined | null): string {
   return isValidPrice(value) ? formatColones(value) : "Sin precio";
@@ -46,7 +47,7 @@ export default function PriceEditDialog({
   const changedB2B = b2b !== null && b2b !== currentB2B;
   const discount = !hasErrors && b2c && b2b ? discountPercent(b2c, b2b) : null;
   const adminName = user?.displayName ?? "Administrador";
-  const target = `${product.title || product.model || "Producto"} (${product.objectID})`;
+  const target = `${getProductTitle(product)} (${product.objectID})`;
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => event.key === "Escape" && onClose();
@@ -144,7 +145,7 @@ export default function PriceEditDialog({
               Operación simulada · Modificar precio
             </p>
             <h2 id="price-title" className="mt-1 text-lg font-bold text-slate-900">
-              {product.title || product.model || "Producto sin título"}
+              {getProductTitle(product)}
             </h2>
             <p className="text-xs text-slate-500">{product.objectID}</p>
           </div>

@@ -24,6 +24,7 @@ import { useAuth } from "../../auth/useAuth";
 import AdminPageHeader from "./components/AdminPageHeader";
 import AuditLog from "./components/AuditLog";
 import InventoryAdjustDialog from "./components/InventoryAdjustDialog";
+import { getProductTitle } from "../../Catalog/productTitle";
 
 const PAGE_SIZE = 25;
 const LOW_STOCK = 2;
@@ -339,7 +340,7 @@ export default function AdminInventoryPage() {
                         to={`/producto/${product.objectID}`}
                         className="font-semibold text-slate-800 hover:text-amber-700 hover:underline"
                       >
-                        {product.title}
+                        {getProductTitle(product)}
                       </Link>
                       <p className="text-xs text-slate-500">{product.objectID} · {product.brand} · {product.year}</p>
                     </td>
@@ -376,7 +377,7 @@ export default function AdminInventoryPage() {
               <li key={product.objectID} className="rounded-xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
                 <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0">
-                    <p className="font-semibold text-slate-800">{product.title}</p>
+                    <p className="font-semibold text-slate-800">{getProductTitle(product)}</p>
                     <p className="text-xs text-slate-500">{product.objectID} · Total: {total}</p>
                   </div>
                   <button

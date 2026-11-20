@@ -5,7 +5,7 @@ import StockByLocation from "./components/StockByLocation";
 import ProductNavbar from "./components/ProductNavbar";
 import AddToCartButton from "../../components/AddToCartButton";
 import PriceTag from "../../components/PriceTag";
-
+import { getProductTitle } from "../../Catalog/productTitle";
 import { useBranch } from "../../branch/useBranch";
 import { getBranchInfo } from "../../branch/branches";
 import BranchSelector from "../../branch/BranchSelector";
@@ -29,7 +29,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     return (
     <div>
 
-    <ProductNavbar title={product.title} totalStock={totalStock} />
+     <ProductNavbar title={getProductTitle(product)} totalStock={totalStock} />
 
         <div className="max-w-4xl mx-auto px-4">
 
@@ -78,7 +78,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                     <span className="font-semibold">Transmisión:</span> {product.transmission}
                 </p>
                 <p className="col-span-1 md:col-span-2">
-                    <span className="font-semibold">Descripción vehicular:</span> {product.description}
+                                        <span className="font-semibold">Descripción vehicular:</span> {product.description || "Sin descripción disponible."}
                 </p>
             </div>
 

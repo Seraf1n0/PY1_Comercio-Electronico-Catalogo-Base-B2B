@@ -18,7 +18,7 @@ import AnalyticsPage from "./pages/analytics/AnalyticsPage";
 import MyOrdersPage from "./pages/orders/MyOrdersPage";
 import OrderDetailPage from "./pages/orders/OrderDetail";
 import AdminLayout from "./pages/admin/AdminLayout";
-import AdminHomePage from "./pages/admin/AdminHomePage";
+import AdminHomePage from "./pages/admin/AdminHomepage";
 import AdminOrderDetailPage from "./pages/admin/AdminOrderDetailPage";
 import AdminOrdersPage from "./pages/admin/AdminOrdersPage";
 import AdminProductsPage from "./pages/admin/AdminProductsPage";

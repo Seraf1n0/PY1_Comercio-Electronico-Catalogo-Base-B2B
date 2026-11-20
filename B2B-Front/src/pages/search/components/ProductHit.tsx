@@ -5,6 +5,7 @@ import PriceTag from "../../../components/PriceTag";
 import { useBranch } from "../../../branch/useBranch";
 import { getBranchInfo } from "../../../branch/branches";
 import { getBranchStock } from "../../../inventory/inventoryOverrides";
+import { getProductTitle } from "../../../Catalog/productTitle";
 
 export default function ProductHit({ hit }: { hit: Product }) {
   const { selectedBranch } = useBranch();
@@ -19,7 +20,7 @@ export default function ProductHit({ hit }: { hit: Product }) {
           <div className="aspect-[4/3] w-full overflow-hidden rounded-lg bg-slate-100">
             <img
               src={hit.images_urls?.[0]}
-              alt={hit.title}
+                            alt={getProductTitle(hit)}
               loading="lazy"
               className="h-full w-full object-cover"
             />
@@ -29,7 +30,7 @@ export default function ProductHit({ hit }: { hit: Product }) {
             {hit.categories?.[0] ?? "Sin categoría"}
           </p>
           <h2 className="line-clamp-2 font-semibold text-slate-800">
-            {hit.title ?? "Sin título"}
+                                  {getProductTitle(hit)}
           </h2>
           <PriceTag item={hit} size="md" className="mt-auto" />
           {branchInfo && branchStock !== null && (

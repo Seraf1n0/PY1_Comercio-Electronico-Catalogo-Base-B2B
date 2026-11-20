@@ -11,6 +11,7 @@ import { getBranchInfo } from "../branch/branches";
 import { getBranchStock } from "../inventory/inventoryOverrides";
 import { can } from "../auth/permissions";
 import { canBePurchasedBy } from "../Catalog/pricing/priceValidation";
+import { getProductTitle } from "../Catalog/productTitle";
 
 type AddToCartSource = "catalog" | "detail";
 
@@ -22,6 +23,7 @@ export default function AddToCartButton({
     source?: AddToCartSource;
 }) {
     const { state, dispatch } = useCart();
+    const productTitle = getProductTitle(product);
     const { notify } = useCartFeedback();
     const { track } = useAnalytics();
     const { role } = useAuth();
@@ -54,7 +56,7 @@ export default function AddToCartButton({
 
         track("ADD_TO_CART", {
             productId: product.objectID,
-            title: product.title,
+            title: productTitle,
             category: product.categories?.[0] ?? "",
             brand: product.brand ?? "",
             quantity: 1,
@@ -63,7 +65,7 @@ export default function AddToCartButton({
         });
 
         const newQuantity = currentQuantity + 1;
-        const label = product.title ?? "Producto";
+        const label = productTitle;
         notify(`${label} · ${newQuantity} en el carrito`);
     };
 
@@ -85,8 +87,8 @@ export default function AddToCartButton({
         disabled={!canAdd}
         aria-label={
             canAdd
-                ? `Agregar ${product.title ?? "producto"} al carrito`
-                : `${product.title ?? "Producto"}: ${buttonLabel}`
+                ? `Agregar ${productTitle} al carrito`
+                : `${productTitle}: ${buttonLabel}`
         }
         className="mt-4 flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded w-full cursor-pointer disabled:cursor-not-allowed disabled:bg-slate-300 disabled:text-slate-600">
 

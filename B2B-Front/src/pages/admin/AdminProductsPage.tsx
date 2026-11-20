@@ -26,6 +26,7 @@ import Spinner from "../../components/Spinner";
 import AdminPageHeader from "./components/AdminPageHeader";
 import AuditLog from "./components/AuditLog";
 import PriceEditDialog from "./components/PriceEditDialog";
+import { getProductTitle } from "../../Catalog/productTitle";
 
 const HITS_PER_PAGE = 25;
 
@@ -306,7 +307,7 @@ export default function AdminProductsPage() {
                               to={`/producto/${product.objectID}`}
                               className="font-semibold text-slate-800 hover:text-amber-700 hover:underline"
                             >
-                              {product.title}
+                              {getProductTitle(product)}
                             </Link>
                             <p className="text-xs text-slate-500">
                               {product.brand} · {product.model} · {product.year} · {product.objectID}
@@ -364,7 +365,7 @@ export default function AdminProductsPage() {
                         to={`/producto/${product.objectID}`}
                         className="font-semibold text-slate-800 hover:text-amber-700"
                       >
-                        {product.title}
+                        {getProductTitle(product)}
                       </Link>
                       <p className="text-xs text-slate-500">
                         {product.brand} · {product.year} · {product.objectID}
