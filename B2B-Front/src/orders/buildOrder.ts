@@ -7,13 +7,17 @@ import { meetsB2BMinimum } from "../cart/b2bEligibility";
 import { getProductSubtotal, getIva, getOrderTotal } from "../cart/cartTotals";
 import { getShippingCost } from "../cart/shipping";
 import { getNextOrderNumber } from "./ordersStorage";
+import { isValidPrice } from "../Catalog/pricing/priceView";
+import { canBePurchasedBy, isValidLegalId } from "../Catalog/pricing/priceValidation";
 
 export type OrderBuildErrorCode =
   | "INVALID_ROLE"
   | "MISSING_BRANCH"
   | "EMPTY_CART"
   | "B2B_MINIMUM_NOT_MET"
-  | "B2B_COMPANY_MISSING";
+    | "B2B_COMPANY_MISSING"
+  | "B2B_COMPANY_INVALID"
+  | "INVALID_PRICE";
 
 export class OrderBuildError extends Error {
   readonly code: OrderBuildErrorCode;
@@ -69,7 +73,28 @@ export function buildOrder(input: BuildOrderInput): Order {
       "La cuenta B2B no tiene una empresa registrada.",
     );
   }
+  if (isB2B && user.company && (!user.company.name.trim() || !isValidLegalId(user.company.legalId))) {
+    throw new OrderBuildError(
+      "B2B_COMPANY_INVALID",
+      "La información de la empresa (nombre o cédula jurídica) no es válida.",
+    );
+  }
 
+  // Ultima barrera: nunca se genera una orden con un precio invalido o que
+  // no corresponda a la tarifa del cliente.
+  const invalidItem = items.find(
+    (item) =>
+      !isValidPrice(item.price) ||
+      !canBePurchasedBy(item, user.role) ||
+      (isB2B && item.price !== item.prices?.B2B),
+  );
+  if (invalidItem) {
+    throw new OrderBuildError(
+      "INVALID_PRICE",
+      `El producto ${invalidItem.title} no tiene un precio válido.`,
+    );
+  }
+  
   const pricingTier: CustomerType = isB2B ? "B2B" : "B2C";
 
   const orderItems: OrderItem[] = items.map((item) => {

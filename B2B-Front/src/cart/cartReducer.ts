@@ -3,7 +3,7 @@ import type { Product } from '../Catalog/types';
 import { getCartItemStock, getTotalStock } from './stock';
 import type { BranchId } from '../auth/types';
 import { getBranchStock } from '../inventory/inventoryOverrides';
-
+import { getProductTitle } from '../Catalog/productTitle';
 export interface State {
     items: CartItem[];
 }
@@ -57,7 +57,7 @@ export const reducer = (state: State, action: Action): State => {
             const newItem: CartItem = withSubtotal({
                 id: product.objectID,
                 lineId: createCartLineId(product.objectID, branchId),
-                title: product.title ?? 'Falta titulo',
+                                title: getProductTitle(product),
                 price: product.price,
                 prices: product.prices,
                 quantity: 1,

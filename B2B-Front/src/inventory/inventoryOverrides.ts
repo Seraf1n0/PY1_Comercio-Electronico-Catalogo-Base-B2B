@@ -4,7 +4,7 @@ import { branches, getBranchInfo } from "../branch/branches";
 import { readJSON, writeJSON, removeJSON } from "../lib/safeStorage";
 import { storageKeys } from "../lib/storageKeys";
 
-type InventoryOverrides = Record<string, Partial<Record<BranchId, number>>>;
+export type InventoryOverrides = Record<string, Partial<Record<BranchId, number>>>;
 
 type InventoryProduct = {
   objectID: string;
@@ -42,7 +42,7 @@ function readOverrides(): InventoryOverrides {
   return valid;
 }
 
-function getBaseStock(product: InventoryProduct, branchId: BranchId): number {
+export function getBaseStock(product: InventoryProduct, branchId: BranchId): number {
   if (!product.stock) return 0;
 
   const baseStock = product.stock[getBranchInfo(branchId).stockKey];
@@ -86,6 +86,38 @@ export function adjustBranchStock(
   }
 
   return writeJSON(storageKeys.inventoryOverrides, overrides);
+}
+
+/** Copia de todos los ajustes vigentes (el panel la usa para recalcular en bloque). */
+export function readInventoryOverrides(): InventoryOverrides {
+  return readOverrides();
+}
+
+/** Stock efectivo usando una copia de ajustes ya leida (evita leer storage por celda). */
+export function computeBranchStock(
+  product: InventoryProduct,
+  branchId: BranchId,
+  overrides: InventoryOverrides,
+): number {
+  return Math.max(0, getBaseStock(product, branchId) + (overrides[product.objectID]?.[branchId] ?? 0));
+}
+
+/**
+ * Fija el stock de una sucursal a un valor exacto (operacion simulada del admin).
+ * Internamente se guarda como ajuste respecto al stock base de Algolia.
+ */
+export function setBranchStock(
+  product: Pick<Product, "objectID" | "stock">,
+  branchId: BranchId,
+  nextStock: number,
+): boolean {
+  if (!Number.isInteger(nextStock) || nextStock < 0) return false;
+  return adjustBranchStock(product, branchId, nextStock - getBranchStock(product, branchId));
+}
+
+/** Ajuste simulado vigente (0 si no hay) para mostrar "base + ajuste" en el panel. */
+export function getStockAdjustment(productId: string, branchId: BranchId): number {
+  return readOverrides()[productId]?.[branchId] ?? 0;
 }
 
 /** Devolvemos todo a su forma original igual para admin */

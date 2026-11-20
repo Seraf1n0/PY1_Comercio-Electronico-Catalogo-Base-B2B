@@ -13,7 +13,8 @@ import EmptyCart from "../cart/components/EmptyCart";
 import { useState } from "react";
 import CheckoutModal from "../checkout/components/CheckoutModal";
 import UserBadge from "../../components/UserBadge";
-import { getCartInventoryIssues } from "../../cart/inventoryValidation";
+import { getCartIssues } from "../../cart/inventoryValidation";
+import { useAuth } from "../../auth/useAuth";
 import { getCartLineId } from "../../cart/types";
 import { getBranchInfo } from "../../branch/branches";
 
@@ -23,7 +24,9 @@ export default function CheckoutPage() {
   const shipping = getShippingCost(state.items);
   const total = getOrderTotal(state.items);
   const totalUnits = getTotalUnits(state.items);
-  const inventoryIssues = getCartInventoryIssues(state.items);
+  const { role } = useAuth();
+  // Inventario + precios: cualquiera de los dos bloquea la compra.
+  const inventoryIssues = getCartIssues(state.items, role);
 
   const [isOpen, setIsOpen] =  useState(false);
 
@@ -66,7 +69,7 @@ export default function CheckoutPage() {
           <section className="flex-1">
             {inventoryIssues.length > 0 && (
               <div role="alert" className="mb-4 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800">
-                <p className="font-semibold">No puedes pagar todavía. Corrige la disponibilidad en el carrito:</p>
+                <p className="font-semibold">No puedes pagar todavía. Corrige lo siguiente en el carrito:</p>
                 <ul className="mt-1 list-inside list-disc">
                   {inventoryIssues.map((issue) => <li key={issue.itemId}>{issue.message}</li>)}
                 </ul>

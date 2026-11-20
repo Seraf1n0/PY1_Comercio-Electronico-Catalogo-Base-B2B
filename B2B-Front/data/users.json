@@ -1,7 +1,7 @@
 [
   {
     "objectID": "usr-b2c-001",
-    "username": "cliente b2c",
+    "username": "cliente.b2c.laura",
     "email": "cliente.b2c@gmail.com",
     "displayName": "Laura Mora",
     "phone": "88881111",
@@ -63,5 +63,25 @@
     "role": "SUPERVISOR",
     "active": true,
     "defaultBranch": "san_jose"
+  },
+    {
+    "username": "cliente.b2c.yosimar",
+    "email": "cliente.Yosimar@gmail.com",
+    "displayName": "Yosimar Montenegro",
+    "phone": "88887777",
+    "role": "B2C",
+    "active": true,
+    "defaultBranch": "limon",
+    "objectID": "usr-b2c-002"
+  },
+    {
+    "username": "cliente.b2c.dylan",
+    "email": "clienteDylan@gmail.com",
+    "displayName": "Dylan Rodriguez",
+    "phone": "76884365",
+    "role": "B2C",
+    "active": true,
+    "defaultBranch": "guanacaste",
+    "objectID": "usr-b2c-003"
   }
 ]

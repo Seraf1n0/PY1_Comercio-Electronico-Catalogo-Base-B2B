@@ -2,6 +2,10 @@ import type { CartItem } from "./types";
 import { getBranchInfo } from "../branch/branches";
 import { getBranchStock } from "../inventory/inventoryOverrides";
 import { getCartLineId } from "./types";
+import type { Role } from "../auth/types";
+import { isValidPrice } from "../Catalog/pricing/priceView";
+import { canBePurchasedBy } from "../Catalog/pricing/priceValidation";
+
 
 export interface CartInventoryIssue {
   itemId: string;
@@ -33,4 +37,28 @@ export function getCartInventoryIssues(items: CartItem[]): CartInventoryIssue[] 
         : `${item.title}: solicitas ${item.quantity}, pero solo hay ${available} disponibles en ${branchName}.`,
     }];
   });
+}
+
+
+/**
+ * Lineas del carrito con precio o informacion comercial invalida
+ */
+export function getCartPricingIssues(items: CartItem[], role: Role | null): CartInventoryIssue[] {
+  return items.flatMap((item) => {
+    const lineOk =
+      isValidPrice(item.price) &&
+      Number.isFinite(item.subtotal) &&
+      canBePurchasedBy(item, role);
+    return lineOk
+      ? []
+      : [{
+          itemId: `${getCartLineId(item)}:price`,
+          message: `${item.title}: el precio no es válido en este momento. Elimínalo del carrito para continuar.`,
+        }];
+  });
+}
+
+/** Todo lo que impide continuar con la compra: inventario y precios. */
+export function getCartIssues(items: CartItem[], role: Role | null): CartInventoryIssue[] {
+  return [...getCartInventoryIssues(items), ...getCartPricingIssues(items, role)];
 }

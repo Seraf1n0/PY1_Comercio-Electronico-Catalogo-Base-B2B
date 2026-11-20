@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom";
 import type { Product } from "../../../Catalog/types";
 import AddToCartButton from "../../../components/AddToCartButton";
-import { selectPrice } from "../../../Catalog/pricing/selectPrice";
-import { useAuth } from "../../../auth/useAuth";
+import PriceTag from "../../../components/PriceTag";
 import { useBranch } from "../../../branch/useBranch";
 import { getBranchInfo } from "../../../branch/branches";
 import { getBranchStock } from "../../../inventory/inventoryOverrides";
+import { getProductTitle } from "../../../Catalog/productTitle";
 
 export default function ProductHit({ hit }: { hit: Product }) {
-  const { role } = useAuth();
-  const price = role ? selectPrice(hit, role) : hit.price;
-  const isB2B = role === "B2B";
   const { selectedBranch } = useBranch();
   const branchInfo = selectedBranch ? getBranchInfo(selectedBranch) : null;
   const branchStock = branchInfo ? getBranchStock(hit, branchInfo.id) : null;
@@ -23,7 +20,7 @@ export default function ProductHit({ hit }: { hit: Product }) {
           <div className="aspect-[4/3] w-full overflow-hidden rounded-lg bg-slate-100">
             <img
               src={hit.images_urls?.[0]}
-              alt={hit.title}
+                            alt={getProductTitle(hit)}
               loading="lazy"
               className="h-full w-full object-cover"
             />
@@ -33,19 +30,9 @@ export default function ProductHit({ hit }: { hit: Product }) {
             {hit.categories?.[0] ?? "Sin categoría"}
           </p>
           <h2 className="line-clamp-2 font-semibold text-slate-800">
-            {hit.title ?? "Sin título"}
+                                  {getProductTitle(hit)}
           </h2>
-          <div className="mt-auto">
-            <p className="font-bold text-blue-800">
-              {isB2B ? "Precio mayorista: " : "Precio: "}
-              ₡{price?.toLocaleString("es-CR") ?? "N/D"}
-            </p>
-            {isB2B && hit.prices && (
-              <p className="text-xs font-normal text-slate-500">
-                Precio regular: ₡{hit.prices.B2C.toLocaleString("es-CR")}
-              </p>
-            )}
-          </div>
+          <PriceTag item={hit} size="md" className="mt-auto" />
           {branchInfo && branchStock !== null && (
             <p className="text-xs text-slate-500">
               {branchStock > 0

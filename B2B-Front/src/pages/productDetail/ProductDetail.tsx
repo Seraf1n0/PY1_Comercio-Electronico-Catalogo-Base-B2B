@@ -4,8 +4,8 @@ import SpecsTable from "./components/SpecsTable";
 import StockByLocation from "./components/StockByLocation";
 import ProductNavbar from "./components/ProductNavbar";
 import AddToCartButton from "../../components/AddToCartButton";
-import { selectPrice } from "../../Catalog/pricing/selectPrice";
-import { useAuth } from "../../auth/useAuth";
+import PriceTag from "../../components/PriceTag";
+import { getProductTitle } from "../../Catalog/productTitle";
 import { useBranch } from "../../branch/useBranch";
 import { getBranchInfo } from "../../branch/branches";
 import BranchSelector from "../../branch/BranchSelector";
@@ -18,9 +18,6 @@ interface ProductDetailProps {
 
 export default function ProductDetail({ product }: ProductDetailProps) {
     const totalStock = branches.reduce((sum, branch) => sum + getBranchStock(product, branch.id), 0);
-    const { role } = useAuth();
-    const price = role ? selectPrice(product, role) : product.price;
-    const isB2B = role === "B2B";
     const { selectedBranch } = useBranch();
     const selectedBranchInfo = selectedBranch ? getBranchInfo(selectedBranch) : null;
     const selectedBranchStock = selectedBranchInfo
@@ -32,7 +29,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     return (
     <div>
 
-    <ProductNavbar title={product.title} totalStock={totalStock} />
+     <ProductNavbar title={getProductTitle(product)} totalStock={totalStock} />
 
         <div className="max-w-4xl mx-auto px-4">
 
@@ -44,14 +41,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
                 {/* Panel lateral */}
                 <div className="bg-white shadow-lg rounded p-4 w-full md:w-64 h-fit">
-                    <p className="text-lg font-bold">
-                        {isB2B ? "Precio mayorista" : "Precio"}: ₡{price?.toLocaleString("es-CR") ?? "N/D"}
-                    </p>
-                    {isB2B && product.prices && (
-                        <p className="text-sm text-gray-500">
-                            Precio regular: ₡{product.prices.B2C.toLocaleString("es-CR")}
-                        </p>
-                    )}
+                                        <PriceTag item={product} size="lg" />
                     <p className="text-sm text-gray-600 mt-1">Impuestos: Ya incluidos</p>
 
                     <div className="mt-4">
@@ -88,7 +78,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                     <span className="font-semibold">Transmisión:</span> {product.transmission}
                 </p>
                 <p className="col-span-1 md:col-span-2">
-                    <span className="font-semibold">Descripción vehicular:</span> {product.description}
+                                        <span className="font-semibold">Descripción vehicular:</span> {product.description || "Sin descripción disponible."}
                 </p>
             </div>
 

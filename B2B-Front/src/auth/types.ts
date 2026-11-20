@@ -57,7 +57,7 @@ export interface Session {
 }
 
 export type LoginResult =
-| { ok: true }
+| { ok: true, role: Role }
 | { ok: false, reason: LookupFailure }
 
 /**
@@ -67,5 +67,18 @@ export type LoginResult =
 export interface UserDirectory {
     findByLogin(login: string): Promise<LookupResult>;
     findById(id: string): Promise<AppUser | null>;
+    
+    lookupById(id: string): Promise<LookupResult>;
     list(): Promise<AppUser[]>;
+    /** Todos los registros (validos e invalidos) con su resultado de validacion. */
+    listAll(): Promise<UserListing[]>;
+}
+
+/** Registro del directorio con su resultado de validacion */
+export interface UserListing {
+    objectID: string;
+    username: string;
+    displayName: string;
+    rawRole: string | null;
+    result: LookupResult;
 }

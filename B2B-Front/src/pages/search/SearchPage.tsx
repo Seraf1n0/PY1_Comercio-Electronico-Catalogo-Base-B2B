@@ -18,6 +18,7 @@ import RecentSearchChips from "./components/RecentSearchChips";
 import RecentlyViewedProducts from "./components/RecentlyViewedProducts";
 import B2BMinimumNotice from "../../components/B2BMinimumNotice";
 import BranchSelector from "../../branch/BranchSelector";
+import Can from "../../auth/Can";
 
 // Conecta el buscador con analytics; debe vivir dentro de InstantSearch.
 function SearchTracking() {
@@ -29,16 +30,16 @@ function SearchTracking() {
 export default function SearchPage() {
   return (
     <div className="min-h-screen bg-slate-50">
-      <div className="grid grid-cols-3 items-center bg-white px-4 sm:px-6 py-4 shadow-md">
-        <div className="justify-self-start">
+            <div className="flex items-center justify-between gap-3 bg-white px-4 py-3 shadow-md sm:px-6">
+        <div className="min-w-0">
           <UserBadge />
         </div>
-        <h1 className="text-center text-xl font-bold tracking-tight text-blue-800 sm:text-2xl truncate">
+                <h1 className="shrink-0 text-lg font-bold tracking-tight text-blue-800 sm:text-xl lg:text-2xl">
           Bombocars
         </h1>
 
         <div className="flex justify-end">
-          <CartPreview />
+          <Can permission="cart.add"><CartPreview /></Can>
         </div>
       </div>
 

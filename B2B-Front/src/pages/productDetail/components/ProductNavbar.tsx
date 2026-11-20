@@ -4,6 +4,7 @@ import FeedbackAlert from "../../../components/FeedbackAlert";
 import CartPreview from "../../../components/CartPreview";
 import UserBadge from "../../../components/UserBadge";
 import { useState } from "react";
+import Can from "../../../auth/Can"; 
 
 interface ProductNavbarProps {
   title: string;
@@ -65,7 +66,7 @@ export default function ProductNavbar({ title, totalStock }: ProductNavbarProps)
           className="heart-icon h-6 w-6 text-gray-700 cursor-pointer hover:text-red-500" 
           onClick={handleFavorite} />
         <UserBadge />
-        <CartPreview />
+        <Can permission="cart.add"><CartPreview /></Can>
       </div>
 
       <FeedbackAlert mensaje={mensaje} trigger={trigger} duration={3000} />
